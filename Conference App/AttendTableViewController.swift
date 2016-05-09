@@ -289,6 +289,13 @@ class AttendeesViewController: UITableViewController, UISearchResultsUpdating {
         }
         return false
     }
+    // Displays the Menu when clicked
+    @IBAction func showMenu(sender: AnyObject) {
+        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
+        
+        rightNavController.popToRootViewControllerAnimated(true)
+    }
+    
 }
 
 

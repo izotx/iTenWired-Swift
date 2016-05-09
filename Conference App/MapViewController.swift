@@ -1,4 +1,4 @@
-//
+        //
 //  MapViewController.swift
 //  Conference App
 //
@@ -257,6 +257,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
      }
      */
     
+    // Displays the menu when clicked
+    @IBAction func showMenu(sender: AnyObject) {
+        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
+        
+        rightNavController.popToRootViewControllerAnimated(true)
+    }
     
 }
 

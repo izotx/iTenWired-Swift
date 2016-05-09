@@ -99,4 +99,11 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         return [add]
     }
     
+    @IBAction func showMenu(sender: AnyObject) {
+        
+        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
+        
+        rightNavController.popToRootViewControllerAnimated(true)
+    }
+    
 }
