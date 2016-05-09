@@ -176,6 +176,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40D07A941CE0CA4C005E361B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE2623D41CAF39CF0074C58F /* Home.png */,
+				FE2623E41CAF3D820074C58F /* Settings.png */,
+				FE0E76C41CC9D0910027CEDD /* blank-image.png */,
+				FE2623E21CAF3D520074C58F /* Who.png */,
+				FE2623E01CAF3D000074C58F /* About.png */,
+				FE2623DE1CAF3CD80074C58F /* LiveBroadcast.png */,
+				FE2623DC1CAF3C800074C58F /* SocialMedia.png */,
+				FE2623DA1CAF3BDB0074C58F /* MyIten.png */,
+				FE2623D61CAF3A9A0074C58F /* Map.png */,
+				FE2623D81CAF3B2B0074C58F /* Agenda.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		D4C467C21CB84B5F00BD6157 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +237,6 @@
 				FEF7E0C81CB85329002A810B /* Home.storyboard */,
 				FE8936701CC1458100F4F103 /* Home.swift */,
 				D4C467C21CB84B5F00BD6157 /* Agenda */,
-				FE2623D41CAF39CF0074C58F /* Home.png */,
 				A12350161CB9500400B1233E /* ItineraryStoryboard.storyboard */,
 				A12350171CB9500400B1233E /* ItineraryViewController.swift */,
 				0E7A8FE41CC19D150034513C /* AppData.swift */,
@@ -229,15 +245,7 @@
 				B1C3E2DF1CC17BEA00E77ADA /* appendToMyIten.swift */,
 				0EBCE1E31CC2E128008CEA2C /* LiveBroadcast.storyboard */,
 				0EBCE1E51CC2E14E008CEA2C /* LiveBroadcastViewController.swift */,
-				FE2623E41CAF3D820074C58F /* Settings.png */,
-				FE0E76C41CC9D0910027CEDD /* blank-image.png */,
-				FE2623E21CAF3D520074C58F /* Who.png */,
-				FE2623E01CAF3D000074C58F /* About.png */,
-				FE2623DE1CAF3CD80074C58F /* LiveBroadcast.png */,
-				FE2623DC1CAF3C800074C58F /* SocialMedia.png */,
-				FE2623DA1CAF3BDB0074C58F /* MyIten.png */,
-				FE2623D61CAF3A9A0074C58F /* Map.png */,
-				FE2623D81CAF3B2B0074C58F /* Agenda.png */,
+				40D07A941CE0CA4C005E361B /* Images */,
 				FE2623AA1CAEFA940074C58F /* Main.storyboard */,
 				FE2623AD1CAEFA940074C58F /* Assets.xcassets */,
 				FE2623A81CAEFA940074C58F /* DetailViewController.swift */,

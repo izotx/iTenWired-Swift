@@ -10,7 +10,17 @@ import UIKit
 import CoreData
 import SystemConfiguration
 
+class MenuItem{
+    var storybardId = ""
+    var vcId = ""
+    var menuLabel = ""
+    
+}
+
+
+//FIXME: that needs to go
 public var Vc:[UIViewController] = [/*UINavigationController(),*/UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController()]
+
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     //initialize String for Menu List
@@ -41,9 +51,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
         
         //Intitializes and Adds new view controllers to Menu
-        Vc[0].addChildViewController(UIViewController())
+      //  Vc[0].addChildViewController(UIViewController())
         Vc[0].navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self.view, action: nil)
         
+        ///FIXME: Create list of storyboard ids and view controllers ids
         
         //Adds new initialized ViewControllers to a ViewController array
         var Sbd:UIStoryboard? = UIStoryboard.init(name: "MapView", bundle: nil)
@@ -117,6 +128,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             tv.reloadData()
         }
         
+        /** How fast is the method */
         if !MasterViewController.isConnectedToNetwork() {
             print(x)
             print("\(indexPath.row) \(x.count)")
