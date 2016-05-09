@@ -116,6 +116,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let tv = view.view as! UITableView
             tv.reloadData()
         }
+        print(x)
+        print("\(indexPath.row) \(x.count)")
         
         if !MasterViewController.isConnectedToNetwork() {
             print(x)

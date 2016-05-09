@@ -31,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         controller.presentViewController(Vc[0], animated: true, completion: nil)
         
         
-        
-        
         return true
     }
 
@@ -137,6 +135,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             }
         }
     }
-
 }
 
