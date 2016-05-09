@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connect With Us-->
+        <scene sceneID="rBb-Um-uHj">
+            <objects>
+                <viewController storyboardIdentifier="SocialMedia" title="Connect With Us" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kbL-Et-oOB" customClass="SocialMediaViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wbq-YI-sm0"/>
+                        <viewControllerLayoutGuide type="bottom" id="e6b-UT-2na"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="efu-MP-tUt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVC-vU-p2D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL2-xd-W4m">
+                                <rect key="frame" x="25" y="594" width="318" height="25"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Share on Twitter">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postToTwitter:" destination="kbL-Et-oOB" eventType="touchUpInside" id="UBc-Qv-ugf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sVC-vU-p2D" firstAttribute="centerY" secondItem="efu-MP-tUt" secondAttribute="centerY" id="B3I-yv-jqX"/>
+                            <constraint firstItem="zL2-xd-W4m" firstAttribute="centerX" secondItem="efu-MP-tUt" secondAttribute="centerX" id="J7T-1g-lc3"/>
+                            <constraint firstItem="sVC-vU-p2D" firstAttribute="top" secondItem="efu-MP-tUt" secondAttribute="topMargin" id="kBT-aa-kOF"/>
+                            <constraint firstItem="zL2-xd-W4m" firstAttribute="centerX" secondItem="efu-MP-tUt" secondAttribute="centerX" id="w7X-tf-FCO"/>
+                            <constraint firstItem="sVC-vU-p2D" firstAttribute="centerX" secondItem="efu-MP-tUt" secondAttribute="centerX" id="wvt-XV-siF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="facebookwebview" destination="sVC-vU-p2D" id="hJM-u4-lGc"/>
+                        <outlet property="twitter" destination="zL2-xd-W4m" id="m4M-uA-YvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cV7-lb-oZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2688.5" y="278.5"/>
+        </scene>
+    </scenes>
+</document>
