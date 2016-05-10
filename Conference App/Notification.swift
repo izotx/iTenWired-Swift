@@ -8,3 +8,15 @@
 
 import Foundation
 
+class Notification{
+
+    let message : String
+    //let aditionalData : NSDictionary
+    //let date : NSDate
+    
+    init(message:String, aditionalData: NSDictionary, date: NSDate){
+        self.message = message
+       // self.aditionalData = aditionalData
+       // self.date = date
+    }
+}
