@@ -11,111 +11,65 @@ import Foundation
 
 class AttendeeData{
     
-    private var attendee:Attendee = Attendee()
+    private let appData = AppData()
+    
+    private var sponsers:[Sponser] = []
+    private var exibitors:[Exibitor] = []
+    private var speackers:[Speacker] = []
+
     
     init(){
-        
-    }
-    internal func loadSponsors(data:NSData){
-        do{
-            let json = try NSJSONSerialization.JSONObjectWithData(data, options:.AllowFragments)
-            
-            if let eventsJSON = json["sponsors"] as? [NSDictionary] {
-                
-                
-                for eventJson in eventsJSON {
-                    
-                    let event =  Event(dictionary: eventJson)
-                    self.attendee.addEvent(event)
-                }
-            }
-            
-        } catch {
-            print("Error with Json: \(error)")
-        }
-        
-    }
-    //json Exhibitor
-    internal func loadExhibitor(data:NSData){
-        do{
-            let json = try NSJSONSerialization.JSONObjectWithData(data, options:.AllowFragments)
-            
-            if let eventsJSON = json["exhibitors"] as? [NSDictionary] {
-                
-                
-                for eventJson in eventsJSON {
-     
-                    let event =  Event(dictionary: eventJson)
-                    self.attendee.addEvent(event)
-                }
-            }
-            
-        } catch {
-            print("Error with Json: \(error)")
-        }
-        
-    }
-    internal func loadSpeakers(data:NSData){
-        do{
-            let json = try NSJSONSerialization.JSONObjectWithData(data, options:.AllowFragments)
-            
-            if let eventsJSON = json["speakers"] as? [NSDictionary] {
-                
-                
-                for eventJson in eventsJSON {
-                    
-                    let event =  Event(dictionary: eventJson)
-                    self.attendee.addEvent(event)
-                }
-            }
-            
-        } catch {
-            print("Error with Json: \(error)")
-        }
-        
+        loadSponsers()
+        loadExibitors()
+        loadSpeackers()
     }
     
-
-    internal func getDataFromURL(requestURL: NSURL) -> NSData?{
+    // Loads sponsers from file to memory
+    func loadSponsers(){
         
-        var locked = true       // Flag to make sure the
-        var returnData:NSData?
+        let data = appData.getDataFromFile()
         
-        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithRequest(urlRequest) {
-            (data, response, error) -> Void in
-            
-            if let httpResponse = response as? NSHTTPURLResponse {
-                
-                let statusCode = httpResponse.statusCode
-                
-                if (statusCode == 200) {
-                    returnData = data!
-                }else{
-                    print("Error while retriving data!")
-                }
-                locked = false
-                
+        if let sponsersData = data["sponsors"] as? [NSDictionary]{
+            for sponserData in sponsersData{
+                let sponser =  Sponser(dictionary: sponserData)
+                self.sponsers.append(sponser)
             }
         }
-        
-        
-        task.resume()
-        
-        while(locked){ // Runs untill the response is received
-            
-        }
-        
-        return returnData
     }
     
-    func getAttendee() -> Attendee {
-        let requestURL: NSURL = NSURL(string: "http://djmobilesoftware.com/jsondata.json")! // URL for the JSON file
-        let data:NSData = self.getDataFromURL(requestURL)!  //loads the JSON data from the URL
-        self.loadSponsors(data)
-        self.loadExhibitor(data)
-        self.loadSpeakers(data)
-        return self.attendee
+    // loads exhibitors from file to memory
+    func loadExibitors(){
+        
+        let data = self.appData.getDataFromFile()
+        if let exibitorsData = data["exhibitors"] as? [NSDictionary] {
+            for exibitorData in exibitorsData{
+                let exibitor = Exibitor(dictionary: exibitorData)
+                exibitors.append(exibitor)
+            }
+        }
+    }
+    
+    //loads speakes from file to memory
+    func loadSpeackers(){
+    
+        let data = self.appData.getDataFromFile()
+        if let speakersData = data["speakers"] as? [NSDictionary] {
+            for speakerData in speakersData {
+                let speacker = Speacker(dictionary: speakerData)
+                speackers.append(speacker)
+            }
+        }
+    }
+    
+    func getSponsers() -> [Sponser] {
+        return self.sponsers
+    }
+    
+    func getExibitors() -> [Exibitor] {
+        return self.exibitors
+    }
+    
+    func getSpeakers() -> [Speacker] {
+        return self.speackers
     }
 }

@@ -36,6 +36,7 @@ class AppData {
             print("Out of date files")
         }
     }
+    
     func getDataBear()->NSDictionary
     {
         var resultDictionary: NSData?
@@ -65,11 +66,13 @@ class AppData {
         return dictionary!
         
     }
+    
     func getDataFromFile()-> NSDictionary
     {
         checkForPurgeFiles()
         return getDataBear()
     }
+    
     func getDataFromURL(requestURL: NSURL) -> NSData?{
         
         var locked = true       // Flag to make sure the
