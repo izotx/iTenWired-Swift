@@ -35,8 +35,9 @@ class DetailViewController: UIViewController {
         self.configureView()
         
         // loads and displays the agenda for iPads
-        let view = Vc[1]
-        self.showDetailViewController(view, sender: self)
+        //TODO:
+        //let view = Vc[1]
+        //self.showDetailViewController(view, sender: self)
     }
 
     override func didReceiveMemoryWarning() {

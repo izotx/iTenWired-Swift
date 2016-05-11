@@ -12,7 +12,8 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
 
     
     @IBAction func AgendaBTN(sender: AnyObject) {
-        self.showViewController(Vc[1], sender: self)
+        //FIXME:
+        //self.showViewController(Vc[1], sender: self)
     }
     @IBOutlet weak var ItinTable: UITableView!
     var dataMyIten: appendToMyIten = appendToMyIten()

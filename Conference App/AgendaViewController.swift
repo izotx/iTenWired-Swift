@@ -115,8 +115,6 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
             let add = UITableViewRowAction(style: .Normal, title: "Add to MyIten") { action, index in
                 self.append.appendAgenda(self.agendaController.getEventAt(indexPath.row))
                 tableView.reloadData()
-                print("Selected")
-                print(indexPath.row)
             }
             add.backgroundColor = UIColor.redColor()
             return [add]

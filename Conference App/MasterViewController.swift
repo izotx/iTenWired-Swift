@@ -10,248 +10,137 @@ import UIKit
 import CoreData
 import SystemConfiguration
 
+
 class MenuItem{
-    var storybardId = ""
-    var vcId = ""
-    var menuLabel = ""
+    var storyboardId:String
+    var viewControllerId:String
+    var name:String
+    var image:UIImage
     
+    
+    init(storyboardId: String, viewControllerId: String, name: String, imageUrl: String){
+        self.storyboardId = storyboardId
+        self.viewControllerId = viewControllerId
+        self.name = name
+        self.image = UIImage(named: imageUrl)!
+    }
 }
-
-
-//FIXME: that needs to go
-public var Vc:[UIViewController] = [/*UINavigationController(),*/UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController(),UIViewController()]
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    //initialize String for Menu List
-    let x:[String] = [/*"Home",*/"Map","Agenda","My Iten","Social Media","Live Broadcast","About","Who is Here", "Settings"]
-    //assigns images to menu listß
-    let m:[UIImage] = [/*UIImage(named:"Home.png")!,*/UIImage(named:"Map.png")!,UIImage(named:"Agenda.png")!,UIImage(named:"MyIten.png")!,UIImage(named:"SocialMedia.png")!,UIImage(named:"LiveBroadcast.png")!,UIImage(named:"About.png")!,UIImage(named:"Who.png")!,UIImage(named:"Settings.png")!]
-    
-    
-    //creates new default instances of UIViewController to initialize storyboards
-    
+    var menuItems:[MenuItem] = []
     
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
     var items: NSMutableArray!
     var images: NSMutableArray!
 
-    //Entry Function
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        self.items = NSMutableArray(array: x)
-        self.images = NSMutableArray(array: m)
-        self.title = "iTen Wired"
-        self.tableView = UITableView(frame:self.view!.frame)
+        
+        // Tableview delegates
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
+        
+        // UI Config
+        self.title = "iTen Wired"
+        self.tableView = UITableView(frame:self.view!.frame)
         self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.rowHeight = CGFloat(65.00)
         self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
         
-        //Intitializes and Adds new view controllers to Menu
-      //  Vc[0].addChildViewController(UIViewController())
-        Vc[0].navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self.view, action: nil)
-        
-        ///FIXME: Create list of storyboard ids and view controllers ids
-        
-        //Adds new initialized ViewControllers to a ViewController array
-        var Sbd:UIStoryboard? = UIStoryboard.init(name: "MapView", bundle: nil)
-        var dViewController:UIViewController = Sbd!.instantiateViewControllerWithIdentifier("MapStoryboard")
-        Vc[0] = dViewController
-        
-        /*Sbd = UIStoryboard.init(name: "MapView", bundle: nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("MapStoryboard")
-        Vc[0] = dViewController*/
-        
-        Sbd = UIStoryboard.init(name: "AgendaMain", bundle: nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("AgendaInitial")
-        Vc[1] = dViewController
-        
-        Sbd = UIStoryboard.init(name: "ItineraryStoryboard", bundle: nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("Itinerary")
-        Vc[2] = dViewController
-        
-        Sbd = UIStoryboard.init(name: "SocialMedia", bundle: nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("SocialMedia")
-        Vc[3] = dViewController
-        
-        Sbd = UIStoryboard.init(name: "LiveBroadcast", bundle:nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("LiveBroadcast")
-        Vc[4] = dViewController
-        
-        Sbd = UIStoryboard.init(name: "AboutView", bundle: nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("AboutView")
-        Vc[5] = dViewController
-        
-        Sbd = UIStoryboard.init(name: "Attendees", bundle: nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("Attendee")
-        Vc[6] = dViewController
-        
-        /*Sbd = UIStoryboard.init(name: "Home", bundle: nil)
-        dViewController = Sbd!.instantiateViewControllerWithIdentifier("Home")
-        Vc[0] = dViewController*/
-     
+        // Loads menu items into array
+        self.loadMenuItems()
     }
+    
+    internal func loadMenuItems(){
+        // Loading menu items into array
+        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "Map.png")
+        self.menuItems.append(map)
+        
+        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda.png")
+        self.menuItems.append(agenda)
+        
+        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten.png")
+        self.menuItems.append(myIten)
+        
+        //let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMedia", name: "Social Media", imageUrl: "SocialMedia.png")
+        //self.menuItems.append(socialMedia)
+        
+        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast.png")
+        self.menuItems.append(liveBroadcast)
+        
+        //let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About,png")
+        //self.menuItems.append(about)
+        
+        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who.png")
+        self.menuItems.append(atendees)
+        
+        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Settings.png")
+        self.menuItems.append(notifications)
+    }
+    
     //Animates view
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
     }
-    //Memory Issues Function (UNUSED)
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
-    // MARK: - Segues
-
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-            //let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                //controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
-    }*/
-    
-    //What happens when you push a button
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
-        let view = Vc[indexPath.row]
-        if view is UITableViewController{
-            let tv = view.view as! UITableView
-            tv.reloadData()
-        }
-        print(x)
-        print("\(indexPath.row) \(x.count)")
         
-        /** How fast is the method */
-        if !MasterViewController.isConnectedToNetwork() {
-            print(x)
-            print("\(indexPath.row) \(x.count)")
-            if x[indexPath.row] == "Map" || x[indexPath.row] == "Social Media" || x[indexPath.row] == "Live Broadcast" || x[indexPath.row] == "About" || x[indexPath.row] == "Who is Here"{
+        let index = indexPath.row
+        let menuItem = menuItems[index]
+        
+        if !MasterViewController.isConnectedToNetwork(){
+            if menuItem.name == "Live Broadcast"{
+                // create the alert
+                let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
                 
-                print("Network not found")
-                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
                 
-                let pop:UIAlertController = UIAlertController(title: "No Network!", message: "This Item Is Unavailable Offline!", preferredStyle: UIAlertControllerStyle.Alert)
+                // show the alert
+                self.presentViewController(alert, animated: true, completion: nil)
                 
-                pop.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
-               
-                self.presentViewController(pop, animated: true, completion: nil)//viewControllerElement)
-                
-                            }
-            else{
-              
-                if let m = view.navigationController{
-                    m.navigationItem.setHidesBackButton(false, animated: true)
-                    m.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-                    m.navigationItem.hidesBackButton = false
-                    m.navigationItem.leftBarButtonItem = m.navigationItem.backBarButtonItem
-                    m.navigationBarHidden = false
-                }
-                if let q = self.detailViewController{
-                    q.navigationItem.setHidesBackButton(false, animated: true)
-                    q.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-                    q.navigationItem.hidesBackButton = false
-                    q.navigationItem.leftBarButtonItem = q.navigationItem.backBarButtonItem
-                    //q.navigationBarHidden = false
-                
-                }
-               /*let f = UINavigationController(rootViewController: self)
-                
-                f.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-                f.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-                f.title = "iTen Wired"
-                //f.view = view.view*/
-                self.showDetailViewController(view, sender: self)
+                return
             }
         }
-        else {
-          
-            if let m = view.navigationController{
-                m.navigationItem.setHidesBackButton(false, animated: true)
-                //m.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-                m.navigationItem.hidesBackButton = false
-                //m.navigationItem.leftBarButtonItem = m.navigationItem.backBarButtonItem
-                //m.navigationBarHidden = false
-                
-            }
-
-            if let q = self.detailViewController{
-                q.navigationItem.setHidesBackButton(false, animated: true)
-                //q.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-                q.navigationItem.hidesBackButton = false
-                //q.navigationItem.leftBarButtonItem = q.navigationItem.backBarButtonItem
-                //q.navigationBarHidden = false
-                
-            }
-            /*let f = UINavigationController(rootViewController: self)
-            
-            f.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Menu", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-            f.title = "iTen Wired"
-*/
-            self.showDetailViewController(view, sender: self)
-            
-        }
         
-                
-        
-        
-        
+        let storyboard = UIStoryboard.init(name: menuItem.storyboardId, bundle: nil)
+        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(menuItem.viewControllerId)
+        self.navigationController?.pushViewController(destinationViewController, animated: true)
     }
-    // MARK: - Table View
-
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        //return self.fetchedResultsController.sections?.count ?? 0
-    }*/
     
-    //Number of Selectable Rows
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /*let sectionInfo = self.fetchedResultsController.sections![section]
-        return sectionInfo.numberOfObjects*/
-        
-        return self.items.count;
+        return self.menuItems.count
     }
-    //Add Cells To Table View
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        /*let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
-        self.configureCell(cell, withObject: object)
-        return cell*/
+      
+        let index = indexPath.row
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel!.text = "\(self.items[indexPath.row])"
-        if let q:UIImage? = self.images[indexPath.row] as? UIImage{
+        
+        cell.textLabel!.text = menuItems[index].name
+        
+        if let q : UIImage? = menuItems[index].image{
             cell.imageView?.image = q
         }
+        
         cell.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 0.5)
-        //cell.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.75, alpha: 0.5)
         cell.textLabel?.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
+        
         let bgColorView = UIView()
+        
         bgColorView.backgroundColor = UIColor.cyanColor()
         cell.selectedBackgroundView = bgColorView
-        //cell.setValue(UIView(), forKeyPath: "Home")
-        /*if !MasterViewController.isConnectedToNetwork() {
-            if cell.textLabel!.text == "Map" {
-                cell.userInteractionEnabled = false
-            }
-            else if cell.textLabel!.text == "Social Media" {
-                cell.userInteractionEnabled = false
-            }
-        }
-        else {
-            if cell.textLabel!.text == "Map" {
-                cell.userInteractionEnabled = true
-            }
-            else if cell.textLabel!.text == "Social Media" {
-                cell.userInteractionEnabled = true
-            }
-        }*/
+        
         return cell
     }
     
@@ -259,6 +148,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
      * Voodoo Magic, Don't question it! (from stack overflow)
      * http://stackoverflow.com/users/2303865/leo-dabus : http://stackoverflow.com/questions/30743408/check-for-internet-connection-in-swift-2-ios-9
      */
+    
+    //FIXME: find better solution
     class func isConnectedToNetwork() -> Bool {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
@@ -274,35 +165,5 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
         return (isReachable && !needsConnection)
     }
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        //return true
-        return false
-    }
+
 }
-
-
-/*
-func insertNewObject(Name: String, Content: UIViewController) {
-    /* Default Code
-     let context = self.fetchedResultsController.managedObjectContext
-     let entity = self.fetchedResultsController.fetchRequest.entity!
-     let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context)
-     
-     // If appropriate, configure the new managed object.
-     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-     newManagedObject.setValue(NSDate(), forKey: "timeStamp")
-     
-     // Save the context.
-     do {
-     try context.save()
-     } catch {
-     // Replace this implementation with code to handle the error appropriately.
-     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-     //print("Unresolved error \(error), \(error.userInfo)")
-     abort()
-     }
-     */
-}
-*/
-

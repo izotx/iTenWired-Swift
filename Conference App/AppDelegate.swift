@@ -17,42 +17,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        
-       // let oneSignal = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b", handleNotification: nil)
-        
-        
+        // Recives and deals with notifications
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
             NSLog("OneSignal Notification opened:\nMessage: %@", message)
             
-            if additionalData != nil {
-                NSLog("additionalData: %@", additionalData)
-                // Check for and read any custom values you added to the notification
-                // This done with the "Additonal Data" section the dashbaord.
-                // OR setting the 'data' field on our REST API.
-                if let customKey = additionalData["customKey"] as! String? {
-                    NSLog("customKey: %@", customKey)
+                let notificationController = NotificationController()
+                let date = NSDate()
+                var data:NSDictionary = NSDictionary()
+            
+                if additionalData != nil {
+                    data = additionalData
                 }
-            }
+            
+                let notificaton = Notification(message: message, aditionalData: data, date: date)
+                notificationController.addNotification(notificaton)
         }
         
         OneSignal.defaultClient().enableInAppAlertNotification(true)
         
+        
         let appData = AppData()
         appData.initData()
-        // Override point for customization after application launch.
-        let splitViewController = self.window!.rootViewController as! UISplitViewController
+        //Override point for customization after application launch.
+       let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
-        splitViewController.delegate = self
+       splitViewController.delegate = self
 
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
         //Load Agenda as a first item
-        controller.presentViewController(Vc[0], animated: true, completion: nil)
-        
-        
-        
+        //controller.presentViewController(Vc[0], animated: true, completion: nil)
         
         return true
     }

@@ -34,6 +34,12 @@
 		5543342A1CE27E7500A6001C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554334291CE27E7500A6001C /* Notification.swift */; };
 		55450B881CE234EE00A2712E /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55450B871CE234EE00A2712E /* Speaker.swift */; };
 		55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55450B891CE23B6E00A2712E /* speakerCell.swift */; };
+		5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
+		5549801D1CE3761E00CC6E36 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
+		5549801E1CE3761F00CC6E36 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
+		554980201CE37DCC00CC6E36 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5549801F1CE37DCC00CC6E36 /* Notification.storyboard */; };
+		554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980231CE37EDC00CC6E36 /* NotificationViewController.swift */; };
+		554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980251CE3871500CC6E36 /* NotificationsCell.swift */; };
 		55881A9A1CE12729009B8399 /* loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A991CE12729009B8399 /* loc.swift */; };
 		55881A9C1CE129FF009B8399 /* Exibitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9B1CE129FF009B8399 /* Exibitor.swift */; };
 		55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9D1CE12AD3009B8399 /* Sponser.swift */; };
@@ -122,6 +128,10 @@
 		554334291CE27E7500A6001C /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		55450B871CE234EE00A2712E /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		55450B891CE23B6E00A2712E /* speakerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speakerCell.swift; sourceTree = "<group>"; };
+		5549801B1CE3734200CC6E36 /* NotificationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationList.swift; sourceTree = "<group>"; };
+		5549801F1CE37DCC00CC6E36 /* Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		554980231CE37EDC00CC6E36 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		554980251CE3871500CC6E36 /* NotificationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
 		55881A991CE12729009B8399 /* loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loc.swift; sourceTree = "<group>"; };
 		55881A9B1CE129FF009B8399 /* Exibitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exibitor.swift; sourceTree = "<group>"; };
 		55881A9D1CE12AD3009B8399 /* Sponser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponser.swift; sourceTree = "<group>"; };
@@ -229,6 +239,7 @@
 				0EE564D01CB83E6C001678B0 /* MapView.storyboard */,
 				FE2623AF1CAEFA940074C58F /* LaunchScreen.storyboard */,
 				0EBCE1E31CC2E128008CEA2C /* LiveBroadcast.storyboard */,
+				5549801F1CE37DCC00CC6E36 /* Notification.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -248,6 +259,7 @@
 				A123500D1CB945F300B1233E /* AgendaViewController.swift */,
 				0EE564D21CB83E9A001678B0 /* MapViewController.swift */,
 				A12350171CB9500400B1233E /* ItineraryViewController.swift */,
+				554980231CE37EDC00CC6E36 /* NotificationViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -276,6 +288,7 @@
 				55881A9F1CE13506009B8399 /* AttendeeProtocol.swift */,
 				55450B871CE234EE00A2712E /* Speaker.swift */,
 				554334291CE27E7500A6001C /* Notification.swift */,
+				5549801B1CE3734200CC6E36 /* NotificationList.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -294,6 +307,7 @@
 				D4C467C81CB84BA000BD6157 /* EventCell.swift */,
 				4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */,
 				55450B891CE23B6E00A2712E /* speakerCell.swift */,
+				554980251CE3871500CC6E36 /* NotificationsCell.swift */,
 			);
 			name = UIView;
 			sourceTree = "<group>";
@@ -519,6 +533,7 @@
 				D4C467D01CB84D9700BD6157 /* AgendaMain.storyboard in Resources */,
 				827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */,
 				FE2623E51CAF3D820074C58F /* Settings.png in Resources */,
+				554980201CE37DCC00CC6E36 /* Notification.storyboard in Resources */,
 				FE2623AC1CAEFA940074C58F /* Main.storyboard in Resources */,
 				4F3A78DB1CB5AAF500A87EE6 /* Attendees.storyboard in Resources */,
 				FE2623DF1CAF3CD80074C58F /* LiveBroadcast.png in Resources */,
@@ -602,6 +617,7 @@
 				B1C3E2E01CC17BEA00E77ADA /* appendToMyIten.swift in Sources */,
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,
 				0E647B331CBF2E67006DFB68 /* AnnotationDetailViewController.swift in Sources */,
+				5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */,
 				D4C467CA1CB84BA000BD6157 /* AgendaDataLoader.swift in Sources */,
 				0E7A8FE51CC19D150034513C /* AppData.swift in Sources */,
 				0E647B311CBF2E38006DFB68 /* AddAnnotation.swift in Sources */,
@@ -613,6 +629,7 @@
 				FEF7E0C71CB852B5002A810B /* EventCell.swift in Sources */,
 				55450B881CE234EE00A2712E /* Speaker.swift in Sources */,
 				4F4590E61CBEC8DE00F51BCE /* AttendeeData.swift in Sources */,
+				554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */,
 				55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */,
 				5543342A1CE27E7500A6001C /* Notification.swift in Sources */,
 				55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */,
@@ -628,6 +645,7 @@
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
 				4F4590E41CBEC85A00F51BCE /* Attendee.swift in Sources */,
 				55881AA01CE13506009B8399 /* AttendeeProtocol.swift in Sources */,
+				554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */,
 				A12350191CB9500400B1233E /* ItineraryViewController.swift in Sources */,
 				FE2623A91CAEFA940074C58F /* DetailViewController.swift in Sources */,
 				55881A9C1CE129FF009B8399 /* Exibitor.swift in Sources */,
@@ -638,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5549801D1CE3761E00CC6E36 /* NotificationList.swift in Sources */,
 				FE2623BC1CAEFA940074C58F /* Conference_AppTests.swift in Sources */,
 				552E69311CE2858B0010C3C9 /* NotificationController.swift in Sources */,
 				552E692F1CE285810010C3C9 /* Notification.swift in Sources */,
@@ -648,6 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5549801E1CE3761F00CC6E36 /* NotificationList.swift in Sources */,
 				552E69321CE2858C0010C3C9 /* NotificationController.swift in Sources */,
 				552E69301CE285810010C3C9 /* Notification.swift in Sources */,
 				FE2623C71CAEFA940074C58F /* Conference_AppUITests.swift in Sources */,
