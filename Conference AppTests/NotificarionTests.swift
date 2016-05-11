@@ -23,6 +23,8 @@ class NotificarionTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(false, "OK")
+        XCTAssertTrue(false)
     }
 
     func testPerformanceExample() {
@@ -35,21 +37,19 @@ class NotificarionTests: XCTestCase {
     func testSaveNotification(){
         
         let notificationController = NotificationController()
-        let data = NSDictionary()
-        let date = NSDate()
+       // let data = NSDictionary()
+        //let date = NSDate()
         
         // Creates a notification
-        var notification = Notification(message: "This is a notification", aditionalData: data, date: date)
+        var notification = Notification(message: "This is a notification")
         notificationController.addNotification(notification)
         
-        notification = Notification(message: "This is another notification", aditionalData: data, date: date)
+        notification = Notification(message: "This is another notification")
         notificationController.addNotification(notification)
         
         let notifications = notificationController.getAllNotifications()
         
-        for notification in notifications {
-            print(notification.message)
-        }
+        XCTAssert(false, "Notifications are equal!")
     }
 
 }

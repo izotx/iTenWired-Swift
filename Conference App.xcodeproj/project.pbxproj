@@ -27,7 +27,6 @@
 		4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4590E71CBEC98F00F51BCE /* AttendeeController.swift */; };
 		4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72CBAD1CC884BA00C30D2B /* DescriptionViewController.swift */; };
 		552E692C1CE284DC0010C3C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
-		552E692E1CE2851B0010C3C9 /* NotificarionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692D1CE2851B0010C3C9 /* NotificarionTests.swift */; };
 		552E692F1CE285810010C3C9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554334291CE27E7500A6001C /* Notification.swift */; };
 		552E69301CE285810010C3C9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554334291CE27E7500A6001C /* Notification.swift */; };
 		552E69311CE2858B0010C3C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
@@ -120,7 +119,6 @@
 		536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Conference App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		551604F11CE2720F00D46D2B /* Conference App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Conference App-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		552E692B1CE284DC0010C3C9 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		552E692D1CE2851B0010C3C9 /* NotificarionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificarionTests.swift; sourceTree = "<group>"; };
 		554334291CE27E7500A6001C /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		55450B871CE234EE00A2712E /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		55450B891CE23B6E00A2712E /* speakerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speakerCell.swift; sourceTree = "<group>"; };
@@ -370,7 +368,6 @@
 			children = (
 				FE2623BB1CAEFA940074C58F /* Conference_AppTests.swift */,
 				FE2623BD1CAEFA940074C58F /* Info.plist */,
-				552E692D1CE2851B0010C3C9 /* NotificarionTests.swift */,
 			);
 			path = "Conference AppTests";
 			sourceTree = "<group>";
@@ -641,7 +638,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				552E692E1CE2851B0010C3C9 /* NotificarionTests.swift in Sources */,
 				FE2623BC1CAEFA940074C58F /* Conference_AppTests.swift in Sources */,
 				552E69311CE2858B0010C3C9 /* NotificationController.swift in Sources */,
 				552E692F1CE285810010C3C9 /* Notification.swift in Sources */,

@@ -29,8 +29,23 @@ class Conference_AppTests: XCTestCase {
         }
     }
     
-    func testCreateNotification(){
+    func testSaveNotification(){
         
+        let notificationController = NotificationController()
+        // let data = NSDictionary()
+        //let date = NSDate()
+        print("Test")
+        // Creates a notification
+        var notification = Notification(message: "This is a notification")
+        notificationController.addNotification(notification)
+        
+        notification = Notification(message: "This is another notification")
+        notificationController.addNotification(notification)
+        
+        let notifications = notificationController.getAllNotifications()
+        
+        XCTAssert(false, "Notifications are equal!")
+        XCTFail()
+        XCTAssertTrue(false)
     }
-    
 }
