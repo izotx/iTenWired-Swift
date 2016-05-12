@@ -40,6 +40,8 @@
 		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
 		557D354A1CE4BBA300562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
+		557D354C1CE4DC8B00562A7A /* MyItenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D354B1CE4DC8B00562A7A /* MyItenController.swift */; };
+		557D354E1CE4DDDF00562A7A /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D354D1CE4DDDF00562A7A /* EventList.swift */; };
 		55881A9A1CE12729009B8399 /* loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A991CE12729009B8399 /* loc.swift */; };
 		55881A9C1CE129FF009B8399 /* Exibitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9B1CE129FF009B8399 /* Exibitor.swift */; };
 		55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9D1CE12AD3009B8399 /* Sponser.swift */; };
@@ -52,7 +54,6 @@
 		A123500E1CB945F300B1233E /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A123500D1CB945F300B1233E /* AgendaViewController.swift */; };
 		A12350181CB9500400B1233E /* ItineraryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A12350161CB9500400B1233E /* ItineraryStoryboard.storyboard */; };
 		A12350191CB9500400B1233E /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12350171CB9500400B1233E /* ItineraryViewController.swift */; };
-		B1C3E2E01CC17BEA00E77ADA /* appendToMyIten.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3E2DF1CC17BEA00E77ADA /* appendToMyIten.swift */; };
 		D4C467CA1CB84BA000BD6157 /* AgendaDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C41CB84BA000BD6157 /* AgendaDataLoader.swift */; };
 		D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C51CB84BA000BD6157 /* Agenda.swift */; };
 		D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C61CB84BA000BD6157 /* AgendaController.swift */; };
@@ -132,6 +133,8 @@
 		5549801F1CE37DCC00CC6E36 /* Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		554980231CE37EDC00CC6E36 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		554980251CE3871500CC6E36 /* NotificationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
+		557D354B1CE4DC8B00562A7A /* MyItenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItenController.swift; sourceTree = "<group>"; };
+		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		55881A991CE12729009B8399 /* loc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loc.swift; sourceTree = "<group>"; };
 		55881A9B1CE129FF009B8399 /* Exibitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exibitor.swift; sourceTree = "<group>"; };
 		55881A9D1CE12AD3009B8399 /* Sponser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponser.swift; sourceTree = "<group>"; };
@@ -144,7 +147,6 @@
 		A123500D1CB945F300B1233E /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		A12350161CB9500400B1233E /* ItineraryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItineraryStoryboard.storyboard; sourceTree = "<group>"; };
 		A12350171CB9500400B1233E /* ItineraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
-		B1C3E2DF1CC17BEA00E77ADA /* appendToMyIten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = appendToMyIten.swift; sourceTree = "<group>"; };
 		D4C467C31CB84BA000BD6157 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		D4C467C41CB84BA000BD6157 /* AgendaDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDataLoader.swift; sourceTree = "<group>"; };
 		D4C467C51CB84BA000BD6157 /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				55450B871CE234EE00A2712E /* Speaker.swift */,
 				554334291CE27E7500A6001C /* Notification.swift */,
 				5549801B1CE3734200CC6E36 /* NotificationList.swift */,
+				557D354D1CE4DDDF00562A7A /* EventList.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				4F4590E71CBEC98F00F51BCE /* AttendeeController.swift */,
 				D4C467C61CB84BA000BD6157 /* AgendaController.swift */,
 				552E692B1CE284DC0010C3C9 /* NotificationController.swift */,
+				557D354B1CE4DC8B00562A7A /* MyItenController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -368,7 +372,6 @@
 				55229BCE1CE122C70023EFD3 /* Storyboards */,
 				552E692A1CE284B60010C3C9 /* Controllers */,
 				55229BD11CE124E60023EFD3 /* Entity */,
-				B1C3E2DF1CC17BEA00E77ADA /* appendToMyIten.swift */,
 				0E647B301CBF2E38006DFB68 /* AddAnnotation.swift */,
 				FE2623AD1CAEFA940074C58F /* Assets.xcassets */,
 				FE2623A31CAEFA940074C58F /* Conference_App.xcdatamodeld */,
@@ -609,12 +612,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557D354E1CE4DDDF00562A7A /* EventList.swift in Sources */,
 				FEF7E0CB1CB858E3002A810B /* MapViewController.swift in Sources */,
+				557D354C1CE4DC8B00562A7A /* MyItenController.swift in Sources */,
 				0EBCE1E61CC2E14E008CEA2C /* LiveBroadcastViewController.swift in Sources */,
 				4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */,
 				A123500E1CB945F300B1233E /* AgendaViewController.swift in Sources */,
 				0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */,
-				B1C3E2E01CC17BEA00E77ADA /* appendToMyIten.swift in Sources */,
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,
 				0E647B331CBF2E67006DFB68 /* AnnotationDetailViewController.swift in Sources */,
 				5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */,

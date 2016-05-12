@@ -20,10 +20,9 @@ class AgendaController{
     }
     
     func getEventAt(index:Int) ->Event{
-        
-        
         return self.agenda.events[index]
     }
+    
     func getById(id:Int)->Event
     {
         var event : Event?

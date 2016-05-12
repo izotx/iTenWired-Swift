@@ -96,7 +96,7 @@
                                         <constraint firstItem="Yoc-fm-cea" firstAttribute="leading" secondItem="z2m-7Q-STt" secondAttribute="leading" id="uxX-DD-3GQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.1508229672908783" green="0.35499495267868042" blue="0.59834796190261841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.12156862745098039" green="0.27450980392156865" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dateLable" destination="NYn-AI-LEB" id="Zzv-6r-yzc"/>
                                     <outlet property="nameLable" destination="z2m-7Q-STt" id="zda-gI-jlq"/>

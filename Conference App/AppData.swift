@@ -9,6 +9,8 @@
 import Foundation
 
 class AppData {
+   
+    
     var path: String
     var mainFile: String
     var agenda: Agenda

@@ -75,8 +75,7 @@ class AttendeesViewController: UITableViewController{
             }
             
             index -= atendeeControler.getSponsersCount() + 1
-            
-            print(atendeeControler.getExibitorsCount())
+        
             if(index >= 0 && index - 1 < atendeeControler.getExibitorsCount()) {
             
                 if(index == 0){

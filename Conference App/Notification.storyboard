@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Notification View Controller-->
+        <!--Announcements-->
         <scene sceneID="10R-13-auF">
             <objects>
                 <tableViewController storyboardIdentifier="NotificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0BY-8d-2od" customClass="NotificationViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,10 +21,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mesasge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9l-ap-Zef">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mesasge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9l-ap-Zef">
                                             <rect key="frame" x="8" y="37" width="579" height="105"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.98656028510000005" green="0.6345037818" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stg-1x-ltb">
@@ -46,6 +46,7 @@
                                         <constraint firstItem="stg-1x-ltb" firstAttribute="top" secondItem="IfI-Kr-E9j" secondAttribute="topMargin" constant="15" id="w6i-sQ-2b2"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.1215686275" green="0.27450980390000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dateLabel" destination="stg-1x-ltb" id="0s9-Fx-YWz"/>
                                     <outlet property="messageLabel" destination="A9l-ap-Zef" id="jYF-nC-o9f"/>
@@ -57,7 +58,7 @@
                             <outlet property="delegate" destination="0BY-8d-2od" id="9vA-f4-em7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="g2n-zV-VwP"/>
+                    <navigationItem key="navigationItem" title="Announcements" id="g2n-zV-VwP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr5-J5-eeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
