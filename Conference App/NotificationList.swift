@@ -17,6 +17,7 @@ class NotificationList: NSObject, NSCoding{
     }
     
     required convenience init?(coder decoder: NSCoder){
+    
         guard let notifications = decoder.decodeObjectForKey("notifications") as? [Notification] else{
             return nil
         }

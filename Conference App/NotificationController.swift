@@ -19,6 +19,7 @@ class NotificationController{
         var notificationsArray = self.getAllNotifications()
         notificationsArray.append(notification)
         
+        NSKeyedArchiver.setClassName("NotificationList", forClass: NotificationList.self)
         let notificationsData = NSKeyedArchiver.archivedDataWithRootObject(NotificationList(notifications: notificationsArray))
         
         self.defaults.setObject(notificationsData, forKey: "Notifications")
@@ -40,8 +41,9 @@ class NotificationController{
         }
         
         let list = NotificationList(notifications: notificationsArray)
-        
+        NSKeyedArchiver.setClassName("NotificationList", forClass: NotificationList.self)
         let notificationsData = NSKeyedArchiver.archivedDataWithRootObject(list)
+
         self.defaults.setObject(notificationsData, forKey: "Notifications")
         self.defaults.synchronize() // Sync the defaults to update the data
     }
@@ -51,6 +53,7 @@ class NotificationController{
         let arr = [Notification]()
         var notificationsArray = NotificationList(notifications: arr)
         
+        NSKeyedUnarchiver.setClass(NotificationList.self, forClassName: "NotificationList")
         if let data = self.defaults.objectForKey("Notifications") as? NSData{
             if let notifications = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? NotificationList {
                 notificationsArray = notifications

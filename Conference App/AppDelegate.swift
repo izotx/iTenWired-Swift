@@ -14,9 +14,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
+    var testMe = false
+    
+    func testingNotifications(){
+        let notificationController = NotificationController()
+        let data = NSDictionary()
+        let date = NSDate()
+        // Creates a notification
+        var notification = Notification(message: "This is a notification", aditionalData: data, date: date)
+        notificationController.addNotification(notification)
+        
+        notification = Notification(message: "This is another notification", aditionalData: data, date: date)
+        notificationController.addNotification(notification)
 
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        if testMe{
+            testingNotifications()
+        }
          
         // Recives and deals with notifications
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
