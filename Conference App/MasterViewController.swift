@@ -71,8 +71,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten.png")
         self.menuItems.append(myIten)
         
-        //let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMedia", name: "Social Media", imageUrl: "SocialMedia.png")
-        //self.menuItems.append(socialMedia)
+        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "TwitterViewController", name: "Social Media", imageUrl: "SocialMedia.png")
+        self.menuItems.append(socialMedia)
         
         let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast.png")
         self.menuItems.append(liveBroadcast)
