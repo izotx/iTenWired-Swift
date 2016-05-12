@@ -11,9 +11,28 @@ import UIKit
 class NotificationsCell: UITableViewCell {
     
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+  
     
     func build(notification:Notification){
         self.messageLabel.text  = notification.message
+        
+        // Format the date
+        let dateFormater = NSDateFormatter()
+        dateFormater.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormater.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        var dateString = NSDateFormatter.localizedStringFromDate(notification.date, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        
+        
+        self.dateLabel.text = dateString
+        
+        
+        if notification.isDone {
+        
+        }else{
+            self.backgroundColor = UIColor.grayColor()
+        }
     }
     
 }

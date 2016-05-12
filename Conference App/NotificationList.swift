@@ -11,7 +11,6 @@ import Foundation
 class NotificationList: NSObject, NSCoding{
 
     var notifications: [Notification] = []
-    
 
     init(notifications:[Notification]) {
             self.notifications = notifications
@@ -38,5 +37,13 @@ class NotificationList: NSObject, NSCoding{
     
     func count() -> Int {
         return self.notifications.count
+    }
+    
+    func getArray() -> [Notification]{
+        return self.notifications
+    }
+    
+    func updateNotification(notification:Notification, atIndex:Int){
+        self.notifications.insert(notification,atIndex: atIndex)
     }
 }

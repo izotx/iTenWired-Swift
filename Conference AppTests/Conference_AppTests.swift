@@ -44,11 +44,10 @@ class Conference_AppTests: XCTestCase {
         let notifications = notificationController.getAllNotifications()
         
         // Test Assert
-        let notification0 = notifications.getAtIndex(0)
-        let notification1 = notifications.getAtIndex(1)
-        
-        print(notifications.getAtIndex(0).message)
-        print(notifications.getAtIndex(1).message)
+        let notification0 = notifications[0]
+        let notification1 = notifications[1]
+        print(notifications[0].message)
+        print(notifications[1].message)
         
         XCTAssert(notification0.message == "This is another notification" || notification1.message == "This is another notification" , "Notifications are not equal!")
         XCTAssert(notification1.message == "This is a notification" || notification0.message == "This is a notification", "Notifications are not equal!")

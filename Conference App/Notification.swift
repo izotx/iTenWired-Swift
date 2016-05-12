@@ -13,6 +13,7 @@ class Notification: NSObject, NSCoding{
     let message : String
     let aditionalData : NSDictionary
     let date : NSDate
+    var isDone:Bool = false
     
     init(message:String, aditionalData: NSDictionary, date: NSDate){
         self.message = message
@@ -37,4 +38,9 @@ class Notification: NSObject, NSCoding{
         coder.encodeObject(self.aditionalData, forKey: "data")
         coder.encodeObject(self.date, forKey: "date")
     }
+    
+    func setDone(done:Bool){
+        self.isDone = done
+    }
+    
 }

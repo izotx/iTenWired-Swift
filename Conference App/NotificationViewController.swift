@@ -18,13 +18,13 @@ class NotificationViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let notifications = notificationController.getAllNotifications()
-        return notifications.count()
+        return notifications.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let notificationController = NotificationController()
-        let notification = notificationController.getAllNotifications().getAtIndex(indexPath.row)
+        let notification = notificationController.getAllNotifications()[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("NotificationsCell") as? NotificationsCell
         
         cell?.build(notification)

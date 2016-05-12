@@ -43,6 +43,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         
         super.viewDidLoad()
+    
         
         // Tableview delegates
         self.tableView!.delegate = self

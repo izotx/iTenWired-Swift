@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B7z-BC-sIf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -9,32 +9,45 @@
         <scene sceneID="10R-13-auF">
             <objects>
                 <tableViewController storyboardIdentifier="NotificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0BY-8d-2od" customClass="NotificationViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wf0-8u-lpl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wf0-8u-lpl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NotificationsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationsCell" rowHeight="98" id="Eyd-g0-QFq" customClass="NotificationsCell" customModule="Conference_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="98"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NotificationsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationsCell" rowHeight="170" id="Eyd-g0-QFq" customClass="NotificationsCell" customModule="Conference_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyd-g0-QFq" id="IfI-Kr-E9j">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9l-ap-Zef">
-                                            <rect key="frame" x="13" y="38" width="579" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mesasge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9l-ap-Zef">
+                                            <rect key="frame" x="8" y="37" width="579" height="124"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stg-1x-ltb">
+                                            <rect key="frame" x="8" y="23" width="416" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="416" id="NE6-rO-HP2"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="centerY" secondItem="IfI-Kr-E9j" secondAttribute="centerY" id="7xZ-PD-2Of"/>
-                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="leading" secondItem="IfI-Kr-E9j" secondAttribute="leadingMargin" constant="5" id="8hW-2z-ND2"/>
-                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="trailing" secondItem="IfI-Kr-E9j" secondAttribute="trailingMargin" id="Gfq-5B-3Ja"/>
+                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="bottom" secondItem="IfI-Kr-E9j" secondAttribute="bottomMargin" id="9i4-T5-fHV"/>
+                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="top" secondItem="IfI-Kr-E9j" secondAttribute="topMargin" constant="29" id="T5S-KJ-0WF"/>
+                                        <constraint firstItem="stg-1x-ltb" firstAttribute="leading" secondItem="IfI-Kr-E9j" secondAttribute="leadingMargin" id="aam-PH-fZd"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="A9l-ap-Zef" secondAttribute="trailing" constant="5" id="tRE-Nv-cpi"/>
+                                        <constraint firstItem="stg-1x-ltb" firstAttribute="leading" secondItem="A9l-ap-Zef" secondAttribute="leading" id="vuQ-uG-j0t"/>
+                                        <constraint firstItem="stg-1x-ltb" firstAttribute="top" secondItem="IfI-Kr-E9j" secondAttribute="topMargin" constant="15" id="w6i-sQ-2b2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateLabel" destination="stg-1x-ltb" id="0s9-Fx-YWz"/>
                                     <outlet property="messageLabel" destination="A9l-ap-Zef" id="jYF-nC-o9f"/>
                                 </connections>
                             </tableViewCell>
@@ -44,10 +57,67 @@
                             <outlet property="delegate" destination="0BY-8d-2od" id="9vA-f4-em7"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="g2n-zV-VwP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr5-J5-eeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="369"/>
+            <point key="canvasLocation" x="777" y="377"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fAe-M6-BBa">
+            <objects>
+                <navigationController id="B7z-BC-sIf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cwI-JC-YmM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0BY-8d-2od" kind="relationship" relationship="rootViewController" id="KJg-9U-DAF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9A9-Dr-pBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="369"/>
+        </scene>
+        <!--notificationDetail-->
+        <scene sceneID="CcB-Ov-h5j">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8D-CB-lg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="notificationDetail" title="notificationDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DWv-Cs-Tvw" customClass="NotificationDetail" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7v-gy-1a8"/>
+                        <viewControllerLayoutGuide type="bottom" id="aSQ-am-ZI8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7zf-ct-10s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6Ep-eh-sc7">
+                                <rect key="frame" x="20" y="220" width="560" height="360"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6Ep-eh-sc7" secondAttribute="bottom" constant="20" symbolic="YES" id="lEo-Ft-yze"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0LC-44-o9n">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="UlN-SP-dsN">
+                            <connections>
+                                <action selector="showMenu:" destination="DWv-Cs-Tvw" id="7hZ-W3-qQr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutTextView" destination="6Ep-eh-sc7" id="0Ph-oa-1Qq"/>
+                        <outlet property="messageLabel" destination="6Ep-eh-sc7" id="hII-Ec-BSc"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="804" y="1065"/>
         </scene>
     </scenes>
 </document>

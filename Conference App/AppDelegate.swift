@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+         
         // Recives and deals with notifications
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
             NSLog("OneSignal Notification opened:\nMessage: %@", message)
@@ -31,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             
                 let notificaton = Notification(message: message, aditionalData: data, date: date)
                 notificationController.addNotification(notificaton)
+            
+                UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
         }
         
         OneSignal.defaultClient().enableInAppAlertNotification(true)

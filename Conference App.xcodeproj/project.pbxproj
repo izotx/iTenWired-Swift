@@ -29,17 +29,17 @@
 		552E692C1CE284DC0010C3C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
 		552E692F1CE285810010C3C9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554334291CE27E7500A6001C /* Notification.swift */; };
 		552E69301CE285810010C3C9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554334291CE27E7500A6001C /* Notification.swift */; };
-		552E69311CE2858B0010C3C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
-		552E69321CE2858C0010C3C9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
 		5543342A1CE27E7500A6001C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554334291CE27E7500A6001C /* Notification.swift */; };
 		55450B881CE234EE00A2712E /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55450B871CE234EE00A2712E /* Speaker.swift */; };
 		55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55450B891CE23B6E00A2712E /* speakerCell.swift */; };
 		5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
-		5549801D1CE3761E00CC6E36 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
-		5549801E1CE3761F00CC6E36 /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		554980201CE37DCC00CC6E36 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5549801F1CE37DCC00CC6E36 /* Notification.storyboard */; };
 		554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980231CE37EDC00CC6E36 /* NotificationViewController.swift */; };
 		554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980251CE3871500CC6E36 /* NotificationsCell.swift */; };
+		557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
+		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
+		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
+		557D354A1CE4BBA300562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
 		55881A9A1CE12729009B8399 /* loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A991CE12729009B8399 /* loc.swift */; };
 		55881A9C1CE129FF009B8399 /* Exibitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9B1CE129FF009B8399 /* Exibitor.swift */; };
 		55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9D1CE12AD3009B8399 /* Sponser.swift */; };
@@ -656,9 +656,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5549801D1CE3761E00CC6E36 /* NotificationList.swift in Sources */,
 				FE2623BC1CAEFA940074C58F /* Conference_AppTests.swift in Sources */,
-				552E69311CE2858B0010C3C9 /* NotificationController.swift in Sources */,
+				557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */,
+				557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */,
 				552E692F1CE285810010C3C9 /* Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,9 +667,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5549801E1CE3761F00CC6E36 /* NotificationList.swift in Sources */,
-				552E69321CE2858C0010C3C9 /* NotificationController.swift in Sources */,
 				552E69301CE285810010C3C9 /* Notification.swift in Sources */,
+				557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */,
+				557D354A1CE4BBA300562A7A /* NotificationController.swift in Sources */,
 				FE2623C71CAEFA940074C58F /* Conference_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

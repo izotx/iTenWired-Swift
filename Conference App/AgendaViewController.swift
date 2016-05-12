@@ -140,7 +140,6 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
             let destinationViewController: EventViewController
             = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
             
