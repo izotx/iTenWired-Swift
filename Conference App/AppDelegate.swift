@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
-    var testMe = false
+    var testMe = true
     
     func testingNotifications(){
         let notificationController = NotificationController()
@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         var notification = Notification(message: "This is a notification", aditionalData: data, date: date)
         notificationController.addNotification(notification)
         
-        notification = Notification(message: "This is another notification", aditionalData: data, date: date)
-        notificationController.addNotification(notification)
+        //notification = Notification(message: "This is another notification", aditionalData: data, date: date)
+        //notificationController.addNotification(notification)
 
     }
     
@@ -34,7 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         if testMe{
             testingNotifications()
         }
-         
+        
+        let notificationController = NotificationController()
+        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
+        
         // Recives and deals with notifications
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
             NSLog("OneSignal Notification opened:\nMessage: %@", message)
@@ -49,8 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             
                 let notificaton = Notification(message: message, aditionalData: data, date: date)
                 notificationController.addNotification(notificaton)
-            
-                UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
         }
         
         OneSignal.defaultClient().enableInAppAlertNotification(true)

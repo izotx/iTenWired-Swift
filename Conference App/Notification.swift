@@ -15,6 +15,13 @@ class Notification: NSObject, NSCoding{
     let date : NSDate
     var isDone:Bool = false
     
+    init(message:String, aditionalData: NSDictionary, date: NSDate, isDone:Bool){
+        self.message = message
+        self.aditionalData = aditionalData
+        self.date = date
+        self.isDone = isDone
+    }
+    
     init(message:String, aditionalData: NSDictionary, date: NSDate){
         self.message = message
         self.aditionalData = aditionalData
@@ -25,18 +32,20 @@ class Notification: NSObject, NSCoding{
         
         guard let message = decoder.decodeObjectForKey("message") as? String,
             let aditionalData = decoder.decodeObjectForKey("data") as? NSDictionary,
-            let date = decoder.decodeObjectForKey("date") as? NSDate
+            let date = decoder.decodeObjectForKey("date") as? NSDate,
+            let isDone = decoder.decodeBoolForKey("isDone") as? Bool
         else{
             return nil
         }
         
-        self.init(message: message, aditionalData: aditionalData, date: date)
+        self.init(message: message, aditionalData: aditionalData, date: date, isDone:isDone)
     }
     
     func encodeWithCoder(coder: NSCoder) {
         coder.encodeObject(self.message, forKey: "message")
         coder.encodeObject(self.aditionalData, forKey: "data")
         coder.encodeObject(self.date, forKey: "date")
+        coder.encodeBool(self.isDone, forKey: "isDone")
     }
     
     func setDone(done:Bool){

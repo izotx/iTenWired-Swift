@@ -29,6 +29,13 @@ class NotificationViewController: UITableViewController {
         
         cell?.build(notification)
         
+        if notification.isDone == false {
+            notification.setDone(true)
+            notificationController.deleteNotification(notification)
+            notificationController.addNotification(notification)
+        }
+
+        
         return cell!
     }
 }

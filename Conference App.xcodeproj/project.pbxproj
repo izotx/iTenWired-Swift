@@ -296,6 +296,8 @@
 		552E692A1CE284B60010C3C9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4F4590E71CBEC98F00F51BCE /* AttendeeController.swift */,
+				D4C467C61CB84BA000BD6157 /* AgendaController.swift */,
 				552E692B1CE284DC0010C3C9 /* NotificationController.swift */,
 			);
 			name = Controllers;
@@ -366,9 +368,7 @@
 				55229BCE1CE122C70023EFD3 /* Storyboards */,
 				552E692A1CE284B60010C3C9 /* Controllers */,
 				55229BD11CE124E60023EFD3 /* Entity */,
-				D4C467C61CB84BA000BD6157 /* AgendaController.swift */,
 				B1C3E2DF1CC17BEA00E77ADA /* appendToMyIten.swift */,
-				4F4590E71CBEC98F00F51BCE /* AttendeeController.swift */,
 				0E647B301CBF2E38006DFB68 /* AddAnnotation.swift */,
 				FE2623AD1CAEFA940074C58F /* Assets.xcassets */,
 				FE2623A31CAEFA940074C58F /* Conference_App.xcdatamodeld */,

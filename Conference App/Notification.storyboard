@@ -9,22 +9,22 @@
         <scene sceneID="10R-13-auF">
             <objects>
                 <tableViewController storyboardIdentifier="NotificationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0BY-8d-2od" customClass="NotificationViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wf0-8u-lpl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="151" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wf0-8u-lpl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NotificationsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationsCell" rowHeight="170" id="Eyd-g0-QFq" customClass="NotificationsCell" customModule="Conference_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="170"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NotificationsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationsCell" rowHeight="151" id="Eyd-g0-QFq" customClass="NotificationsCell" customModule="Conference_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="151"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eyd-g0-QFq" id="IfI-Kr-E9j">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="169"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mesasge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9l-ap-Zef">
-                                            <rect key="frame" x="8" y="37" width="579" height="124"/>
+                                            <rect key="frame" x="8" y="37" width="579" height="105"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stg-1x-ltb">
@@ -33,16 +33,16 @@
                                                 <constraint firstAttribute="width" constant="416" id="NE6-rO-HP2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="bottom" secondItem="IfI-Kr-E9j" secondAttribute="bottomMargin" id="9i4-T5-fHV"/>
-                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="top" secondItem="IfI-Kr-E9j" secondAttribute="topMargin" constant="29" id="T5S-KJ-0WF"/>
+                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="leading" secondItem="stg-1x-ltb" secondAttribute="leading" id="2tY-HT-06f"/>
+                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="top" secondItem="IfI-Kr-E9j" secondAttribute="topMargin" constant="29" id="5xa-rK-nQg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="A9l-ap-Zef" secondAttribute="trailing" constant="5" id="TUu-IW-BjL"/>
+                                        <constraint firstItem="A9l-ap-Zef" firstAttribute="bottom" secondItem="IfI-Kr-E9j" secondAttribute="bottomMargin" id="ZEr-6t-Ilc"/>
                                         <constraint firstItem="stg-1x-ltb" firstAttribute="leading" secondItem="IfI-Kr-E9j" secondAttribute="leadingMargin" id="aam-PH-fZd"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="A9l-ap-Zef" secondAttribute="trailing" constant="5" id="tRE-Nv-cpi"/>
-                                        <constraint firstItem="stg-1x-ltb" firstAttribute="leading" secondItem="A9l-ap-Zef" secondAttribute="leading" id="vuQ-uG-j0t"/>
                                         <constraint firstItem="stg-1x-ltb" firstAttribute="top" secondItem="IfI-Kr-E9j" secondAttribute="topMargin" constant="15" id="w6i-sQ-2b2"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -82,7 +82,6 @@
         <!--notificationDetail-->
         <scene sceneID="CcB-Ov-h5j">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W8D-CB-lg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="notificationDetail" title="notificationDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DWv-Cs-Tvw" customClass="NotificationDetail" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o7v-gy-1a8"/>
@@ -116,6 +115,7 @@
                         <outlet property="messageLabel" destination="6Ep-eh-sc7" id="hII-Ec-BSc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8D-CB-lg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804" y="1065"/>
         </scene>

@@ -29,7 +29,7 @@ class NotificationsCell: UITableViewCell {
         
         
         if notification.isDone {
-        
+           self.backgroundColor = UIColor.whiteColor()
         }else{
             self.backgroundColor = UIColor.grayColor()
         }

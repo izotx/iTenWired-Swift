@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class NotificationController{
@@ -19,11 +20,15 @@ class NotificationController{
         var notificationsArray = self.getAllNotifications()
         notificationsArray.append(notification)
         
-        NSKeyedArchiver.setClassName("NotificationList", forClass: NotificationList.self)
+       // NSKeyedArchiver.setClassName("NotificationList", forClass: NotificationList.self)
         let notificationsData = NSKeyedArchiver.archivedDataWithRootObject(NotificationList(notifications: notificationsArray))
         
         self.defaults.setObject(notificationsData, forKey: "Notifications")
         self.defaults.synchronize() // Sync the defaults to update the data
+        
+        if notification.isDone == false{
+            UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        }
     }
     
     func deleteNotification(notification:Notification){
@@ -32,7 +37,9 @@ class NotificationController{
         
         
         for var index in Range(start: 0,end: notificationsArray.count) {
-            if notificationsArray[index].date.isEqualToDate(notification.date){
+            if notificationsArray[index].date.isEqualToDate(notification.date)
+                && notificationsArray[index].message == notification.message
+            {
                 print(notificationsArray[index].date)
                 print(notification.date)
                 notificationsArray.removeAtIndex(index)
@@ -46,6 +53,8 @@ class NotificationController{
 
         self.defaults.setObject(notificationsData, forKey: "Notifications")
         self.defaults.synchronize() // Sync the defaults to update the data
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber - 1
     }
     
     
