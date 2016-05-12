@@ -33,7 +33,7 @@ class Notification: NSObject, NSCoding{
         guard let message = decoder.decodeObjectForKey("message") as? String,
             let aditionalData = decoder.decodeObjectForKey("data") as? NSDictionary,
             let date = decoder.decodeObjectForKey("date") as? NSDate,
-            let isDone = decoder.decodeBoolForKey("isDone") as? Bool
+            let isDone: Bool = decoder.decodeBoolForKey("isDone")
         else{
             return nil
         }

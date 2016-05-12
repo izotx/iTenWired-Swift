@@ -22,7 +22,7 @@ class NotificationsCell: UITableViewCell {
         dateFormater.dateStyle = NSDateFormatterStyle.ShortStyle
         dateFormater.timeStyle = NSDateFormatterStyle.ShortStyle
         
-        var dateString = NSDateFormatter.localizedStringFromDate(notification.date, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+        let dateString = NSDateFormatter.localizedStringFromDate(notification.date, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
         
         
         self.dateLabel.text = dateString

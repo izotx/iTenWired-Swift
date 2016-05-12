@@ -16,6 +16,9 @@ class AboutData {
     var logo = ""
     
     init() {
+        
+        //FIXME: Remove Networkig code
+        
         // Get the JSON File
         let urlString = "http://djmobilesoftware.com/jsondata.json"
         let url = NSURL(string: urlString)
@@ -28,8 +31,7 @@ class AboutData {
                     print("error: \(error.localizedDescription): \(error.userInfo)")
                 }
                 else if let data = data {
-                    if let str = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                        //print("Received data:\n\(str)")
+                    if NSString(data: data, encoding: NSUTF8StringEncoding) != nil {
                         
                         do {
                             // Convert the JSON to Dictionary
@@ -88,6 +90,4 @@ class AboutData {
     func showContent()->String {
         return self.content
     }
-    
-
 }

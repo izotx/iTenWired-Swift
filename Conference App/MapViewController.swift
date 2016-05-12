@@ -155,7 +155,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         // All locations "loc" are stored in this array and converted into annotations
         for locs in locArray {
-            if let tempLat = CLLocationDegrees(locs.latitude), let tempLong = CLLocationDegrees(locs.longitude), let tempName = locs.name as? String, let tempDesc = locs.description as? String {
+            if let tempLat = CLLocationDegrees(locs.latitude), let tempLong = CLLocationDegrees(locs.longitude), let tempName:String = locs.name, let tempDesc:String = locs.description {
             
                 let tempCoord = CLLocationCoordinate2D(latitude: CLLocationDegrees(tempLat), longitude: CLLocationDegrees(tempLong))
                 latSum += Double(tempLat)
@@ -171,10 +171,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         // Add annotations to the map
         if !(annotationArray.isEmpty) {
             self.mainMap.addAnnotations(annotationArray)
-            
-            //        for locs in annotationArray {
-            //            self.mainMap.selectAnnotation(locs, animated: false)
-            //        }
             
             // Gets the average coordinates to center the map region on
             latSum = latSum/count
@@ -219,7 +215,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var locationStatus : NSString = "Not Started"
     // authorization status
     
-    func locationManager(manager: CLLocationManager!,
+    func locationManager(manager: CLLocationManager,
                          didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         var shouldIAllow = false
         

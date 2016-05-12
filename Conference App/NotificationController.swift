@@ -36,7 +36,7 @@ class NotificationController{
         var notificationsArray = self.getAllNotifications()
         
         
-        for var index in Range(start: 0,end: notificationsArray.count) {
+        for index in Range(0 ..< notificationsArray.count) {
             if notificationsArray[index].date.isEqualToDate(notification.date)
                 && notificationsArray[index].message == notification.message
             {

@@ -42,17 +42,17 @@ class AppData {
         var resultDictionary: NSData?
         var dictionary: NSDictionary?
         do {
-            resultDictionary = try NSData(contentsOfFile:path)
+            resultDictionary =  NSData(contentsOfFile:path)
             if((resultDictionary) != nil)
             {
-                dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as! NSDictionary
+                dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as? NSDictionary
             }
             else
             {
                 initData()
                 do {
-                    resultDictionary = try NSData(contentsOfFile:path)
-                    dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as! NSDictionary
+                    resultDictionary =  NSData(contentsOfFile:path)
+                    dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as? NSDictionary
                 }
                 catch {
                     
@@ -64,7 +64,6 @@ class AppData {
         }
         
         return dictionary!
-        
     }
     
     func getDataFromFile()-> NSDictionary
@@ -110,30 +109,18 @@ class AppData {
     //
     func checkForPurgeFiles()
     {
-        var pastDate: Bool = false
-        var data: NSDictionary = getDataBear()
         
-        do{
+        let data: NSDictionary = getDataBear()
+        
+        if let eventsJSON = data["events"] as? [NSDictionary] {
             
-            
-            if let eventsJSON = data["events"] as? [NSDictionary] {
-                
-                
-                for eventJson in eventsJSON {
+            for eventJson in eventsJSON {
                     
-                    let event =  Event(dictionary: eventJson)
-                    agenda.addEvent(event)
-                }
+                let event =  Event(dictionary: eventJson)
+                agenda.addEvent(event)
             }
-            
-        } catch {
-            print("Error with file: \(error)")
-            
         }
-        let allUnits = NSCalendarUnit(rawValue: UInt.max)
-        var date = NSDate()
-        let components = NSCalendar.currentCalendar().components(allUnits, fromDate: date)
-        
+    
         for event in agenda.events
         {
             var dateFromString:[Int] = [Int]()
@@ -141,14 +128,6 @@ class AppData {
             dateFromString.append(Int(dateString[0])!)
             dateFromString.append(Int(dateString[1])!)
             dateFromString.append(Int(dateString[2])!)
-            
-            
-            if(status)
-            {
-                var m = components.month
-                var y = components.year
-               //status =  !(y > dateFromString[2] || (m > dateFromString[0] &&   y == dateFromString[2]))
-            }
             
         }
         if(!status)

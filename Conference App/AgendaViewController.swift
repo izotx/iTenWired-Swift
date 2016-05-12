@@ -25,7 +25,7 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         tableView.estimatedRowHeight = 85.0
         tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
         
-        let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AgendaViewController.handleTap(_:)))
         tap.delegate = self
         self.view.addGestureRecognizer(tap)
         
@@ -125,7 +125,6 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
             add.backgroundColor = UIColor.greenColor()
             return [add]
         }
-        return []
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

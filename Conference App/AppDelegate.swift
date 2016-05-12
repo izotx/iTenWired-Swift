@@ -14,14 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
-    var testMe = true
+    var testMe = false
     
     func testingNotifications(){
         let notificationController = NotificationController()
         let data = NSDictionary()
         let date = NSDate()
         // Creates a notification
-        var notification = Notification(message: "This is a notification", aditionalData: data, date: date)
+        let notification = Notification(message: "This is a notification", aditionalData: data, date: date)
         notificationController.addNotification(notification)
         
         //notification = Notification(message: "This is another notification", aditionalData: data, date: date)

@@ -122,7 +122,7 @@ class LiveBroadcastViewController: UIViewController {
     func startAudio() {
         
         // Creates a timer that updates the duration labels (HH:MM:SS), calls audioDuration()
-        let newtimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("audioDuration"), userInfo: nil, repeats: true)
+        let newtimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LiveBroadcastViewController.audioDuration), userInfo: nil, repeats: true)
         timer.invalidate()
         timer = newtimer
         

@@ -39,7 +39,7 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
     }
     //s
     @IBAction func Clear(sender: AnyObject) {
-        var appData = AppData()
+        let appData = AppData()
         appData.clearItin()
         dataMyIten.reloadData()
         ItinTable.reloadData()
