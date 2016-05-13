@@ -24,8 +24,8 @@ class SpeakerCell: UITableViewCell {
     }
 
     
-    func build(speacker:Speacker){
-        setName(speacker.name)
-        setJobTitle(speacker.jobTitle)
+    func build(speaker:Speaker){
+        setName(speaker.name)
+        setJobTitle(speaker.jobTitle)
     }
 }

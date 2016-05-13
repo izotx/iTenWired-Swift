@@ -10,7 +10,7 @@
 import Foundation
 
 
-class Speacker : AttendeeProtocol {
+class Speaker : AttendeeProtocol {
 
     var id:Int = 0
     var name = ""

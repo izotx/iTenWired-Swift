@@ -43,8 +43,6 @@ class SocialMediaViewController: UIViewController {
         let requestObj = NSURLRequest(URL: url!);
         facebookwebview.loadRequest(requestObj);
         
-        // print("IN VC: \(socialMediaJSON.content)")
-        
     }
 
     override func didReceiveMemoryWarning() {

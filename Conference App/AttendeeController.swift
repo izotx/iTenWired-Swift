@@ -28,7 +28,7 @@ class AttendeeController{
         return self.getExibitors().count
     }
     
-    func getSpeakers() -> [Speacker] {
+    func getSpeakers() -> [Speaker] {
         return self.dataLoader.getSpeakers()
     }
     
@@ -53,7 +53,7 @@ class AttendeeController{
         return self.getExibitors()[index]
     }
     
-    func getSpeackerAtIndex(index: Int) -> Speacker {
+    func getSpeackerAtIndex(index: Int) -> Speaker {
         return self.getSpeakers()[index]
     }
     
