@@ -12,37 +12,28 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
 
     
     @IBAction func AgendaBTN(sender: AnyObject) {
-        self.showViewController(Vc[1], sender: self)
+        //FIXME:
+        //self.showViewController(Vc[1], sender: self)
     }
     @IBOutlet weak var ItinTable: UITableView!
-    var dataMyIten: appendToMyIten = appendToMyIten()
     
+    let myItenController = MyItenController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.ItinTable.delegate = self
         self.ItinTable.dataSource = self
-        
-        
         ItinTable.estimatedRowHeight = 85.0
         ItinTable.rowHeight = UITableViewAutomaticDimension
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     
     override func viewWillAppear(animated: Bool) {
-        dataMyIten.reloadData()
         ItinTable.reloadData()
     }
-    //s
-    @IBAction func Clear(sender: AnyObject) {
-        var appData = AppData()
-        appData.clearItin()
-        dataMyIten.reloadData()
-        ItinTable.reloadData()
-    }
+    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,13 +44,13 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataMyIten.events.count
+        return myItenController.getMyItenEvents().count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventCell
-        let event = dataMyIten.events[indexPath.row]
+        let event = myItenController.getMyItenEvents()[indexPath.row]
         
         cell.setName(event.name)
         cell.setStartTime(event.timeStart)
@@ -73,7 +64,7 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         let destinationViewController: EventViewController
             = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
         
-        let event = dataMyIten.events[indexPath.row]
+        let event = myItenController.getMyItenEvents()[indexPath.row]
         destinationViewController.event = event
         
         self.navigationController?.pushViewController(destinationViewController, animated: true)
@@ -81,22 +72,17 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
         ItinTable.reloadData()
     }
+    
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
-        
-        
-        let add = UITableViewRowAction(style: .Normal, title: "Remove from my Iten") { action, index in
-            self.dataMyIten.removeData(self.dataMyIten.events[indexPath.row].id)
-            self.dataMyIten.reloadData()
-            self.ItinTable.reloadData()
-            print("Selected")
-            print(indexPath.row)
-            
+        let delete = UITableViewRowAction(style: .Normal, title: "Remove from my Iten") { action, index in
+            self.myItenController.deleteFromMyIten(self.myItenController.getMyItenEvents()[indexPath.row])
+            tableView.reloadData()
         }
-        add.backgroundColor = UIColor.lightGrayColor()
+        delete.backgroundColor = UIColor.lightGrayColor()
         
         
-        return [add]
+        return [delete]
     }
     
     @IBAction func showMenu(sender: AnyObject) {

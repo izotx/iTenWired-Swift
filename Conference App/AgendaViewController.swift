@@ -11,10 +11,10 @@ import UIKit
 class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
 
     var agendaController:AgendaController = AgendaController()
-    var append = appendToMyIten()
     var fistTouch:Bool = false
     let swipeImageIndex = 2
     
+    let myItenController = MyItenController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +25,21 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         tableView.estimatedRowHeight = 85.0
         tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
         
-        let tap = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AgendaViewController.handleTap(_:)))
         tap.delegate = self
         self.view.addGestureRecognizer(tap)
         
     }
     
     func handleTap(sender: UITapGestureRecognizer? = nil) {
-        
-        
         if(!fistTouch){
             fistTouch = true
             tableView.reloadData()
         }
-        
-        
+
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        
         
         if(!fistTouch){
             fistTouch = true
@@ -60,11 +56,9 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
             
                 return false
             }
-            
         }
         
         return true
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,13 +71,9 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        
-       
-        
         if(section == 0){
             return agendaController.getEventsCount()
         }
-        
         return 0
     }
 
@@ -109,25 +99,11 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
     
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
-        let appendData: appendToMyIten = appendToMyIten()
-        if(appendData.getFileInIten(self.agendaController.getEventAt(indexPath.row).id))
-        {
-            let add = UITableViewRowAction(style: .Normal, title: "Add to MyIten") { action, index in
-                self.append.appendAgenda(self.agendaController.getEventAt(indexPath.row))
-                tableView.reloadData()
-                print("Selected")
-                print(indexPath.row)
-            }
-            add.backgroundColor = UIColor.redColor()
-            return [add]
+        let add = UITableViewRowAction(style: .Normal, title: "Add"){action, index in
+            self.myItenController.addToMyIten(self.agendaController.getEventAt(indexPath.row))
+            tableView.reloadData()
         }
-        else{
-            let add = UITableViewRowAction(style: .Normal, title: "Already added") { action, index in
-            }
-            add.backgroundColor = UIColor.greenColor()
-            return [add]
-        }
-        return []
+        return [add]
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -142,7 +118,6 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
             let destinationViewController: EventViewController
             = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
             

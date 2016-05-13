@@ -14,22 +14,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
+    var testMe = true
+    
+    func testingNotifications(){
+        let notificationController = NotificationController()
+        let data = NSDictionary()
+        let date = NSDate()
+        // Creates a notification
+        let notification = Notification(message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum, dolor sit amet blandit imperdiet, nisl est iaculis massa, sed.", aditionalData: data, date: date)
+        notificationController.addNotification(notification)
+        
+        //notification = Notification(message: "This is another notification", aditionalData: data, date: date)
+        //notificationController.addNotification(notification)
 
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        if testMe{
+            testingNotifications()
+        }
+        
+        let notificationController = NotificationController()
+        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
+        
+        // Recives and deals with notifications
+        _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
+            NSLog("OneSignal Notification opened:\nMessage: %@", message)
+            
+                let notificationController = NotificationController()
+                let date = NSDate()
+                var data:NSDictionary = NSDictionary()
+            
+                if additionalData != nil {
+                    data = additionalData
+                }
+            
+                let notificaton = Notification(message: message, aditionalData: data, date: date)
+                notificationController.addNotification(notificaton)
+        }
+        
+        OneSignal.defaultClient().enableInAppAlertNotification(true)
+        
+        
         let appData = AppData()
         appData.initData()
-        // Override point for customization after application launch.
-        let splitViewController = self.window!.rootViewController as! UISplitViewController
+        //Override point for customization after application launch.
+       let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
-        splitViewController.delegate = self
+       splitViewController.delegate = self
 
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
         //Load Agenda as a first item
-        controller.presentViewController(Vc[0], animated: true, completion: nil)
-        
+        //controller.presentViewController(Vc[0], animated: true, completion: nil)
         
         return true
     }

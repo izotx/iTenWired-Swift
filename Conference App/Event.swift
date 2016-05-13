@@ -7,8 +7,9 @@
 //
 
 import Foundation
-//data structure
-class Event{
+
+
+class Event : NSObject, NSCoding{
 
     var id:Int = 0
     var name:String = ""
@@ -16,35 +17,27 @@ class Event{
     var timeStart:String = ""
     var timeStop:String = ""
     var date:String = ""
-    
-    
-    // atendee data added by Tin
-    //attendees
-    var attendeeName: String = ""
-    var logo:String = ""
-    var level: String = ""
-    var description: String = ""
-    var jobTitle : String = ""
-    var company: String = ""
-    var linkedin : String = ""
-    var email : String = ""
-    var website:String = ""
-    var type:String = ""
+
     
     init(id:Int){
         self.id = id
     }
     
+    init(id:Int, name:String, summary:String, timeStart:String, timeStop:String, date:String){
+        self.id = id
+        self.name = name
+        self.summary = summary
+        self.timeStart = timeStart
+        self.timeStop = timeStop
+        self.date = date
+    }
+    
     init(dictionary: NSDictionary){
-        
-        var IDString:String
+
         if let IDString = dictionary.objectForKey(EventEnum.id.rawValue) as? String{
             self.id = Int(IDString)!
             
-        } else {
-         
         }
-        
         if let name = dictionary.objectForKey(EventEnum.name.rawValue) as? String{
             self.name = name
         }
@@ -64,40 +57,34 @@ class Event{
         if let date = dictionary.objectForKey(EventEnum.date.rawValue) as? String{
             self.date = date
         }
+    }
+    
+    required convenience init?(coder decoder: NSCoder){
         
+        guard let id:Int32 = decoder.decodeIntForKey(EventEnum.id.rawValue),
+            let name:String = decoder.decodeObjectForKey(EventEnum.name.rawValue) as? String,
+            let summary = decoder.decodeObjectForKey(EventEnum.summary.rawValue) as? String,
+            let timeStart = decoder.decodeObjectForKey(EventEnum.timeStart.rawValue) as? String,
+            let timeStop = decoder.decodeObjectForKey(EventEnum.timeStop.rawValue) as? String,
+            let date = decoder.decodeObjectForKey(EventEnum.date.rawValue) as? String
         
-        // atendee data added by Tin
-        if let logo = dictionary.objectForKey(EventEnum.logo.rawValue) as? String{
-            self.logo = logo
-        }
-        if let level = dictionary.objectForKey(EventEnum.level.rawValue) as? String{
-            self.level = level
-        }
-        if let description = dictionary.objectForKey(EventEnum.description.rawValue) as? String{
-            self.description = description
-        }
-        if let jobTitle = dictionary.objectForKey(EventEnum.jobTitle.rawValue) as? String{
-            self.jobTitle = jobTitle
-        }
-        if let company = dictionary.objectForKey(EventEnum.company.rawValue) as? String{
-            self.company = company
-        }
-        if let linkedin = dictionary.objectForKey(EventEnum.linkedin.rawValue) as? String{
-            self.linkedin = linkedin
-        }
-        if let email = dictionary.objectForKey(EventEnum.email.rawValue) as? String{
-            self.email = email
-        }
-        if let website = dictionary.objectForKey(EventEnum.website.rawValue) as? String{
-            self.website = website
-        }
-        if let type = dictionary.objectForKey(EventEnum.type.rawValue) as? String{
-            self.type = type
+        else {
+            return nil
         }
         
+        self.init(id: Int(id), name: name, summary: summary, timeStart: timeStart, timeStop: timeStop, date: date)
+    }
+    
+    
+    func encodeWithCoder(coder: NSCoder) {
+        coder.encodeInt(Int32(self.id), forKey: EventEnum.id.rawValue)
+        coder.encodeObject(self.name, forKey: EventEnum.name.rawValue)
+        coder.encodeObject(self.summary, forKey: EventEnum.summary.rawValue)
+        coder.encodeObject(self.timeStart, forKey: EventEnum.timeStart.rawValue)
+        coder.encodeObject(self.timeStop, forKey: EventEnum.timeStop.rawValue)
+        coder.encodeObject(self.date, forKey: EventEnum.date.rawValue)
     }
 }
-
 
 enum EventEnum : String{
     case id
@@ -106,15 +93,4 @@ enum EventEnum : String{
     case timeStart
     case timeStop
     case date
-    
-    // atendee data added by Tin
-    case logo
-    case level
-    case description
-    case jobTitle
-    case company
-    case linkedin
-    case email
-    case website
-    case type
 }

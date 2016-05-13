@@ -16,22 +16,16 @@ class AnnotationDetailViewController: UIViewController {
     var receivedAnnotation: AddAnnotation?
     
     @IBOutlet var pointTitle: UILabel!
-    @IBOutlet var pointLat: UILabel!
-    @IBOutlet var pointLong: UILabel!
     @IBOutlet var pointInfo: UILabel!
     
     // Dismiss button, not needed since navigation is working
     @IBAction func dismissView(sender: AnyObject) {
-        if let nav = self.navigationController {
-            // print("Inside Nav")
+        if self.navigationController != nil {
             navigationController?.popViewControllerAnimated(true)
         }
         else {
-            // print("Not Inside Nav")
             self.dismissViewControllerAnimated(true, completion: nil)
-            //dismissViewControllerAnimated(true, completion: nil)
         }
-        
     }
     
     // Get Directions to Annotation Location
@@ -53,14 +47,10 @@ class AnnotationDetailViewController: UIViewController {
         // Set Initial VC Styling
         self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
         self.pointTitle.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
-        self.pointLat.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
-        self.pointLong.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
         self.pointInfo.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
         
-        if let annotationName = receivedAnnotation?.title, let annotationLat = receivedAnnotation?.coordinate.latitude, let annotationLong = receivedAnnotation?.coordinate.longitude, let annotationInfo = receivedAnnotation?.info {
+        if let annotationName = receivedAnnotation?.title, let annotationInfo = receivedAnnotation?.info {
             pointTitle.text = annotationName
-            pointLat.text = String(annotationLat)
-            pointLong.text = String(annotationLong)
             pointInfo.text = annotationInfo
         }
         

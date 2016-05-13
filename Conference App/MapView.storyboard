@@ -85,28 +85,16 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1s-uI-VN6">
                                 <rect key="frame" x="161" y="79" width="54" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIb-vo-Uym">
-                                <rect key="frame" x="176" y="121" width="24" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Long" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tML-I0-il3">
-                                <rect key="frame" x="169" y="150" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-IQ-k1g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Desc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKC-IQ-k1g">
                                 <rect key="frame" x="168" y="179" width="39" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEX-wA-AP3">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEX-wA-AP3">
                                 <rect key="frame" x="20" y="208" width="335" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -124,22 +112,15 @@
                         <constraints>
                             <constraint firstItem="xEX-wA-AP3" firstAttribute="top" secondItem="fKC-IQ-k1g" secondAttribute="bottom" constant="8" id="3St-UR-oUs"/>
                             <constraint firstItem="E1s-uI-VN6" firstAttribute="centerX" secondItem="7ss-q8-wm1" secondAttribute="centerX" id="9hH-hv-KIX"/>
-                            <constraint firstItem="kIb-vo-Uym" firstAttribute="top" secondItem="E1s-uI-VN6" secondAttribute="bottom" constant="8" id="FPB-bd-W7l"/>
                             <constraint firstItem="xEX-wA-AP3" firstAttribute="centerX" secondItem="7ss-q8-wm1" secondAttribute="centerX" id="H3A-1Z-Uk0"/>
-                            <constraint firstItem="fKC-IQ-k1g" firstAttribute="top" secondItem="tML-I0-il3" secondAttribute="bottom" constant="8" id="Hba-gS-Hp5"/>
-                            <constraint firstItem="kIb-vo-Uym" firstAttribute="centerX" secondItem="7ss-q8-wm1" secondAttribute="centerX" id="He1-vY-clx"/>
                             <constraint firstAttribute="trailing" secondItem="xEX-wA-AP3" secondAttribute="trailing" constant="20" id="Inh-r0-tFK"/>
-                            <constraint firstItem="tML-I0-il3" firstAttribute="centerX" secondItem="7ss-q8-wm1" secondAttribute="centerX" id="Ofy-vT-kWr"/>
                             <constraint firstItem="E1s-uI-VN6" firstAttribute="top" secondItem="0iv-at-IVV" secondAttribute="bottom" constant="15" id="P1n-Gp-sh2"/>
                             <constraint firstItem="xEX-wA-AP3" firstAttribute="leading" secondItem="7ss-q8-wm1" secondAttribute="leading" constant="20" id="ZeI-SQ-wMY"/>
                             <constraint firstItem="fKC-IQ-k1g" firstAttribute="centerX" secondItem="7ss-q8-wm1" secondAttribute="centerX" id="n33-bl-j2n"/>
-                            <constraint firstItem="tML-I0-il3" firstAttribute="top" secondItem="kIb-vo-Uym" secondAttribute="bottom" constant="8" id="wCp-fY-dGa"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="pointInfo" destination="fKC-IQ-k1g" id="dCu-b3-0pT"/>
-                        <outlet property="pointLat" destination="kIb-vo-Uym" id="Bm7-9o-2kD"/>
-                        <outlet property="pointLong" destination="tML-I0-il3" id="bgq-Nl-E3R"/>
                         <outlet property="pointTitle" destination="E1s-uI-VN6" id="33X-Um-R4F"/>
                     </connections>
                 </viewController>
