@@ -38,6 +38,11 @@ class AttendeesCell: UITableViewCell {
     {
         let imageData = NSData(contentsOfURL: NSURL(string: logo)!)
         self.logoView.image = UIImage(data: imageData!)
+        
+        logoView.layer.cornerRadius = 10
+        logoView.layer.masksToBounds = true
+        
+       
     }
     
     

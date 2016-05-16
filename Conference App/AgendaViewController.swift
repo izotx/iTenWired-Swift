@@ -13,7 +13,7 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
     var agendaController:AgendaController = AgendaController()
     var fistTouch:Bool = false
     let swipeImageIndex = 2
-    
+  
     let myItenController = MyItenController()
     
     override func viewDidLoad() {
@@ -82,28 +82,12 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventCell
         let event = agendaController.getEventAt(indexPath.row)
         
-        cell.setName(event.name)
-        cell.setStartTime(event.timeStart)
-        cell.setStopTime(event.timeStop)
-        cell.setDate(event.date)
         
-        if(indexPath.row == swipeImageIndex && !self.fistTouch){
-            cell.showSwipe(true)
-        }else{
-            cell.showSwipe(false)
-        }
+        //builds cell data
+        cell.build(event)
+        cell.setStartButton(myItenController.isPresent(event))
         
-
         return cell
-    }
-    
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        
-        let add = UITableViewRowAction(style: .Normal, title: "Add"){action, index in
-            self.myItenController.addToMyIten(self.agendaController.getEventAt(indexPath.row))
-            tableView.reloadData()
-        }
-        return [add]
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -142,5 +126,7 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
             }
         }
     }
+    
+
 }
 

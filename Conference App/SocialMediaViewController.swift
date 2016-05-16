@@ -28,7 +28,7 @@ class SocialMediaViewController: UITableViewController {
     var socialItems:[SocialItem] = [SocialItem(name:"Facebook", logo: "facebook.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Twitter", logo: "twitter.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
                                     SocialItem(name:"YouTube", logo: "youtube.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Instagram", logo: "instagram.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Instagram", logo: "instagram-50-2.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Web", logo: "web.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Email", logo: "email.png", storyboardId: "", viewControllerId: "")]
     
