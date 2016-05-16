@@ -8,6 +8,29 @@
 
 import UIKit
 
+//extension UISplitViewController {
+//    func toggleMasterView() {
+//        let barButtonItem = self.displayModeButtonItem()
+//        UIApplication.sharedApplication().sendAction(barButtonItem.action, to: barButtonItem.target, from: nil, forEvent: nil)
+//    }
+//}
+
+
+extension UISplitViewController {
+    func toggleMasterView() {
+        var nextDisplayMode: UISplitViewControllerDisplayMode
+        switch(self.preferredDisplayMode){
+        case .PrimaryHidden:
+            nextDisplayMode = .AllVisible
+        default:
+            nextDisplayMode = .PrimaryHidden
+        }
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.preferredDisplayMode = nextDisplayMode
+        }
+    }
+}
+
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
@@ -29,6 +52,14 @@ class DetailViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func changeSplitMode(sender: AnyObject) {
+        //self.navigationController?.navigationController?.popToRootViewControllerAnimated(true)
+        self.splitViewController?.toggleMasterView()
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

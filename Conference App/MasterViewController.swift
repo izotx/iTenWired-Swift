@@ -39,6 +39,13 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
+    
+        return .PrimaryHidden
+    }
+    
+    
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
         return true
     }
@@ -49,8 +56,10 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         
         splitViewController?.delegate = self
     
-        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
-        navigationItem.leftItemsSupplementBackButton = true
+      ///  navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+      //  navigationItem.leftItemsSupplementBackButton = true
+  
+        
         
         // Tableview delegates
         self.tableView!.delegate = self
@@ -122,7 +131,10 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         
         let storyboard = UIStoryboard.init(name: menuItem.storyboardId, bundle: nil)
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(menuItem.viewControllerId)
-        self.navigationController?.pushViewController(destinationViewController, animated: true)
+//        self.navigationController?.pushViewController(destinationViewController, animated: true)
+        splitViewController?.showDetailViewController(destinationViewController, sender: nil)
+        
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
