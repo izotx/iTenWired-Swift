@@ -32,6 +32,10 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         resizeScrollView()
         resizeTableview()
+        
+        if event?.presentorsIDs.count <= 0 {
+            self.tableView.hidden = true
+        }
     }
     
     func resizeScrollView(){

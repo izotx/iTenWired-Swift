@@ -36,7 +36,8 @@ class AttendeesCell: UITableViewCell {
     
     func setLogo(logo:String)
     {
-        self.logoView.image = UIImage(named: logo)
+        let imageData = NSData(contentsOfURL: NSURL(string: logo)!)
+        self.logoView.image = UIImage(data: imageData!)
     }
     
     

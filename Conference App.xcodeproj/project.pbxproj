@@ -56,6 +56,13 @@
 		55DAC31B1CE527A100941824 /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC31A1CE527A100941824 /* PendingOperations.swift */; };
 		55DAC31D1CE528AC00941824 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC31C1CE528AC00941824 /* ImageDownloader.swift */; };
 		55DAC3221CE651CB00941824 /* AutoresizeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3211CE651CB00941824 /* AutoresizeTextView.swift */; };
+		55DAC32A1CEA3B9100941824 /* menu-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3291CEA3B9100941824 /* menu-25.png */; };
+		55DAC32F1CEA488900941824 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC32E1CEA488900941824 /* twitter.png */; };
+		55DAC3311CEA493D00941824 /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3301CEA493D00941824 /* youtube.png */; };
+		55DAC3331CEA496200941824 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3321CEA496200941824 /* instagram.png */; };
+		55DAC3351CEA497E00941824 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3341CEA497E00941824 /* web.png */; };
+		55DAC3371CEA499000941824 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3361CEA499000941824 /* facebook.png */; };
+		55DAC3391CEA4B8100941824 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3381CEA4B8100941824 /* email.png */; };
 		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
@@ -158,6 +165,13 @@
 		55DAC31A1CE527A100941824 /* PendingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
 		55DAC31C1CE528AC00941824 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		55DAC3211CE651CB00941824 /* AutoresizeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoresizeTextView.swift; sourceTree = "<group>"; };
+		55DAC3291CEA3B9100941824 /* menu-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-25.png"; sourceTree = "<group>"; };
+		55DAC32E1CEA488900941824 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		55DAC3301CEA493D00941824 /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
+		55DAC3321CEA496200941824 /* instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instagram.png; sourceTree = "<group>"; };
+		55DAC3341CEA497E00941824 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
+		55DAC3361CEA499000941824 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		55DAC3381CEA4B8100941824 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
@@ -231,10 +245,12 @@
 		40D07A941CE0CA4C005E361B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				55DAC32D1CEA487F00941824 /* Social Media */,
 				55DAC3181CE526E600941824 /* placeholder.png */,
 				0E7E95611CC974FD000EF67E /* swipe.png */,
 				FE2623D41CAF39CF0074C58F /* Home.png */,
 				FE2623E41CAF3D820074C58F /* Settings.png */,
+				55DAC3291CEA3B9100941824 /* menu-25.png */,
 				FE0E76C41CC9D0910027CEDD /* blank-image.png */,
 				FE2623E21CAF3D520074C58F /* Who.png */,
 				FE2623E01CAF3D000074C58F /* About.png */,
@@ -273,7 +289,6 @@
 				FE2623A61CAEFA940074C58F /* MasterViewController.swift */,
 				0EE564D61CB84DC1001678B0 /* AboutViewController.swift */,
 				4F2FBD111CBC5AEC0017A11F /* AttendTableViewController.swift */,
-				827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */,
 				0E647B321CBF2E67006DFB68 /* AnnotationDetailViewController.swift */,
 				FE2623A81CAEFA940074C58F /* DetailViewController.swift */,
 				D4C467C31CB84BA000BD6157 /* EventViewController.swift */,
@@ -343,6 +358,7 @@
 		557D35531CE50B2200562A7A /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */,
 				557D35541CE50B3C00562A7A /* TwitterViewController.swift */,
 			);
 			name = Social;
@@ -373,6 +389,19 @@
 				557D35511CE505F800562A7A /* Twitter.swift */,
 			);
 			name = Twitter;
+			sourceTree = "<group>";
+		};
+		55DAC32D1CEA487F00941824 /* Social Media */ = {
+			isa = PBXGroup;
+			children = (
+				55DAC3301CEA493D00941824 /* youtube.png */,
+				55DAC3321CEA496200941824 /* instagram.png */,
+				55DAC3361CEA499000941824 /* facebook.png */,
+				55DAC3341CEA497E00941824 /* web.png */,
+				55DAC3381CEA4B8100941824 /* email.png */,
+				55DAC32E1CEA488900941824 /* twitter.png */,
+			);
+			name = "Social Media";
 			sourceTree = "<group>";
 		};
 		5CABC4C70AD5BD42C86B7A69 /* Frameworks */ = {
@@ -576,18 +605,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DAC3351CEA497E00941824 /* web.png in Resources */,
 				FE2623E31CAF3D520074C58F /* Who.png in Resources */,
 				FE2623E11CAF3D000074C58F /* About.png in Resources */,
 				FE2623D71CAF3A9A0074C58F /* Map.png in Resources */,
 				FE2623B11CAEFA940074C58F /* LaunchScreen.storyboard in Resources */,
 				FE2623AE1CAEFA940074C58F /* Assets.xcassets in Resources */,
+				55DAC3311CEA493D00941824 /* youtube.png in Resources */,
 				FE2623DB1CAF3BDB0074C58F /* MyIten.png in Resources */,
+				55DAC3391CEA4B8100941824 /* email.png in Resources */,
 				A12350181CB9500400B1233E /* ItineraryStoryboard.storyboard in Resources */,
+				55DAC3371CEA499000941824 /* facebook.png in Resources */,
 				FE2623DD1CAF3C800074C58F /* SocialMedia.png in Resources */,
 				FE2623D51CAF39CF0074C58F /* Home.png in Resources */,
 				FE0E76C51CC9D0920027CEDD /* blank-image.png in Resources */,
 				0E7E95621CC974FD000EF67E /* swipe.png in Resources */,
 				0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */,
+				55DAC32F1CEA488900941824 /* twitter.png in Resources */,
 				55DAC3191CE526E600941824 /* placeholder.png in Resources */,
 				0EE564D11CB83E6C001678B0 /* MapView.storyboard in Resources */,
 				FE2623D91CAF3B2B0074C58F /* Agenda.png in Resources */,
@@ -595,10 +629,12 @@
 				D4C467D01CB84D9700BD6157 /* AgendaMain.storyboard in Resources */,
 				827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */,
 				FE2623E51CAF3D820074C58F /* Settings.png in Resources */,
+				55DAC3331CEA496200941824 /* instagram.png in Resources */,
 				554980201CE37DCC00CC6E36 /* Notification.storyboard in Resources */,
 				FE2623AC1CAEFA940074C58F /* Main.storyboard in Resources */,
 				4F3A78DB1CB5AAF500A87EE6 /* Attendees.storyboard in Resources */,
 				FE2623DF1CAF3CD80074C58F /* LiveBroadcast.png in Resources */,
+				55DAC32A1CEA3B9100941824 /* menu-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

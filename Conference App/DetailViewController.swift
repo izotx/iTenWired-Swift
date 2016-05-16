@@ -65,10 +65,18 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         
-        // loads and displays the agenda for iPads
-        //TODO:
-        //let view = Vc[1]
-        //self.showDetailViewController(view, sender: self)
+        if !(self.splitViewController?.collapsed)!{
+            
+            let storyboard = UIStoryboard.init(name: "AgendaMain", bundle: nil)
+            let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("AgendaInitial")
+            splitViewController?.showDetailViewController(destinationViewController, sender: nil)
+            
+        }
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

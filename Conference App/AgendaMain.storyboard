@@ -112,7 +112,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Agenda" id="vHj-4t-Fyb">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="6NB-0E-Qh5">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="6NB-0E-Qh5">
                             <connections>
                                 <action selector="showMenu:" destination="bj8-7D-Y4f" id="NeC-mq-0bp"/>
                             </connections>
@@ -213,6 +213,7 @@ In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie
             <objects>
                 <navigationController storyboardIdentifier="AgendaInitial" automaticallyAdjustsScrollViewInsets="NO" id="0VX-Za-iCa" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pRe-fR-TYU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -224,7 +225,7 @@ In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="InC-VQ-fR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="441"/>
+            <point key="canvasLocation" x="297" y="441"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="iFe-Sb-wJ0">
@@ -378,6 +379,7 @@ In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie
         </scene>
     </scenes>
     <resources>
+        <image name="menu-25.png" width="25" height="25"/>
         <image name="swipe.png" width="368" height="94"/>
     </resources>
 </document>

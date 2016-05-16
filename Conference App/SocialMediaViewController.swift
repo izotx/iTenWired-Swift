@@ -2,47 +2,39 @@
 //  SociaMedia.swift
 //  Conference App
 //
-//  Created by user115597 on 4/16/16.
+//  Created by Felipe Neves on 5/16/16.
 //  Copyright © 2016 Chrystech Systems. All rights reserved.
 //
 
 import UIKit
-import Social
 
-class SocialMediaViewController: UIViewController {
+class SocialItem {
+    var name:String = ""
+    var logo:String = ""
+    var storyboardId = ""
+    var viewControllerId = ""
     
+    init(name:String, logo:String, storyboardId:String, viewControllerId: String){
+        self.name = name
+        self.logo = logo
+        self.storyboardId = storyboardId
+        self.viewControllerId = viewControllerId
+    }
+}
+
+
+class SocialMediaViewController: UITableViewController {
     
-    @IBOutlet weak var facebook: UIButton!
-    @IBOutlet weak var twitter: UIButton!
-    @IBOutlet weak var google: UIButton!
-    @IBOutlet weak var facebookwebview: UIWebView!
+    var socialItems:[SocialItem] = [SocialItem(name:"Facebook", logo: "facebook.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Twitter", logo: "twitter.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
+                                    SocialItem(name:"YouTube", logo: "youtube.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Instagram", logo: "instagram.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Web", logo: "web.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Email", logo: "email.png", storyboardId: "", viewControllerId: "")]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 50)
-        
-        let tempDictionary = AppData()
-        let dictionaryResult = tempDictionary.getDataFromFile()
-        
-        var result = ""
-        
-        if let sociallinks = dictionaryResult.objectForKey("links") as? NSArray {
-            for link in sociallinks {
-                if let newLink = link["URL"] as? String, let newLabel = link["label"] as? String {
-                    
-                    if newLabel == "twitter" {
-                        result = newLink
-                    }
-                }
-                
-            }
-        }
-        
-        let url = NSURL (string: result);
-        let requestObj = NSURLRequest(URL: url!);
-        facebookwebview.loadRequest(requestObj);
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,26 +42,41 @@ class SocialMediaViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func postToTwitter(sender: AnyObject) {
-        post(toService: SLServiceTypeTwitter)
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("socialSelectCells", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = socialItems[indexPath.row].name
+        cell.imageView?.image = UIImage(named: socialItems[indexPath.row].logo)
+        
+        return cell
     }
     
-    @IBAction func postToFacebook(sender: AnyObject) {
-        post(toService: SLServiceTypeFacebook)
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return socialItems.count
     }
     
-    func post(toService service: String) {
-        let socialController = SLComposeViewController(forServiceType: service)
-                   socialController.setInitialText("tell your friends about us www.itenwired.com")
-        self.presentViewController(socialController, animated: true, completion: nil)
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let socialItem = socialItems[indexPath.row]
+        
+        //TODO: Finish social item ids
+        if socialItem.storyboardId != ""{
+            
+            let storyboard = UIStoryboard.init(name: socialItem.storyboardId, bundle: nil)
+            let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(socialItem.viewControllerId)
+            splitViewController?.showDetailViewController(destinationViewController, sender: nil)
+        }
     }
     
     
     @IBAction func showMenu(sender: AnyObject) {
-        
-        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
-        
-        rightNavController.popToRootViewControllerAnimated(true)
+        if let splitController = self.splitViewController{
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
     }
-
 }

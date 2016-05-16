@@ -131,10 +131,16 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
     // Displays the Menu when clicked
     @IBAction func showMenu(sender: AnyObject) {
         
-        let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
-        rightNavController.popToRootViewControllerAnimated(true)
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
     }
-
-    
 }
 

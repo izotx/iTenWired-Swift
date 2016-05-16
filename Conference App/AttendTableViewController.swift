@@ -13,6 +13,10 @@ class AttendeesViewController: UITableViewController{
     
     let atendeeControler = AttendeeController()
     
+    // Photo Loader and controller for exhibitor photos
+    let exhibitorPhotos = [Photorecord]()
+    let exibitorPendingOperations = PendingOperarions()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +26,6 @@ class AttendeesViewController: UITableViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -67,7 +69,7 @@ class AttendeesViewController: UITableViewController{
                     return cell
                 }
                 
-                let cell = tableView.dequeueReusableCellWithIdentifier("sponsersCell", forIndexPath: indexPath) as! AttendeesCell
+                let cell = tableView.dequeueReusableCellWithIdentifier("exibitorsCell", forIndexPath: indexPath) as! AttendeesCell
                 let sponser = atendeeControler.getSponserAtIndex(index - 1)
                 cell.build(sponser)
                 
@@ -76,6 +78,7 @@ class AttendeesViewController: UITableViewController{
             
             index -= atendeeControler.getSponsersCount() + 1
         
+            // Exhibitors
             if(index >= 0 && index - 1 < atendeeControler.getExibitorsCount()) {
             
                 if(index == 0){

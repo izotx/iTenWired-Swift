@@ -1,10 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jdv-xQ-8zR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bEe-z9-4FU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Social Media-->
+        <scene sceneID="PJ4-Xa-gdI">
+            <objects>
+                <tableViewController restorationIdentifier="SocialMediaRoot" storyboardIdentifier="SocialMediaRoot" id="v0j-U2-FAf" customClass="SocialMediaViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fPI-rO-JjV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="socialSelectCells" selectionStyle="default" indentationWidth="10" reuseIdentifier="socialSelectCells" textLabel="LBs-Zx-Eae" detailTextLabel="feS-5e-Ha4" imageView="5Nl-oG-59F" style="IBUITableViewCellStyleValue1" id="Z3z-fH-xOv">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z3z-fH-xOv" id="e9m-Hc-Kba">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LBs-Zx-Eae">
+                                            <rect key="frame" x="55" y="10" width="39" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="feS-5e-Ha4">
+                                            <rect key="frame" x="543" y="14" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="twitter.png" id="5Nl-oG-59F">
+                                            <rect key="frame" x="15" y="11" width="25" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="v0j-U2-FAf" id="pKe-ZJ-BTB"/>
+                            <outlet property="delegate" destination="v0j-U2-FAf" id="7lQ-Lw-rxJ"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Social Media" id="pRc-BY-qPQ">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="hwN-xr-BjR">
+                            <connections>
+                                <action selector="showMenu:" destination="v0j-U2-FAf" id="1jf-3Z-FCc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfN-SG-jut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="-580"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UkG-tu-YUU">
+            <objects>
+                <navigationController id="bEe-z9-4FU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffd-2O-w5w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v0j-U2-FAf" kind="relationship" relationship="rootViewController" id="GbZ-k0-EUJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AO-uQ-WTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="-597"/>
+        </scene>
         <!--TwitterViewController-->
         <scene sceneID="xbq-Cs-HRd">
             <objects>
@@ -18,7 +95,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="209"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fuh-4m-SZj" id="2aO-Pu-gRw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="208.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-qy-ydn">
@@ -101,48 +178,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJb-ty-Y4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="-678"/>
-        </scene>
-        <!--Connect With Us-->
-        <scene sceneID="rBb-Um-uHj">
-            <objects>
-                <viewController storyboardIdentifier="SocialMedia" title="Connect With Us" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kbL-Et-oOB" customClass="SocialMediaViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wbq-YI-sm0"/>
-                        <viewControllerLayoutGuide type="bottom" id="e6b-UT-2na"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="efu-MP-tUt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVk-IA-dk7">
-                                <rect key="frame" x="-3" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Social" id="Hm6-hD-B8R">
-                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="dtd-Av-uyJ">
-                                            <connections>
-                                                <action selector="showMenu:" destination="kbL-Et-oOB" id="NiF-qe-xZk"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4Q-yx-U7p">
-                                <rect key="frame" x="-3" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem title="Facebook" id="nPk-qb-a6K"/>
-                                    <tabBarItem title="Twitter" id="aJ1-pX-nfs"/>
-                                </items>
-                            </tabBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cV7-lb-oZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2269.5" y="-633.5"/>
+            <point key="canvasLocation" x="1322" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-25.png" width="25" height="25"/>
+        <image name="twitter.png" width="25" height="21"/>
+    </resources>
 </document>

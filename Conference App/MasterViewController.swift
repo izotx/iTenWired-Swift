@@ -87,7 +87,7 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten.png")
         self.menuItems.append(myIten)
         
-        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "TwitterViewController", name: "Social Media", imageUrl: "SocialMedia.png")
+        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMedia.png")
         self.menuItems.append(socialMedia)
         
         let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast.png")
@@ -131,7 +131,6 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         
         let storyboard = UIStoryboard.init(name: menuItem.storyboardId, bundle: nil)
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(menuItem.viewControllerId)
-//        self.navigationController?.pushViewController(destinationViewController, animated: true)
         splitViewController?.showDetailViewController(destinationViewController, sender: nil)
         
         
@@ -154,7 +153,7 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         }
         
         cell.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 0.5)
-        cell.textLabel?.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
         let bgColorView = UIView()
         
