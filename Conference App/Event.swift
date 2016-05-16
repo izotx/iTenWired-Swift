@@ -18,7 +18,7 @@ class Event : NSObject, NSCoding{
     var timeStop:String = ""
     var date:String = ""
     var track = 0
-    var presentors:[Speaker] = []
+    var presentorsIDs:[Int] = []
     
     init(id:Int){
         self.id = id
@@ -59,11 +59,9 @@ class Event : NSObject, NSCoding{
             self.date = date
         }
         
-        if let speakers = dictionary.objectForKey(EventEnum.presentors.rawValue) as? [NSDictionary]{
-            
-            for speaker in speakers {
-                let presentor = Speaker(dictionary: speaker)
-                self.presentors.append(presentor)
+        if let speakersIds = dictionary.objectForKey(EventEnum.presenters.rawValue) as? [String]{
+            for id in speakersIds {
+                self.presentorsIDs.append(Int(id)!)
             }
         }
     }
@@ -102,5 +100,5 @@ enum EventEnum : String{
     case timeStart
     case timeStop
     case date
-    case presentors
+    case presenters
 }

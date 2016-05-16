@@ -90,7 +90,6 @@
 		FEF7E0C51CB852A8002A810B /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C31CB84BA000BD6157 /* EventViewController.swift */; };
 		FEF7E0C61CB852B1002A810B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C71CB84BA000BD6157 /* Event.swift */; };
 		FEF7E0C71CB852B5002A810B /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C81CB84BA000BD6157 /* EventCell.swift */; };
-		FEF7E0CA1CB8542C002A810B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF7E0C81CB85329002A810B /* Home.storyboard */; };
 		FEF7E0CB1CB858E3002A810B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE564D21CB83E9A001678B0 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -199,7 +198,6 @@
 		FE2623E01CAF3D000074C58F /* About.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About.png; sourceTree = "<group>"; };
 		FE2623E21CAF3D520074C58F /* Who.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Who.png; sourceTree = "<group>"; };
 		FE2623E41CAF3D820074C58F /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
-		FEF7E0C81CB85329002A810B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = ../Home.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,7 +252,6 @@
 			children = (
 				A12350161CB9500400B1233E /* ItineraryStoryboard.storyboard */,
 				0EE564D41CB845E7001678B0 /* AboutView.storyboard */,
-				FEF7E0C81CB85329002A810B /* Home.storyboard */,
 				FE2623AA1CAEFA940074C58F /* Main.storyboard */,
 				4F3A78DA1CB5AAF500A87EE6 /* Attendees.storyboard */,
 				D4C467CF1CB84D9700BD6157 /* AgendaMain.storyboard */,
@@ -579,7 +576,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEF7E0CA1CB8542C002A810B /* Home.storyboard in Resources */,
 				FE2623E31CAF3D520074C58F /* Who.png in Resources */,
 				FE2623E11CAF3D000074C58F /* About.png in Resources */,
 				FE2623D71CAF3A9A0074C58F /* Map.png in Resources */,

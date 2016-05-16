@@ -56,21 +56,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         OneSignal.defaultClient().enableInAppAlertNotification(true)
         
+        //TDOD: remove appData Instantiation
+       let appData = AppData()
+       appData.initData()
         
-        let appData = AppData()
-        appData.initData()
+        
         //Override point for customization after application launch.
-       let splitViewController = self.window!.rootViewController as! UISplitViewController
-        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
-       splitViewController.delegate = self
+       // let splitViewController = self.window!.rootViewController as! UISplitViewController
+       // let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+       // navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+      // splitViewController.delegate = self
 
-        let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
-        let controller = masterNavigationController.topViewController as! MasterViewController
-        controller.managedObjectContext = self.managedObjectContext
-        //Load Agenda as a first item
-        //controller.presentViewController(Vc[0], animated: true, completion: nil)
+        //let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
+       // let controller = masterNavigationController.topViewController as! MasterViewController
+       // controller.managedObjectContext = self.managedObjectContext
         
+        
+       /* //TODO: Create constants
+        let storyboard = UIStoryboard.init(name: "AgendaMain", bundle: nil)
+        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("AgendaInitial")
+        
+        controller.presentViewController(destinationViewController, animated: true, completion: nil)
+        */
         return true
     }
 

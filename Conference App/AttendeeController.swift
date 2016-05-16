@@ -57,27 +57,15 @@ class AttendeeController{
         return self.getSpeakers()[index]
     }
     
-    
-    
-    
-    
-    //FIXME: remove all code below
-    var attendee:Attendee = Attendee()
-    let dataLoader2:AttendeeData = AttendeeData()
-    
-    init(){
-       // self.attendee = self.dataLoader2.getAttendee()
+    func getSpeakerById(id:Int) -> Speaker? {
+        
+        for speaker in self.getSpeakers() {
+        
+            if speaker.id == id{
+                return speaker
+            }
+        }
+        return nil
     }
-    
-    func getAgenda() -> Attendee{
-        return self.attendee
-    }
-    
-    func getEventAt(index:Int) ->Event{
-        return self.attendee.event[index]
-    }
-    
-    func getEventsCount() -> Int{
-        return attendee.event.count
-    }
+
 }

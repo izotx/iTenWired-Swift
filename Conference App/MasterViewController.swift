@@ -26,7 +26,7 @@ class MenuItem{
     }
 }
 
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class MasterViewController: UITableViewController, UISplitViewControllerDelegate{
     
     var menuItems:[MenuItem] = []
     
@@ -39,11 +39,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        splitViewController?.delegate = self
     
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+        navigationItem.leftItemsSupplementBackButton = true
         
         // Tableview delegates
         self.tableView!.delegate = self
