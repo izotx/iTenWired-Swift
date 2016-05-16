@@ -58,6 +58,13 @@ class SocialMediaViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let socialItem = socialItems[indexPath.row]
         
+        if socialItem.name == "Web" {
+            if let url = NSURL(string: "http://www.itenwired.com") {
+                UIApplication.sharedApplication().openURL(url)
+            }
+            return
+        }
+        
         //TODO: Finish social item ids
         if socialItem.storyboardId != ""{
             

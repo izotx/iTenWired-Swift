@@ -22,7 +22,7 @@ class AboutViewController: UIViewController {
         
         // Initial VC Styling
         self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
-        aboutTextView.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
+        aboutTextView.textColor = UIColor.whiteColor()
         aboutTextView.text = about.content
         
         if let url = NSURL(string:about.logo) {

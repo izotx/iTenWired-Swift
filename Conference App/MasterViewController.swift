@@ -93,8 +93,8 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast.png")
         self.menuItems.append(liveBroadcast)
         
-        //let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About,png")
-        //self.menuItems.append(about)
+        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About.png")
+        self.menuItems.append(about)
         
         let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who.png")
         self.menuItems.append(atendees)
