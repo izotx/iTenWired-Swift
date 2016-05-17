@@ -15,6 +15,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
   
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
 
     @IBOutlet weak var tableView: UITableView!
@@ -44,30 +45,24 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func resizeScrollView(){
         var scrollViewHeight:CGFloat = 0.0
-        
+        view.layoutIfNeeded()
         for view in scrollView.subviews {
             let height = view.frame.size.height + view.frame.origin.y
             if Double(height) > Double(scrollViewHeight) {
                 scrollViewHeight = height
             }
         }
-        
-        self.scrollView.contentSize = CGSize(width: self.scrollView.frame.size.width, height: scrollViewHeight)
+        //Margin hack 
+        let margin:CGFloat = 140.0
+        self.scrollView.contentSize = CGSize(width: self.scrollView.frame.size.width, height: scrollViewHeight + margin)
     }
     
     func resizeTableview(){
         var tableViewHeight:CGFloat = 0.0
-        
-        
-        for view in tableView.subviews {
-            let height = view.frame.size.height + view.frame.origin.y
-            if Double(height) > Double(tableViewHeight) {
-                tableViewHeight = height
-            }
-        }
-        
-        self.tableView.contentSize = CGSize(width: self.tableView.frame.size.width, height: tableViewHeight)
-    
+        view.layoutIfNeeded()
+        let h =  tableView.sizeThatFits(CGSizeMake(tableView.frame.width, CGFloat(Float.infinity))).height
+        tableViewHeight = h
+        self.tableViewHeightConstraint.constant = tableViewHeight
     }
     
     override func didReceiveMemoryWarning() {
