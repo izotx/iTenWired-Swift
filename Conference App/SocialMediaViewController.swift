@@ -25,10 +25,12 @@ class SocialItem {
 
 class SocialMediaViewController: UITableViewController {
     
+    let socialData = SocialMediaData()
+    
     var socialItems:[SocialItem] = [SocialItem(name:"Facebook", logo: "Facebook-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Twitter", logo: "Twitter-50.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
                                     SocialItem(name:"LinkedIn", logo:"LinkedIn-50.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Google", logo :"Google-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Google+", logo :"Google-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"YouTube", logo: "YouTube-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Instagram", logo: "Instagram-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Web", logo: "Web-50.png", storyboardId: "", viewControllerId: ""),
@@ -61,9 +63,109 @@ class SocialMediaViewController: UITableViewController {
         let socialItem = socialItems[indexPath.row]
         
         if socialItem.name == "Web" {
-            if let url = NSURL(string: "http://www.itenwired.com") {
+            
+            let urlString = socialData.getSocialMedia("web")?.URL
+            
+            if let url = NSURL(string: urlString!) {
                 UIApplication.sharedApplication().openURL(url)
             }
+            return
+        }
+        
+        if socialItem.name == "YouTube" {
+            
+            let urlString = socialData.getSocialMedia("YouTube")?.URL
+            
+            if let url = NSURL(string: urlString!) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+            return
+        }
+        
+        if socialItem.name == "Google+" {
+            
+            let urlString = socialData.getSocialMedia("google")?.URL
+            
+            if let url = NSURL(string: urlString!) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+            return
+        }
+        
+        if socialItem.name == "Instagram"{
+            
+            let urlString = socialData.getSocialMedia("Instagram")?.URL
+            
+            
+            // Gets username
+            let count = urlString?.componentsSeparatedByString("/").count
+            let username = urlString?.componentsSeparatedByString("/")[count!-1]
+            let instagramURLString = "instagram://user?username=\(username!)"
+            
+            let instagramURL = NSURL(string: instagramURLString)
+            
+            if UIApplication.sharedApplication().canOpenURL(instagramURL!){
+                UIApplication.sharedApplication().openURL(instagramURL!)
+            } else {
+                if let url = NSURL(string: urlString!) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+            }
+            
+            
+            return
+            
+        }
+        
+        if socialItem.name == "LinkedIn" {
+            let urlString = socialData.getSocialMedia("linkedin")?.URL
+            
+            if let url = NSURL(string: urlString!) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+            return
+        }
+        
+        if socialItem.name == "Email" {
+            let urlString = socialData.getSocialMedia("email")?.URL
+            
+            if let url = NSURL(string: "mailto:\(urlString!)") {
+                UIApplication.sharedApplication().openURL(url)
+            }
+            return
+        }
+        
+        if socialItem.name == "Twitter" {
+            let urlString = "twitter://search?query=%23iTenWired15"
+            let url = NSURL(string: urlString)
+            
+            if UIApplication.sharedApplication().canOpenURL(url!) {
+                UIApplication.sharedApplication().openURL(url!)
+            }
+            return
+        }
+        
+        if socialItem.name == "Facebook" {
+            
+            
+            let urlString = socialData.getSocialMedia("facebook")?.URL
+            
+            
+            // Gets username
+            let count = urlString?.componentsSeparatedByString("/").count
+            let username = urlString?.componentsSeparatedByString("/")[count!-1]
+            let fbURLString = "fb://\(username!)"
+            
+            let fbURL = NSURL(string: fbURLString)
+            
+            if UIApplication.sharedApplication().canOpenURL(fbURL!){
+                UIApplication.sharedApplication().openURL(fbURL!)
+            } else {
+                if let url = NSURL(string: urlString!) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+            }
+            
             return
         }
         

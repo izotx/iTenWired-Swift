@@ -67,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfN-SG-jut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="-581"/>
+            <point key="canvasLocation" x="1426" y="-576"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UkG-tu-YUU">
@@ -85,9 +85,26 @@
             </objects>
             <point key="canvasLocation" x="356" y="-597"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gRQ-PA-gmr">
+            <objects>
+                <navigationController id="Cn3-Ty-Nqn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4UL-Yx-ayf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jdv-xQ-8zR" kind="show" id="PqV-X4-Kdu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3h-lP-AUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="130"/>
+        </scene>
         <!--TwitterViewController-->
         <scene sceneID="xbq-Cs-HRd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uJb-ty-Y4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="TwitterViewController" title="TwitterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jdv-xQ-8zR" customClass="TwitterViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="209" sectionHeaderHeight="28" sectionFooterHeight="28" id="XRd-Lw-19i">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -95,7 +112,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="twitterCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="twitterCell" rowHeight="209" id="Fuh-4m-SZj" customClass="TwitterCell" customModule="Conference_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="209"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="209"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fuh-4m-SZj" id="2aO-Pu-gRw">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="208"/>
@@ -178,10 +195,18 @@
                             <outlet property="delegate" destination="jdv-xQ-8zR" id="Cs4-4v-5pz"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Twitter" id="0Ci-0j-gz1">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="mnd-K8-Etd">
+                            <connections>
+                                <action selector="showMenu:" destination="jdv-xQ-8zR" id="mAN-0L-h12"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uJb-ty-Y4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="112"/>
+            <point key="canvasLocation" x="1426" y="130"/>
         </scene>
     </scenes>
     <resources>

@@ -49,11 +49,12 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FNR-D7-Hhu">
                                 <rect key="frame" x="20" y="220" width="560" height="360"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FNR-D7-Hhu" firstAttribute="top" secondItem="Znl-Rw-mTU" secondAttribute="bottom" id="53H-73-LzZ"/>
                             <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="vKM-jj-dvt" secondAttribute="leadingMargin" id="6t1-Jt-55q"/>

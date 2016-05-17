@@ -88,6 +88,8 @@
 		55DAC3791CEBAACF00941824 /* LinkedIn-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3781CEBAACF00941824 /* LinkedIn-50.png */; };
 		55DAC37B1CEBAB3E00941824 /* Web-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC37A1CEBAB3E00941824 /* Web-50.png */; };
 		55DAC37D1CEBAB6900941824 /* Email-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC37C1CEBAB6900941824 /* Email-50.png */; };
+		55DAC37F1CEBAEDD00941824 /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC37E1CEBAEDD00941824 /* SocialMedia.swift */; };
+		55DAC3811CEBC77A00941824 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3801CEBC77A00941824 /* About.swift */; };
 		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
@@ -213,6 +215,8 @@
 		55DAC3781CEBAACF00941824 /* LinkedIn-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LinkedIn-50.png"; sourceTree = "<group>"; };
 		55DAC37A1CEBAB3E00941824 /* Web-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Web-50.png"; sourceTree = "<group>"; };
 		55DAC37C1CEBAB6900941824 /* Email-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Email-50.png"; sourceTree = "<group>"; };
+		55DAC37E1CEBAEDD00941824 /* SocialMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
+		55DAC3801CEBC77A00941824 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
@@ -348,6 +352,7 @@
 				554334291CE27E7500A6001C /* Notification.swift */,
 				5549801B1CE3734200CC6E36 /* NotificationList.swift */,
 				557D354D1CE4DDDF00562A7A /* EventList.swift */,
+				55DAC3801CEBC77A00941824 /* About.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 		55DAC3121CE5116A00941824 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				55DAC37E1CEBAEDD00941824 /* SocialMedia.swift */,
 				55DAC31E1CE613C700941824 /* Twitter */,
 			);
 			name = Social;
@@ -844,9 +850,11 @@
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
 				4F2FBD141CBC5C7C0017A11F /* AttendeesCell.swift in Sources */,
 				D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */,
+				55DAC3811CEBC77A00941824 /* About.swift in Sources */,
 				55DAC3221CE651CB00941824 /* AutoresizeTextView.swift in Sources */,
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
 				4F4590E41CBEC85A00F51BCE /* Attendee.swift in Sources */,
+				55DAC37F1CEBAEDD00941824 /* SocialMedia.swift in Sources */,
 				55DAC3671CEB711800941824 /* SpeakerViewController.swift in Sources */,
 				55881AA01CE13506009B8399 /* AttendeeProtocol.swift in Sources */,
 				554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */,

@@ -8,8 +8,28 @@
 
 import Foundation
 
+
+
 class SocialMediaData {
     
     let appData = AppData()
     
+    func getSocialMedia(named : String) -> SocialMedia?{
+    
+        
+        let data = self.appData.getDataFromFile()
+        
+        if let socialData = data["links"] as? [NSDictionary]{
+            for social in socialData {
+                let dictionary = social
+                let socialMedia = SocialMedia(dictionary: dictionary)
+                
+                if socialMedia.label == named {
+                    return socialMedia
+                }
+            }
+        }
+        
+       return nil
+    }
 }
