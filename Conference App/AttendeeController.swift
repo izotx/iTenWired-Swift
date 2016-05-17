@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//control
+
 class AttendeeController{
     
     let dataLoader = AttendeeData()

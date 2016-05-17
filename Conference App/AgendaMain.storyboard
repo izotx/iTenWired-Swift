@@ -160,28 +160,10 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-Qe-YSL">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8h-EI-44J">
-                                                <rect key="frame" x="13" y="39" width="294" height="37"/>
-                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nisi nunc, pharetra vel aliquam sed, posuere tincidunt velit. Suspendisse auctor pellentesque dui eget congue. Mauris sit amet neque dui. Aenean diam urna, rutrum vel placerat sit amet, ultricies sed velit. Curabitur varius nisi a sollicitudin imperdiet. Sed id sem purus. Nam eu pretium sem.
-
-Integer sed sapien vitae massa tincidunt sagittis. Vivamus libero sapien, tristique nec scelerisque nec, feugiat at justo. Etiam eu mi gravida, ornare quam nec, semper risus. Suspendisse tincidunt, urna sit amet rutrum malesuada, magna nunc laoreet odio, eu posuere est lorem at felis. Praesent molestie odio ac justo euismod malesuada nec vitae ligula. Sed a egestas ligula, vitae lacinia nisi. Nam laoreet placerat nunc, vehicula tristique diam rutrum nec. Donec consectetur pretium mattis. Suspendisse ut porta nunc. Curabitur condimentum, nulla eu dictum mattis, risus augue fringilla enim, et tristique sapien urna sed sapien. Proin vitae velit at tortor pulvinar scelerisque at non leo.
-
-Sed fermentum lacus id sapien tempor, vel vehicula purus sagittis. Sed sit amet commodo metus. In sit amet elementum mauris. Maecenas sed mi auctor, ultricies est et, dapibus massa. In fringilla euismod nulla nec luctus. Etiam urna justo, dapibus quis molestie in, rutrum eget lectus. Vestibulum at mauris vel ante convallis facilisis ac nec orci. Donec id faucibus lectus. Phasellus ut vehicula odio.
-
-Vestibulum sed vestibulum nunc. Mauris varius libero eu lectus dignissim mattis. Nam non odio vitae neque egestas luctus at in ex. Maecenas vitae felis sed ligula sagittis interdum nec eu arcu. Proin quis justo a ex hendrerit pharetra. Sed ullamcorper est risus, in maximus metus pretium eget. Proin nec feugiat elit.
-
-In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie vehicula. Vestibulum commodo, nibh ac vulputate finibus, nulla magna auctor arcu, et facilisis arcu tortor at augue. Etiam sit amet quam dui. Fusce ut dictum est, vitae tempor ligula. Nulla tempor, erat at dapibus malesuada, lectus libero ullamcorper justo, vel finibus mauris mi at elit. Nunc mollis vulputate egestas. Suspendisse potenti. Etiam ligula risus, mollis et neque egestas, feugiat condimentum enim. Aliquam ac urna in mauris lobortis lacinia. Suspendisse interdum nibh quis ullamcorper fringilla. Vivamus a bibendum nibh. Praesent malesuada laoreet justo ut tempor.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-gX-aNZ">
-                                                <rect key="frame" x="0.0" y="161" width="320" height="259"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-gX-aNZ">
+                                                <rect key="frame" x="0.0" y="205" width="320" height="244"/>
                                                 <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" priority="750" constant="500" id="3dr-ko-jWN"/>
-                                                </constraints>
                                                 <color key="sectionIndexColor" red="0.98656028510000005" green="0.6345037818" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="sectionIndexBackgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
@@ -244,13 +226,37 @@ In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8h-EI-44J">
+                                                <rect key="frame" x="18" y="109" width="294" height="37"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nisi nunc, pharetra vel aliquam sed, posuere tincidunt velit. Suspendisse auctor pellentesque dui eget congue. Mauris sit amet neque dui. Aenean diam urna, rutrum vel placerat sit amet, ultricies sed velit. Curabitur varius nisi a sollicitudin imperdiet. Sed id sem purus. Nam eu pretium sem.
+
+Integer sed sapien vitae massa tincidunt sagittis. Vivamus libero sapien, tristique nec scelerisque nec, feugiat at justo. Etiam eu mi gravida, ornare quam nec, semper risus. Suspendisse tincidunt, urna sit amet rutrum malesuada, magna nunc laoreet odio, eu posuere est lorem at felis. Praesent molestie odio ac justo euismod malesuada nec vitae ligula. Sed a egestas ligula, vitae lacinia nisi. Nam laoreet placerat nunc, vehicula tristique diam rutrum nec. Donec consectetur pretium mattis. Suspendisse ut porta nunc. Curabitur condimentum, nulla eu dictum mattis, risus augue fringilla enim, et tristique sapien urna sed sapien. Proin vitae velit at tortor pulvinar scelerisque at non leo.
+
+Sed fermentum lacus id sapien tempor, vel vehicula purus sagittis. Sed sit amet commodo metus. In sit amet elementum mauris. Maecenas sed mi auctor, ultricies est et, dapibus massa. In fringilla euismod nulla nec luctus. Etiam urna justo, dapibus quis molestie in, rutrum eget lectus. Vestibulum at mauris vel ante convallis facilisis ac nec orci. Donec id faucibus lectus. Phasellus ut vehicula odio.
+
+Vestibulum sed vestibulum nunc. Mauris varius libero eu lectus dignissim mattis. Nam non odio vitae neque egestas luctus at in ex. Maecenas vitae felis sed ligula sagittis interdum nec eu arcu. Proin quis justo a ex hendrerit pharetra. Sed ullamcorper est risus, in maximus metus pretium eget. Proin nec feugiat elit.
+
+In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie vehicula. Vestibulum commodo, nibh ac vulputate finibus, nulla magna auctor arcu, et facilisis arcu tortor at augue. Etiam sit amet quam dui. Fusce ut dictum est, vitae tempor ligula. Nulla tempor, erat at dapibus malesuada, lectus libero ullamcorper justo, vel finibus mauris mi at elit. Nunc mollis vulputate egestas. Suspendisse potenti. Etiam ligula risus, mollis et neque egestas, feugiat condimentum enim. Aliquam ac urna in mauris lobortis lacinia. Suspendisse interdum nibh quis ullamcorper fringilla. Vivamus a bibendum nibh. Praesent malesuada laoreet justo ut tempor.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt3-BN-eGc">
+                                                <rect key="frame" x="40" y="30" width="240" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="R8h-EI-44J" firstAttribute="top" secondItem="dbk-Qe-YSL" secondAttribute="top" constant="45" id="AvO-cC-AwR"/>
                                             <constraint firstItem="R8h-EI-44J" firstAttribute="leading" secondItem="dbk-Qe-YSL" secondAttribute="leading" constant="13" id="Sfo-F7-Mff"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yt3-BN-eGc" secondAttribute="trailing" constant="40" id="aMk-S3-SeF"/>
                                             <constraint firstItem="R8h-EI-44J" firstAttribute="centerX" secondItem="J5H-gX-aNZ" secondAttribute="centerX" id="ajK-xk-3Bp"/>
                                             <constraint firstItem="J5H-gX-aNZ" firstAttribute="top" secondItem="R8h-EI-44J" secondAttribute="bottom" constant="25" id="cvl-mS-fNj" userLabel="Table View.top = Summary Label.bottom + 25"/>
+                                            <constraint firstItem="Yt3-BN-eGc" firstAttribute="top" secondItem="dbk-Qe-YSL" secondAttribute="top" constant="30" id="gJS-2v-Wii"/>
+                                            <constraint firstItem="R8h-EI-44J" firstAttribute="top" secondItem="Yt3-BN-eGc" secondAttribute="bottom" constant="53" id="gnJ-yp-aRd"/>
+                                            <constraint firstItem="Yt3-BN-eGc" firstAttribute="leading" secondItem="dbk-Qe-YSL" secondAttribute="leading" constant="40" id="rtC-3O-6DZ"/>
                                             <constraint firstItem="J5H-gX-aNZ" firstAttribute="leading" secondItem="dbk-Qe-YSL" secondAttribute="leading" id="yVj-fi-tmO"/>
                                             <constraint firstAttribute="trailing" secondItem="J5H-gX-aNZ" secondAttribute="trailing" id="z2S-mf-HGv"/>
                                         </constraints>
@@ -286,11 +292,12 @@ In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie
                         <outlet property="scrollView" destination="lye-Dk-5mE" id="vW2-3b-Q57"/>
                         <outlet property="summaryLabel" destination="R8h-EI-44J" id="Drb-UB-pLz"/>
                         <outlet property="tableView" destination="J5H-gX-aNZ" id="MrA-iT-6ME"/>
+                        <outlet property="titleLabel" destination="Yt3-BN-eGc" id="96P-fl-brh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rh-Dw-sHf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="441"/>
+            <point key="canvasLocation" x="1256" y="441"/>
         </scene>
     </scenes>
     <resources>

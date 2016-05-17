@@ -13,6 +13,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
    // @IBOutlet var NameLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
   
     @IBOutlet weak var scrollView: UIScrollView!
 
@@ -23,15 +24,18 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // TableView Delegate
         tableView.delegate = self
         tableView.dataSource = self
         
         // Do any additional setup after loading the view, typically from a nib.
-        //NameLabel.text = event!.name
         summaryLabel.text = event?.summary
+        titleLabel.text = event?.name
         
-        resizeScrollView()
+        // Resize the tableview and scrollview
         resizeTableview()
+        resizeScrollView()
+        
         
         if event?.presentorsIDs.count <= 0 {
             self.tableView.hidden = true
@@ -53,6 +57,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func resizeTableview(){
         var tableViewHeight:CGFloat = 0.0
+        
         
         for view in tableView.subviews {
             let height = view.frame.size.height + view.frame.origin.y
@@ -91,7 +96,12 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (event?.presentorsIDs.count)!
+        
+        let count = (event?.presentorsIDs.count)!
+        
+        tableView.contentSize = CGSize(width: tableView.contentSize.width, height: CGFloat(count) * 40.00)
+        
+        return count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
