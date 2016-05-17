@@ -25,12 +25,14 @@ class SocialItem {
 
 class SocialMediaViewController: UITableViewController {
     
-    var socialItems:[SocialItem] = [SocialItem(name:"Facebook", logo: "facebook.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Twitter", logo: "twitter.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
-                                    SocialItem(name:"YouTube", logo: "youtube.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Instagram", logo: "instagram-50-2.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Web", logo: "web.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Email", logo: "email.png", storyboardId: "", viewControllerId: "")]
+    var socialItems:[SocialItem] = [SocialItem(name:"Facebook", logo: "Facebook-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Twitter", logo: "Twitter-50.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
+                                    SocialItem(name:"LinkedIn", logo:"LinkedIn-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Google", logo :"Google-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"YouTube", logo: "YouTube-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Instagram", logo: "Instagram-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Web", logo: "Web-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Email", logo: "Email-50.png", storyboardId: "", viewControllerId: "")]
     
     
     override func viewDidLoad() {
@@ -43,12 +45,12 @@ class SocialMediaViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("socialSelectCells", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SocialMediaCell", forIndexPath: indexPath) as? SocialMediaCell
         
-        cell.textLabel?.text = socialItems[indexPath.row].name
-        cell.imageView?.image = UIImage(named: socialItems[indexPath.row].logo)
+        cell?.setName(socialItems[indexPath.row].name)
+        cell?.setlogo(socialItems[indexPath.row].logo)
         
-        return cell
+        return cell!
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

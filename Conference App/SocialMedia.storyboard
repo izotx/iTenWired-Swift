@@ -9,42 +9,45 @@
         <scene sceneID="PJ4-Xa-gdI">
             <objects>
                 <tableViewController restorationIdentifier="SocialMediaRoot" storyboardIdentifier="SocialMediaRoot" id="v0j-U2-FAf" customClass="SocialMediaViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fPI-rO-JjV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" id="fPI-rO-JjV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="socialSelectCells" selectionStyle="default" indentationWidth="10" reuseIdentifier="socialSelectCells" textLabel="LBs-Zx-Eae" detailTextLabel="feS-5e-Ha4" imageView="5Nl-oG-59F" style="IBUITableViewCellStyleValue1" id="Z3z-fH-xOv">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SocialMediaCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SocialMediaCell" rowHeight="79" id="WoK-GL-0mb" customClass="SocialMediaCell" customModule="Conference_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z3z-fH-xOv" id="e9m-Hc-Kba">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WoK-GL-0mb" id="dHQ-3G-lUb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LBs-Zx-Eae">
-                                            <rect key="frame" x="55" y="10" width="39" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="feS-5e-Ha4">
-                                            <rect key="frame" x="543" y="14" width="42" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-5G-Cxe">
+                                            <rect key="frame" x="19" y="14" width="50" height="50"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI7-3A-06b">
+                                            <rect key="frame" x="97" y="24" width="169" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="169" id="LNW-mC-oaR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="twitter.png" id="5Nl-oG-59F">
-                                            <rect key="frame" x="15" y="11" width="25" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="v4W-5G-Cxe" firstAttribute="leading" secondItem="dHQ-3G-lUb" secondAttribute="leadingMargin" constant="11" id="JUw-ys-p6H"/>
+                                        <constraint firstItem="JI7-3A-06b" firstAttribute="top" secondItem="dHQ-3G-lUb" secondAttribute="topMargin" constant="16" id="Urr-NY-k6i"/>
+                                        <constraint firstItem="JI7-3A-06b" firstAttribute="leading" secondItem="dHQ-3G-lUb" secondAttribute="leadingMargin" constant="89" id="jt3-ns-jiB"/>
+                                        <constraint firstItem="v4W-5G-Cxe" firstAttribute="centerY" secondItem="JI7-3A-06b" secondAttribute="centerY" id="r0M-0T-g0v"/>
+                                        <constraint firstItem="v4W-5G-Cxe" firstAttribute="centerY" secondItem="dHQ-3G-lUb" secondAttribute="centerY" id="sbQ-cU-47D"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="logo" destination="v4W-5G-Cxe" id="LQM-6B-07P"/>
+                                    <outlet property="nameLabel" destination="JI7-3A-06b" id="5tF-vb-J14"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfN-SG-jut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="-580"/>
+            <point key="canvasLocation" x="1401" y="-581"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UkG-tu-YUU">
@@ -182,7 +185,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Facebook-50.png" width="50" height="50"/>
         <image name="menu-25.png" width="25" height="25"/>
-        <image name="twitter.png" width="25" height="21"/>
     </resources>
 </document>

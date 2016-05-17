@@ -105,6 +105,21 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+       
+        guard let speakerID = self.event?.presentorsIDs[indexPath.row],
+            let speaker = self.attendeeController.getSpeakerById(speakerID) else{
+                
+                return
+        }
+        
+        let storyboard = UIStoryboard.init(name: "Attendees", bundle: nil)
+        
+        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("SpeakerDescriptionViewController") as? SpeakerDescriptionViewController
+        
+        
+        destinationViewController?.speaker = speaker
+  
+        self.navigationController?.pushViewController(destinationViewController!, animated: true)
         
     }
 }

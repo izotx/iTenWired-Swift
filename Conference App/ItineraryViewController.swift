@@ -10,10 +10,10 @@ import UIKit
 
 class ItineraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
-    
     @IBAction func AgendaBTN(sender: AnyObject) {
-        //FIXME:
-        //self.showViewController(Vc[1], sender: self)
+        let storyboard = UIStoryboard.init(name: "AgendaMain", bundle: nil)
+        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("AgendaInitial")
+        splitViewController?.showDetailViewController(destinationViewController, sender: nil)
     }
     @IBOutlet weak var ItinTable: UITableView!
     
@@ -21,11 +21,14 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationItem.rightBarButtonItem = editButtonItem()
         
         self.ItinTable.delegate = self
         self.ItinTable.dataSource = self
         ItinTable.estimatedRowHeight = 85.0
         ItinTable.rowHeight = UITableViewAutomaticDimension
+        
+        
     }
     
     
@@ -84,6 +87,8 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         
         return [delete]
     }
+    
+
     
     @IBAction func showMenu(sender: AnyObject) {
         if let splitController = self.splitViewController{

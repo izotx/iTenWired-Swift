@@ -8,13 +8,6 @@
 
 import UIKit
 
-//extension UISplitViewController {
-//    func toggleMasterView() {
-//        let barButtonItem = self.displayModeButtonItem()
-//        UIApplication.sharedApplication().sendAction(barButtonItem.action, to: barButtonItem.target, from: nil, forEvent: nil)
-//    }
-//}
-
 
 extension UISplitViewController {
     func toggleMasterView() {

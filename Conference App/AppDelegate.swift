@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
         
         let notificationController = NotificationController()
-        UIApplication.sharedApplication().applicationIconBadgeNumber = 250//notificationController.getNumberOfUnReadNotifications()
+        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
         
         // Recives and deals with notifications
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
