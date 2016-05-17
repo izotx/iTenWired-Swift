@@ -53,8 +53,8 @@ class LiveBroadcastViewController: UIViewController {
         super.viewDidLoad()
         
         // Initial VC Styling
-        self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
-        self.broadcastTitle.textColor = UIColor.whiteColor()
+        //self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
+        //self.broadcastTitle.textColor = UIColor.whiteColor()
         
         // This Code Lets the App Play MP3 in Background, Not Implemented Yet
         let session:AVAudioSession = AVAudioSession.sharedInstance()
@@ -132,7 +132,9 @@ class LiveBroadcastViewController: UIViewController {
         //let url = "http://pubint.ic.llnwd.net/stream/pubint_wuwfhd3"
         
         // Pensacola Business Radio URL
-        //let url = "http://199.180.72.2:9110/;stream.mp3" - Public Business Radio
+        //let url = "http://199.180.72.2:9110/;stream.mp3" //- Public Business Radio
+        
+        //let url = "http://199.180.72.2:9110/home.html"
         
         // Random Weather Radio URL for testing
         let url = "http://audiostream.wunderground.com/2000grandprix/cedarfalls.mp3.m3u"

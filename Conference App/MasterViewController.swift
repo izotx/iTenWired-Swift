@@ -78,28 +78,28 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
     
     internal func loadMenuItems(){
         // Loading menu items into array
-        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "Map.png")
+        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "MapM-25.png")
         self.menuItems.append(map)
         
-        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda.png")
+        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda-25.png")
         self.menuItems.append(agenda)
         
-        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten.png")
+        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten-25.png")
         self.menuItems.append(myIten)
         
-        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMedia.png")
+        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMedia-25.png")
         self.menuItems.append(socialMedia)
         
-        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast.png")
+        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast-25.png")
         self.menuItems.append(liveBroadcast)
         
-        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About.png")
+        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About-25.png")
         self.menuItems.append(about)
         
-        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who.png")
+        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who-25.png")
         self.menuItems.append(atendees)
         
-        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Settings.png")
+        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Announcements-25.png")
         self.menuItems.append(notifications)
     }
     

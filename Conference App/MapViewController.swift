@@ -17,7 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var mainMap: MKMapView!
     @IBOutlet weak var segmentStyle: UISegmentedControl!
     
-    // Global Variables
+
     var locationManager: CLLocationManager = CLLocationManager()
     var startLocation: CLLocation!
     var destination: MKMapItem?
@@ -239,26 +239,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             NSLog("Denied access: \(locationStatus)")
         }
         
-        // print(locationStatus)
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     
-     
-     }
-     */
-    
     // Displays the menu when clicked
     @IBAction func showMenu(sender: AnyObject) {
         let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
         
         rightNavController.popToRootViewControllerAnimated(true)
     }
-    
 }
 

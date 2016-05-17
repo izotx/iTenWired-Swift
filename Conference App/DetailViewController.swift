@@ -72,11 +72,6 @@ class DetailViewController: UIViewController {
             splitViewController?.showDetailViewController(destinationViewController, sender: nil)
             
         }
-        
-        
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

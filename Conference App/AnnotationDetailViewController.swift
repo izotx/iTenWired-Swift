@@ -45,9 +45,8 @@ class AnnotationDetailViewController: UIViewController {
         super.viewDidLoad()
         
         // Set Initial VC Styling
-        self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
-        self.pointTitle.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
-        self.pointInfo.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
+       // self.pointTitle.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
+        //self.pointInfo.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
         
         if let annotationName = receivedAnnotation?.title, let annotationInfo = receivedAnnotation?.info {
             pointTitle.text = annotationName
