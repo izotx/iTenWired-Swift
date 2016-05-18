@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Sponsors-->
+        <!--Who is here?-->
         <scene sceneID="ucK-Bf-UNd">
             <objects>
                 <tableViewController id="D4x-NL-wQ1" customClass="AttendeesViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="exibitorsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="exibitorsCell" rowHeight="87" id="nu9-Qy-b5u" customClass="AttendeesCell" customModule="Conference_App" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="exibitorsCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="exibitorsCell" rowHeight="87" id="nu9-Qy-b5u" customClass="AttendeesCell" customModule="Conference_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="145" width="600" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nu9-Qy-b5u" id="7xo-tL-srZ">
@@ -189,7 +189,7 @@
                             <outlet property="delegate" destination="D4x-NL-wQ1" id="dYw-5v-Icb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sponsors" id="u84-ZJ-n8H">
+                    <navigationItem key="navigationItem" title="Who is here?" id="u84-ZJ-n8H">
                         <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="Teh-0I-qSG">
                             <connections>
                                 <action selector="showMenu:" destination="D4x-NL-wQ1" id="ZYH-cL-Zjq"/>

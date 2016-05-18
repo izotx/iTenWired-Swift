@@ -11,10 +11,20 @@ import UIKit
 class About {
 
     var description = ""
-    var image:UIImage!
+    var image = ""
     
     
-    init(){
+    init(description: String, image: String){
+        self.description = description
+        self.image = image
+    }
     
+    func setDescription(description:String){
+        self.description = description
+    }
+    
+    func setImage(URLString : String){
+        self.image =  URLString
     }
 }
+

@@ -11,19 +11,21 @@ import UIKit
 class AboutViewController: UIViewController {
 
     
-    var about: AboutData = AboutData()
+    var aboutData: AboutData = AboutData()
     
-    @IBOutlet var aboutTextView: UITextView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet var imageURL: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Initial VC Styling
-        aboutTextView.text = about.content
+        let about = aboutData.getAbout()
         
-        if let url = NSURL(string:about.logo) {
+        // Initial VC Styling
+        descriptionLabel.text = about.description
+        
+        if let url = NSURL(string:about.image) {
             let data = NSData(contentsOfURL:url)
         
             if(data != nil){
@@ -31,7 +33,6 @@ class AboutViewController: UIViewController {
                 imageURL.contentMode = .ScaleAspectFit
             }
         }
-        aboutTextView.scrollRangeToVisible(NSMakeRange(0, 0))
         
     }
 
@@ -39,4 +40,11 @@ class AboutViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
+    @IBAction func showMenu(sender: AnyObject) {
+        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
+        
+        rightNavController.popToRootViewControllerAnimated(true)
+    }
+    
 }
