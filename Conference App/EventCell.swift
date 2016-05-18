@@ -68,11 +68,5 @@ class EventCell: UITableViewCell {
             myItenController.addToMyIten(event)
             self.addButton.setImage(UIImage(named: "StarFilled-25.png"), forState: UIControlState.Normal)
         }
-        
-        
-        
-        
     }
-    
-    
 }

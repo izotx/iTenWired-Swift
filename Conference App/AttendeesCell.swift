@@ -20,27 +20,16 @@ class AttendeesCell: UITableViewCell {
     
     func build(sponser:Sponser){
         setName(sponser.name)
-        setLogo(sponser.logo)
         setLevel(sponser.level)
     }
     
     func build(exibitor:Exibitor){
         setName(exibitor.name)
-        setLogo(exibitor.logo)
         setLevel(exibitor.website)
     }
     
     func setName(name:String){
         nameLabel.text = name
-    }
-    
-    func setLogo(logo:String)
-    {
-        let imageData = NSData(contentsOfURL: NSURL(string: logo)!)
-        self.logoView.image = UIImage(data: imageData!)
-        
-        logoView.layer.cornerRadius = 10
-        logoView.layer.masksToBounds = true
     }
     
     func setProfileImage(photoDetails : Photorecord){
@@ -51,6 +40,4 @@ class AttendeesCell: UITableViewCell {
     {
         Title.text = level
     }
-    
-  
 }

@@ -26,6 +26,9 @@ class SpeakerCell: UITableViewCell {
     
     func build(speaker:Speaker){
         setName(speaker.name)
-        setJobTitle("\(speaker.jobTitle) at \(speaker.company)")
+        
+        if speaker.jobTitle != "" && speaker.company != ""{
+            setJobTitle("\(speaker.jobTitle) at \(speaker.company)")
+        }
     }
 }

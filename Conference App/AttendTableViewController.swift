@@ -10,25 +10,66 @@ import UIKit
 
 class AttendeesViewController: UITableViewController{
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let atendeeControler = AttendeeController()
+    
+    var sponsers:[Sponser] = []
+    var exhibitors:[Exibitor] = []
+    var speakers:[Speaker] = []
     
     // Photo Loader and controller for exhibitor photos
     var exhibitorPhotos = [Photorecord]()
     let exibitorPendingOperations = PendingOperarions()
-    var exhibitors:[Exibitor] = []
+    
     
     // Photo loader and controller for sponsers
     var sponserPhotos = [Photorecord]()
     let sponserPendingoperations = PendingOperarions()
-    var sponsers:[Sponser] = []
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchExhibitors()  // Loads Exhibitors Data
-        self.fetchSponsers()    // Loads Sponsers Data
+        self.activityIndicator.startAnimating()
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            //Gets attendees Data
+            self.loadSponsers()
+            self.loadExhibitors()
+            self.speakers = self.atendeeControler.getSpeakers()
+            
+            // Deactivates Activity indicator
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
+            
+            //Relaods TableView Data
+            self.tableView.reloadData()
+        }
     }
+    
+    internal func loadSponsers(){
+        let sponsers = self.atendeeControler.getSponsers()
+        
+        for sponser in sponsers {
+            self.sponsers.append(sponser)
+            let url = NSURL(string: sponser.logo)
+            let photoRecord = Photorecord(name: sponser.logo, url: url!)
+            self.sponserPhotos.append(photoRecord)
+        }
+    }
+    
+    internal func loadExhibitors(){
+        let exhibitors = self.atendeeControler.getExibitors()
+        
+        for exhibitor in exhibitors {
+            self.exhibitors.append(exhibitor)
+            let url = NSURL(string: exhibitor.logo)
+            let photoRecord = Photorecord(name: exhibitor.logo, url: url!)
+            self.exhibitorPhotos.append(photoRecord)
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,22 +81,51 @@ class AttendeesViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var index = indexPath.row
         
+        // Sponser Cell
+        if index >= 0 && index <= sponsers.count{
+            if index == 0 { //excludes header
+                return
+            }
+            print("\(index-1) cell of sponsers")
+        }
+        
+        index = index - (sponsers.count + 1)
+        
+        if index >= 0 && index <= exhibitors.count{
+            if index == 0{  // Excludes Header
+                return
+            }
+            print("\(index - 1) cell of exhibitors")
+        }
+        
+        index = index - (exhibitors.count + 1)
+        
+        // Speaker
+        if index >= 0 && index <= speakers.count {
+            
+            if index == 0{
+                return
+            }
+            let storyboard = UIStoryboard.init(name: "Attendees", bundle: nil)
+            
+            let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("SpeakerDescriptionViewController") as? SpeakerDescriptionViewController
+            
+            
+            destinationViewController?.speaker = speakers[index-1]
+            
+            self.navigationController?.pushViewController(destinationViewController!, animated: true)
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return self.exhibitors.count + self.sponsers.count + atendeeControler.getSpeakers().count
+       return self.exhibitors.count + self.sponsers.count + self.speakers.count
     }
     
     
     //FIXME: IMPLEMENT
-    // returns true is the searchController is active and there is a search typed
     func searchPerformed() -> Bool{
-        //if searchController.active {
-           // if let query = searchController.searchBar.text {
-            //    return true
-            //}
-      //  }
         return false
     }
     
@@ -79,23 +149,18 @@ class AttendeesViewController: UITableViewController{
                 
                 let photoDetails = sponserPhotos[index-1]
                 
-                switch photoDetails.state {
-                    
-                case PhotoRecordState.Downloaded:
-                    break
-                    
-                case PhotoRecordState.New:
-                    self.startDownloadForRecord(photoDetails, index: index-1, pendingOperations: self.sponserPendingoperations)
-                    break
-                    
-                default:
-                    break
-                }
                 
                 let cell = tableView.dequeueReusableCellWithIdentifier("exibitorsCell", forIndexPath: indexPath) as! AttendeesCell
-                let sponser = atendeeControler.getSponserAtIndex(index - 1)
+                
+                if photoDetails.state == PhotoRecordState.New {
+                    self.startDownloadForRecord(photoDetails, indexPath: indexPath, pendingOperations: self.sponserPendingoperations)
+                }
+                
+                let sponser = self.sponsers[index-1]
+                
                 cell.build(sponser)
                 cell.setProfileImage(photoDetails)
+                
                 return cell
             }
             
@@ -109,24 +174,18 @@ class AttendeesViewController: UITableViewController{
                     return cell
                 }
                 
-                let photoDetails = exhibitorPhotos[index-1]
-                
-                switch photoDetails.state {
-                case PhotoRecordState.Downloaded:
-                    break
-                case PhotoRecordState.New:
-                    self.startOperationForPhotoRecord(photoDetails, index: index-1, pendingOperations: self.exibitorPendingOperations)
-                    
-                default: break
-                }
+                let photoDetails = self.exhibitorPhotos[index-1]
                 
                 let cell = tableView.dequeueReusableCellWithIdentifier("exibitorsCell", forIndexPath: indexPath) as! AttendeesCell
-                let  exibitor = atendeeControler.getExibitorAtIndex(index - 1)
                 
+                if photoDetails.state == PhotoRecordState.New {
+                    self.startDownloadForRecord(photoDetails, indexPath: indexPath, pendingOperations: self.exibitorPendingOperations)
+                }
+                
+                let  exibitor = self.exhibitors[index-1]
                 cell.build(exibitor)
                 cell.setProfileImage(photoDetails)
-                
-                
+    
                 return cell
             }
         }
@@ -147,12 +206,17 @@ class AttendeesViewController: UITableViewController{
         return tableView.dequeueReusableCellWithIdentifier("exibitorsCell", forIndexPath: indexPath) as! AttendeesCell
     }
     
-    func startOperationForPhotoRecord(photoDetails: Photorecord, index: Int, pendingOperations: PendingOperarions){
+    @IBAction func showMenu(sender: AnyObject) {
+        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
+        
+        rightNavController.popToRootViewControllerAnimated(true)
+    }
+    
+    func startOperationForPhotoRecord(photoDetails: Photorecord, indexPath: NSIndexPath, pendingOperations: PendingOperarions){
         
         switch (photoDetails.state) {
-
-        case PhotoRecordState.New:pendingOperations
-            startDownloadForRecord(photoDetails, index: index, pendingOperations: pendingOperations)
+        case PhotoRecordState.New:
+            startDownloadForRecord(photoDetails, indexPath: indexPath, pendingOperations: pendingOperations)
             break
             
         default: print("Do Nothing..")
@@ -160,9 +224,9 @@ class AttendeesViewController: UITableViewController{
         
     }
     
-    func startDownloadForRecord(photoDetails: Photorecord, index: Int, pendingOperations: PendingOperarions){
+    func startDownloadForRecord(photoDetails: Photorecord, indexPath: NSIndexPath, pendingOperations: PendingOperarions){
         
-        if let downloadoperarion = pendingOperations.downloadsInProgress[index]{
+        if let downloadoperarion = pendingOperations.downloadsInProgress[indexPath.row]{
             return
         }
         
@@ -174,43 +238,14 @@ class AttendeesViewController: UITableViewController{
                 return
             }
             dispatch_async(dispatch_get_main_queue(), {
-                pendingOperations.downloadsInProgress.removeValueForKey(index)
+                pendingOperations.downloadsInProgress.removeValueForKey(indexPath.row)
+                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             })
         }
         
-        pendingOperations.downloadsInProgress.removeValueForKey(index)
+        pendingOperations.downloadsInProgress.removeValueForKey(indexPath.row)
         pendingOperations.downloadQueue.addOperation(downloader)
     }
-    
-    @IBAction func showMenu(sender: AnyObject) {
-        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
-        
-        rightNavController.popToRootViewControllerAnimated(true)
-    }
-    
-    func fetchExhibitors(){
-         let exhibitors = atendeeControler.getExibitors()
-        
-        for exhibitor in exhibitors {
-            self.exhibitors.append(exhibitor)
-            let url = NSURL(string: exhibitor.logo)
-            let photoRecord = Photorecord(name: exhibitor.logo, url: url!)
-            self.exhibitorPhotos.append(photoRecord)
-            
-        }
-    }
-    
-    func fetchSponsers(){
-        let sponsers = atendeeControler.getSponsers()
-        
-        for sponser in sponsers {
-            self.sponsers.append(sponser)
-            let url = NSURL(string: sponser.logo)
-            let photoRecord = Photorecord(name: sponser.logo, url: url!)
-            self.sponserPhotos.append(photoRecord)
-        }
-    }
-    
 }
 
 

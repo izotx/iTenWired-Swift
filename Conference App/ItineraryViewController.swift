@@ -21,7 +21,7 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.rightBarButtonItem = editButtonItem()
+        self.navigationItem.rightBarButtonItem = editButtonItem()
         
         self.ItinTable.delegate = self
         self.ItinTable.dataSource = self
@@ -30,12 +30,6 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         
         
     }
-    
-    
-    override func viewWillAppear(animated: Bool) {
-        ItinTable.reloadData()
-    }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,7 +70,7 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         ItinTable.reloadData()
     }
     
-    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+    /*func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         
         let delete = UITableViewRowAction(style: .Normal, title: "Remove from my Iten") { action, index in
             self.myItenController.deleteFromMyIten(self.myItenController.getMyItenEvents()[indexPath.row])
@@ -86,8 +80,19 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         return [delete]
+    }*/
+    
+    
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+   
 
     
     @IBAction func showMenu(sender: AnyObject) {
