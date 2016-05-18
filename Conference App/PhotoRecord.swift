@@ -19,11 +19,12 @@ class Photorecord {
     let name:String
     let url:NSURL
     var state = PhotoRecordState.New
-    var image = UIImage(named : "placeholder.png")
+    var image:UIImage!
     
     
     init(name:String, url:NSURL){
         self.name = name
         self.url = url
+        self.image = UIImage(named : "placeholder.png")
     }
 }

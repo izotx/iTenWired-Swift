@@ -11,7 +11,7 @@ import Foundation
 
 class PendingOperarions {
 
-    lazy var downloadsInProgress = [NSIndexPath:NSOperation]()
+    lazy var downloadsInProgress = [Int:NSOperation]()
     lazy var downloadQueue:NSOperationQueue = {
         var queue = NSOperationQueue()
         queue.name = "Download queue"

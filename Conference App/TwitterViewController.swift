@@ -69,7 +69,7 @@ class TwitterViewController: UITableViewController{
     
     func startDownloadForRecord(photoDetails: Photorecord, indexPath: NSIndexPath){
         
-        if let downloadoperarion = pendingOperarions.downloadsInProgress[indexPath]{
+        if let downloadoperarion = pendingOperarions.downloadsInProgress[indexPath.row]{
             return
         }
         
@@ -81,18 +81,16 @@ class TwitterViewController: UITableViewController{
                 return
             }
             dispatch_async(dispatch_get_main_queue(), {
-                self.pendingOperarions.downloadsInProgress.removeValueForKey(indexPath)
+                self.pendingOperarions.downloadsInProgress.removeValueForKey(indexPath.row)
                 self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             })
         }
         
-        pendingOperarions.downloadsInProgress.removeValueForKey(indexPath)
+        pendingOperarions.downloadsInProgress.removeValueForKey(indexPath.row)
         pendingOperarions.downloadQueue.addOperation(downloader)
     }
     
     func fetchTweets(){
-        
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         self.tweets = twitterController.getTweets()
         
         for tweet in self.tweets {
@@ -101,7 +99,6 @@ class TwitterViewController: UITableViewController{
             self.photos.append(photoRecord)
         }
         self.tableView.reloadData()
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     }
     
     func checkForNewTweets() -> Bool{

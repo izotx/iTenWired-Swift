@@ -41,15 +41,10 @@ class AttendeesCell: UITableViewCell {
         
         logoView.layer.cornerRadius = 10
         logoView.layer.masksToBounds = true
-        
-       
     }
     
-    
-    // FIXME: Remove function
-    func setjobTitle(title:String)
-    {
-        Title.text = title
+    func setProfileImage(photoDetails : Photorecord){
+        self.logoView.image = photoDetails.image!
     }
     
     func setLevel(level:String)
