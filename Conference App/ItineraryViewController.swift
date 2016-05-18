@@ -82,6 +82,18 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         return [delete]
     }*/
     
+    override func setEditing(editing: Bool, animated: Bool) {
+       
+        
+        self.ItinTable.setEditing(!ItinTable.editing, animated: animated)
+        if ItinTable.editing{
+            self.navigationItem.rightBarButtonItem?.title = "Done"
+        }
+        else{
+            self.navigationItem.rightBarButtonItem?.title = "Edit"
+        }
+    }
+    
     
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
