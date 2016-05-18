@@ -33,11 +33,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Znl-Rw-mTU">
-                                <rect key="frame" x="0.0" y="64" width="320" height="84"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Znl-Rw-mTU">
+                                <rect key="frame" x="24" y="97" width="272" height="84"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8C-Q4-CDM">
-                                <rect key="frame" x="20" y="156" width="280" height="197"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8C-Q4-CDM">
+                                <rect key="frame" x="24" y="185" width="272" height="197"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,13 +45,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Z8C-Q4-CDM" secondAttribute="trailing" id="6h8-gy-osf"/>
-                            <constraint firstItem="Z8C-Q4-CDM" firstAttribute="top" secondItem="Znl-Rw-mTU" secondAttribute="bottom" constant="37" id="W26-CO-JMe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Znl-Rw-mTU" secondAttribute="trailing" constant="-20" id="cjB-k0-zvG"/>
-                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="vKM-jj-dvt" secondAttribute="leadingMargin" constant="-20" id="eXy-HS-CBf"/>
-                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="top" secondItem="d6b-Vk-6tp" secondAttribute="bottom" id="qHz-U2-Kv7"/>
-                            <constraint firstItem="jdc-QG-U8d" firstAttribute="top" secondItem="Znl-Rw-mTU" secondAttribute="bottom" constant="420" id="sG6-p9-QV3"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Z8C-Q4-CDM" secondAttribute="leading" id="zoe-Up-9ui"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="trailing" secondItem="Z8C-Q4-CDM" secondAttribute="trailing" id="4zZ-nb-mb8"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="top" secondItem="d6b-Vk-6tp" secondAttribute="bottom" constant="33" id="HWF-DR-Ick"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="vKM-jj-dvt" secondAttribute="leadingMargin" constant="8" id="Isi-Av-3aX"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="Z8C-Q4-CDM" secondAttribute="leading" id="Ws3-QA-RkQ"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="centerX" secondItem="vKM-jj-dvt" secondAttribute="centerX" id="fIi-p5-hBo"/>
+                            <constraint firstItem="Z8C-Q4-CDM" firstAttribute="top" secondItem="Znl-Rw-mTU" secondAttribute="bottom" constant="4" id="o50-nk-zo7"/>
+                            <constraint firstItem="Z8C-Q4-CDM" firstAttribute="centerY" secondItem="vKM-jj-dvt" secondAttribute="centerY" id="o5c-FJ-9CY"/>
+                            <constraint firstItem="jdc-QG-U8d" firstAttribute="top" secondItem="Z8C-Q4-CDM" secondAttribute="bottom" constant="186" id="rg0-Wl-J8B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uGK-BL-ymw">
