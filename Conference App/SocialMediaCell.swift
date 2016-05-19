@@ -25,4 +25,15 @@ class SocialMediaCell: UITableViewCell {
         let image = UIImage(named: logo)
         self.logo.image = image
     }
+    
+    func build(socialItem: SocialItem){
+        self.UIConfig()
+        self.setName(socialItem.name)
+        self.setlogo(socialItem.logo)
+    }
+    
+    internal func UIConfig(){
+        self.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
+    }
 }

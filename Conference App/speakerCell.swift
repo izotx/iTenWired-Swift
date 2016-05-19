@@ -31,4 +31,10 @@ class SpeakerCell: UITableViewCell {
             setJobTitle("\(speaker.jobTitle) at \(speaker.company)")
         }
     }
+    
+    internal func UIConfig(){
+        self.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        self.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
+        self.jobTitleLabel.textColor = ItenWiredStyle.text.color.invertedColor
+    }
 }

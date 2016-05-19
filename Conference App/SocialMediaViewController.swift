@@ -42,16 +42,22 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.UIConfig()
+        
         // TableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        //self.shareButton.layer.cornerRadius = 15
         
         shareButton.frame = CGRectMake(160, 100, 50, 50)
         
         shareButton.layer.cornerRadius = 0.75 * shareButton.bounds.size.width
         
+    }
+    
+    internal func UIConfig(){
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.shareButton.backgroundColor = ItenWiredStyle.background.color.mainColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,8 +68,7 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SocialMediaCell", forIndexPath: indexPath) as? SocialMediaCell
         
-        cell?.setName(socialItems[indexPath.row].name)
-        cell?.setlogo(socialItems[indexPath.row].logo)
+        cell?.build(socialItems[indexPath.row])
         
         return cell!
     }
@@ -191,8 +196,8 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    
     @IBAction func showMenu(sender: AnyObject) {
+        
         if let splitController = self.splitViewController{
             if !splitController.collapsed {
                 splitController.toggleMasterView()
@@ -202,9 +207,8 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
                 rightNavController.popToRootViewControllerAnimated(true)
             }
         }
+
     }
-    
-    
     
     
    

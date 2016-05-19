@@ -12,7 +12,7 @@ class ShareButton: UIButton {
 
     override func drawRect(rect: CGRect) {
         let path = UIBezierPath(ovalInRect: rect)
-        ItenWiredStyle.background.color.mainColor.setFill()
+        ItenWiredStyle.shareButtonColor.setFill()
         path.fill()
         
         //set up the width and height variables

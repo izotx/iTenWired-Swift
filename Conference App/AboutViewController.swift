@@ -19,7 +19,7 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.UIConfig()
         let about = aboutData.getAbout()
         
         // Initial VC Styling
@@ -34,6 +34,11 @@ class AboutViewController: UIViewController {
             }
         }
         
+    }
+    
+    internal func UIConfig(){
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.descriptionLabel.textColor = ItenWiredStyle.text.color.mainColor
     }
 
     override func didReceiveMemoryWarning() {

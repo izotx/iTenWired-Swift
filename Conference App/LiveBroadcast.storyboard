@@ -121,7 +121,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="byL-hR-Q6p">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="HzM-5j-eUt">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="HzM-5j-eUt">
                             <connections>
                                 <action selector="showMenu:" destination="eDK-YJ-Q42" id="npg-zN-D7R"/>
                             </connections>
@@ -155,4 +155,7 @@
             <point key="canvasLocation" x="-414" y="-303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-25.png" width="25" height="25"/>
+    </resources>
 </document>

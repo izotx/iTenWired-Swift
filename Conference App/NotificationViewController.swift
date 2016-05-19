@@ -16,6 +16,11 @@ class NotificationViewController: UITableViewController {
         
     }
     
+    internal func UIconfig(){
+        self.tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let notifications = notificationController.getAllNotifications()
         return notifications.count

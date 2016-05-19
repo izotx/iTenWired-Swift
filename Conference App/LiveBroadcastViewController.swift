@@ -52,16 +52,18 @@ class LiveBroadcastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Initial VC Styling
-        //self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
-        //self.broadcastTitle.textColor = UIColor.whiteColor()
-        
+        self.UIConfig()
         // This Code Lets the App Play MP3 in Background, Not Implemented Yet
         let session:AVAudioSession = AVAudioSession.sharedInstance()
         
         do { try session.setCategory(AVAudioSessionCategoryPlayback) }
         catch { }
         
+    }
+    
+    internal func UIConfig(){
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.broadcastTitle.textColor = ItenWiredStyle.text.color.mainColor
     }
     
     // Figures out the duration that the stream has been going, called by timer every second
@@ -164,8 +166,15 @@ class LiveBroadcastViewController: UIViewController {
     
     
     @IBAction func showMenu(sender: AnyObject) {
-        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
-        rightNavController.popToRootViewControllerAnimated(true)
+        if let splitController = self.splitViewController{
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
     }
     
     

@@ -23,12 +23,18 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = editButtonItem()
         
+        self.UIConfig()
+        
         self.ItinTable.delegate = self
         self.ItinTable.dataSource = self
+        self.ItinTable.userInteractionEnabled = true
+    }
+    
+    internal func UIConfig(){
+        self.ItinTable.backgroundColor = ItenWiredStyle.background.color.mainColor
+        
         ItinTable.estimatedRowHeight = 85.0
         ItinTable.rowHeight = UITableViewAutomaticDimension
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,15 +55,15 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventCell
         let event = myItenController.getMyItenEvents()[indexPath.row]
         
-        cell.setName(event.name)
-        cell.setStartTime(event.timeStart)
-        cell.setStopTime(event.timeStop)
-        cell.setDate(event.date)
+        cell.build(event)
+        cell.userInteractionEnabled = true
         
         return cell
 
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        print("Row Selected")
         let destinationViewController: EventViewController
             = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
         

@@ -65,15 +65,21 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         
-        // UI Config
-        self.title = "iTen Wired"
-        self.tableView = UITableView(frame:self.view!.frame)
-        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.tableView.rowHeight = CGFloat(65.00)
-        self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
+        self.UIConfig()
         
         // Loads menu items into array
         self.loadMenuItems()
+    }
+    
+    internal func UIConfig(){
+        
+        self.title = "iTen Wired"
+        self.tableView = UITableView(frame:self.view!.frame)
+        
+        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        self.tableView.rowHeight = CGFloat(65.00)
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
     }
     
     internal func loadMenuItems(){

@@ -52,6 +52,10 @@ class AttendeesViewController: UITableViewController{
         }
     }
     
+    internal func UIConfig(){
+        self.tableView.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        self.view.backgroundColor = ItenWiredStyle.background.color.invertedColor
+    }
     
     // Loads sponser data and populates the photorecord array
     internal func loadSponsers(){

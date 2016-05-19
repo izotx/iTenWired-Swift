@@ -18,8 +18,14 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.UIConfig()
+        
         tableView.estimatedRowHeight = 85.0
         tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
+    }
+    
+    internal func UIConfig(){
+        tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
     }
 
     override func didReceiveMemoryWarning() {

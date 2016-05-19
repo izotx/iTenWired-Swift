@@ -21,8 +21,6 @@ class EventCell: UITableViewCell {
     
     @IBOutlet var timeStopLable: UILabel!
     
-    @IBOutlet weak var swipeImageView: UIImageView!
-    
     var event:Event!
     
     func setName(name:String){
@@ -42,11 +40,20 @@ class EventCell: UITableViewCell {
     }
     
     func build(event:Event){
+        self.UIConfig()
         self.setName(event.name)
         self.setStartTime(event.timeStart)
         self.setStopTime(event.timeStop)
         self.setDate(event.date)
         self.event = event
+    }
+    
+    internal func UIConfig(){
+        self.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.nameLable.textColor = ItenWiredStyle.text.color.mainColor
+        self.timeLable.textColor = ItenWiredStyle.text.color.mainColor
+        self.dateLable.textColor = ItenWiredStyle.text.color.mainColor
+        self.timeStopLable.textColor = ItenWiredStyle.text.color.mainColor
     }
     
     func setStartButton(isPresentMyIten: Bool){

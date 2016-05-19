@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bEe-z9-4FU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bEe-z9-4FU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,10 +19,10 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WoK-GL-0mb" id="dHQ-3G-lUb">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-5G-Cxe">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-5G-Cxe">
                                             <rect key="frame" x="19" y="14" width="50" height="50"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JI7-3A-06b">
@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="356" y="130"/>
         </scene>
-        <!--Social Media View Controller-->
+        <!--Social Media-->
         <scene sceneID="jPI-3X-NBg">
             <objects>
                 <viewController restorationIdentifier="SocialMediaRoot" storyboardIdentifier="SocialMediaRoot" id="JTA-3c-jRR" customClass="SocialMediaViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -176,6 +176,13 @@
                             <constraint firstAttribute="trailing" secondItem="LHW-B2-FFE" secondAttribute="trailing" id="qKV-Pq-e90"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Social Media" id="YXS-vt-v6R">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="5j0-Vm-TAv">
+                            <connections>
+                                <action selector="showMenu:" destination="JTA-3c-jRR" id="Q9l-xy-3tE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="shareButton" destination="kaG-pg-V4m" id="Jol-oC-OEs"/>
                         <outlet property="tableView" destination="LHW-B2-FFE" id="5X3-yT-EnM"/>
@@ -183,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzA-eh-lJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1309" y="-597"/>
+            <point key="canvasLocation" x="1630" y="-606"/>
         </scene>
         <!--TwitterViewController-->
         <scene sceneID="xbq-Cs-HRd">
@@ -198,7 +205,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="209"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fuh-4m-SZj" id="2aO-Pu-gRw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="208.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-qy-ydn">
