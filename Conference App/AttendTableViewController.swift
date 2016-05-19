@@ -31,8 +31,12 @@ class AttendeesViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Starts the activity indicator. Runs until data is loading
         self.activityIndicator.startAnimating()
         
+        
+        // Async data load
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             //Gets attendees Data
             self.loadSponsers()
@@ -48,6 +52,8 @@ class AttendeesViewController: UITableViewController{
         }
     }
     
+    
+    // Loads sponser data and populates the photorecord array
     internal func loadSponsers(){
         let sponsers = self.atendeeControler.getSponsers()
         
@@ -59,6 +65,7 @@ class AttendeesViewController: UITableViewController{
         }
     }
     
+    // Loads exhibitor data and populates the photorecord array
     internal func loadExhibitors(){
         let exhibitors = self.atendeeControler.getExibitors()
         
@@ -226,7 +233,7 @@ class AttendeesViewController: UITableViewController{
     
     func startDownloadForRecord(photoDetails: Photorecord, indexPath: NSIndexPath, pendingOperations: PendingOperarions){
         
-        if let downloadoperarion = pendingOperations.downloadsInProgress[indexPath.row]{
+        if pendingOperations.downloadsInProgress[indexPath.row] != nil{
             return
         }
         
@@ -247,6 +254,4 @@ class AttendeesViewController: UITableViewController{
         pendingOperations.downloadQueue.addOperation(downloader)
     }
 }
-
-
 

@@ -216,7 +216,7 @@
                 </searchDisplayController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sj-ER-OZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="-641"/>
+            <point key="canvasLocation" x="1288" y="-646"/>
         </scene>
         <!--Speaker Description View Controller-->
         <scene sceneID="0Fg-5v-b54">

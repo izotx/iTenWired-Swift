@@ -23,10 +23,12 @@ class SocialItem {
 }
 
 
-class SocialMediaViewController: UITableViewController {
+class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let socialData = SocialMediaData()
     
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     var socialItems:[SocialItem] = [SocialItem(name:"Facebook", logo: "Facebook-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Twitter", logo: "Twitter-50.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
                                     SocialItem(name:"LinkedIn", logo:"LinkedIn-50.png", storyboardId: "", viewControllerId: ""),
@@ -39,6 +41,17 @@ class SocialMediaViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // TableView Delegate
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        //self.shareButton.layer.cornerRadius = 15
+        
+        shareButton.frame = CGRectMake(160, 100, 50, 50)
+        
+        shareButton.layer.cornerRadius = 0.75 * shareButton.bounds.size.width
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +59,7 @@ class SocialMediaViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SocialMediaCell", forIndexPath: indexPath) as? SocialMediaCell
         
         cell?.setName(socialItems[indexPath.row].name)
@@ -55,11 +68,11 @@ class SocialMediaViewController: UITableViewController {
         return cell!
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return socialItems.count
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let socialItem = socialItems[indexPath.row]
         
         if socialItem.name == "Web" {
@@ -190,4 +203,26 @@ class SocialMediaViewController: UITableViewController {
             }
         }
     }
+    
+    
+    
+    
+   
+    func displayShareSheet(shareContent:String) {
+        let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+        presentViewController(activityViewController, animated: true, completion: {})
+    }
+    
+    @IBAction func shareButtonAction(sender: AnyObject) {
+        
+        let hashtags = self.socialData.getHashTags()
+        
+        var content = ""
+        
+        for hashtag in hashtags{
+            content = "\(hashtag) \(content)"
+        }
+        displayShareSheet(content)
+    }
+    
 }

@@ -32,4 +32,15 @@ class SocialMediaData {
         
        return nil
     }
+    
+    func getHashTags() -> [String] {
+    
+        let data = self.appData.getDataFromFile()
+        
+        if let hashTags = data["hashtags"] as? [String]{
+            return hashTags
+        }
+        
+        return ["#ItenWired"]
+    }
 }
