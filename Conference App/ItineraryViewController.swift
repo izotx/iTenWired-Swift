@@ -98,6 +98,10 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
+        if editingStyle == .Delete{
+            self.myItenController.deleteFromMyIten(self.myItenController.getMyItenEvents()[indexPath.row])
+            tableView.reloadData()
+        }
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
