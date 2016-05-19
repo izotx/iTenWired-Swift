@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        if testMe{
+       if testMe{
             testingNotifications()
         }
         
@@ -60,8 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
        let appData = AppData()
        appData.initData()
         
-        
-//        Override point for customization after application launch.
+        //  Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
     ///    navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
@@ -71,16 +70,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
        
         
-        let controller = masterNavigationController.topViewController as! MasterViewController
+        let controller = masterNavigationController.topViewController as! MasterViewController2
         controller.managedObjectContext = self.managedObjectContext
-        
-        
-       /* //TODO: Create constants
-        let storyboard = UIStoryboard.init(name: "AgendaMain", bundle: nil)
-        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("AgendaInitial")
-        
-        controller.presentViewController(destinationViewController, animated: true, completion: nil)
-        */
+       
         return true
     }
 

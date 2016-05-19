@@ -84,7 +84,7 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
     
     internal func loadMenuItems(){
         // Loading menu items into array
-        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "MapM-25.png")
+        let map = MenuItem(storyboardId: "Main", viewControllerId: "collectionViewController", name: "Main", imageUrl: "MapM-25.png")
         self.menuItems.append(map)
         
         let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda-25.png")
