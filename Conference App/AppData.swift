@@ -94,7 +94,6 @@ class AppData {
                     print("Error while retriving data!")
                 }
                 locked = false
-                
             }
         }
         

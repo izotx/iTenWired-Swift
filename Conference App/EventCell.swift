@@ -36,11 +36,13 @@ class EventCell: UITableViewCell {
     }
     
     func setDate(date:String){
-        dateLable.text = date
+        let day = date.componentsSeparatedByString("/")[1]
+        dateLable.text = day
+        print(day)
     }
     
     func build(event:Event){
-        self.UIConfig()
+        //self.UIConfig()
         self.setName(event.name)
         self.setStartTime(event.timeStart)
         self.setStopTime(event.timeStop)

@@ -55,6 +55,12 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableHeaderFooterViewWithIdentifier("dateCell")
+        
+        return cell
+    }
  
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             let destinationViewController: EventViewController
