@@ -94,6 +94,9 @@ class AttendeesViewController: UITableViewController{
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var index = indexPath.row
         
+//        tableView.reloadRowsAtIndexPaths([index], withRowAnimation: )
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        
         // Sponser Cell
         if index >= 0 && index <= sponsers.count{
             if index == 0 { //excludes header
@@ -212,6 +215,7 @@ class AttendeesViewController: UITableViewController{
             let cell = tableView.dequeueReusableCellWithIdentifier("speakerCell", forIndexPath: indexPath) as! SpeakerCell
             let  speaker = atendeeControler.getSpeackerAtIndex(index - 1)
             cell.build(speaker)
+            cell.imageView?.image = nil
         }
  
         return tableView.dequeueReusableCellWithIdentifier("exibitorsCell", forIndexPath: indexPath) as! AttendeesCell

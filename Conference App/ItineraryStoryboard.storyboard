@@ -45,7 +45,7 @@
                                         <rect key="frame" x="0.0" y="92" width="333" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="sRM-O8-7zk" id="c6F-zG-nGk">
-                                            <rect key="frame" x="0.0" y="0.0" width="333" height="135"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="333" height="135.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZB-DX-kkX">
