@@ -12,7 +12,8 @@ class AgendaHeaderTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     
-    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var dateView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +24,8 @@ class AgendaHeaderTableViewCell: UITableViewCell {
     internal func UIConfig(){
         self.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.dateLabel.textColor = ItenWiredStyle.text.color.mainColor
-        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.contentView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.dateView.backgroundColor = ItenWiredStyle.background.color.mainColor
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

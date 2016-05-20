@@ -28,6 +28,13 @@ class SpeakerDescriptionViewController: UIViewController {
         resizeScrollView()
     }
     
+    internal func UIConfig(){
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
+        self.job.textColor = ItenWiredStyle.text.color.mainColor
+        self.bioLabel.textColor = ItenWiredStyle.text.color.mainColor
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

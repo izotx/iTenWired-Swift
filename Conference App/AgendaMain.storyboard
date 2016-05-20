@@ -60,8 +60,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="contentView" destination="SY2-IE-LpG" id="0Vp-ef-UxL"/>
                                             <outlet property="dateLabel" destination="yH4-ya-SRC" id="sp1-M9-IJK"/>
-                                            <outlet property="view" destination="H7B-yr-ztj" id="rKV-UR-SkV"/>
+                                            <outlet property="dateView" destination="H7B-yr-ztj" id="zy9-gx-oNK"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="CV8-MV-CZs" customClass="EventCell" customModule="Conference_App" customModuleProvider="target">
