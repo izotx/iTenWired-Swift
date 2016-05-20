@@ -10,7 +10,7 @@
 import Foundation
 
 
-class Speacker : AttendeeProtocol {
+class Speaker : AttendeeProtocol {
 
     var id:Int = 0
     var name = ""
@@ -25,8 +25,8 @@ class Speacker : AttendeeProtocol {
     
     init(dictionary: NSDictionary){
     
-        if let id = dictionary.objectForKey(SpeakerEnum.id.rawValue) as? Int {
-            self.id = id
+        if let id = dictionary.objectForKey(SpeakerEnum.id.rawValue) as? String {
+            self.id = Int(id)!
         }
         
         if let name = dictionary.objectForKey(SpeakerEnum.name.rawValue) as? String {

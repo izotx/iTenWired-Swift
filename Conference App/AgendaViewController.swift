@@ -11,56 +11,23 @@ import UIKit
 class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
 
     var agendaController:AgendaController = AgendaController()
-    var fistTouch:Bool = false
-    let swipeImageIndex = 2
-    
+
     let myItenController = MyItenController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.tableView.userInteractionEnabled = true
+        self.UIConfig()
         
         tableView.estimatedRowHeight = 85.0
         tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(AgendaViewController.handleTap(_:)))
-        tap.delegate = self
-        self.view.addGestureRecognizer(tap)
-        
     }
     
-    func handleTap(sender: UITapGestureRecognizer? = nil) {
-        if(!fistTouch){
-            fistTouch = true
-            tableView.reloadData()
-        }
+    internal func UIConfig(){
+        tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
+    }
 
-    }
-    
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        
-        if(!fistTouch){
-            fistTouch = true
-            tableView.reloadData()
-        }
-        
-        if gestureRecognizer is UITapGestureRecognizer {
-            
-            let location = touch.locationInView(tableView)
-            
-            if tableView.indexPathForRowAtPoint(location) == nil {
-                return true
-            }else {
-            
-                return false
-            }
-        }
-        
-        return true
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -82,41 +49,23 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventCell
         let event = agendaController.getEventAt(indexPath.row)
         
-        cell.setName(event.name)
-        cell.setStartTime(event.timeStart)
-        cell.setStopTime(event.timeStop)
-        cell.setDate(event.date)
+        //builds cell data
+        cell.build(event)
+        cell.setStartButton(myItenController.isPresent(event))
         
-        if(indexPath.row == swipeImageIndex && !self.fistTouch){
-            cell.showSwipe(true)
-        }else{
-            cell.showSwipe(false)
-        }
-        
-
         return cell
     }
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("dateCell") as? AgendaHeaderTableViewCell
         
-        let add = UITableViewRowAction(style: .Normal, title: "Add"){action, index in
-            self.myItenController.addToMyIten(self.agendaController.getEventAt(indexPath.row))
-            tableView.reloadData()
-        }
-        return [add]
+        return cell
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // the cells you would like the actions to appear needs to be editable
-        return true
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
     }
-    
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        // you need to implement this method too or you can't swipe to display the actions
-    }
-    
-    
-    
+ 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             let destinationViewController: EventViewController
             = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
@@ -131,10 +80,18 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
     // Displays the Menu when clicked
     @IBAction func showMenu(sender: AnyObject) {
         
-        let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
-        rightNavController.popToRootViewControllerAnimated(true)
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
     }
-
     
+
 }
 

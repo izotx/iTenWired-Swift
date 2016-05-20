@@ -38,9 +38,6 @@ class TwitterController{
             }catch {
                 print("Error parsing twitter data")
             }
-                
-            
-            
         }
         return tweets
     }

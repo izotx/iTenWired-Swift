@@ -43,11 +43,8 @@ class AnnotationDetailViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set Initial VC Styling
-        self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
-        self.pointTitle.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
-        self.pointInfo.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
+    
+        self.UIConfig()
         
         if let annotationName = receivedAnnotation?.title, let annotationInfo = receivedAnnotation?.info {
             pointTitle.text = annotationName
@@ -59,6 +56,12 @@ class AnnotationDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    internal func UIConfig(){
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.pointTitle.textColor = ItenWiredStyle.text.color.mainColor
+        self.pointInfo.textColor = ItenWiredStyle.text.color.mainColor
     }
     
     

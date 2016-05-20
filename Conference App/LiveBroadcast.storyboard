@@ -67,12 +67,12 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMB-5o-tte">
                                 <rect key="frame" x="20" y="225" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="G2T-1s-mWg"/>
                                 </constraints>
                                 <state key="normal" title="Play">
-                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="playAudio:" destination="eDK-YJ-Q42" eventType="touchUpInside" id="Tfb-nu-dTp"/>
@@ -80,13 +80,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPS-oR-Mef">
                                 <rect key="frame" x="20" y="283" width="560" height="50"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PGE-59-fWE"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fX8-Dh-N2q"/>
                                 </constraints>
                                 <state key="normal" title="Stop">
-                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -100,11 +100,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pensacola Business Radio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48x-Dz-gls">
                                 <rect key="frame" x="172" y="92" width="256" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hMB-5o-tte" secondAttribute="trailing" constant="20" id="C2W-yU-2za"/>
                             <constraint firstItem="hMB-5o-tte" firstAttribute="leading" secondItem="doE-ku-PN6" secondAttribute="leading" constant="20" id="Erw-DN-pkw"/>
@@ -121,7 +121,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="byL-hR-Q6p">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="HzM-5j-eUt">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="HzM-5j-eUt">
                             <connections>
                                 <action selector="showMenu:" destination="eDK-YJ-Q42" id="npg-zN-D7R"/>
                             </connections>
@@ -155,4 +155,7 @@
             <point key="canvasLocation" x="-414" y="-303"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-25.png" width="25" height="25"/>
+    </resources>
 </document>

@@ -24,8 +24,17 @@ class SpeakerCell: UITableViewCell {
     }
 
     
-    func build(speacker:Speacker){
-        setName(speacker.name)
-        setJobTitle(speacker.jobTitle)
+    func build(speaker:Speaker){
+        setName(speaker.name)
+        
+        if speaker.jobTitle != "" && speaker.company != ""{
+            setJobTitle("\(speaker.jobTitle) at \(speaker.company)")
+        }
+    }
+    
+    internal func UIConfig(){
+        self.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        self.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
+        self.jobTitleLabel.textColor = ItenWiredStyle.text.color.invertedColor
     }
 }

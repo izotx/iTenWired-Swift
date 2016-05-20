@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cyD-S0-XLk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -31,54 +30,41 @@
                         <viewControllerLayoutGuide type="bottom" id="jdc-QG-U8d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vKM-jj-dvt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Znl-Rw-mTU">
-                                <rect key="frame" x="20" y="70" width="560" height="136"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Znl-Rw-mTU" secondAttribute="height" multiplier="48:17" constant="176" id="Biy-eI-8wM"/>
-                                    <constraint firstAttribute="height" constant="136" id="xPZ-IF-u96"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Biy-eI-8wM"/>
-                                    </mask>
-                                </variation>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Znl-Rw-mTU">
+                                <rect key="frame" x="24" y="97" width="272" height="84"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FNR-D7-Hhu">
-                                <rect key="frame" x="20" y="220" width="560" height="360"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8C-Q4-CDM">
+                                <rect key="frame" x="24" y="185" width="272" height="197"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FNR-D7-Hhu" firstAttribute="top" secondItem="Znl-Rw-mTU" secondAttribute="bottom" id="53H-73-LzZ"/>
-                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="vKM-jj-dvt" secondAttribute="leadingMargin" id="6t1-Jt-55q"/>
-                            <constraint firstAttribute="bottom" secondItem="FNR-D7-Hhu" secondAttribute="bottom" constant="20" symbolic="YES" id="BqM-rM-PfW"/>
-                            <constraint firstItem="FNR-D7-Hhu" firstAttribute="top" secondItem="Znl-Rw-mTU" secondAttribute="bottom" constant="8" symbolic="YES" id="DFJ-Cw-eIP"/>
-                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="trailing" secondItem="FNR-D7-Hhu" secondAttribute="trailing" id="M0K-l3-fa0"/>
-                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="top" secondItem="d6b-Vk-6tp" secondAttribute="bottom" constant="10" id="eMi-rU-IrT"/>
-                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="trailing" secondItem="vKM-jj-dvt" secondAttribute="trailingMargin" id="rpg-2M-7BR"/>
-                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="FNR-D7-Hhu" secondAttribute="leading" id="xDc-sd-hl9"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="trailing" secondItem="Z8C-Q4-CDM" secondAttribute="trailing" id="4zZ-nb-mb8"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="top" secondItem="d6b-Vk-6tp" secondAttribute="bottom" constant="33" id="HWF-DR-Ick"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="vKM-jj-dvt" secondAttribute="leadingMargin" constant="8" id="Isi-Av-3aX"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="leading" secondItem="Z8C-Q4-CDM" secondAttribute="leading" id="Ws3-QA-RkQ"/>
+                            <constraint firstItem="Znl-Rw-mTU" firstAttribute="centerX" secondItem="vKM-jj-dvt" secondAttribute="centerX" id="fIi-p5-hBo"/>
+                            <constraint firstItem="Z8C-Q4-CDM" firstAttribute="top" secondItem="Znl-Rw-mTU" secondAttribute="bottom" constant="4" id="o50-nk-zo7"/>
+                            <constraint firstItem="Z8C-Q4-CDM" firstAttribute="centerY" secondItem="vKM-jj-dvt" secondAttribute="centerY" id="o5c-FJ-9CY"/>
+                            <constraint firstItem="jdc-QG-U8d" firstAttribute="top" secondItem="Z8C-Q4-CDM" secondAttribute="bottom" constant="186" id="rg0-Wl-J8B"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="53H-73-LzZ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="uGK-BL-ymw">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="CwL-2o-KaG">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="CwL-2o-KaG">
                             <connections>
-                                <action selector="showMenu:" destination="1EW-Hn-lzk" id="cjK-JQ-UfV"/>
+                                <action selector="showMenu:" destination="1EW-Hn-lzk" id="Ygf-lA-X0v"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="aboutTextView" destination="FNR-D7-Hhu" id="aCu-xN-jIk"/>
+                        <outlet property="descriptionLabel" destination="Z8C-Q4-CDM" id="QgY-fN-YbF"/>
                         <outlet property="imageURL" destination="Znl-Rw-mTU" id="8v8-GH-1s8"/>
                     </connections>
                 </viewController>
@@ -87,4 +73,7 @@
             <point key="canvasLocation" x="692" y="427"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-25.png" width="25" height="25"/>
+    </resources>
 </document>

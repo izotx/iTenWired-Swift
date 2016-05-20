@@ -47,4 +47,14 @@ class MyItenController{
         }
         return eventsArray.events
     }
+    
+    func isPresent(event: Event) -> Bool{
+        for myItenEvent in getMyItenEvents(){
+            
+            if myItenEvent.id == event.id {
+                return true
+            }
+        }
+        return false 
+    }
 }

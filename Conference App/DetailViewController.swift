@@ -8,6 +8,22 @@
 
 import UIKit
 
+
+extension UISplitViewController {
+    func toggleMasterView() {
+        var nextDisplayMode: UISplitViewControllerDisplayMode
+        switch(self.preferredDisplayMode){
+        case .PrimaryHidden:
+            nextDisplayMode = .AllVisible
+        default:
+            nextDisplayMode = .PrimaryHidden
+        }
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.preferredDisplayMode = nextDisplayMode
+        }
+    }
+}
+
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
@@ -29,15 +45,26 @@ class DetailViewController: UIViewController {
         }
     }
 
+    
+    @IBAction func changeSplitMode(sender: AnyObject) {
+        //self.navigationController?.navigationController?.popToRootViewControllerAnimated(true)
+        self.splitViewController?.toggleMasterView()
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         
-        // loads and displays the agenda for iPads
-        //TODO:
-        //let view = Vc[1]
-        //self.showDetailViewController(view, sender: self)
+        if !(self.splitViewController?.collapsed)!{
+            
+            let storyboard = UIStoryboard.init(name: "AgendaMain", bundle: nil)
+            let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("AgendaInitial")
+            splitViewController?.showDetailViewController(destinationViewController, sender: nil)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

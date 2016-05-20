@@ -27,8 +27,18 @@ class NotificationsCell: UITableViewCell {
         
         if notification.isDone {
           //TODO: Change Layout
+            self.messageLabel.font = UIFont.systemFontOfSize(17.0)
+            self.dateLabel.font = UIFont.systemFontOfSize(17.0)
         }else{
            //TODO: Change Layout
+            self.messageLabel.font = UIFont.boldSystemFontOfSize(17.0)
+            self.dateLabel.font = UIFont.boldSystemFontOfSize(17.0)
         }
+    }
+    
+    internal func UIConfig(){
+    
+        self.messageLabel.textColor = ItenWiredStyle.text.color.mainColor
+        self.dateLabel.textColor = ItenWiredStyle.text.color.mainColor
     }
 }

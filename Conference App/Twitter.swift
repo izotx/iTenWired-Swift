@@ -12,6 +12,7 @@ class Twitter{
 
     var text = ""
     var user:TwitterUser!
+    var createdAt = ""
     
     
     init(dictionary: NSDictionary){
@@ -24,11 +25,15 @@ class Twitter{
             
             self.user = TwitterUser(dictionary: user)
         }
+        
+        if let createdAt = dictionary.objectForKey(TwitterEnum.created_at.rawValue) as? String {
+            self.createdAt = createdAt
+        }
     }
 }
-
 
 enum TwitterEnum:String{
     case text
     case user
+    case created_at
 }

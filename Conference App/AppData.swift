@@ -16,7 +16,7 @@ class AppData {
     var agenda: Agenda
     var status: Bool = true
     //Make sure that this url is the main json request
-    var dataPath: NSURL =  NSURL(string: "http://djmobilesoftware.com/jsondata.json")!
+    var dataPath: NSURL =  NSURL(string: "http://djmobilesoftware.com/itenwired/jsondata.json")!
     var otherPath: String
     
     init()
@@ -94,7 +94,6 @@ class AppData {
                     print("Error while retriving data!")
                 }
                 locked = false
-                
             }
         }
         

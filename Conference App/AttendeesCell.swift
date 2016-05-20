@@ -20,13 +20,11 @@ class AttendeesCell: UITableViewCell {
     
     func build(sponser:Sponser){
         setName(sponser.name)
-        setLogo(sponser.logo)
         setLevel(sponser.level)
     }
     
     func build(exibitor:Exibitor){
         setName(exibitor.name)
-        setLogo(exibitor.logo)
         setLevel(exibitor.website)
     }
     
@@ -34,22 +32,12 @@ class AttendeesCell: UITableViewCell {
         nameLabel.text = name
     }
     
-    func setLogo(logo:String)
-    {
-        self.logoView.image = UIImage(named: logo)
-    }
-    
-    
-    // FIXME: Remove function
-    func setjobTitle(title:String)
-    {
-        Title.text = title
+    func setProfileImage(photoDetails : Photorecord){
+        self.logoView.image = photoDetails.image!
     }
     
     func setLevel(level:String)
     {
         Title.text = level
     }
-    
-  
 }

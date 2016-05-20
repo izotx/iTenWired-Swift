@@ -1,0 +1,883 @@
+{
+    "header_image_path": "http://uwfdining.djmobilesoftware.com/homeScreenHeader.png",
+    "hashtags": [
+                 "#ITENWired15"
+                 ],
+    "links": [
+              {
+              "label": "facebook",
+              "URL": "https://www.facebook.com/itenwired"
+              },
+              {
+              "label": "twitter",
+              "URL": "https://twitter.com/hashtag/itenwired15"
+              },
+              {
+              "label": "web",
+              "URL": "http://www.itenwired.com"
+              },
+              {
+              "label": "register",
+              "URL": "https://www.eventbrite.com/e/iten-wired-summit-2015-tickets-16796105604"
+              },
+              {
+              "label": "email",
+              "URL": "rsvp@itenwired.com"
+              },
+              {
+              "label": "google",
+              "URL": "https://plus.google.com/117452167661154193040/posts"
+              },
+              {
+              "label": "linkedin",
+              "URL": "https://www.linkedin.com/groups?home=&gid=6595708"
+              },
+              {
+              "label": "Instagram",
+              "URL": "https://instagram.com/itenwired"
+              },
+              {
+              "label": "YouTube",
+              "URL": "https://www.youtube.com/channel/UCtKjYIMKf4A0ynUXlEyEa0w/feed"
+              }
+              ],
+    
+    "conference_description": "ITEN Wired is a conference hosted by IT Gulf Coast and Florida West Economic Development Alliance. The annual summit provides networking and learning opportunities for executives, entrepreneurs, technology professionals and academia to foster local economic development efforts surrounding innovation, technology and entrepreneurship.",
+    
+    "locations": [
+                  {
+                  "name": "ITEN Wired",
+                  "latitude": "30.331991",
+                  "longitude": "-87.136002",
+                  "date": "Oct. 22 & 23, 2015",
+                  "description": "Hilton Pensacola Beach Gulf Front",
+                  "long-description": "The Hilton Pensacola Beach Gulf Front is located in the heart of Pensacola Beach with views of the stunning emerald waters of the Gulf of Mexico. Guests can find outdoor activities, local shopping, dining, and live entertainment within walking distance. /n Valet parking is available (for tips only) from the Lobby Entrance of the hotel. The registration desk will be at the Conference Center entrance of the hotel. The hotel is home to Bonsai Sushi and Lounge, the H2O A Cajun-Asian Grill, and the Latitudes Beach Bar with stunning beach views. Guest amenities include an outdoor pool, fitness center, Grab n’ Go deli shop, full room service and more. Upgrade to a suite to enjoy additional space and a private balcony overlooking the Gulf of Mexico."
+                  }
+                  ],
+    "tracks": [
+               {
+               "id": "1",
+               "description": "Cyber Security"
+               },
+               {
+               "id": "2",
+               "description": "Maker/Incubator"
+               },
+               {
+               "id": "3",
+               "description": "Mobile/Wearable"
+               },
+               {
+               "id": "4",
+               "description": "Professional Development"
+               },
+               {
+               "id": "5",
+               "description": "All"
+               }
+               ],
+    "events": [
+               {
+               "id": "180",
+               "name": "CIO Panel Discussion",
+               "summary": "The ITEN Wired Summit is proud to announce the second annual CIO Panel Discussion. CIO's will discuss the issues that affect their organizations today and provide insight into the future of IT. It is an opportunity for IT professionals and technology service and infrastructure providers to hear a frank and open discussion about the future of the IT industry. We will have a panel of 3 to 5 CIO's guided by a moderator. CIO's from Military/training, Medical, manufacturing, banking, government, education, and technology have been invited. The moderator will present the panel with 3 or 4 CIO level issues/challenges. Each will have an opportunity to discuss his/her views on how his/her organization approaches the issues. The panel can exchange ideas/approaches with each other and attendees will hear the directions and concepts of the CIO's and better understand the types and extent of services that will be needed as the organizations mature and change to meet future IT challenges. This discussion is also a great opportunity for service providers and vendors to understand what skill sets, services, and technology are required. Given the current volatility in the economy this type of event offers the opportunity to understand where the market place is headed, how to prepare, and how to remain competitive.",
+               "description": "",
+               "date": "10/22/2015",
+               "timeStart": "3:30 PM",
+               "timeStop": "4:30 PM",
+               "track": "5",
+               "presenters": [
+               
+               ],
+               "eventType": "session"
+               },
+               {
+               "id": "183",
+               "name": "Opening Reception",
+               "summary": "Sponsored by Navy Federal Credit Union",
+               "description": "",
+               "date": "10/22/2015",
+               "timeStart": "5:00 PM",
+               "timeStop": "7:00 PM",
+               "track": "5",
+               "presenters": [
+               
+               ],
+               "eventType": "session"
+               },
+               {
+               "id": "13",
+               "name": "Registration & Networking",
+               "summary": "Exhibitor Booths Open",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "7:00 AM",
+               "timeStop": "8:00 AM",
+               "track": "5",
+               "presenters": [
+               
+               ],
+               "eventType": "session"
+               },
+               {
+               "id": "14",
+               "name": "Breakfast and Opening Keynote",
+               "summary": "Welcome and Orientation: Paul Carney, Master of Ceremonies Nino Vidovic, Opening Keynote Speaker Sponsored by Konica Minolta Business Solutions",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "8:00 AM",
+               "timeStop": "8:50 AM",
+               "track": "5",
+               "presenters": [
+                              "251"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "155",
+               "name": "Public Sector WIFI Networks: Dealing with the Enemy From Within",
+               "summary": "With WiFi proliferation across Public Sector the challenges and expectations have evolved. The original focus was simply on centralized management and capacity. With access points springing up everywhere these networks are forced to carry a multitude of different types of traffic (secure and unsecure). With enhanced management and capacity comes significant opportunities and as many challenges. The attempts to secure these networks while balancing acceptable access has been hit or miss.",
+               "description": "With WiFi proliferation across Public Sector the challenges and expectations have evolved. The original focus was simply on centralized management and capacity. With access points springing up everywhere these networks are forced to carry a multitude of different types of traffic (secure and unsecure). With enhanced management and capacity comes significant opportunities and as many challenges. The attempts to secure these networks while balancing acceptable access has been hit or miss. We will look at what carriers are offering to assist, from secure circuits, ACLs, layered in firewalls and virtual domains to unique monitoring solutions. We will look into some of the customized solutions securing our public sector wireless networks, helping to ensure a more secure and safe computing environment.",
+               "date": "10/23/2015",
+               "timeStart": "9:00 AM",
+               "timeStop": "9:45 AM",
+               "track": "1",
+               "presenters": [
+                              "246"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "157",
+               "name": "Intellectual Property Strategies for Start-Ups",
+               "summary": "Focus on types of IP and methods of stretching funds at early stages",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "9:00 AM",
+               "timeStop": "9:45 AM",
+               "track": "2",
+               "presenters": [
+                              "221"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "160",
+               "name": "Continuous activity and sleep monitoring: An implementation guide",
+               "summary": "ActiGraph is a global provider of physical activity monitoring solutions. With hundreds of large-scale research studies and pharmaceutical clinical trial projects under our belt, we've learned what works and what doesn't when choosing study, motivate and engage various populations.",
+               "description": "ActiGraph is a global provider of physical activity monitoring solutions. With hundreds of large-scale research studies and pharmaceutical clinical trial projects under our belt, we've learned what works and what doesn't when choosing study, motivate and engage various populations. This presentation will cover ActiGraph's background, product line, software and hardware deployment solutions and best practices for various wearable technology implementation scenarios.",
+               "date": "10/23/2015",
+               "timeStart": "9:00 AM",
+               "timeStop": "9:45 AM",
+               "track": "3",
+               "presenters": [
+                              "222"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "164",
+               "name": "Implement IT projects with our Customers in mind",
+               "summary": "Looking to improve your internal customer's satisfaction of IT Deliverables? Start projects with our customers' viewpoint versus the technology and improve the acceptance of the rollout of these projects and your reputation.",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "9:00 AM",
+               "timeStop": "9:45 AM",
+               "track": "4",
+               "presenters": [
+                              "225"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "156",
+               "name": "Cyber Self Defense: Protecting Your Online Identity",
+               "summary": "Cyber crime is now more profitable than the global trade in marijuana, cocaine and heroin combined. Attacks come from all angles, not just computers, but also mobile devices, public wi-fi, social media, malvertising and other forms of social engineering.",
+               "description": "Cyber crime is now more profitable than the global trade in marijuana, cocaine and heroin combined. Attacks come from all angles -- not just computers, but also mobile devices, public wi-fi, social media, malvertising and other forms of social engineering. Protecting your online identity requires understanding both the form of current threats and effective prevention measures:  Situational Awareness Social Media Wi-fi and other wireless tech Password hygiene & multi-factor authentication Social Engineering attacksCyber crime is just that -- crime! -- but you can avoid being a victim through education and awareness.",
+               "date": "10/23/2015",
+               "timeStart": "10:10 AM",
+               "timeStop": "10:55 AM",
+               "track": "1",
+               "presenters": [
+                              "223"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "158",
+               "name": "3D Arts, Printed Parts, and Education",
+               "summary": "A significant role of universities and colleges is to provide a pipeline of creative and skilled talent to industry. The team from UWF will discuss the current uses of 3D printing and rapid prototyping in research and teaching and the potential, outlook on the future of these technologies in regards to industry and commerce.",
+               "description": "A significant role of universities and colleges is to provide a pipeline of creative and skilled talent to industry. The team from UWF will discuss the current uses of 3D printing and rapid prototyping in research and teaching and the potential, outlook on the future of these technologies in regards to industry and commerce. With that in mind, the group will address issues like: How higher education deploys 3D technology, the benefit of providing this valuable learning opportunity and what challenges must be overcome to expand the resource to the community and business. A faculty artist will describe the intersection of art and industry. Participants will take a virtual tour of UWF's Skylab while learning about career opportunities available to professionals with skills in 3D printing and design. Lastly, UWF engineering will highlight printed parts made by undergraduate students. The University of West Florida is one of 12 public universities in the state. In 40 years, UWF has served more than 100,000 students from all over the world. UWF currently enrolls more than 12,000 degree-seeking students in a variety of rigorous academic programs. Additionally, the university has more than 5,000 enrollments each year in career training, as well as personal and professional education events.",
+               "date": "10/23/2015",
+               "timeStart": "10:10 AM",
+               "timeStop": "10:55 AM",
+               "track": "2",
+               "presenters": [
+                              "241",
+                              "242",
+                              "243",
+                              "244",
+                              "245"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "161",
+               "name": "Wearable Tech: Not Just a Fashion Statement",
+               "summary": "Wearable technology practically emerged from the industry overnight, but many are questioning its place in the enterprise. We will explore Google, Apple, and Microsoft's unique approaches to wearable tech and answer the question: How is wearable tech relevant?",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "10:10 AM",
+               "timeStop": "10:55 AM",
+               "track": "3",
+               "presenters": [
+                              "224"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "165",
+               "name": "Soft Skills Hard Data",
+               "summary": "A lot of what happens in our career is not because of our technical skills. Instead of worrying about new technologies, we should focus on improving our soft skills. Are you looking to get a promotion or land a better job? You'll need technical skills to get you in the door, but your soft skills will win you the job. We'll dive into areas that help us the most: social skills, professionalism, setting goals, productivity, and staying healthy.",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "10:10 AM",
+               "timeStop": "10:55 AM",
+               "track": "4",
+               "presenters": [
+                              "230"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "17",
+               "name": "Lunch Keynote",
+               "summary": "Vern Boyle, Lunch Keynote Speaker Sponsored By Northrop Grumman",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "11:00 AM",
+               "timeStop": "12:00",
+               "track": "5",
+               "presenters": [
+               
+               ],
+               "eventType": "session"
+               },
+               {
+               "id": "171",
+               "name": "DNS  The Unsung Hero in Network Security",
+               "summary": "DNS is the engine that makes the Internet work, converting recognizable names into IP addresses behind the scenes. Without DNS, the Internet as we know it would not exist. DNS tends to be a service that once configured, is often ignored.",
+               "description": "DNS is the engine that makes the Internet work, converting recognizable names into IP addresses behind the scenes. Without DNS, the Internet as we know it would not exist. DNS tends to be a service that once configured, is often ignored. In today's world of ongoing and evolving cyberattacks, DNS is often overlooked as a means of both detecting and mitigating network compromise. This talk will examine the state of DNS security including DNSSEC validation, ECS (EDNS 0 Client Subnet) support, DNS filtering and securing DNS. We will also examine some tools used to analyze and uncover some common DNS attacks and network compromise. Tools used include Graylog, Kibana and Elasticsearch. We will also examine ways in to protect enterprise DNS services.",
+               "date": "10/23/2015",
+               "timeStart": "12:15 PM",
+               "timeStop": "1:00 PM",
+               "track": "1",
+               "presenters": [
+                              "195"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "159",
+               "name": "Research to Robot to Market: Start-up 101",
+               "summary": "Ever dreamed of owning your own company? Discover what it takes to become an entrepreneur through the story of a year old start-up. What it takes to become an entrepreneur? Where to start? Can I do it alone? How to raise funding? These are some of the questions we will try to answer within this talk.",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "12:15 PM",
+               "timeStop": "1:00 PM",
+               "track": "2",
+               "presenters": [
+                              "250"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "162",
+               "name": "Why, Wearables, why?",
+               "summary": "Wearables are must-have devices that are ushering in a new era of mobile computing. Or they're strange, superfluous, privacy-invading gadgets that simultaneously do more and less than accessories that have served us just fine for hundreds of years, thank you very much. We'll take a look at what's currently available in the land of wearables to what's ahead in the future.",
+               "description": "Wearables are must-have devices that are ushering in a new era of mobile computing. Or they're strange, superfluous, privacy-invading gadgets that simultaneously do more and less than accessories that have served us just fine for hundreds of years, thank you very much. We'll take a look at what's currently available in the land of wearables to what's ahead in the future -- from smartwatches and virtual reality systems to playback controls in your pants.",
+               "date": "10/23/2015",
+               "timeStart": "12:15 PM",
+               "timeStop": "1:00 PM",
+               "track": "3",
+               "presenters": [
+                              "232"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "166",
+               "name": "Moving from Tech to Management",
+               "summary": "Current trends in the Information Technology industry require day-to-day technical operations employees to transition into IT Business Management. It's not enough to just have technical skills. At the end of the day it necessary to deliver value to the business by aligning technology decisions with business objectives. In this session, we will discuss how to make the transition from tech into management. Also, once you have made the transition into management, we will discuss what comes next. We will also cover key topics that include: Financial planning, building teams, and keeping an attitude of gratitude.",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "12:15 PM",
+               "timeStop": "1:00 PM",
+               "track": "4",
+               "presenters": [
+                              "173"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "169",
+               "name": "Turning the Tables - The Future of Cyber Defense",
+               "summary": "Massive data breaches, cyber espionage and attacks against vehicles and emerging IOT solutions make news headlines so frequently one could wonder if there is any defense against the attackers. This session will cover potential future technologies and strategies that several security researchers and leaders in the field are investigating that could finally turn the tables, creating a future where defense becomes easier and successful attacks become more difficult.",
+               "description": "Massive data breaches, cyber espionage and attacks against vehicles and emerging IOT solutions make news headlines so frequently one could wonder if there is any defense against the attackers. This session will cover potential future technologies and strategies that several security researchers and leaders in the field are investigating that could finally turn the tables, creating a future where defense becomes easier and successful attacks become more difficult. The presenter will share several opinions from cyber experts, as well as his own thoughts gathered from two decades of success in security within DOD and regulated industries.",
+               "date": "10/23/2015",
+               "timeStart": "1:15 PM",
+               "timeStop": "2:00 PM",
+               "track": "1",
+               "presenters": [
+                              "228"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "170",
+               "name": "Quit Screwing Around and Make Some Money",
+               "summary": "The story of a tech startup and its journey from a few guys to now a team of over 600. 'Quit Screwing Around and make some money' is the best advice we ever received from a CPA who worked with us in the beginning. I'll share our story, best practices and tips we've received along the way.",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "1:15 PM",
+               "timeStop": "2:00 PM",
+               "track": "2",
+               "presenters": [
+                              "239"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "163",
+               "name": "Mobile and Wearable Applications at University of West Florida",
+               "summary": "Presentation will be focused on different use-cases of mobile and wearable technologies at the University of West Florida. The audience will see examples of mobile solutions across different disciplines, from apps for soldiers deployed to Afghanistan, to Internet of Things, and indoor location system. Janusz Chudzynski will explore uses of wearable technology in higher education and demonstrate how to create wearable apps for Apple Watch platform.",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "1:15 PM",
+               "timeStop": "2:00 PM",
+               "track": "3",
+               "presenters": [
+                              "186"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "167",
+               "name": "Shaping the Future of Floridas Next Generation Tech Workforce",
+               "summary": "The Florida IT Career (FITC) Alliance is a grant program under the direction of Florida State University and Florida Agricultural and Mechanical University that promotes IT, computer science and computer engineering education. The FITC program has had many successes in outreach endeavors through our team of dedicated Student Ambassadors. These students travel across the Florida panhandle to our thirty school partners, teaching children and young adults about the importance of technology education.",
+               "description": "The Florida IT Career (FITC) Alliance is a grant program under the direction of Florida State University and Florida Agricultural and Mechanical University that promotes IT, computer science and computer engineering education. The FITC program has had many successes in outreach endeavors through our team of dedicated Student Ambassadors. These students travel across the Florida panhandle to our thirty school partners, teaching children and young adults about the importance of technology education. These efforts are focused on creating a pipeline from K-12 schools to secondary education, and finally to the tech industry in Florida.",
+               "date": "10/23/2015",
+               "timeStart": "1:15 PM",
+               "timeStop": "2:00 PM",
+               "track": "4",
+               "presenters": [
+                              "233"
+                              ],
+               "eventType": "session"
+               },
+               {
+               "id": "168",
+               "name": "Ignite ITEN",
+               "summary": "Sponsored by: Mediacom Business Ignite ITEN presenters will share their personal and professional passions, using 20 slides that auto-advance every 15 seconds for a total of just five minutes. Afternoon BreakSponsored by: Southern Light",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "2:00 PM",
+               "timeStop": "3:00 PM",
+               "track": "5",
+               "presenters": [
+               
+               ],
+               "eventType": "session"
+               },
+               {
+               "id": "118",
+               "name": "Closing Session",
+               "summary": "Sponsored by Innovation Coast Leveraging Advanced Technology for Regional Economic DevelopmentDr. Stephen Dunnivant, Closing Keynote Speaker Regionalism has become an essential strategy to economic development on a global scale. As municipalities struggle to compete in the economic landscape, it has become increasingly evident that they must combine their resources and collaborate on a common identity. This identity is often centered on the economic engine of choice, leveraging geographic strengths and human capital. The role of technology is often at the core of regional development. The Florida Panhandle boasts a wide potential for focusing on advanced technology as that core. This presentation will offer data on our area enhancing our position as a technology corridor, as well as recommendations for the alignment of resources to produce the needed talent chain in that sector.   Make sure you get your Passport completed and turned in for your chance to win the Grand Prize drawing for a Microsoft Surface Pro 3.",
+               "description": "",
+               "date": "10/23/2015",
+               "timeStart": "3:15 PM",
+               "timeStop": "4:30 PM",
+               "track": "5",
+               "presenters": [
+               
+               ],
+               "eventType": "session"
+               }
+               ],
+    "speakers": [
+                 {
+                 "id": "45",
+                 "name": "Robert Foster",
+                 "jobtitle": "",
+                 "bio": "Robert Foster's technology career began in his senior year in Escambia High School in Pensacola when he constructed an Atom Smasher (Cyclotron) using parts from the dumpsters behind TV Repair shops and Bell Telephone sub-stations in Pensacola. The Pensacola News Journal Article re Foster's Atom Smasher is on his LinkedIn Profile. Foster joined IBM in Pensacola as a Field Engineer in 1967. Foster's half-century in technology includes seventeen years with IBM in positions from Engineering, to Sales, to Product Development, to Corporate Strategy Advisor and Division Manager of Systems Strategy. Foster left IBM in 1984 in Austin, Texas, and he has been instrumental in launching twelve technology startups in Austin, of which www.Apogee.us, www.SecureLink.com, and www.ReachForce.com are thriving. Mr. Foster is past-Division Manager for Apogee.us, where he managed the Division that facilitates Warrant-based wire taps for Law Enforcement Agencies under CALEA; Foster remains an Advisor to Apogee, with the intercepts being handled arms-length via a Law Firm and Engineering Team. Foster is a Member of InfraGard, and is studying for his CISSP designation. Apogee, in addition to offering CALEA Trusted Third-Party services to ISP's, is the largest provider of combined telecommunication services to Higher Education dormitories and Student Housing in the United States.",
+                 "company": "",
+                 "website": "",
+                 "linkedin": "http://www.linkedin.com/pub/robert-l-foster/0/31/8a6/",
+                 "email": "",
+                 "sessions": [
+                 
+                 ]
+                 },
+                 {
+                 "id": "173",
+                 "name": "Jeffrey Mitchell",
+                 "jobtitle": "Director of Information",
+                 "bio": "Jeff Mitchell is an ITPro and problem solver bringing passion, expertise, and finesse to his work with both people and technology. During his fifteen years in the field, Jeff has identified and implemented IT solutions ranging from geographically dispersed systems for Small and Medium clients to enterprise deployments of private and hybrid cloud integrated solutions. Heavily tied into the community of Northwest Florida Jeff has worked as Infrastructure Admin, Chief Technology Officer, Office 365 Practice Manager, Director of IT and Cloud Infrastructure. Jeff has been a member of the Pensacola ITT Tech's Program Advisory Committee, contributing to the school's degree programs in Information Systems and Cybersecurity and Network Systems Administration. In addition to speaking engagements at ITGulfCoast, iTenwired (3 Years), IT Pro Camps, SQL Saturdays, Microsoft Road Shows and is a published contributor with Microsoft Press. Jeff lives in Fort Walton Beach Florida where Bit-Wizards corporate office is located. He knows more about Batman than you and enjoys New Orleans Saints football and playing the guitar.",
+                 "company": "Bit-Wizards",
+                 "website": "http://bitwizards.com/blogs/jeffrey-mitchell",
+                 "linkedin": "http://www.linkedin.com/in/jeffmitchellfl",
+                 "email": "",
+                 "sessions": [
+                              "166"
+                              ]
+                 },
+                 {
+                 "id": "186",
+                 "name": "Janusz Chudzynski",
+                 "jobtitle": "Research Associate and Software Engineer",
+                 "bio": "Janusz Chudzynski is a Software Engineer, Research Associate, and Instructor at theAcademic Technology Centerof University of West Florida.He is engaged in a research and development of innovative applications using various technologies in the support of learning and research in learning. Janusz published two books related to mobile programming and authored multiple mobile and web apps on different platforms. Recently he decided to explore the possibilities of IoT and programming wearable devices. He was one of the first developers in the world that published app on Apple Watch platform. Janusz developed the ITEN Wired apps.",
+                 "company": "Academic Technology Center at the University of West Florida",
+                 "website": "http://uwf.edu/",
+                 "linkedin": "http://www.linkedin.com/in/chudzynski",
+                 "email": "jchudzynski@uwf.edu",
+                 "sessions": [
+                              "163"
+                              ]
+                 },
+                 {
+                 "id": "195",
+                 "name": "Jim Nitterauer",
+                 "jobtitle": "Senior Systems Administrator",
+                 "bio": "Jim Nitterauer is currently a Senior Systems Administrator at AppRiver, LLC. His team is responsible for global network deployments and manages the SecureSurf global DNS infrastructure and SecureTide global SPAM & Virus filtering infrastructure as well as all internal applications and manages network security for the entire company. He was President and CEO of GridSouth Networks, LLC, a joint venture between Creative Data Concepts Limited Inc. and AppRiver, LLC. Jim is also the founder and President of Creative Data Concepts Limited, Inc., a well-known Web services provider that has been located in Pensacola, Florida since 1998. Jim served as President of the Gulf Breeze Area Chamber of Commerce in 2003 and 2004 and has served as an active member of its Board of Directors. He has chaired the Chamber's Governmental Affairs Committee and hosted its monthly television show. Jim has also served as president of Santa Rosa County Crimestoppers, Inc. from 2002 through 2009. Jim holds a Bachelor of Science degree with a major in biology from Ursinus College and a Master of Science degree with a major in microbiology and biochemistry from the University of Alabama. He is a 2000 graduate of Leadership Santa Rosa and a 2001 graduate of Leadership Pensacola. Jim, his wife Susan, their two boys and a dog reside in Gulf Breeze, Florida. Baseball, running, playing guitar and family activities take up most of his &lsquo;spare' time. Jim and his family attend Gulf Breeze United Methodist Church.",
+                 "company": "AppRiver, LLC",
+                 "website": "http://www.appriver.com/",
+                 "linkedin": "http://www.linkedin.com/in/gridsouth",
+                 "email": "",
+                 "sessions": [
+                              "171"
+                              ]
+                 },
+                 {
+                 "id": "221",
+                 "name": "Hunter Adams",
+                 "jobtitle": "Registered Patent Attorney",
+                 "bio": "",
+                 "company": "AdamsIP, LLC",
+                 "website": "http://www.adamsiplaw.com",
+                 "linkedin": "http://https://www.linkedin.com/profile/view?id=65575865",
+                 "email": "",
+                 "sessions": [
+                              "157"
+                              ]
+                 },
+                 {
+                 "id": "222",
+                 "name": "Jeremy Wyatt",
+                 "jobtitle": "Sr. Vice President of Software Engineering",
+                 "bio": "Jeremy Wyatt is the Sr. Vice President at ActiGraph, LLC. Founded in 2004, ActiGraph provides robust, clinical grade physical activity monitors to large institutions for kinetics research in very large-scale studies. Jeremy joined ActiGraph as a hardware engineer and helped redesign one of the first commercially viable monitors that the company sold. Jeremy has an Electrical Engineering degree from the University of Florida and an MBA from the University of West Florida.",
+                 "company": "ActiGraph",
+                 "website": "http://www.actigraphcorp.com",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "160"
+                              ]
+                 },
+                 {
+                 "id": "223",
+                 "name": "Glenda R. Snodgrass",
+                 "jobtitle": "President",
+                 "bio": "Glenda R. Snodgrass has been President of The Net Effect, as well as its lead consultant and project manager, since the company's inception in 1996. Ms. Snodgrass is primarily engaged in drafting network security protocols and developing security awareness training programs for clients, in addition to conducting securityrelated workshops and delivering cyber security defense presentations at professional conferences and conventions. An active member of the Gulf Coast Industrial Security Awareness Council, InfraGard, ASIS International, and Gulf Coast Technology Council, as well as numerous civic organization, Ms. Snograss holds a B.A. from the University of South Alabama (1986) and a matrise from Universit de Paris I PanthonSorbonne in Paris, France (1989).",
+                 "company": "The Net Effect",
+                 "website": "http://www.theneteffect.com",
+                 "linkedin": "http://www.linkedin.com/in/glendasnodgrass",
+                 "email": "grs@theneteffect.com",
+                 "sessions": [
+                              "156"
+                              ]
+                 },
+                 {
+                 "id": "224",
+                 "name": "Brian Wilkey",
+                 "jobtitle": "Co-founder, Executive Vice President",
+                 "bio": "Brian Wilkey, co-founder of Digital Boardwalk, has been with the company since its inception in 2008. With a background in information technology, and an education in business administration in management information systems, Brian continues to drive Digital Boardwalk's commitment to innovation. As Digital Boardwalk's Executive VP, Brian oversees all business operations as well as business development efforts including strategic planning, market expansion, and partner relations. Prior to Digital Boardwalk, Brian worked in the Architectural and Engineering industry for an award-winning architectural firm in Central Florida. Brian worked with his team of architects in the design and development of some of Florida's most recognized commercial architecture projects including the state's first 'net-zero' green building. Although the crash of the housing market did not lend Brian many opportunities in the industry, architecture and design remain Brian's childhood passions. In his free time, Brian is an avid cross-country mountain-biker, traveling the country in pursuit of the best trails. After nine months of high-altitude conditioning, Brian mountain-biked up and down Colorado's Pikes Peak in 2013. On a rainy day Brian enjoys researching technology and studying astrophysics.",
+                 "company": "Digital Boardwalk",
+                 "website": "http://www.digitalboardwalk.com",
+                 "linkedin": "http://www.linkedin.com/in/mbrianwilkey",
+                 "email": "Brian.wilkey@digitalboardwalk.com",
+                 "sessions": [
+                              "161"
+                              ]
+                 },
+                 {
+                 "id": "225",
+                 "name": "Cathleen C. Lilli",
+                 "jobtitle": "IT Leadership-Director of IT Infrastructure",
+                 "bio": "Through the majority of Cathleen Lilli's career, she has had the great opportunity to span many jobs as an IT professional. These jobs range from Application Development, Systems Engineering, to Sales & IT management positions (application & infrastructure). The variation of job roles assisted her in understanding all aspects of delivering IT services. Additionally, she had a unique opportunity for two years, as the Customer Service Partner representing the Chief Operations Officer for a large Northeast Bank. In this role, she was able to transform the Operations Division from inward-focused to a customer driven and customer-focused organization. This experience was personally rewarding and incredibly eye opening for her to see that when the conversation changes to focus on the customer all differences are set aside and solutions are developed.",
+                 "company": "Konica Minolta Business Solutions",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "164"
+                              ]
+                 },
+                 {
+                 "id": "228",
+                 "name": "Brent Hutfless",
+                 "jobtitle": "IT Director",
+                 "bio": "Brent Hutfless is the IT Director of Austal USA, the American branch of the global defense and commercial shipbuilder Austal, a Top 100 Federal Contractor. Brent has over twenty years of experience and leadership within technology and security, across challenging roles in aerospace and defense, healthcare, manufacturing and training industries. He holds a bachelor's in computer science from Troy State, and a master's in computer science / software engineering from the University of West Florida. Brent is a Certified Information Systems Security Professional (CISSP) and maintains a GIAC Security Leadership Certification (GSLC). Active within the security domain, he serves as president of the Gulf Coast Industrial Security Awareness Council, as an officer for the Panama City chapter of (ISC)2, and contributes to Peerlyst and LinkedIn communities. Brent is also a regional speaker, contributing writer, researcher, and has taught medical informatics and health records topics at the university level.",
+                 "company": "Austal USA",
+                 "website": "http://www.austal.com",
+                 "linkedin": "",
+                 "email": "brent.hutfless@austalusa.com",
+                 "sessions": [
+                              "169"
+                              ]
+                 },
+                 {
+                 "id": "230",
+                 "name": "Daniel Judge",
+                 "jobtitle": "Software Architect",
+                 "bio": "Daniel Judge is a Software Architect at ActiGraph. He has over 13 years of professional experience as a software developer using mainly .NET technologies. Daniel is an active member in several local Toastmasters groups and is serving as Area Director in 2015-2016. He is a member of the Pensacola Bay Community Band where he plays tuba and euphonium. Daniel and his wife Megan live on a small farm with several dogs, cats, horses, and a donkey named Raya.",
+                 "company": "ActiGraph",
+                 "website": "http://www.danielwjudge.com",
+                 "linkedin": "http://https://www.linkedin.com/in/danielwjudge",
+                 "email": "dwjref@gmail.com",
+                 "sessions": [
+                              "165"
+                              ]
+                 },
+                 {
+                 "id": "232",
+                 "name": "Phil Nickinson",
+                 "jobtitle": "Editor in Chief",
+                 "bio": "Phil has served as editor-in-chief of AndroidCentral.com since 2009. In a previous life he spent more than a decade in the newsroom of a two-time Pulitzer finalist newspaper in his hometown of Pensacola, Fla. In his current life, he's got the greatest job in the world, a gorgeous wife, two beautiful daughters and a mutt named Max. You can find him on Google+, Twitter, and Instagram.",
+                 "company": "AndroidCentral.com",
+                 "website": "http://www.androidcentral.com",
+                 "linkedin": "",
+                 "email": "phil@androidcentral.com",
+                 "sessions": [
+                              "162"
+                              ]
+                 },
+                 {
+                 "id": "233",
+                 "name": "Ebe Randeree",
+                 "jobtitle": "Associate Dean, College of Communication & Information",
+                 "bio": "Ebe Randeree is the Associate Dean for the College of Communication & Information at Florida State University. He leads the college efforts in Finance/Administration, Communication, and Internships/Outreach. He joined FSU from the University at Buffalo where he taught courses in Strategic Management. His education and research are in the areas of Technology, Health Informatics, and Leadership.",
+                 "company": "Florida State University",
+                 "website": "http://fitc.cci.fsu.edu/",
+                 "linkedin": "http://https://www.linkedin.com/grp/home?gid=6709065",
+                 "email": "ebe.randeree@cci.fsu.edu",
+                 "sessions": [
+                              "167"
+                              ]
+                 },
+                 {
+                 "id": "234",
+                 "name": "Dr. Stephen Dunnivant",
+                 "jobtitle": "Dean of the Advanced Technology Center",
+                 "bio": "Dr. Stephen Dunnivant has over 25 years of experience in higher education and economic development. He is originally from upstate New York and a graduate of Gulf Coast State College, FSU, George Washington University, and the University of West Florida. He has presented at numerous national conferences and is a published educational author. At Gulf Coast State College, Dr. Dunnivant played a leadership role in developing their $35 million Advanced Technology Center, establishing key partnerships with local and national industries to stimulate regional economic development.",
+                 "company": "Gulf Coast State College",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "sdunnivant@gulfcoast.edu",
+                 "sessions": [
+                 
+                 ]
+                 },
+                 {
+                 "id": "235",
+                 "name": "Ekta Sahasi",
+                 "jobtitle": "Vice President",
+                 "bio": "Ekta is a charismaticentrepreneurand a seasonedtechnology and new ventures leader with over 20 years industry experience. As a founding member of the Business Innovation Center in North America and the Chief Innovation Officer, Ekta is responsible for developing a globaltransformationstrategyfor Konica Minolta, invest in the startupecosystemtoacceleratethepace ofinnovationand create a portfolio of new business for the company. As a corporate venturecapitals, Ekta workscloselywith VC's, start ups and academia to incubate transformativesolutionsand drive keydifferentiationin the Konica Minolta portfolio. Prior to joining Konica Minolta, Ekta was leading Research and Innovation at eBay Inc. Ekta is passionate about driving sustained innovation, methodical execution and delivering lasting outcomes to build enduringbusinesses.",
+                 "company": "Konica Minolta",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "esahasi@kmbs.konicaminolta.us",
+                 "sessions": [
+                 
+                 ]
+                 },
+                 {
+                 "id": "239",
+                 "name": "Jarrod Morgan",
+                 "jobtitle": "Chief Operating Officer",
+                 "bio": "Jarrod Morgan co-founded a leading company in the growing online education industry and continues to push the envelope in the organization's development. Morgan now serves as Chief Operating Officer and was the company's first proctor. Under Morgan's leadership, the company has grown from a handful of clients in 2008 to over 700 institutions and proctored over 1 million exams. With Morgan's guidance the firm opened additional offices in eight states and its workforce has expanded from half a dozen employees in January of 2011 to more than 600 in 2015. The service has developed into a brand trusted by prestigious institutions such as the University of Alabama, the University of Florida, Northwestern University and many others. In the education industry Morgan is known for his work ethic, leadership, ambition, positive attitude and infectious sense of humor. Prior to ProctorU, Morgan served as director of technology for Andrew Jackson University. In 2013, Morgan was named as one of the top 40 business professionals under the age of 40 by the Birmingham Business Journal. Morgan works out of the Hoover, Ala. office where he coordinates the day-to-day operations of the growing online proctoring team.",
+                 "company": "ProctorU",
+                 "website": "http://proctoru.com",
+                 "linkedin": "",
+                 "email": "jmorgan@proctoru.com",
+                 "sessions": [
+                              "170"
+                              ]
+                 },
+                 {
+                 "id": "240",
+                 "name": "Vern Boyle",
+                 "jobtitle": "Director of Technology",
+                 "bio": "Vern Boyle is director of Technology for Northrop Grumman's Cyber Division (CD). Vern is responsible for defining and executing CD's technical strategy. This includes driving division internal investment plans and increasing customer funded contract research and development. Areas of emphasis include cybersecurity, signals intelligence, information operations, and critical infrastructure protection. He also defines technologies that support the business' mission area strategies in the defense, intelligence, and civil arenas. Vern also leads the division Advanced Cyber Technology Center that focuses on producing high end products and solutions to address customer hard problems. Vern has more than 20 years of experience defining, developing and deploying advanced cyber, SIGINT and intelligence solutions. His areas of expertise include high speed optical and digital processing, global communication systems, network and protocol processing, SIGINT systems, and complex system architecture development. Vern has led numerous programs and multi-disciplined engineering teams through full life cycle development and deployment. Prior to Northrop Grumman he worked as a technical director and chief technologist at Essex Corporation and Harris Corporation. Prior to that he worked on space programs at Lockheed Martin. Vern holds a bachelor's in electrical engineering from Penn State University and a master's degree in electrical engineering from Florida Institute of Technology.",
+                 "company": "Northrop Grumman Information Systems",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                 
+                 ]
+                 },
+                 {
+                 "id": "241",
+                 "name": "Thomas Asmuth",
+                 "jobtitle": "Professor",
+                 "bio": "Bio to come.",
+                 "company": "Department of Art Fabrication Studio, UWF",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "158"
+                              ]
+                 },
+                 {
+                 "id": "242",
+                 "name": "Brice Harris",
+                 "jobtitle": "Assistant Vice President",
+                 "bio": "Dr. Brice Harris was appointed Assistant Vice President for Research and Economic Opportunity in July 2015. Previously at UWF, Dr. Harris held the titles of Associate Director and, later, Director of Strategic Initiatives for the Office of Economic Development and Engagement. Dr. Harris began his employment with UWF in 2010 as a Consultant to the Haas Center for Business Research and Economic Development, and later served as Co-Director of that center. A Pensacola native, Dr. Harris' career to date has centered on military, economic, and political affairs, and includes periods of service in federal and state government, as well as in the private sector. Dr. Harris completed tours of service as a Presidential Management Fellow in the Office of the Secretary of Defense (OSD) and the U.S. Treasury Department's Office of Foreign Assets Control. He has also worked as a private contractor to OSD and the U.S. Marine Corps Command & Staff College, and as a consultant to two separate federal contracting entities. Additionally, Dr. Harris has served as Defense & Space Coordinator in the Executive Office of the Governor of Florida. In that capacity, he was responsible for managing a portfolio of strategic programs, projects, and activities related to Florida's aerospace and defense industries. Previously, Dr. Harris served as the Chief Operations Officer of a stage one technology company formed to commercialize a software suite developed by the Florida Institute for Human and Machine Cognition. Dr. Harris holds a B.A. in Political Science from the University of Florida (1999); an M.S. in Defense & Strategic Studies from Missouri State University (2001); and a Ph.D. in Politics & International Relations from the University of Reading in the United Kingdom (2007).",
+                 "company": "UWF Outreach",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "158"
+                              ]
+                 },
+                 {
+                 "id": "243",
+                 "name": "John Barksdale",
+                 "jobtitle": "Sky Lab Manager",
+                 "bio": "Bio to come.",
+                 "company": "UWF Outreach",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "158"
+                              ]
+                 },
+                 {
+                 "id": "244",
+                 "name": "Nicole Gislason",
+                 "jobtitle": "Director",
+                 "bio": "Bio to come.",
+                 "company": "IT Academy, UWF",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "158"
+                              ]
+                 },
+                 {
+                 "id": "245",
+                 "name": "UWF Engineering Student",
+                 "jobtitle": "Student",
+                 "bio": "Name and Bio to come.",
+                 "company": "UWF",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "158"
+                              ]
+                 },
+                 {
+                 "id": "246",
+                 "name": "Ira Levy",
+                 "jobtitle": "Chief Operating Officer",
+                 "bio": "Ira Levy is the Chief Operating Officer of Affiniti and was named to that position in 2014. Mr. Levy led the creation of the One Maryland Inter-County Broadband Network consortium which received a $110 million federal Broadband Technology Opportunities Program (BTOP) grant, the second largest nationally. He led the consortium as Chief Information Officer of Howard County, Maryland (2010). Ira was personally recognized at the White House Champions of Change (2012). Additionally, the One Maryland initiative was named 2012 Best in Category by the National Association of Counties (NACO) and as the 2011 Fiber Network of the Year by the National Association of Telecommunications Officers and Advisors (NATOA).  Subsequently and prior to joining Affiniti, Mr. Levy served as the Chief Executive Officer of Torrential Systems (2013), an IT development company. Mr. Levy holds a Master's Degree in Information & Telecommunications Systems and an MBA -- both from Johns Hopkins as well as a Master's Degree in Education from the University of Central Florida.",
+                 "company": "Affiniti",
+                 "website": "http://www.affiniti.com",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "155"
+                              ]
+                 },
+                 {
+                 "id": "250",
+                 "name": "Sebastien Cotton",
+                 "jobtitle": "Founder, CEO",
+                 "bio": "Sebastien Cotton, Ph.D., is Founder and CEO of Robotics Unlimited Inc. Dr. Cotton has over 8 years of experience in the Industry, He is a former internationally renowned Scientist with expertise in robotics, biomechanics of legged system and actuation systems. Dr. Cotton has authored multiple papers in international Journals and Conferences. Dr. Cotton was a Research Scientist at the Institute for Human and Machine Cognition between 2010 and 2014. At IHMC, he was the Co-PI of the FastRunner project and led a multi-disciplinary team of scientists and engineers towards the development of an extremely fast, inherently stable and energy-efficient biologically inspired bipedal robot. His research work led to the development of several new technologies and concepts. Dr. Cotton and his team own the world speed record for a legged robot with their HexRunner robot (a scaled up version of OutRunner), which reached 33 mph outdoor and 45 mph in a lab environment. Before joining IHMC, Dr. Cotton was a Research Associate at the LIRMM in France where he gained experience in the modeling and control of humanoid robots. He developed a virtual model to improve the modeling and balance control of humanoid robots. His work has been applied to several humanoid robots. Beside robotics, Dr. Cotton conducted several experiments in human locomotion and introduced a major tool in the biomechanics community, dedicated to the study of balance for Humans. Dr. Cotton received a Ph.D. in Robotics in 2010 from the Universit de Montpellier 2, a M.S in Electrical Engineering in 2007 from the Universit de Montpellier 2, and a B.S in Mathematics and Computer Science from the Universit d'Avignon in 2005. He received a PhD Fellowship from the CNRS and won an award of excellence during his MS degree.",
+                 "company": "Robotics Unlimited Inc.",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "159"
+                              ]
+                 },
+                 {
+                 "id": "251",
+                 "name": "Nino Vidovic",
+                 "jobtitle": "Chief Operating Technologist",
+                 "bio": "Bio to come.",
+                 "company": "Konica Minolta",
+                 "website": "",
+                 "linkedin": "",
+                 "email": "",
+                 "sessions": [
+                              "14"
+                              ]
+                 }
+                 ],
+    "sponsors": [
+                 {
+                 "id": "112",
+                 "name": "Navy Federal Credit Union",
+                 "level": "Opening Reception Sponsor",
+                 "description": "Navy Federal Credit Union is the world's largest credit union with $60 billion in assets, over 5 million members, 248 branches, and a workforce of over 12,000 employees worldwide. The credit union serves all Department of Defense and Coast Guard active duty, civilian, and contractor personnel and their families. For additional information about Navy Federal, visit www.navyfederal.org.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/NavyFedCreditUnionLogo-300.jpg",
+                 "website": "http://www.navyfederal.org"
+                 },
+                 {
+                 "id": "220",
+                 "name": "Northrop Grumman",
+                 "level": "Keynote Luncheon Sponsor",
+                 "description": "Northrop Grumman is a leading global security company providing innovative systems, products and solutions in unmanned systems, cyber, C4ISR, and logistics and modernization to government and commercial customers worldwide.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/northrop_grumman.jpg",
+                 "website": "http://www.northropgrumman.com/Pages/default.aspx"
+                 },
+                 {
+                 "id": "203",
+                 "name": "Konica Minolta Business Solutions, USA, Inc.",
+                 "level": "Opening Breakfast Sponsor",
+                 "description": "Konica Minolta Business Solutions U.S.A., Inc. is a leader in enterprise content management, technology optimization and cloud services. Our solutions help organizations improve their speed to market, manage technology costs, and facilitate the sharing of information to increase productivity. With over 41,000 worldwide employees and cutting-edge research programs, Konica Minolta Business Solutions, U.S.A., Inc., is a leader in enterprise content management, technology optimization and cloud services. Recognized for seven consecutive years as a #1 Brand for Customer Loyalty by Brand Keys, clients trust Konica Minolta to help them envision how they can achieve their goals and deliver innovative solutions to give shape to their ideas. For more information, visit CountOnKonicaMinolta.com and also follow us @KonicaMinoltaUS on Twitter, Facebook and YouTube.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/konica_minolta_logo.png",
+                 "website": "http://www.CountOnKonicaMinolta.com"
+                 },
+                 {
+                 "id": "43",
+                 "name": "TEKsystems",
+                 "level": "Track Sponsor: Professional Development",
+                 "description": "At TEKsystems, a leading provider of IT staffing, IT talent management and IT services, we understand people. Every year we deploy over 80,000 IT professionals at 6,000 client sites across North America, Europe and Asia. Our deep insights into the IT labor market enable us to help clients achieve their business goals--while optimizing their IT workforce strategies.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/tek.gif",
+                 "website": "http://teksystems.com"
+                 },
+                 {
+                 "id": "40",
+                 "name": "AppRiver",
+                 "level": "Track Sponsor: CyberSecurity",
+                 "description": "In just a few short years, AppRiver has grown to become a worldwide leader in email and Web security, but new threats are emerging every day. Count on the phenomenal team at AppRiver to keep your business productive, your network safe and your information secure.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/appRiver.gif",
+                 "website": "http://www.appriver.com"
+                 },
+                 {
+                 "id": "114",
+                 "name": "Digital Boardwalk",
+                 "level": "Track Sponsor: Mobility/Wearable",
+                 "description": "Digital Boardwalk is a true managed I.T. services firm located in Downtown Pensacola, Florida. We provide innovative technology products and solutions to small and medium businesses, small enterprise healthcare, and government, while focusing on insurmountable customer service and rapid response times by leveraging the latest remote management technologies.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/digitalBoardwalk.png",
+                 "website": "http://www.digitalboardwalk.com"
+                 },
+                 {
+                 "id": "39",
+                 "name": "Cox Business",
+                 "level": "Morning Break Sponsor",
+                 "description": "Cox Business provides voice, data and video services for more than 275,000 small and regional businesses, including healthcare providers, K-12 and higher education, financial institutions and federal, state and local government organizations. Visit us at CoxBusiness.com.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/coxBusiness.jpg",
+                 "website": "http://www.coxbusiness.com"
+                 },
+                 {
+                 "id": "152",
+                 "name": "Southern Light",
+                 "level": "Afternoon Break Sponsor",
+                 "description": "Southern Light is the preferred provider of telecommunications services -- using fiber-optic networks and wireless capabilities - along the US Gulf Coast region. Our company owns and maintains the largest contiguous fiber-optic network from south Louisiana, through southern Mississippi and Alabama, and across the Florida panhandle. Southern Light is a privately held company and is focused on serving three primary customer segments in our markets: 1) Telecommunications Carriers, 2) Enterprise Customers and 3) Government Entities. Southern Light provides Metro Ethernet, Internet, OCxx, TDM and Colocations services over our own fiber optic network, to name a few of our Digital Services.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/Southern__Light__Logo.png",
+                 "website": "http://southernlightfiber.com/"
+                 },
+                 {
+                 "id": "134",
+                 "name": "Innovation Coast",
+                 "level": "Closing Keynote Sponsor",
+                 "description": "Innovation Coast is an alliance of technology and knowledge based companies in Northwest Florida. Its mission is to grow, sustain, and showcase the region's successful, vibrant ecosystem of technology and knowledge-based companies, capital investors, andprofessionals by focusing on the following objectives:  Develop the area's technology community into a cohesive network that supports member's goals and shares ideas, knowledge and resources to help business expand and be successful Attract potential technology and knowledge sector companies, entrepreneurs and investment to the area. Actively recruit talent for member companies and attract the critically needed workforce for the technology and knowledge sector. Inventory member skill requirements; match and facilitate the development of local talent. Encourage and provide support programs for technology sector start-ups and entrepreneurs with mentoring, venture capital, guidance and partnering opportunities.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/InnovationCoast-logo-300.jpg",
+                 "website": "http://www.innovationcoast.com"
+                 },
+                 {
+                 "id": "42",
+                 "name": "H2 Performance Consulting",
+                 "level": "Golf Outing Sponsor",
+                 "description": "H2 Performance Consulting's focus is on improving business and technology performance for our clients. Our professionals have a sterling reputation as experts in project, program, and portfolio management with substantial experience in performance, communications, change, training and acquisitions consulting. Founded in 2005 on the principle that consultants must measure their success in terms of their client's ability to have improved business performance through engaging H2's consulting services. H2 provides our clients with a blended set of solutions and services aimed at helping improve or transform business challenges into solid and successful business results.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/h2-logo-icon-small-3.png",
+                 "website": "http://www.h2pc.com"
+                 },
+                 {
+                 "id": "151",
+                 "name": "Mediacom Business",
+                 "level": "IGNITE Session Sponsor",
+                 "description": "Mediacom Business delivers Internet, Phone and TV services via cable-exclusive DOCSIS 3.0 technology. We have invested over $2.5 billion over the past 10 years to expand our product delivery systems. With a coast-to-coast fiber network, Mediacom Business offers anchor institutions bandwidth and connectivity with speeds of 1 Gigabit and beyond.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/mediacom_MEANSbusiness-300.png",
+                 "website": "http://www.mediacombusiness.com"
+                 },
+                 {
+                 "id": "44",
+                 "name": "Duncan McCall Advertising & Marketing",
+                 "level": "Provide Kind",
+                 "description": "Duncan McCall is a full-service marketing communications firm. The firms provides results-driven marketing and branding solutions for a national roster of clients who want solid strategy, hard-working tactics and real ROI. Services include media planning, public relations, creative services, and online/social media marketing programs. Award-winning creative services include online and traditional media, including print, video, outdoor, brochures, corporate identity, photography, and more. Duncan McCall designed and built this website.",
+                 "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/dmc-logo-300x200.png",
+                 "website": "http://www.duncanmccall.com"
+                 }
+                 ],
+    "exhibitors": [
+                   {
+                   "id": "248",
+                   "name": "Affiniti",
+                   "description": "Affiniti provides advanced technology to rural communities so they can compete in the digital world.",
+                   "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-affiniti.jpg",
+                   "website": "http://www.affiniti.com"
+                   },
+                   {
+                   "id": "247",
+                   "name": "C-Spire",
+                   "description": "C-Spire is the sixth largest wireless provider in the United States with over 1,200,000 customers ranging from the Florida Panhandle to Mississippi.",
+                   "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-cspire.jpg",
+                   "website": "http://www.cspire.com"
+                   },
+                   {
+                   "id": "187",
+                   "name": "Metro Systems Inc.",
+                   "description": "Metro Systems Incorporated (MSI) is a certified small business, with a successful history of providing IT professionals on a project or full-time basis. We specialize in placement of technology professionals for government, commercial, and non-profit organizations, large and small. Our mission is to provide these organizations with the highest quality IT talent and to match candidates to the best possible IT careers. Headquartered in the Washington DC metropolitan area with locations in Alexandria, VA, Richmond, VA and Pensacola, FL, MSI has nationwide reach capabilities.",
+                   "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/metro.png",
+                   "website": "http://www.metrosystemsinc.com"
+                   },
+                   {
+                   "id": "237",
+                   "name": "National Flight Academy",
+                   "description": "The National Flight Academy (NFA), the Naval Aviation Museum Foundation's educational initiative, was authorized by the Department of Navy in 2001 and designed to address the serious concerns of declining Science, Technology, Engineering, and Math (STEM) skills and standards in our country. The Academy's immersive simulated environment, coupled with the most revolutionary methods in instruction, foster cooperative learning and inspire young people primarily in grades 7 through 12 to pursue the math and sciences today, which open the door to science and engineering degrees and careers of tomorrow. This vision for today's youth and tomorrow's leaders is the guiding purpose of the National Flight Academy.",
+                   "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-nfa-logo.jpg",
+                   "website": "http://www.nationalflightacademy.com"
+                   },
+                   {
+                   "id": "249",
+                   "name": "Presidio",
+                   "description": "Presidio partners with industry leaders to develop and support the answers to clients' IT challenges.",
+                   "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-presidio.jpg",
+                   "website": "http://www.presidio.com"
+                   },
+                   {
+                   "id": "236",
+                   "name": "Sirius Technical Services",
+                   "description": "Sirius Technical Services is a professional resource company that helps isolate top candidates to fit client needs. We work within various industries such as, Aerospace, Nuclear, Power, Oil & Gas, Chemical and Petro Chemical, Refineries and Shipbuilding. We offer various ways of contract hire to tailor fit client requests. Whether that be long term or short term contract, payroll services and direct hires.",
+                   "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-sirius-logo.jpg",
+                   "website": "http://www.siriustechnical.com"
+                   },
+                   {
+                   "id": "52",
+                   "name": "University of West Florida",
+                   "description": "Founded in 1963, the University of West Florida is a vibrant, distinctive institute of higher learning with undergraduate, graduate and targeted research programs. With multiple locations in Northwest Florida, the University serves a student population of more than 12,000.",
+                   "logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/uwf.png",
+                   "website": "http://www.uwf.edu"
+                   }
+                   ]
+}

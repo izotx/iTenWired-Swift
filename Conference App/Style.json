@@ -1,0 +1,41 @@
+{
+    "ItenWiredStyle":
+    {
+        "background":{
+            "color":{
+                "mainColor": {
+                    "red": 0.15,
+                    "green": 0.353,
+                    "blue": 0.6,
+                    "alpha": 100
+                },
+                "invertedColor":{
+                    "red": 1.0,
+                    "green": 1.0,
+                    "blue": 1.0,
+                    "alpha": 1.0
+                }
+            }
+        },
+        
+        "text": {
+            "color":{
+                "mainColor": {
+                    "red": 1.0,
+                    "green": 1.0,
+                    "blue": 1.0,
+                    "alpha": 1.0
+                }
+                ,
+                "invertedColor":{
+                    "red": 0.15,
+                    "green": 0.353,
+                    "blue": 0.6,
+                    "alpha": 100
+                }
+            }
+            
+        }
+        
+    }
+}

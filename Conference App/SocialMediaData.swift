@@ -8,71 +8,39 @@
 
 import Foundation
 
+
+
 class SocialMediaData {
     
-    //backup url
-    let url = "http://www.facebook.com/itenwired"
-    var content: String = ""
+    let appData = AppData()
     
-    init() {
-        
-        //FIXME: Remove networking code
-        
-        // Get the JSON File
-        let urlString = "http://djmobilesoftware.com/jsondata.json"
-        let url = NSURL(string: urlString)
-        
-        // Start a NSURLSession to Download JSON
-        if let url = url {
-            let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
-                if let error =  error {
-                    print("error: \(error.localizedDescription): \(error.userInfo)")
-                }
-                else if let data = data {
-                    if NSString(data: data, encoding: NSUTF8StringEncoding) != nil {
-                        //print("Received data:\n\(str)")
-                        
-                        do {
-                            // Convert the JSON to Dictionary
-                            let dictionary =  try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary
-                            
-//                            if let links = dictionary.objectForKey("jsondata"){
-//                                let linkArray = links["label"] as! NSArray
-//                                for items in linkArray{
-//                                    let facebookURL = items["facebook"]
-//                                    self.content = (facebookURL as? String)!
-//                                }
-//                            }
-                            
-                            if let sociallinks = dictionary.objectForKey("links") as? NSArray {
-                                for link in sociallinks {
-                                    if let newLink = link["URL"] as? String, let newLabel = link["label"] as? String {
-                                   
-                                        if newLabel == "twitter" {
-                                            self.content = newLink
-                                        }
-                                    }
-                                    
-                                }
-                            }
-                            
-                            print(self.content)
-                        }
-                        catch let error as NSError {
-                            print(error)
-                            
-                        }
-                        
-                    }
-                    else {
-                       
-                    }
-                }
-            })
-            task.resume()    } }
+    func getSocialMedia(named : String) -> SocialMedia?{
     
-    func getURLContent() -> String{
-        return self.content;
+        
+        let data = self.appData.getDataFromFile()
+        
+        if let socialData = data["links"] as? [NSDictionary]{
+            for social in socialData {
+                let dictionary = social
+                let socialMedia = SocialMedia(dictionary: dictionary)
+                
+                if socialMedia.label == named {
+                    return socialMedia
+                }
+            }
+        }
+        
+       return nil
+    }
+    
+    func getHashTags() -> [String] {
+    
+        let data = self.appData.getDataFromFile()
+        
+        if let hashTags = data["hashtags"] as? [String]{
+            return hashTags
+        }
+        
+        return ["#ItenWired"]
     }
 }

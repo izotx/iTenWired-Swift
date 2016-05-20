@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//control
+
 class AttendeeController{
     
     let dataLoader = AttendeeData()
@@ -28,7 +28,7 @@ class AttendeeController{
         return self.getExibitors().count
     }
     
-    func getSpeakers() -> [Speacker] {
+    func getSpeakers() -> [Speaker] {
         return self.dataLoader.getSpeakers()
     }
     
@@ -53,31 +53,19 @@ class AttendeeController{
         return self.getExibitors()[index]
     }
     
-    func getSpeackerAtIndex(index: Int) -> Speacker {
+    func getSpeackerAtIndex(index: Int) -> Speaker {
         return self.getSpeakers()[index]
     }
     
-    
-    
-    
-    
-    //FIXME: remove all code below
-    var attendee:Attendee = Attendee()
-    let dataLoader2:AttendeeData = AttendeeData()
-    
-    init(){
-       // self.attendee = self.dataLoader2.getAttendee()
+    func getSpeakerById(id:Int) -> Speaker? {
+        
+        for speaker in self.getSpeakers() {
+        
+            if speaker.id == id{
+                return speaker
+            }
+        }
+        return nil
     }
-    
-    func getAgenda() -> Attendee{
-        return self.attendee
-    }
-    
-    func getEventAt(index:Int) ->Event{
-        return self.attendee.event[index]
-    }
-    
-    func getEventsCount() -> Int{
-        return attendee.event.count
-    }
+
 }

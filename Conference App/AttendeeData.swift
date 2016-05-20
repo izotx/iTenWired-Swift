@@ -15,13 +15,13 @@ class AttendeeData{
     
     private var sponsers:[Sponser] = []
     private var exibitors:[Exibitor] = []
-    private var speackers:[Speacker] = []
+    private var speakers:[Speaker] = []
 
     
     init(){
         loadSponsers()
         loadExibitors()
-        loadSpeackers()
+        loadSpeakers()
     }
     
     // Loads sponsers from file to memory
@@ -50,13 +50,13 @@ class AttendeeData{
     }
     
     //loads speakes from file to memory
-    func loadSpeackers(){
+    func loadSpeakers(){
     
         let data = self.appData.getDataFromFile()
         if let speakersData = data["speakers"] as? [NSDictionary] {
             for speakerData in speakersData {
-                let speacker = Speacker(dictionary: speakerData)
-                speackers.append(speacker)
+                let speaker = Speaker(dictionary: speakerData)
+                speakers.append(speaker)
             }
         }
     }
@@ -69,7 +69,7 @@ class AttendeeData{
         return self.exibitors
     }
     
-    func getSpeakers() -> [Speacker] {
-        return self.speackers
+    func getSpeakers() -> [Speaker] {
+        return self.speakers
     }
 }

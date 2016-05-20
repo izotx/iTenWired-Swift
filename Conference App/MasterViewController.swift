@@ -26,7 +26,7 @@ class MenuItem{
     }
 }
 
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class MasterViewController: UITableViewController, UISplitViewControllerDelegate{
     
     var menuItems:[MenuItem] = []
     
@@ -40,50 +40,72 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Dispose of any resources that can be recreated.
     }
     
+    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
+    
+        return .PrimaryHidden
+    }
+    
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        splitViewController?.delegate = self
     
+      ///  navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
+      //  navigationItem.leftItemsSupplementBackButton = true
+  
+        
         
         // Tableview delegates
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         
-        // UI Config
-        self.title = "iTen Wired"
-        self.tableView = UITableView(frame:self.view!.frame)
-        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.tableView.rowHeight = CGFloat(65.00)
-        self.view.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
+        self.UIConfig()
         
         // Loads menu items into array
         self.loadMenuItems()
     }
     
+    internal func UIConfig(){
+        
+        self.title = "iTen Wired"
+        self.tableView = UITableView(frame:self.view!.frame)
+        
+        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        self.tableView.rowHeight = CGFloat(65.00)
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+    }
+    
     internal func loadMenuItems(){
         // Loading menu items into array
-        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "Map.png")
+        let map = MenuItem(storyboardId: "Main", viewControllerId: "collectionViewController", name: "Main", imageUrl: "MapM-25.png")
         self.menuItems.append(map)
         
-        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda.png")
+        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda-25.png")
         self.menuItems.append(agenda)
         
-        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten.png")
+        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten-25.png")
         self.menuItems.append(myIten)
         
-        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "TwitterViewController", name: "Social Media", imageUrl: "SocialMedia.png")
+        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMedia-25.png")
         self.menuItems.append(socialMedia)
         
-        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast.png")
+        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast-25.png")
         self.menuItems.append(liveBroadcast)
         
-        //let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About,png")
-        //self.menuItems.append(about)
+        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About-25.png")
+        self.menuItems.append(about)
         
-        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who.png")
+        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who-25.png")
         self.menuItems.append(atendees)
         
-        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Settings.png")
+        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Announcements-25.png")
         self.menuItems.append(notifications)
     }
     
@@ -115,7 +137,9 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let storyboard = UIStoryboard.init(name: menuItem.storyboardId, bundle: nil)
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(menuItem.viewControllerId)
-        self.navigationController?.pushViewController(destinationViewController, animated: true)
+        splitViewController?.showDetailViewController(destinationViewController, sender: nil)
+        
+        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -135,7 +159,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
         
         cell.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 0.5)
-        cell.textLabel?.textColor = UIColor(red: 1, green: 0.63, blue: 0, alpha: 100)
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
         let bgColorView = UIView()
         
