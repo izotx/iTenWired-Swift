@@ -62,6 +62,9 @@
 		559F76681CEE5D52003BE6E6 /* Who-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 559F76671CEE5D52003BE6E6 /* Who-50.png */; };
 		559F766A1CEE5D6F003BE6E6 /* Who-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 559F76691CEE5D6F003BE6E6 /* Who-25.png */; };
 		559F766E1CEF42B9003BE6E6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 559F766D1CEF42B9003BE6E6 /* data.json */; };
+		559F76701CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F766F1CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift */; };
+		559F76751CEF5E3C003BE6E6 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F76741CEF5E3C003BE6E6 /* Track.swift */; };
+		559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F76761CEF6085003BE6E6 /* TrackData.swift */; };
 		55DAC3111CE50F6800941824 /* TwitterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3101CE50F6800941824 /* TwitterCell.swift */; };
 		55DAC3141CE5118000941824 /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3131CE5118000941824 /* TwitterUser.swift */; };
 		55DAC3171CE5258400941824 /* PhotoRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3161CE5258400941824 /* PhotoRecord.swift */; };
@@ -200,6 +203,9 @@
 		559F76671CEE5D52003BE6E6 /* Who-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Who-50.png"; sourceTree = "<group>"; };
 		559F76691CEE5D6F003BE6E6 /* Who-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Who-25.png"; sourceTree = "<group>"; };
 		559F766D1CEF42B9003BE6E6 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		559F766F1CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		559F76741CEF5E3C003BE6E6 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		559F76761CEF6085003BE6E6 /* TrackData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackData.swift; sourceTree = "<group>"; };
 		55DAC3101CE50F6800941824 /* TwitterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterCell.swift; sourceTree = "<group>"; };
 		55DAC3131CE5118000941824 /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
 		55DAC3161CE5258400941824 /* PhotoRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRecord.swift; sourceTree = "<group>"; };
@@ -355,6 +361,7 @@
 				0E647B2C1CBF2DDB006DFB68 /* MapData.swift */,
 				4F4590E51CBEC8DE00F51BCE /* AttendeeData.swift */,
 				892079D31CC9A05F008C1CAC /* SocialMediaData.swift */,
+				559F76761CEF6085003BE6E6 /* TrackData.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -362,18 +369,12 @@
 		55229BD11CE124E60023EFD3 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				559F76731CEF5E1E003BE6E6 /* Attendee */,
+				559F76721CEF5DF8003BE6E6 /* Agenda */,
 				55DAC3121CE5116A00941824 /* Social */,
-				D4C467C51CB84BA000BD6157 /* Agenda.swift */,
-				D4C467C71CB84BA000BD6157 /* Event.swift */,
-				4F4590E31CBEC85A00F51BCE /* Attendee.swift */,
 				55881A991CE12729009B8399 /* loc.swift */,
-				55881A9B1CE129FF009B8399 /* Exibitor.swift */,
-				55881A9D1CE12AD3009B8399 /* Sponser.swift */,
-				55881A9F1CE13506009B8399 /* AttendeeProtocol.swift */,
-				55450B871CE234EE00A2712E /* Speaker.swift */,
 				554334291CE27E7500A6001C /* Notification.swift */,
 				5549801B1CE3734200CC6E36 /* NotificationList.swift */,
-				557D354D1CE4DDDF00562A7A /* EventList.swift */,
 				55DAC3801CEBC77A00941824 /* About.swift */,
 			);
 			name = Entity;
@@ -508,6 +509,39 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		559F76711CEF5D93003BE6E6 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */,
+				559F766F1CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift */,
+				D4C467C81CB84BA000BD6157 /* EventCell.swift */,
+			);
+			name = Agenda;
+			sourceTree = "<group>";
+		};
+		559F76721CEF5DF8003BE6E6 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				559F76741CEF5E3C003BE6E6 /* Track.swift */,
+				D4C467C51CB84BA000BD6157 /* Agenda.swift */,
+				D4C467C71CB84BA000BD6157 /* Event.swift */,
+				557D354D1CE4DDDF00562A7A /* EventList.swift */,
+			);
+			name = Agenda;
+			sourceTree = "<group>";
+		};
+		559F76731CEF5E1E003BE6E6 /* Attendee */ = {
+			isa = PBXGroup;
+			children = (
+				4F4590E31CBEC85A00F51BCE /* Attendee.swift */,
+				55881A9B1CE129FF009B8399 /* Exibitor.swift */,
+				55881A9D1CE12AD3009B8399 /* Sponser.swift */,
+				55881A9F1CE13506009B8399 /* AttendeeProtocol.swift */,
+				55450B871CE234EE00A2712E /* Speaker.swift */,
+			);
+			name = Attendee;
+			sourceTree = "<group>";
+		};
 		55DAC3121CE5116A00941824 /* Social */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,8 +637,7 @@
 		55DAC38A1CEDFBFD00941824 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D4C467C81CB84BA000BD6157 /* EventCell.swift */,
-				4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */,
+				559F76711CEF5D93003BE6E6 /* Agenda */,
 				55450B891CE23B6E00A2712E /* speakerCell.swift */,
 				554980251CE3871500CC6E36 /* NotificationsCell.swift */,
 				55DAC3101CE50F6800941824 /* TwitterCell.swift */,
@@ -985,6 +1018,7 @@
 				A123500E1CB945F300B1233E /* AgendaViewController.swift in Sources */,
 				0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */,
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,
+				559F76701CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift in Sources */,
 				0E647B331CBF2E67006DFB68 /* AnnotationDetailViewController.swift in Sources */,
 				5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */,
 				D4C467CA1CB84BA000BD6157 /* AgendaDataLoader.swift in Sources */,
@@ -995,6 +1029,7 @@
 				55DAC36D1CEBA36700941824 /* SocialMediaCell.swift in Sources */,
 				55DAC3171CE5258400941824 /* PhotoRecord.swift in Sources */,
 				FEF7E0C61CB852B1002A810B /* Event.swift in Sources */,
+				559F76751CEF5E3C003BE6E6 /* Track.swift in Sources */,
 				55DAC3141CE5118000941824 /* TwitterUser.swift in Sources */,
 				FE2623A71CAEFA940074C58F /* MasterViewController.swift in Sources */,
 				557D35501CE5054D00562A7A /* TwitterController.swift in Sources */,
@@ -1019,6 +1054,7 @@
 				0ED487731CBD817D007DCC2B /* AboutData.swift in Sources */,
 				55881A9A1CE12729009B8399 /* loc.swift in Sources */,
 				FEF7E0C51CB852A8002A810B /* EventViewController.swift in Sources */,
+				559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */,
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
 				4F2FBD141CBC5C7C0017A11F /* AttendeesCell.swift in Sources */,
 				D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */,

@@ -144,9 +144,6 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
         
         let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Announcements-50.png")
         self.menuItems.append(notifications)
-        
-        let settings = MenuItem(storyboardId: "", viewControllerId: "", name: "Settings", imageUrl: "Settings-50.png")
-        self.menuItems.append(settings)
     }
     
 }
