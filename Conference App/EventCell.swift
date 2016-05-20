@@ -57,7 +57,10 @@ class EventCell: UITableViewCell {
         self.timeLable.textColor = ItenWiredStyle.text.color.mainColor
         self.dateLable.textColor = ItenWiredStyle.text.color.mainColor
         self.timeStopLable.textColor = ItenWiredStyle.text.color.mainColor
-        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        
+        if let view = self.view {
+            view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        }
     }
     
     func setStartButton(isPresentMyIten: Bool){
