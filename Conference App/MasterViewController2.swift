@@ -23,6 +23,8 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
             super.viewDidLoad()
         
+        
+        
         loadMenuItems()
         
         self.UIConfig()

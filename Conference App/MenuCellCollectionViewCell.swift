@@ -20,7 +20,7 @@ class MenuCellCollectionViewCell: UICollectionViewCell {
         self.nameLabel.text = menuItem.name
         self.icon.image = menuItem.image
         
-        self.UIConfig()
+       self.UIConfig()
     }
     
     internal func UIConfig(){

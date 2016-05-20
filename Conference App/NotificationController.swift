@@ -25,10 +25,6 @@ class NotificationController{
         
         self.defaults.setObject(notificationsData, forKey: "Notifications")
         self.defaults.synchronize() // Sync the defaults to update the data
-        
-        if notification.isDone == false{
-            UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
-        }
     }
     
     func deleteNotification(notification:Notification){

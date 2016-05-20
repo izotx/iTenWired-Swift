@@ -8,10 +8,13 @@
 
 import UIKit
 
-class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
+class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var agendaController:AgendaController = AgendaController()
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     let myItenController = MyItenController()
     
     override func viewDidLoad() {
@@ -20,8 +23,12 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         
         self.UIConfig()
         
-        tableView.estimatedRowHeight = 85.0
-        tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
+        //TablewView delegate 
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        self.tableView.estimatedRowHeight = 85.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
     }
     
     internal func UIConfig(){
@@ -37,14 +44,14 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         return true
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if(section == 0){
             return agendaController.getEventsCount()
         }
         return 0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
     
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! EventCell
         let event = agendaController.getEventAt(indexPath.row)
@@ -56,17 +63,17 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
         return cell
     }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("dateCell") as? AgendaHeaderTableViewCell
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50.0
     }
  
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
             let destinationViewController: EventViewController
             = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
             
@@ -77,7 +84,6 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
        
     }
     
-    // Displays the Menu when clicked
     @IBAction func showMenu(sender: AnyObject) {
         
         if let splitController = self.splitViewController{
@@ -91,7 +97,5 @@ class AgendaViewController: UITableViewController, UIGestureRecognizerDelegate {
             }
         }
     }
-    
-
 }
 

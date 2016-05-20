@@ -14,19 +14,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var window: UIWindow?
 
-    var testMe = true
+    var testMe = false
     
     func testingNotifications(){
         let notificationController = NotificationController()
         let data = NSDictionary()
         let date = NSDate()
         // Creates a notification
-        let notification = Notification(message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum, dolor sit amet blandit imperdiet, nisl est iaculis massa, sed.", aditionalData: data, date: date)
+        let notification = Notification(message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum, dolor sit amet blandit imperdiet, nisl est iaculis massa, sed.",title: "Title", date: date)
+        notificationController.addNotification(notification)
+    }
+
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+    
+        let notificationController = NotificationController()
+        
+        let data = userInfo.first!.1 as? NSDictionary
+        
+        let alert = data!["alert"]
+        
+        
+        let date = NSDate()
+        let notification = Notification(message: (alert!["body"] as? String)!, title: (alert!["title"] as? String)!, date: date)
+        
         notificationController.addNotification(notification)
         
-        //notification = Notification(message: "This is another notification", aditionalData: data, date: date)
-        //notificationController.addNotification(notification)
-
+        UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        completionHandler(UIBackgroundFetchResult.NewData)
+        
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -35,35 +51,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             testingNotifications()
         }
         
-        let notificationController = NotificationController()
-        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
-        
-        // Recives and deals with notifications
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
             NSLog("OneSignal Notification opened:\nMessage: %@", message)
             
-                let notificationController = NotificationController()
-                let date = NSDate()
-                var data:NSDictionary = NSDictionary()
-            
-                if additionalData != nil {
-                    data = additionalData
-                }
-            
-                let notificaton = Notification(message: message, aditionalData: data, date: date)
-                notificationController.addNotification(notificaton)
+
         }
         
         OneSignal.defaultClient().enableInAppAlertNotification(true)
         
-        //TDOD: remove appData Instantiation
+
        let appData = AppData()
        appData.initData()
         
         //  Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-    ///    navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+
         
         splitViewController.delegate = self
 
@@ -75,10 +78,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
        
         return true
     }
+    
+   // appl
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        
+        let notificationController = NotificationController()
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -100,6 +109,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let appData = AppData()
         appData.initData()
         self.saveContext()
+        
+        let notificationController = NotificationController()
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
     }
 
     // MARK: - Split view

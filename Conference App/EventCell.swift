@@ -14,6 +14,7 @@ class EventCell: UITableViewCell {
     
     @IBOutlet var timeLable: UILabel!
     
+    @IBOutlet weak var view: UIView!
 
     @IBOutlet weak var addButton: UIButton!
     
@@ -42,7 +43,7 @@ class EventCell: UITableViewCell {
     }
     
     func build(event:Event){
-        //self.UIConfig()
+       self.UIConfig()
         self.setName(event.name)
         self.setStartTime(event.timeStart)
         self.setStopTime(event.timeStop)
@@ -56,6 +57,7 @@ class EventCell: UITableViewCell {
         self.timeLable.textColor = ItenWiredStyle.text.color.mainColor
         self.dateLable.textColor = ItenWiredStyle.text.color.mainColor
         self.timeStopLable.textColor = ItenWiredStyle.text.color.mainColor
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
     }
     
     func setStartButton(isPresentMyIten: Bool){
