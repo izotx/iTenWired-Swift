@@ -8,71 +8,46 @@
 
 import Foundation
 
-class AppData {
+class AppData{
    
-    let filemgr = NSFileManager.defaultManager()
-    
-    var path: String
-    var mainFile: String
-    var agenda: Agenda
-    var status: Bool = true
-    //Make sure that this url is the main json request
-    var dataPath: NSURL =  NSURL(string: "http://djmobilesoftware.com/itenwired/jsondata.json")!
-    var otherPath: String
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var URL: NSURL =  NSURL(string: "http://djmobilesoftware.com/itenwired/jsondata.json")!
+
     
     init()
     {
-        let dir:NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first!
-        mainFile = "jsonData.json"
-        agenda = Agenda()
-        otherPath = dir.stringByAppendingPathComponent("data.dat")
-        path = dir.stringByAppendingPathComponent(mainFile);
-        
+    
     }
-    func initData()
-    {
-        let data:NSData = getDataFromURL(dataPath)!
-        data.writeToFile(path as String, atomically: false)
-        checkForPurgeFiles()
-        if(!status)
-        {
-            print("Out of date files")
+
+    func getAllNotifications() -> [Notification] {
+        let arr = [Notification]()
+        var notificationsArray = NotificationList(notifications: arr)
+        
+        NSKeyedUnarchiver.setClass(NotificationList.self, forClassName: "NotificationList")
+        if let data = self.defaults.objectForKey("Notifications") as? NSData{
+            if let notifications = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? NotificationList {
+                notificationsArray = notifications
+            }
         }
+        return notificationsArray.getArray().sort({$0.date.compare($1.date) == NSComparisonResult.OrderedDescending})
     }
     
-    func getDataBear()->NSDictionary
-    {
-        var resultDictionary: NSData?
-        var dictionary: NSDictionary?
-        do {
-            resultDictionary =  NSData(contentsOfFile:path)
-            if((resultDictionary) != nil)
-            {
-                dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as? NSDictionary
-            }
-            else
-            {
-                initData()
-                do {
-                    resultDictionary =  NSData(contentsOfFile:path)
-                    dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as? NSDictionary
-                }
-                catch {
-                    
-                }
-            }
-        }
-        catch {
+    func getDataFromFile()-> NSDictionary{
+        var dictionary:NSDictionary!
+        
+        if let data = self.defaults.dataForKey("appData"){
             
+            do {
+                dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary
+                return dictionary
+            } catch{
+            }
         }
-        
-        return dictionary!
+        return dictionary
     }
     
-    func getDataFromFile()-> NSDictionary
-    {
-        checkForPurgeFiles()
-        return getDataBear()
+    func saveData(){
+        self.defaults.setObject(self.getDataFromURL(self.URL), forKey: "appData")
     }
     
     func getDataFromURL(requestURL: NSURL) -> NSData?{
@@ -108,43 +83,4 @@ class AppData {
         return returnData
     }
     
-    //
-    func checkForPurgeFiles()
-    {
-        
-        let data: NSDictionary = getDataBear()
-        
-        if let eventsJSON = data["events"] as? [NSDictionary] {
-            
-            for eventJson in eventsJSON {
-                    
-                let event =  Event(dictionary: eventJson)
-                agenda.addEvent(event)
-            }
-        }
-    
-        for event in agenda.events
-        {
-            var dateFromString:[Int] = [Int]()
-            var dateString = (event.date).characters.split{$0 == "/"}.map(String.init)
-            dateFromString.append(Int(dateString[0])!)
-            dateFromString.append(Int(dateString[1])!)
-            dateFromString.append(Int(dateString[2])!)
-            
-        }
-        if(!status)
-        {
-            let str:NSData = NSData()
-            str.writeToFile(path as String, atomically: false)
-            str.writeToFile(otherPath as String, atomically: false)
-        }
-    }
-    func clearItin()
-    {
-        let str:NSData = NSData()
-        str.writeToFile(otherPath as String, atomically: false)
-    }
-    
-    //Credit to http://stackoverflow.com/questions/24097826/read-and-write-data-from-text-file by user Adam on the stack
-    //overflow site
 }

@@ -71,7 +71,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Announcements" id="KBg-YJ-vxp">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="RdC-p5-fiM"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="RdC-p5-fiM">
+                            <connections>
+                                <action selector="showMenu:" destination="0BY-8d-2od" id="u9Q-uY-VfB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr5-J5-eeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,4 +100,7 @@
             <point key="canvasLocation" x="-49" y="369"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-25.png" width="25" height="25"/>
+    </resources>
 </document>

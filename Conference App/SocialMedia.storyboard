@@ -177,7 +177,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6hg-4F-UrI">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Lm3-TU-2mD"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="Lm3-TU-2mD">
+                            <connections>
+                                <action selector="showMenu:" destination="JTA-3c-jRR" id="xtT-DH-xpa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>

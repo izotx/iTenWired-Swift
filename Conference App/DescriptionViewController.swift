@@ -34,9 +34,17 @@ class AttendeeDescription: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.UIConfig()
         // Do any additional setup after loading the view, typically from a nib.
         // load
       configureView()
+    }
+    
+    internal func UIConfig(){
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.Name.textColor = ItenWiredStyle.text.color.mainColor
+        self.website.textColor = ItenWiredStyle.text.color.mainColor
+        self.Descriptions.textColor = ItenWiredStyle.text.color.mainColor
     }
     
     override func didReceiveMemoryWarning() {

@@ -61,7 +61,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
 
        let appData = AppData()
-       appData.initData()
+        
+        let reach = Reach()
+        
+        //FIXME: better solution
+        if reach.connectionStatus().description != "Offline"{
+            appData.saveData()
+        }
+        
         
         //  Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
@@ -106,8 +113,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        let appData = AppData()
-        appData.initData()
         self.saveContext()
         
         let notificationController = NotificationController()

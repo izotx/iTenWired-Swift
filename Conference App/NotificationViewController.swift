@@ -46,4 +46,18 @@ class NotificationViewController: UITableViewController {
     }
     
     
+    @IBAction func showMenu(sender: AnyObject) {
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
+    }
+    
+    
 }

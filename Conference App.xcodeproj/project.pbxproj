@@ -38,6 +38,9 @@
 		555A7A661CEFB1460068F58C /* More-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A651CEFB1460068F58C /* More-25.png */; };
 		555A7A681CF33BAF0068F58C /* More-color-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A671CF33BAF0068F58C /* More-color-25.png */; };
 		555A7A6A1CF348580068F58C /* speakerHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A691CF348580068F58C /* speakerHeaderCell.swift */; };
+		555A7A6C1CF358040068F58C /* app-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A6B1CF358040068F58C /* app-data.json */; };
+		555A7A701CF35F390068F58C /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A6F1CF35F390068F58C /* Reach.swift */; };
+		555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A711CF365FF0068F58C /* NetworkConnection.swift */; };
 		557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
@@ -186,6 +189,9 @@
 		555A7A651CEFB1460068F58C /* More-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More-25.png"; sourceTree = "<group>"; };
 		555A7A671CF33BAF0068F58C /* More-color-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More-color-25.png"; sourceTree = "<group>"; };
 		555A7A691CF348580068F58C /* speakerHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speakerHeaderCell.swift; sourceTree = "<group>"; };
+		555A7A6B1CF358040068F58C /* app-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "app-data.json"; path = "../app-data.json"; sourceTree = "<group>"; };
+		555A7A6F1CF35F390068F58C /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		555A7A711CF365FF0068F58C /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		557D354B1CE4DC8B00562A7A /* MyItenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItenController.swift; sourceTree = "<group>"; };
 		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		557D354F1CE5054D00562A7A /* TwitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterController.swift; sourceTree = "<group>"; };
@@ -751,8 +757,11 @@
 				FE2623AD1CAEFA940074C58F /* Assets.xcassets */,
 				FE2623A31CAEFA940074C58F /* Conference_App.xcdatamodeld */,
 				FE2623B21CAEFA940074C58F /* Info.plist */,
+				555A7A6B1CF358040068F58C /* app-data.json */,
 				559F76441CEE3CFB003BE6E6 /* Style.json */,
 				559F766D1CEF42B9003BE6E6 /* data.json */,
+				555A7A6F1CF35F390068F58C /* Reach.swift */,
+				555A7A711CF365FF0068F58C /* NetworkConnection.swift */,
 			);
 			path = "Conference App";
 			sourceTree = "<group>";
@@ -907,6 +916,7 @@
 				55DAC3691CEBA12800941824 /* Facebook-25.png in Resources */,
 				55DAC36B1CEBA27200941824 /* Facebook-50.png in Resources */,
 				555A7A661CEFB1460068F58C /* More-25.png in Resources */,
+				555A7A6C1CF358040068F58C /* app-data.json in Resources */,
 				559F76561CEE5B5F003BE6E6 /* MyIten-50.png in Resources */,
 				55DAC3311CEA493D00941824 /* youtube.png in Resources */,
 				559F765F1CEE5C46003BE6E6 /* Announcements-50.png in Resources */,
@@ -1065,6 +1075,7 @@
 				4F2FBD121CBC5AEC0017A11F /* AttendTableViewController.swift in Sources */,
 				0ED487731CBD817D007DCC2B /* AboutData.swift in Sources */,
 				55881A9A1CE12729009B8399 /* loc.swift in Sources */,
+				555A7A701CF35F390068F58C /* Reach.swift in Sources */,
 				FEF7E0C51CB852A8002A810B /* EventViewController.swift in Sources */,
 				559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */,
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
@@ -1072,6 +1083,7 @@
 				D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */,
 				55DAC3811CEBC77A00941824 /* About.swift in Sources */,
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
+				555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */,
 				4F4590E41CBEC85A00F51BCE /* Attendee.swift in Sources */,
 				55DAC37F1CEBAEDD00941824 /* SocialMedia.swift in Sources */,
 				55DAC3671CEB711800941824 /* SpeakerViewController.swift in Sources */,

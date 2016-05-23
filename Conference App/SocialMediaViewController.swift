@@ -197,8 +197,8 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func showMenu(sender: AnyObject) {
-        
         if let splitController = self.splitViewController{
+            
             if !splitController.collapsed {
                 splitController.toggleMasterView()
                 
@@ -207,7 +207,6 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
                 rightNavController.popToRootViewControllerAnimated(true)
             }
         }
-
     }
     
     

@@ -13,6 +13,7 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
     
     let screenBounds = UIScreen.mainScreen().bounds
     var menuItems:[MenuItem] = []
+    let reach = Reach()
     
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -37,16 +38,17 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
         splitViewController?.delegate = self
         
         self.logo.image = UIImage(named: "logo.png")
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
         
-            let aboutData = AboutData()
-            let about = aboutData.getAbout()
+        if reach.connectionStatus().description != "Offline"{
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        
+                let aboutData = AboutData()
+                let about = aboutData.getAbout()
             
-            let url = NSURL(string: about.image)
-            let data = NSData(contentsOfURL: url!)
-            self.logo.image = UIImage(data: data!)
-            
-
+                let url = NSURL(string: about.image)
+                let data = NSData(contentsOfURL: url!)
+                self.logo.image = UIImage(data: data!)
+            }
         }
         
     }

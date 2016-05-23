@@ -238,7 +238,9 @@ class AttendeesViewController: UITableViewController{
         
         switch (photoDetails.state) {
         case PhotoRecordState.New:
-            startDownloadForRecord(photoDetails, indexPath: indexPath, pendingOperations: pendingOperations)
+            if NetworkConnection.isConnected(){
+                startDownloadForRecord(photoDetails, indexPath: indexPath, pendingOperations: pendingOperations)
+            }
             break
             
         default: print("Do Nothing..")
