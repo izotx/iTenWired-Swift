@@ -10,6 +10,7 @@ import Foundation
 
 class AppData {
    
+    let filemgr = NSFileManager.defaultManager()
     
     var path: String
     var mainFile: String

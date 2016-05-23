@@ -15,6 +15,8 @@ class NotificationsCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     func build(notification:Notification){
+        self.UIConfig()
+        
         self.messageLabel.text  = notification.message
         self.titleLabel.text = notification.title
         // Format the date
@@ -40,10 +42,9 @@ class NotificationsCell: UITableViewCell {
     }
     
     internal func UIConfig(){
-    
+        self.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.messageLabel.textColor = ItenWiredStyle.text.color.mainColor
         self.dateLabel.textColor = ItenWiredStyle.text.color.mainColor
-        
         self.titleLabel.textColor = ItenWiredStyle.text.color.mainColor
     }
 }

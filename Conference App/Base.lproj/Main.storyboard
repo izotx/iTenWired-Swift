@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="-419" y="117"/>
         </scene>
-        <!--Master View Controller2-->
+        <!--Iten Wired-->
         <scene sceneID="MNo-P1-5Nh">
             <objects>
                 <viewController storyboardIdentifier="collectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ky3-z3-vgX" customClass="MasterViewController2" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -167,7 +167,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-IA-jKk">
                                 <rect key="frame" x="24" y="82" width="272" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="cAD-xh-bPG"/>
+                                    <constraint firstAttribute="height" constant="84" id="wBK-Qn-hns"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C6Q-rZ-ynb">
@@ -218,15 +218,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="C6Q-rZ-ynb" secondAttribute="trailing" id="3gE-Gv-36V"/>
-                            <constraint firstItem="Slx-IA-jKk" firstAttribute="centerX" secondItem="C6Q-rZ-ynb" secondAttribute="centerX" id="67A-H1-LWu"/>
-                            <constraint firstItem="Slx-IA-jKk" firstAttribute="leading" secondItem="FRJ-T4-Ytk" secondAttribute="leadingMargin" constant="8" id="EaV-wu-DIj"/>
-                            <constraint firstItem="Slx-IA-jKk" firstAttribute="top" secondItem="qsl-vB-WwA" secondAttribute="bottom" constant="18" id="FOZ-be-PBQ"/>
-                            <constraint firstItem="C6Q-rZ-ynb" firstAttribute="top" secondItem="Slx-IA-jKk" secondAttribute="bottom" constant="29" id="JZ4-ZS-REJ"/>
+                            <constraint firstItem="Slx-IA-jKk" firstAttribute="centerX" secondItem="C6Q-rZ-ynb" secondAttribute="centerX" id="YT5-B5-6FC"/>
+                            <constraint firstItem="Slx-IA-jKk" firstAttribute="top" secondItem="FRJ-T4-Ytk" secondAttribute="topMargin" constant="82" id="YuN-7n-obK"/>
                             <constraint firstItem="C6Q-rZ-ynb" firstAttribute="leading" secondItem="FRJ-T4-Ytk" secondAttribute="leading" id="bE9-le-Wnm"/>
+                            <constraint firstItem="Slx-IA-jKk" firstAttribute="top" secondItem="qsl-vB-WwA" secondAttribute="bottom" constant="18" id="c4h-vB-cVW"/>
                             <constraint firstItem="C6Q-rZ-ynb" firstAttribute="bottom" secondItem="1bi-3s-aSc" secondAttribute="top" id="nzp-WP-OoZ"/>
+                            <constraint firstItem="C6Q-rZ-ynb" firstAttribute="top" secondItem="Slx-IA-jKk" secondAttribute="bottom" constant="29" id="tHr-A5-N7D"/>
+                            <constraint firstItem="Slx-IA-jKk" firstAttribute="leading" secondItem="FRJ-T4-Ytk" secondAttribute="leadingMargin" constant="8" id="xrY-zZ-oRP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="T74-DQ-z5j"/>
+                    <navigationItem key="navigationItem" title="Iten Wired" id="U4G-BN-7UW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="C6Q-rZ-ynb" id="sZg-Z4-LHu"/>
@@ -235,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSC-cb-LFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="-606"/>
+            <point key="canvasLocation" x="257" y="-601"/>
         </scene>
         <!--AgendaMain-->
         <scene sceneID="zTt-ib-NKX">

@@ -13,12 +13,13 @@ class NotificationViewController: UITableViewController {
     let notificationController = NotificationController()
     
     override func viewDidLoad() {
-        
+        UIconfig()
     }
     
     internal func UIconfig(){
         self.tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.tableView.tintColor = ItenWiredStyle.background.color.mainColor
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,4 +44,6 @@ class NotificationViewController: UITableViewController {
         
         return cell!
     }
+    
+    
 }

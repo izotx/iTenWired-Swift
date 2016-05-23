@@ -65,7 +65,7 @@
                                             <outlet property="dateView" destination="H7B-yr-ztj" id="zy9-gx-oNK"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="CV8-MV-CZs" customClass="EventCell" customModule="Conference_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="82" id="CV8-MV-CZs" customClass="EventCell" customModule="Conference_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="139" width="320" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CV8-MV-CZs" id="s5D-01-R9X">
@@ -227,7 +227,7 @@
                                                 <color key="sectionIndexColor" red="0.98656028510000005" green="0.6345037818" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="sectionIndexBackgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="speakerHeaderCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="speakerHeaderCell" rowHeight="37" id="Ax7-e1-Qcb">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="speakerHeaderCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="speakerHeaderCell" rowHeight="37" id="Ax7-e1-Qcb" customClass="SpeakerHeaderCell" customModule="Conference_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="320" height="37"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ax7-e1-Qcb" id="2mM-ZW-xzA">
@@ -248,7 +248,7 @@
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="speakerCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="speakerCell" rowHeight="76" id="e7y-nC-om7" customClass="SpeakerCell" customModule="Conference_App" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="speakerCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="speakerCell" rowHeight="76" id="e7y-nC-om7" customClass="SpeakerCell" customModule="Conference_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="65" width="320" height="76"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e7y-nC-om7" id="Eg0-Qk-jal">
@@ -267,14 +267,25 @@
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gv-TF-kpd">
+                                                                    <rect key="frame" x="283" y="25" width="29" height="25"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="29" id="Dve-KV-Ewh"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="More-25.png"/>
+                                                                </button>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstItem="8Gv-TF-kpd" firstAttribute="top" secondItem="Eg0-Qk-jal" secondAttribute="topMargin" constant="17" id="6dU-ko-ma6"/>
                                                                 <constraint firstAttribute="bottomMargin" secondItem="uPm-R1-BAI" secondAttribute="bottom" constant="39" id="AzS-VZ-FP5"/>
                                                                 <constraint firstItem="VbQ-Jp-Njl" firstAttribute="top" secondItem="Eg0-Qk-jal" secondAttribute="topMargin" constant="19" id="PM2-YL-l3X"/>
                                                                 <constraint firstItem="uPm-R1-BAI" firstAttribute="leading" secondItem="VbQ-Jp-Njl" secondAttribute="leading" id="SNT-zh-gn1"/>
+                                                                <constraint firstItem="8Gv-TF-kpd" firstAttribute="trailing" secondItem="Eg0-Qk-jal" secondAttribute="trailingMargin" id="bXc-7l-tJ6"/>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="8Gv-TF-kpd" secondAttribute="bottom" constant="18" id="dkh-8X-q31"/>
                                                                 <constraint firstItem="uPm-R1-BAI" firstAttribute="leading" secondItem="Eg0-Qk-jal" secondAttribute="leadingMargin" constant="8" id="iFb-BD-D6V"/>
                                                                 <constraint firstItem="uPm-R1-BAI" firstAttribute="top" secondItem="Eg0-Qk-jal" secondAttribute="topMargin" id="kOf-w1-L1J"/>
                                                                 <constraint firstItem="VbQ-Jp-Njl" firstAttribute="centerY" secondItem="Eg0-Qk-jal" secondAttribute="centerY" id="nYC-zr-I0R"/>
+                                                                <constraint firstItem="8Gv-TF-kpd" firstAttribute="centerY" secondItem="Eg0-Qk-jal" secondAttribute="centerY" id="yOc-BO-GlL"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -350,6 +361,7 @@ In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="scrollView" destination="lye-Dk-5mE" id="vW2-3b-Q57"/>
+                        <outlet property="scrollviewView" destination="dbk-Qe-YSL" id="WIL-zb-Pjm"/>
                         <outlet property="summaryLabel" destination="R8h-EI-44J" id="Drb-UB-pLz"/>
                         <outlet property="tableView" destination="J5H-gX-aNZ" id="MrA-iT-6ME"/>
                         <outlet property="titleLabel" destination="Yt3-BN-eGc" id="96P-fl-brh"/>
@@ -361,6 +373,7 @@ In lobortis quam quis molestie ullamcorper. Duis bibendum augue eu ante molestie
         </scene>
     </scenes>
     <resources>
+        <image name="More-25.png" width="25" height="25"/>
         <image name="Star-25.png" width="25" height="25"/>
         <image name="menu-25.png" width="25" height="25"/>
     </resources>

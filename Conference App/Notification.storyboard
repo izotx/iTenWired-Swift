@@ -70,7 +70,9 @@
                             <outlet property="delegate" destination="0BY-8d-2od" id="9vA-f4-em7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Announcements" id="g2n-zV-VwP"/>
+                    <navigationItem key="navigationItem" title="Announcements" id="KBg-YJ-vxp">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="RdC-p5-fiM"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tr5-J5-eeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

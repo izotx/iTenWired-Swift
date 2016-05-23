@@ -16,6 +16,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var titleLabel: UILabel!
   
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollviewView: UIView!
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -23,6 +24,8 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.UIConfig()
         
         // TableView Delegate
         tableView.delegate = self
@@ -40,6 +43,15 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         if event?.presentorsIDs.count <= 0 {
             self.tableView.hidden = true
         }
+    }
+    
+    internal func UIConfig(){
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.summaryLabel.textColor = ItenWiredStyle.text.color.mainColor
+        self.titleLabel.textColor = ItenWiredStyle.text.color.mainColor
+        self.scrollView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.scrollviewView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
     }
     
     func resizeScrollView(){
@@ -80,7 +92,9 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerCell = tableView.dequeueReusableCellWithIdentifier("speakerHeaderCell")
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("speakerHeaderCell") as? SpeakerHeaderCell
+
+        headerCell?.build()
         return headerCell
     }
     
@@ -92,6 +106,8 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         let presenter = self.attendeeController.getSpeakerById(presenterId!)
         
         cell?.build(presenter!)
+        cell?.invertTheme()
+        
         return cell!
     }
     

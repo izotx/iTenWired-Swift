@@ -36,6 +36,8 @@
 		554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980231CE37EDC00CC6E36 /* NotificationViewController.swift */; };
 		554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980251CE3871500CC6E36 /* NotificationsCell.swift */; };
 		555A7A661CEFB1460068F58C /* More-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A651CEFB1460068F58C /* More-25.png */; };
+		555A7A681CF33BAF0068F58C /* More-color-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A671CF33BAF0068F58C /* More-color-25.png */; };
+		555A7A6A1CF348580068F58C /* speakerHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A691CF348580068F58C /* speakerHeaderCell.swift */; };
 		557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
@@ -182,6 +184,8 @@
 		554980231CE37EDC00CC6E36 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		554980251CE3871500CC6E36 /* NotificationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
 		555A7A651CEFB1460068F58C /* More-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More-25.png"; sourceTree = "<group>"; };
+		555A7A671CF33BAF0068F58C /* More-color-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More-color-25.png"; sourceTree = "<group>"; };
+		555A7A691CF348580068F58C /* speakerHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speakerHeaderCell.swift; sourceTree = "<group>"; };
 		557D354B1CE4DC8B00562A7A /* MyItenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItenController.swift; sourceTree = "<group>"; };
 		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		557D354F1CE5054D00562A7A /* TwitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterController.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				555A7A651CEFB1460068F58C /* More-25.png */,
+				555A7A671CF33BAF0068F58C /* More-color-25.png */,
 				55DAC3841CECFD7200941824 /* Email-25.png */,
 				55DAC3631CEB579E00941824 /* Agenda */,
 				55DAC32D1CEA487F00941824 /* Social Media */,
@@ -642,6 +647,7 @@
 			children = (
 				559F76711CEF5D93003BE6E6 /* Agenda */,
 				55450B891CE23B6E00A2712E /* speakerCell.swift */,
+				555A7A691CF348580068F58C /* speakerHeaderCell.swift */,
 				554980251CE3871500CC6E36 /* NotificationsCell.swift */,
 				55DAC3101CE50F6800941824 /* TwitterCell.swift */,
 				55DAC36C1CEBA36700941824 /* SocialMediaCell.swift */,
@@ -891,6 +897,7 @@
 				55DAC3541CEB53F300941824 /* SocialMedia-25.png in Resources */,
 				55DAC3351CEA497E00941824 /* web.png in Resources */,
 				55DAC3621CEB578700941824 /* StarFilled-25.png in Resources */,
+				555A7A681CF33BAF0068F58C /* More-color-25.png in Resources */,
 				559F766E1CEF42B9003BE6E6 /* data.json in Resources */,
 				55DAC3851CECFD7200941824 /* Email-25.png in Resources */,
 				55DAC3981CEE19AC00941824 /* About-25.png in Resources */,
@@ -1019,6 +1026,7 @@
 				557D354C1CE4DC8B00562A7A /* MyItenController.swift in Sources */,
 				0EBCE1E61CC2E14E008CEA2C /* LiveBroadcastViewController.swift in Sources */,
 				4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */,
+				555A7A6A1CF348580068F58C /* speakerHeaderCell.swift in Sources */,
 				A123500E1CB945F300B1233E /* AgendaViewController.swift in Sources */,
 				0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */,
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,

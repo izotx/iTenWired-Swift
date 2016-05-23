@@ -16,6 +16,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var segmentResult: UISegmentedControl!
     @IBOutlet weak var mainMap: MKMapView!
     @IBOutlet weak var segmentStyle: UISegmentedControl!
+    @IBOutlet weak var menuButtonMap: UIButton!
     
 
     var locationManager: CLLocationManager = CLLocationManager()
@@ -72,8 +73,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         
     }
+    
+    @IBAction func menuButtonAction(sender: AnyObject) {
+        if let splitController = self.splitViewController{
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let splitController = self.splitViewController{
+            if !splitController.collapsed {
+                self.menuButtonMap.hidden = false
+            }
+        }
         
         segmentStyle.layer.cornerRadius = 5
         
@@ -91,6 +107,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         if (annotationArray.count == 0) {
             addNotations()
+        }
+        
+        if let splitController = self.splitViewController{
+            splitController.toggleMasterView()
         }
         
     }
@@ -240,11 +260,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         
     }
-    // Displays the menu when clicked
+    
+
+    
+    
     @IBAction func showMenu(sender: AnyObject) {
-        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
-        
-        rightNavController.popToRootViewControllerAnimated(true)
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
+    
     }
 }
 

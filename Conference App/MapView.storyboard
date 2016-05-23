@@ -34,6 +34,13 @@
                                     <action selector="openDirections:" destination="raM-Z0-ecJ" eventType="valueChanged" id="TDn-Rj-r8T"/>
                                 </connections>
                             </segmentedControl>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiy-TM-uwi">
+                                <rect key="frame" x="21" y="80" width="25" height="25"/>
+                                <state key="normal" image="menu-25.png"/>
+                                <connections>
+                                    <action selector="menuButtonAction:" destination="raM-Z0-ecJ" eventType="touchUpInside" id="iqv-PW-KHv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -42,9 +49,12 @@
                             <constraint firstItem="Z8o-ti-aBt" firstAttribute="leading" secondItem="IZL-tC-iwY" secondAttribute="leading" constant="20" id="2uX-Qt-Nft"/>
                             <constraint firstAttribute="trailing" secondItem="Z8o-ti-aBt" secondAttribute="trailing" constant="20" id="E7b-wf-CmY"/>
                             <constraint firstAttribute="trailing" secondItem="IQg-u6-wIp" secondAttribute="trailing" id="NyH-8s-qLS"/>
+                            <constraint firstItem="IQg-u6-wIp" firstAttribute="leading" secondItem="Hiy-TM-uwi" secondAttribute="trailing" constant="-46" id="RhS-hH-XvP"/>
                             <constraint firstItem="IQg-u6-wIp" firstAttribute="leading" secondItem="IZL-tC-iwY" secondAttribute="leading" id="SRp-uf-0Br"/>
                             <constraint firstItem="IQg-u6-wIp" firstAttribute="top" secondItem="DZE-eF-m4K" secondAttribute="bottom" id="gZ2-SQ-aHG"/>
+                            <constraint firstItem="Hiy-TM-uwi" firstAttribute="leading" secondItem="IZL-tC-iwY" secondAttribute="leadingMargin" constant="5" id="omX-21-zip"/>
                             <constraint firstItem="mE7-Fn-gVL" firstAttribute="top" secondItem="IQg-u6-wIp" secondAttribute="bottom" id="sTm-df-WxA"/>
+                            <constraint firstItem="Hiy-TM-uwi" firstAttribute="top" secondItem="DZE-eF-m4K" secondAttribute="bottom" constant="16" id="tTG-r3-b8a"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -52,16 +62,17 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Maps" id="6yB-UH-T94">
-                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="sOR-na-0FF">
+                    <navigationItem key="navigationItem" title="Map" id="8Cr-wH-SlA">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="n1H-eU-LQD">
                             <connections>
-                                <action selector="showMenu:" destination="raM-Z0-ecJ" id="mj6-HW-CAr"/>
+                                <action selector="showMenu:" destination="raM-Z0-ecJ" id="Bib-g1-P4u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mainMap" destination="IQg-u6-wIp" id="d4w-oK-2Kq"/>
+                        <outlet property="menuButtonMap" destination="Hiy-TM-uwi" id="F0a-HK-Bw4"/>
                         <outlet property="segmentResult" destination="Z8o-ti-aBt" id="7yA-ff-0Em"/>
                         <outlet property="segmentStyle" destination="Z8o-ti-aBt" id="7SC-Zw-HIb"/>
                         <segue destination="zRE-pd-5tI" kind="show" identifier="NextScene" id="M5k-3k-p0x"/>
@@ -69,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qrd-I3-JPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.5" y="369.5"/>
+            <point key="canvasLocation" x="716.5" y="436.5"/>
         </scene>
         <!--Location Detail-->
         <scene sceneID="Wdv-uI-4zO">
