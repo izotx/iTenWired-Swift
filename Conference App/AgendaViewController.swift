@@ -29,6 +29,11 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.tableView.estimatedRowHeight = 85.0
         self.tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
+        
+        let appData = AppData()
+        if NetworkConnection.isConnected(){
+            appData.saveData()
+        }
     }
     
     internal func UIConfig(){
