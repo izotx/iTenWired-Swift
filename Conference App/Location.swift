@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Location object attributes.
 enum locationEnum:String {
     case name
     case latitude
@@ -16,17 +17,49 @@ enum locationEnum:String {
     case description
 }
 
-// Location Object
-class loc {
+
+// Location object stores a locations informtion
+class Location {
+    
+    /// The locations name
     var name = ""
+    
+    /// The location latitude
     var latitude = ""
+    
+    /// The locations longitude
     var longitude = ""
+    
+    //FIXME: is the date needed?
+    // The locations date
     var date = ""
+    
+    // The locations description
     var description = ""
     
-    init() { }
+    /**
+        Initializes the Location with the provided data
+     
+        - Paramaters:
+            - name: The locations name
+            - latitude: The locations latitude
+            - longitude: The locations longitude
+            - date: The locations date -- Not sure why
+            - description: The locations description
+     */
+    init(name: String, latitude: String, longitude: String, date: String, description: String) {
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+        self.date = date
+        self.description = description
+    }
     
-    // Init with Dictionary
+    /**
+        Initializes a new location usig the provided NSDictionary 
+     
+        - Parameter dictionary: A dictionary with the locations data
+    */
     init(dictionary:NSDictionary) {
         if let name = dictionary.objectForKey(locationEnum.name.rawValue) as? String {
             self.name = name
@@ -44,14 +77,4 @@ class loc {
             self.description = description
         }
     }
-    
-    // Init with String Values
-    init(n: String, lat: String, long: String, date: String, desc: String) {
-        self.name = n
-        self.latitude = lat
-        self.longitude = long
-        self.date = date
-        self.description = desc
-    }
-    
 }

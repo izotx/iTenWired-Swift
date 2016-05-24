@@ -8,10 +8,17 @@
 
 import Foundation
 
-class EventList : NSObject, NSCoding{
+/// List of events created to be able to save the events on the UserDefaults
+class EventList : NSObject{
 
+    /// List of events to be stored
     var events : [Event] = []
     
+    /**
+        Initializes a Event list with the provided array
+     
+        - Parameter events: A array with the events to be stored
+    */
     init(events:[Event]){
         self.events = events
     }
@@ -23,7 +30,10 @@ class EventList : NSObject, NSCoding{
         }
         self.init(events: events)
     }
-    
+}
+
+//MARK: - NSCoding
+extension EventList: NSCoding{
     func encodeWithCoder(coder: NSCoder) {
         coder.encodeObject(self.events, forKey: "events")
     }

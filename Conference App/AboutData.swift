@@ -15,17 +15,15 @@ class AboutData {
     
     func getAbout() -> About {
         
-        let about = About(description: "",image: "")
-        
         let data = appData.getDataFromFile()
         
-        if let description = data["conference_description"] as? String{
-            about.setDescription(description)
+        guard let description = data["conference_description"] as? String,
+            let imageURL = data["header_image_path"] as? String else{
+                
+                return About(description: "", imageURL: "")
         }
         
-        if let image = data["header_image_path"] as? String {
-            about.setImage(image)
-        }
+        let about = About(description: description, imageURL: imageURL)
         
         return about
     }

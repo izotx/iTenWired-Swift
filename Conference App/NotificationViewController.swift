@@ -45,6 +45,10 @@ class NotificationViewController: UITableViewController {
         return cell!
     }
     
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
     
     @IBAction func showMenu(sender: AnyObject) {
         if let splitController = self.splitViewController{

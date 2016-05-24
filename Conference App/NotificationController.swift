@@ -18,6 +18,13 @@ class NotificationController{
     func addNotification(notification:Notification){
        
         var notificationsArray = self.getAllNotifications()
+        
+        for n in notificationsArray {
+            if n.title == notification.title && n.title == notification.title{
+                return
+            }
+        }
+        
         notificationsArray.append(notification)
         
        // NSKeyedArchiver.setClassName("NotificationList", forClass: NotificationList.self)

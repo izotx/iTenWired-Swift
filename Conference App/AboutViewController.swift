@@ -22,15 +22,15 @@ class AboutViewController: UIViewController {
         self.UIConfig()
         let about = aboutData.getAbout()
         
+        self.imageURL.image = UIImage(named: "logo.png")
         // Initial VC Styling
         descriptionLabel.text = about.description
         
-        if let url = NSURL(string:about.image) {
-            let data = NSData(contentsOfURL:url)
-        
-            if(data != nil){
-                imageURL.image = UIImage(data:data!)
-                imageURL.contentMode = .ScaleAspectFit
+        if NetworkConnection.isConnected() {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                let url = NSURL(string: about.image)
+                let data = NSData(contentsOfURL: url!)
+                self.imageURL.image = UIImage(data: data!)
             }
         }
         

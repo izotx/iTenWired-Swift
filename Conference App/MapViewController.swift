@@ -25,7 +25,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     // Pulls Map Data
     var mapController: MapData = MapData()
-    var locArray: [loc] = []
+    var locArray: [Location] = []
     var annotationArray: [AddAnnotation] = []
     
     // Coordinates for Center Location

@@ -8,23 +8,27 @@
 
 import UIKit
 
+/// Information about the ItenWired
 class About {
-
-    var description = ""
-    var image = ""
+    
+    // The conference description
+    var description:String
+    
+    // The url to the conference's logo
+    var image:String
     
     
-    init(description: String, image: String){
+    /**
+        Initializes the conference about information.
+     
+        - Parameters:
+            - description: The conference description
+            - imageURL: The web link to the conference's head logo
+ 
+    */
+    init(description: String, imageURL: String){
         self.description = description
-        self.image = image
-    }
-    
-    func setDescription(description:String){
-        self.description = description
-    }
-    
-    func setImage(URLString : String){
-        self.image =  URLString
+        self.image = imageURL
     }
 }
 
