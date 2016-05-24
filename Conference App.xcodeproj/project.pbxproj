@@ -40,6 +40,13 @@
 		555A7A6C1CF358040068F58C /* app-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A6B1CF358040068F58C /* app-data.json */; };
 		555A7A701CF35F390068F58C /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A6F1CF35F390068F58C /* Reach.swift */; };
 		555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A711CF365FF0068F58C /* NetworkConnection.swift */; };
+		556F70221CF49DCB00428EB5 /* logo-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F70211CF49DCB00428EB5 /* logo-16.png */; };
+		5570EEC61CF4AC510033FCDC /* SocialMediaFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */; };
+		5570EEC81CF4ACC20033FCDC /* AnnouncementsFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */; };
+		5570EECA1CF4ACE10033FCDC /* AboutFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC91CF4ACE10033FCDC /* AboutFilled-50.png */; };
+		5570EECC1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECB1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png */; };
+		5570EECE1CF4AD8C0033FCDC /* MapMFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECD1CF4AD8C0033FCDC /* MapMFilled-50.png */; };
+		5570EED01CF4AE2B0033FCDC /* WhoFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECF1CF4AE2B0033FCDC /* WhoFilled-50.png */; };
 		557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
@@ -104,6 +111,10 @@
 		55DAC3921CEDFEE100941824 /* ItenWiredStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3911CEDFEE100941824 /* ItenWiredStyle.swift */; };
 		55DAC3961CEE17F700941824 /* Agenda-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3951CEE17F700941824 /* Agenda-25.png */; };
 		55DAC3981CEE19AC00941824 /* About-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3971CEE19AC00941824 /* About-25.png */; };
+		55E5A0D51CF4A25200144CD6 /* MapM-50-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55E5A0D41CF4A25200144CD6 /* MapM-50-2.png */; };
+		55E5A0D71CF4A39700144CD6 /* Agenda-50-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55E5A0D61CF4A39700144CD6 /* Agenda-50-2.png */; };
+		55E5A0D91CF4A69900144CD6 /* AgendaFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 55E5A0D81CF4A69900144CD6 /* AgendaFilled-50.png */; };
+		55E5A0DD1CF4A89E00144CD6 /* MyItenFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 55E5A0DC1CF4A89E00144CD6 /* MyItenFilled-50.png */; };
 		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
@@ -185,6 +196,13 @@
 		555A7A6B1CF358040068F58C /* app-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "app-data.json"; path = "../app-data.json"; sourceTree = "<group>"; };
 		555A7A6F1CF35F390068F58C /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		555A7A711CF365FF0068F58C /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		556F70211CF49DCB00428EB5 /* logo-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-16.png"; sourceTree = "<group>"; };
+		5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SocialMediaFilled-50.png"; sourceTree = "<group>"; };
+		5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AnnouncementsFilled-50.png"; sourceTree = "<group>"; };
+		5570EEC91CF4ACE10033FCDC /* AboutFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutFilled-50.png"; sourceTree = "<group>"; };
+		5570EECB1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LiveBroadcastFilled-50.png"; sourceTree = "<group>"; };
+		5570EECD1CF4AD8C0033FCDC /* MapMFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMFilled-50.png"; sourceTree = "<group>"; };
+		5570EECF1CF4AE2B0033FCDC /* WhoFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhoFilled-50.png"; sourceTree = "<group>"; };
 		557D354B1CE4DC8B00562A7A /* MyItenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItenController.swift; sourceTree = "<group>"; };
 		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		55881A991CE12729009B8399 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -245,6 +263,10 @@
 		55DAC3911CEDFEE100941824 /* ItenWiredStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItenWiredStyle.swift; sourceTree = "<group>"; };
 		55DAC3951CEE17F700941824 /* Agenda-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Agenda-25.png"; sourceTree = "<group>"; };
 		55DAC3971CEE19AC00941824 /* About-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "About-25.png"; sourceTree = "<group>"; };
+		55E5A0D41CF4A25200144CD6 /* MapM-50-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapM-50-2.png"; sourceTree = "<group>"; };
+		55E5A0D61CF4A39700144CD6 /* Agenda-50-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Agenda-50-2.png"; sourceTree = "<group>"; };
+		55E5A0D81CF4A69900144CD6 /* AgendaFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AgendaFilled-50.png"; sourceTree = "<group>"; };
+		55E5A0DC1CF4A89E00144CD6 /* MyItenFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyItenFilled-50.png"; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
@@ -309,6 +331,7 @@
 		40D07A941CE0CA4C005E361B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				556F70211CF49DCB00428EB5 /* logo-16.png */,
 				555A7A651CEFB1460068F58C /* More-25.png */,
 				555A7A671CF33BAF0068F58C /* More-color-25.png */,
 				55DAC3841CECFD7200941824 /* Email-25.png */,
@@ -413,7 +436,9 @@
 		559F764E1CEE5A29003BE6E6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				55E5A0D41CF4A25200144CD6 /* MapM-50-2.png */,
 				55DAC34B1CEB51FC00941824 /* MapM-50.png */,
+				5570EECD1CF4AD8C0033FCDC /* MapMFilled-50.png */,
 				55DAC3511CEB532300941824 /* MapM-25.png */,
 			);
 			name = Map;
@@ -422,7 +447,9 @@
 		559F764F1CEE5AB6003BE6E6 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				55E5A0D61CF4A39700144CD6 /* Agenda-50-2.png */,
 				559F76501CEE5AE0003BE6E6 /* Agenda-50.png */,
+				55E5A0D81CF4A69900144CD6 /* AgendaFilled-50.png */,
 				55DAC3951CEE17F700941824 /* Agenda-25.png */,
 			);
 			name = Agenda;
@@ -431,6 +458,7 @@
 		559F76521CEE5AEB003BE6E6 /* MyIten */ = {
 			isa = PBXGroup;
 			children = (
+				55E5A0DC1CF4A89E00144CD6 /* MyItenFilled-50.png */,
 				55DAC3551CEB547000941824 /* MyIten-25.png */,
 				559F76551CEE5B5F003BE6E6 /* MyIten-50.png */,
 			);
@@ -458,6 +486,7 @@
 		559F76591CEE5B9A003BE6E6 /* Social Media */ = {
 			isa = PBXGroup;
 			children = (
+				5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */,
 				559F76571CEE5B97003BE6E6 /* SocialMedia-50.png */,
 				55DAC3531CEB53F300941824 /* SocialMedia-25.png */,
 			);
@@ -467,6 +496,7 @@
 		559F765A1CEE5BDF003BE6E6 /* Live Broadcast */ = {
 			isa = PBXGroup;
 			children = (
+				5570EECB1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png */,
 				55DAC3571CEB54D500941824 /* LiveBroadcast-25.png */,
 				559F765B1CEE5BF0003BE6E6 /* LiveBroadcast-50.png */,
 			);
@@ -476,6 +506,7 @@
 		559F765D1CEE5C03003BE6E6 /* Who */ = {
 			isa = PBXGroup;
 			children = (
+				5570EECF1CF4AE2B0033FCDC /* WhoFilled-50.png */,
 				559F76671CEE5D52003BE6E6 /* Who-50.png */,
 				559F76691CEE5D6F003BE6E6 /* Who-25.png */,
 			);
@@ -485,6 +516,7 @@
 		559F76601CEE5C4D003BE6E6 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				5570EEC91CF4ACE10033FCDC /* AboutFilled-50.png */,
 				55DAC3971CEE19AC00941824 /* About-25.png */,
 				559F76651CEE5CBB003BE6E6 /* About-50.png */,
 			);
@@ -495,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				55DAC3591CEB550700941824 /* Announcements-25.png */,
+				5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */,
 				559F765E1CEE5C46003BE6E6 /* Announcements-50.png */,
 			);
 			name = Announcements;
@@ -885,6 +918,7 @@
 				55DAC3851CECFD7200941824 /* Email-25.png in Resources */,
 				55DAC3981CEE19AC00941824 /* About-25.png in Resources */,
 				55DAC3521CEB532300941824 /* MapM-25.png in Resources */,
+				556F70221CF49DCB00428EB5 /* logo-16.png in Resources */,
 				FE2623B11CAEFA940074C58F /* LaunchScreen.storyboard in Resources */,
 				FE2623AE1CAEFA940074C58F /* Assets.xcassets in Resources */,
 				55DAC3691CEBA12800941824 /* Facebook-25.png in Resources */,
@@ -900,17 +934,23 @@
 				559F76581CEE5B97003BE6E6 /* SocialMedia-50.png in Resources */,
 				55DAC3581CEB54D500941824 /* LiveBroadcast-25.png in Resources */,
 				55DAC3391CEA4B8100941824 /* email.png in Resources */,
+				55E5A0DD1CF4A89E00144CD6 /* MyItenFilled-50.png in Resources */,
 				A12350181CB9500400B1233E /* ItineraryStoryboard.storyboard in Resources */,
 				559F764D1CEE58AC003BE6E6 /* logo.png in Resources */,
+				5570EEC81CF4ACC20033FCDC /* AnnouncementsFilled-50.png in Resources */,
 				559F76641CEE5C92003BE6E6 /* Settings-50.png in Resources */,
 				55DAC35A1CEB550700941824 /* Announcements-25.png in Resources */,
 				55DAC3871CECFDC600941824 /* Web-25.png in Resources */,
 				FE0E76C51CC9D0920027CEDD /* blank-image.png in Resources */,
 				55DAC3771CEBAA8600941824 /* Google-50.png in Resources */,
+				5570EECC1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png in Resources */,
 				559F76511CEE5AE0003BE6E6 /* Agenda-50.png in Resources */,
 				559F76451CEE3CFB003BE6E6 /* Style.json in Resources */,
 				55DAC3791CEBAACF00941824 /* LinkedIn-50.png in Resources */,
 				55DAC3891CECFDF200941824 /* LinkedIn-25.png in Resources */,
+				55E5A0D71CF4A39700144CD6 /* Agenda-50-2.png in Resources */,
+				55E5A0D51CF4A25200144CD6 /* MapM-50-2.png in Resources */,
+				5570EED01CF4AE2B0033FCDC /* WhoFilled-50.png in Resources */,
 				559F76661CEE5CBB003BE6E6 /* About-50.png in Resources */,
 				0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */,
 				55DAC3561CEB547000941824 /* MyIten-25.png in Resources */,
@@ -927,11 +967,15 @@
 				55DAC36F1CEBA8AC00941824 /* Twitter-50.png in Resources */,
 				554980201CE37DCC00CC6E36 /* Notification.storyboard in Resources */,
 				FE2623AC1CAEFA940074C58F /* Main.storyboard in Resources */,
+				5570EECA1CF4ACE10033FCDC /* AboutFilled-50.png in Resources */,
+				55E5A0D91CF4A69900144CD6 /* AgendaFilled-50.png in Resources */,
 				55DAC3731CEBA96E00941824 /* YouTube-50.png in Resources */,
 				4F3A78DB1CB5AAF500A87EE6 /* Attendees.storyboard in Resources */,
 				55DAC32A1CEA3B9100941824 /* menu-25.png in Resources */,
 				55DAC3751CEBAA0000941824 /* Instagram-50.png in Resources */,
 				55DAC37B1CEBAB3E00941824 /* Web-50.png in Resources */,
+				5570EECE1CF4AD8C0033FCDC /* MapMFilled-50.png in Resources */,
+				5570EEC61CF4AC510033FCDC /* SocialMediaFilled-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,40 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
+//    
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//    
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//    
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
 //
-//  MasterViewController2.swift
-//  Conference App
-//
-//  Created by Felipe on 5/18/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
-//
+//    MasterViewController2.swift
+//    Conference App
+//    Created by Felipe Neves {felipenevesbrito@gmail.com} on 5/18/16.
+
+
 
 import UIKit
 import CoreData
 
-class MasterViewController2 : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISplitViewControllerDelegate {
+class MasterViewController2 : UIViewController{
     
     let screenBounds = UIScreen.mainScreen().bounds
     var menuItems:[MenuItem] = []
@@ -23,7 +48,7 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewWillAppear(animated: Bool) {
         if reach.connectionStatus().description != "Offline"{
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
                 
                 let aboutData = AboutData()
                 let about = aboutData.getAbout()
@@ -35,18 +60,15 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
                 
                     self.logo.image = UIImage(data: data!)
                 }                
-            }
+            }*/
         }
 
     }
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-        
-        
+        super.viewDidLoad()
         
         loadMenuItems()
-        
         self.UIConfig()
         
         //CollectionView Deleagte
@@ -55,40 +77,68 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
         
         // SplitView Delegate
         splitViewController?.delegate = self
-        
-        self.logo.image = UIImage(named: "logo.png")
-        
-//        if reach.connectionStatus().description != "Offline"{
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-//        
-//                let aboutData = AboutData()
-//                let about = aboutData.getAbout()
-//            
-//                let url = NSURL(string: about.image)
-//                let data = NSData(contentsOfURL: url!)
-//                self.logo.image = UIImage(data: data!)
-//            }
-//        }
-        
     }
     
     internal func UIConfig(){
-        self.collectionView.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        self.collectionView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.logo.image = UIImage(named: "logo-16.png")
     }
     
-    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
+    /**
+        Loads the menu items into the MenuItems array
+    */
+    internal func loadMenuItems(){
+        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "MapMFilled-50.png")
+        self.menuItems.append(map)
         
-        return .PrimaryHidden
-    }
-    
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
-        return true
-    }
-    
-    override func didReceiveMemoryWarning() {
+        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "AgendaFilled-50.png")
+        self.menuItems.append(agenda)
         
+        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyItenFilled-50.png")
+        self.menuItems.append(myIten)
+        
+        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
+        self.menuItems.append(socialMedia)
+        
+        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
+        self.menuItems.append(liveBroadcast)
+        
+        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "AboutFilled-50.png")
+        self.menuItems.append(about)
+        
+        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "WhoFilled-50.png")
+        self.menuItems.append(atendees)
+        
+        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "AnnouncementsFilled-50.png")
+        self.menuItems.append(notifications)
     }
     
+}
+
+//MARK: - UICollectionViewDataSource
+extension MasterViewController2 : UICollectionViewDataSource{
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
+            return
+        }
+        
+        cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
+            return
+        }
+        
+        //Changes the colors to main colors
+        cell.backgroundColor = ItenWiredStyle.background.color.mainColor
+        cell.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
+    }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.menuItems.count
@@ -99,10 +149,10 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    
-        return CGSize(width: (screenBounds.width / 2) - 6, height: 150)
         
+        return CGSize(width: (screenBounds.width / 2) - 6, height: 150)
     }
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
@@ -116,8 +166,11 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
         
         return cell!
     }
-    
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+}
+
+//MARK: - UICollectionViewDelegate
+extension MasterViewController2: UICollectionViewDelegate{
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         
         let index = indexPath.row
         let menuItem = menuItems[index]
@@ -141,32 +194,15 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(menuItem.viewControllerId)
         splitViewController?.showDetailViewController(destinationViewController, sender: nil)
     }
-    
-    internal func loadMenuItems(){
-        // Loading menu items into array
-        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "MapM-50.png")
-        self.menuItems.append(map)
-        
-        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda-50.png")
-        self.menuItems.append(agenda)
-        
-        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten-50.png")
-        self.menuItems.append(myIten)
-        
-        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMedia-50.png")
-        self.menuItems.append(socialMedia)
-        
-        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast-50.png")
-        self.menuItems.append(liveBroadcast)
-        
-        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About-50.png")
-        self.menuItems.append(about)
-        
-        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who-50.png")
-        self.menuItems.append(atendees)
-        
-        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Announcements-50.png")
-        self.menuItems.append(notifications)
+}
+
+//Mark: - UISplitViewControllerDelegate
+extension MasterViewController2: UISplitViewControllerDelegate{
+    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
+        return .PrimaryHidden
     }
     
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
+    }
 }

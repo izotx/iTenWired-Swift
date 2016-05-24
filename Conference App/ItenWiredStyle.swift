@@ -26,7 +26,7 @@ class ItenWiredStyle{
             
             // Background Color - hex: #265a99
             let bgMainColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
-             bgColor.mainColor = UIColor(hexString: "#1ba1e1")
+             bgColor.mainColor = UIColor(hexString: "#14b1e7")
             //bgColor.mainColor = bgMainColor
             
             let invertedColor = UIColor.whiteColor()
@@ -52,7 +52,7 @@ class ItenWiredStyle{
             txColor.mainColor = txMainColor
             
             let txInvertedColor =  UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 100)
-            txColor.invertedColor = txInvertedColor
+            txColor.invertedColor = UIColor(hexString: "#14b1e7")//txInvertedColor
             
             tx.color = txColor
             

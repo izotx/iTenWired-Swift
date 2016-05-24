@@ -26,6 +26,13 @@ class MenuCellCollectionViewCell: UICollectionViewCell {
     internal func UIConfig(){
         self.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
+        
+        
+        self.contentView.layer.borderColor = ItenWiredStyle.background.color.invertedColor.CGColor
+        
+        self.contentView.layer.borderWidth = 2
+        
+        
     }
     
 }

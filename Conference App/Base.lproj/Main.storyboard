@@ -106,7 +106,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" style="IBUITableViewCellStyleDefault" id="WCw-Qf-5nD">
-                                <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -164,13 +164,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-IA-jKk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-IA-jKk">
                                 <rect key="frame" x="24" y="82" width="272" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="wBK-Qn-hns"/>
-                                </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C6Q-rZ-ynb">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C6Q-rZ-ynb">
                                 <rect key="frame" x="0.0" y="195" width="320" height="373"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m0s-5H-UOy">
@@ -218,13 +215,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="C6Q-rZ-ynb" secondAttribute="trailing" id="3gE-Gv-36V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Slx-IA-jKk" secondAttribute="trailing" constant="4" id="J0V-32-Dq6"/>
                             <constraint firstItem="Slx-IA-jKk" firstAttribute="centerX" secondItem="C6Q-rZ-ynb" secondAttribute="centerX" id="YT5-B5-6FC"/>
                             <constraint firstItem="Slx-IA-jKk" firstAttribute="top" secondItem="FRJ-T4-Ytk" secondAttribute="topMargin" constant="82" id="YuN-7n-obK"/>
                             <constraint firstItem="C6Q-rZ-ynb" firstAttribute="leading" secondItem="FRJ-T4-Ytk" secondAttribute="leading" id="bE9-le-Wnm"/>
                             <constraint firstItem="Slx-IA-jKk" firstAttribute="top" secondItem="qsl-vB-WwA" secondAttribute="bottom" constant="18" id="c4h-vB-cVW"/>
                             <constraint firstItem="C6Q-rZ-ynb" firstAttribute="bottom" secondItem="1bi-3s-aSc" secondAttribute="top" id="nzp-WP-OoZ"/>
                             <constraint firstItem="C6Q-rZ-ynb" firstAttribute="top" secondItem="Slx-IA-jKk" secondAttribute="bottom" constant="29" id="tHr-A5-N7D"/>
-                            <constraint firstItem="Slx-IA-jKk" firstAttribute="leading" secondItem="FRJ-T4-Ytk" secondAttribute="leadingMargin" constant="8" id="xrY-zZ-oRP"/>
+                            <constraint firstItem="Slx-IA-jKk" firstAttribute="leading" secondItem="FRJ-T4-Ytk" secondAttribute="leadingMargin" constant="4" id="xrY-zZ-oRP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Iten Wired" id="U4G-BN-7UW"/>
@@ -236,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSC-cb-LFn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257" y="-601"/>
+            <point key="canvasLocation" x="330" y="-606"/>
         </scene>
         <!--AgendaMain-->
         <scene sceneID="zTt-ib-NKX">
