@@ -40,6 +40,8 @@
 		555A7A6C1CF358040068F58C /* app-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A6B1CF358040068F58C /* app-data.json */; };
 		555A7A701CF35F390068F58C /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A6F1CF35F390068F58C /* Reach.swift */; };
 		555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A711CF365FF0068F58C /* NetworkConnection.swift */; };
+		555A7A791CF488880068F58C /* StarFilled-35.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A781CF488880068F58C /* StarFilled-35.png */; };
+		555A7A7B1CF4889C0068F58C /* Star-35.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A7A1CF4889C0068F58C /* Star-35.png */; };
 		557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
@@ -104,7 +106,7 @@
 		55DAC3921CEDFEE100941824 /* ItenWiredStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3911CEDFEE100941824 /* ItenWiredStyle.swift */; };
 		55DAC3961CEE17F700941824 /* Agenda-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3951CEE17F700941824 /* Agenda-25.png */; };
 		55DAC3981CEE19AC00941824 /* About-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3971CEE19AC00941824 /* About-25.png */; };
-		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; };
+		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
 		827BA9A31CC2E48F003085BA /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */; };
@@ -185,6 +187,8 @@
 		555A7A6B1CF358040068F58C /* app-data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "app-data.json"; path = "../app-data.json"; sourceTree = "<group>"; };
 		555A7A6F1CF35F390068F58C /* Reach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
 		555A7A711CF365FF0068F58C /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		555A7A781CF488880068F58C /* StarFilled-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StarFilled-35.png"; sourceTree = "<group>"; };
+		555A7A7A1CF4889C0068F58C /* Star-35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-35.png"; sourceTree = "<group>"; };
 		557D354B1CE4DC8B00562A7A /* MyItenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItenController.swift; sourceTree = "<group>"; };
 		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		55881A991CE12729009B8399 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -597,6 +601,8 @@
 		55DAC3631CEB579E00941824 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				555A7A781CF488880068F58C /* StarFilled-35.png */,
+				555A7A7A1CF4889C0068F58C /* Star-35.png */,
 				55DAC35F1CEB56BF00941824 /* Star-25.png */,
 				55DAC3611CEB578700941824 /* StarFilled-25.png */,
 			);
@@ -899,6 +905,7 @@
 				559F765C1CEE5BF0003BE6E6 /* LiveBroadcast-50.png in Resources */,
 				559F76581CEE5B97003BE6E6 /* SocialMedia-50.png in Resources */,
 				55DAC3581CEB54D500941824 /* LiveBroadcast-25.png in Resources */,
+				555A7A7B1CF4889C0068F58C /* Star-35.png in Resources */,
 				55DAC3391CEA4B8100941824 /* email.png in Resources */,
 				A12350181CB9500400B1233E /* ItineraryStoryboard.storyboard in Resources */,
 				559F764D1CEE58AC003BE6E6 /* logo.png in Resources */,
@@ -913,6 +920,7 @@
 				55DAC3891CECFDF200941824 /* LinkedIn-25.png in Resources */,
 				559F76661CEE5CBB003BE6E6 /* About-50.png in Resources */,
 				0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */,
+				555A7A791CF488880068F58C /* StarFilled-35.png in Resources */,
 				55DAC3561CEB547000941824 /* MyIten-25.png in Resources */,
 				55DAC3191CE526E600941824 /* placeholder.png in Resources */,
 				559F76681CEE5D52003BE6E6 /* Who-50.png in Resources */,

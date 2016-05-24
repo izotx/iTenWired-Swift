@@ -48,6 +48,7 @@ class AppData{
     
     func saveData(){
         self.defaults.setObject(self.getDataFromURL(self.URL), forKey: "appData")
+        self.defaults.synchronize()
     }
     
     func getDataFromURL(requestURL: NSURL) -> NSData?{
