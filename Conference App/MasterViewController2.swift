@@ -21,6 +21,25 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
     
+    override func viewWillAppear(animated: Bool) {
+        if reach.connectionStatus().description != "Offline"{
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                
+                let aboutData = AboutData()
+                let about = aboutData.getAbout()
+                
+                let url = NSURL(string: about.image)
+                let data = NSData(contentsOfURL: url!)
+                
+                dispatch_async(dispatch_get_main_queue()){
+                
+                    self.logo.image = UIImage(data: data!)
+                }                
+            }
+        }
+
+    }
+    
     override func viewDidLoad() {
             super.viewDidLoad()
         
@@ -39,17 +58,17 @@ class MasterViewController2 : UIViewController, UICollectionViewDelegate, UIColl
         
         self.logo.image = UIImage(named: "logo.png")
         
-        if reach.connectionStatus().description != "Offline"{
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-        
-                let aboutData = AboutData()
-                let about = aboutData.getAbout()
-            
-                let url = NSURL(string: about.image)
-                let data = NSData(contentsOfURL: url!)
-                self.logo.image = UIImage(data: data!)
-            }
-        }
+//        if reach.connectionStatus().description != "Offline"{
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+//        
+//                let aboutData = AboutData()
+//                let about = aboutData.getAbout()
+//            
+//                let url = NSURL(string: about.image)
+//                let data = NSData(contentsOfURL: url!)
+//                self.logo.image = UIImage(data: data!)
+//            }
+//        }
         
     }
     
