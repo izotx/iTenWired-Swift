@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum NetworkNotifications:String{
+    case DataLoaded
+}
+
 class AppData{
    
     let defaults = NSUserDefaults.standardUserDefaults()
@@ -47,17 +51,44 @@ class AppData{
     }
     
     func saveData(){
+        print("1")
+        let data = self.getDataFromURL(self.URL)
+        var beforeDictionary:NSDictionary?
+        do {
+            beforeDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+            
+            print(beforeDictionary)
+        
+        } catch{
+
+        }
+
+        
+        
+        
         self.defaults.setObject(self.getDataFromURL(self.URL), forKey: "appData")
         self.defaults.synchronize()
+        print("________")
+        
+        
+        let dictionary = getDataFromFile()
+            print(dictionary)
+        
+       
+        NSNotificationCenter.defaultCenter().postNotificationName(NetworkNotifications.DataLoaded.rawValue, object: data)
+        
     }
     
     func getDataFromURL(requestURL: NSURL) -> NSData?{
         
         var locked = true       // Flag to make sure the
         var returnData:NSData?
-        
+        let sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        sessionConfiguration.requestCachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
-        let session = NSURLSession.sharedSession()
+        let session = NSURLSession(configuration: sessionConfiguration)
+        
         let task = session.dataTaskWithRequest(urlRequest) {
             (data, response, error) -> Void in
             
@@ -67,6 +98,9 @@ class AppData{
                 
                 if (statusCode == 200) {
                     returnData = data!
+                    //print(returnData)
+                    
+                    
                 }else{
                     print("Error while retriving data!")
                 }
@@ -80,7 +114,8 @@ class AppData{
         while(locked){ // Runs untill the response is received
             
         }
-        
+        print("3")
+
         return returnData
     }
     

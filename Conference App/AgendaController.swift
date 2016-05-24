@@ -16,10 +16,12 @@ class AgendaController{
     }
     
     func getAgenda() -> Agenda{
+        self.agenda = self.dataLoader.getAgenda()
         return self.agenda
     }
     
     func getEventAt(index:Int) ->Event{
+        self.agenda = self.dataLoader.getAgenda()
         return self.agenda.events[index]
     }
     

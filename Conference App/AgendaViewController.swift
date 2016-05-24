@@ -20,8 +20,8 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(networkUpdated(_:)), name: NetworkNotifications.DataLoaded.rawValue, object: nil)
         
-        self.UIConfig()
         
         //TablewView delegate 
         self.tableView.delegate = self
@@ -30,10 +30,34 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.estimatedRowHeight = 85.0
         self.tableView.rowHeight = UITableViewAutomaticDimension     // Sets the table view's row height to automatic
         
+        
+    
+    }
+    
+    /**Called by observing the notification */
+    func networkUpdated(notification:NSNotification){
+        agendaController = AgendaController()
+        if let data = notification.object as? NSData{
+            print("data")
+        }
+        
+        
+        tableView.reloadData()
+        //tableView.reloadData()
+
+        //print()
+        
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.UIConfig()
         let appData = AppData()
         if NetworkConnection.isConnected(){
             appData.saveData()
         }
+
     }
     
     internal func UIConfig(){
