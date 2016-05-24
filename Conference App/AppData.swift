@@ -51,32 +51,10 @@ class AppData{
     }
     
     func saveData(){
-        print("1")
         let data = self.getDataFromURL(self.URL)
-        var beforeDictionary:NSDictionary?
-        do {
-            beforeDictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
-            
-            print(beforeDictionary)
-        
-        } catch{
-
-        }
-
-        
-        
-        
         self.defaults.setObject(self.getDataFromURL(self.URL), forKey: "appData")
         self.defaults.synchronize()
-        print("________")
-        
-        
-        let dictionary = getDataFromFile()
-            print(dictionary)
-        
-       
         NSNotificationCenter.defaultCenter().postNotificationName(NetworkNotifications.DataLoaded.rawValue, object: data)
-        
     }
     
     func getDataFromURL(requestURL: NSURL) -> NSData?{

@@ -87,7 +87,7 @@ class Sponser: AttendeeProtocol{
             self.logo = logo
         }
         
-        if let website = dictionary.objectForKey(SponserEnum.logo.rawValue) as? String{
+        if let website = dictionary.objectForKey(SponserEnum.website.rawValue) as? String{
             self.website = website
         }
     }

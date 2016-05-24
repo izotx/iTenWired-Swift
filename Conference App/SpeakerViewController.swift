@@ -14,6 +14,7 @@ class SpeakerDescriptionViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var job: UILabel!
 
+    @IBOutlet weak var componentsView: UIView!
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -26,10 +27,14 @@ class SpeakerDescriptionViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.build(speaker!)
         resizeScrollView()
+        
+        self.UIConfig()
     }
     
     internal func UIConfig(){
         self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.scrollView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.componentsView.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
         self.job.textColor = ItenWiredStyle.text.color.mainColor
         self.bioLabel.textColor = ItenWiredStyle.text.color.mainColor

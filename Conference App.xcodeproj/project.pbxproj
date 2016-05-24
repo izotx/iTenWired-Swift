@@ -47,6 +47,7 @@
 		5570EECC1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECB1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png */; };
 		5570EECE1CF4AD8C0033FCDC /* MapMFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECD1CF4AD8C0033FCDC /* MapMFilled-50.png */; };
 		5570EED01CF4AE2B0033FCDC /* WhoFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECF1CF4AE2B0033FCDC /* WhoFilled-50.png */; };
+		5570EED21CF4D5560033FCDC /* SponserUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570EED11CF4D5560033FCDC /* SponserUIViewController.swift */; };
 		557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
@@ -203,6 +204,7 @@
 		5570EECB1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LiveBroadcastFilled-50.png"; sourceTree = "<group>"; };
 		5570EECD1CF4AD8C0033FCDC /* MapMFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMFilled-50.png"; sourceTree = "<group>"; };
 		5570EECF1CF4AE2B0033FCDC /* WhoFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhoFilled-50.png"; sourceTree = "<group>"; };
+		5570EED11CF4D5560033FCDC /* SponserUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponserUIViewController.swift; sourceTree = "<group>"; };
 		557D354B1CE4DC8B00562A7A /* MyItenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItenController.swift; sourceTree = "<group>"; };
 		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		55881A991CE12729009B8399 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -642,6 +644,7 @@
 				4F2FBD111CBC5AEC0017A11F /* AttendTableViewController.swift */,
 				4F72CBAD1CC884BA00C30D2B /* DescriptionViewController.swift */,
 				55DAC3661CEB711800941824 /* SpeakerViewController.swift */,
+				5570EED11CF4D5560033FCDC /* SponserUIViewController.swift */,
 			);
 			name = Attendee;
 			sourceTree = "<group>";
@@ -1051,6 +1054,7 @@
 				557D354E1CE4DDDF00562A7A /* EventList.swift in Sources */,
 				55DAC3921CEDFEE100941824 /* ItenWiredStyle.swift in Sources */,
 				FEF7E0CB1CB858E3002A810B /* MapViewController.swift in Sources */,
+				5570EED21CF4D5560033FCDC /* SponserUIViewController.swift in Sources */,
 				557D354C1CE4DC8B00562A7A /* MyItenController.swift in Sources */,
 				0EBCE1E61CC2E14E008CEA2C /* LiveBroadcastViewController.swift in Sources */,
 				4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */,
