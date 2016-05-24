@@ -25,37 +25,22 @@
 //    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //    POSSIBILITY OF SUCH DAMAGE.
 
-//  AgendaDataLoader.swift
-//  Agenda1
-//
-//  Created by Felipe Neves Brito on 4/5/16.
 
+//  DateEnum.swift
+//  Conference App
+//  Created by Felipe Brito on 5/24/16.
 
-import Foundation
-
-/// Loads agenda data
-class AgendaDataLoader{
-    
-    /// App data loader
-    let appData = AppData()
- 
-    /**
-        Returns a Agenda with the events
-     
-        - Returns: A agenda with the events
-    */
-    func getAgenda() -> Agenda {
-        let agenda = Agenda()
-        
-        let data = appData.getDataFromFile()
-        
-        if let eventsData = data["events"] as? [NSDictionary]{
-            for eventData in eventsData{
-                let event =  Event(dictionary: eventData)
-                agenda.addEvent(event)
-            }
-        }
-        
-        return agenda
-    }
+enum DateEnum: String{
+    case January
+    case Feburary
+    case March
+    case April
+    case May
+    case June
+    case July
+    case Agust
+    case September
+    case October
+    case November
+    case December
 }

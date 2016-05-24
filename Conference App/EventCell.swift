@@ -39,7 +39,6 @@ class EventCell: UITableViewCell {
     func setDate(date:String){
         let day = date.componentsSeparatedByString("/")[1]
         dateLable.text = day
-        print(day)
     }
     
     func build(event:Event){
@@ -65,9 +64,9 @@ class EventCell: UITableViewCell {
     
     func setStartButton(isPresentMyIten: Bool){
         if isPresentMyIten {
-            self.addButton.setImage(UIImage(named: "StarFilled-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "StarFilled-50.png"), forState: UIControlState.Normal)
         } else {
-            self.addButton.setImage(UIImage(named: "Star-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "Star-50.png"), forState: UIControlState.Normal)
         }
     }
   
@@ -77,10 +76,10 @@ class EventCell: UITableViewCell {
         
         if myItenController.isPresent(event) {
             myItenController.deleteFromMyIten(event)
-            self.addButton.setImage(UIImage(named: "Star-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "Star-50.png"), forState: UIControlState.Normal)
         } else {
             myItenController.addToMyIten(event)
-            self.addButton.setImage(UIImage(named: "StarFilled-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "StarFilled-50.png"), forState: UIControlState.Normal)
         }
     }
 }

@@ -48,6 +48,9 @@
 		5570EECE1CF4AD8C0033FCDC /* MapMFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECD1CF4AD8C0033FCDC /* MapMFilled-50.png */; };
 		5570EED01CF4AE2B0033FCDC /* WhoFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EECF1CF4AE2B0033FCDC /* WhoFilled-50.png */; };
 		5570EED21CF4D5560033FCDC /* SponserUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570EED11CF4D5560033FCDC /* SponserUIViewController.swift */; };
+		5570EED61CF4E48A0033FCDC /* Star-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EED51CF4E48A0033FCDC /* Star-50.png */; };
+		5570EED81CF4E48F0033FCDC /* StarFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EED71CF4E48F0033FCDC /* StarFilled-50.png */; };
+		5570EEDA1CF4EC100033FCDC /* DateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570EED91CF4EC100033FCDC /* DateEnum.swift */; };
 		557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5549801B1CE3734200CC6E36 /* NotificationList.swift */; };
 		557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552E692B1CE284DC0010C3C9 /* NotificationController.swift */; };
@@ -205,6 +208,9 @@
 		5570EECD1CF4AD8C0033FCDC /* MapMFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMFilled-50.png"; sourceTree = "<group>"; };
 		5570EECF1CF4AE2B0033FCDC /* WhoFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WhoFilled-50.png"; sourceTree = "<group>"; };
 		5570EED11CF4D5560033FCDC /* SponserUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponserUIViewController.swift; sourceTree = "<group>"; };
+		5570EED51CF4E48A0033FCDC /* Star-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-50.png"; sourceTree = "<group>"; };
+		5570EED71CF4E48F0033FCDC /* StarFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StarFilled-50.png"; sourceTree = "<group>"; };
+		5570EED91CF4EC100033FCDC /* DateEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateEnum.swift; sourceTree = "<group>"; };
 		557D354B1CE4DC8B00562A7A /* MyItenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyItenController.swift; sourceTree = "<group>"; };
 		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		55881A991CE12729009B8399 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -633,6 +639,8 @@
 			isa = PBXGroup;
 			children = (
 				55DAC35F1CEB56BF00941824 /* Star-25.png */,
+				5570EED51CF4E48A0033FCDC /* Star-50.png */,
+				5570EED71CF4E48F0033FCDC /* StarFilled-50.png */,
 				55DAC3611CEB578700941824 /* StarFilled-25.png */,
 			);
 			name = Agenda;
@@ -772,6 +780,7 @@
 				559F766D1CEF42B9003BE6E6 /* data.json */,
 				555A7A6F1CF35F390068F58C /* Reach.swift */,
 				555A7A711CF365FF0068F58C /* NetworkConnection.swift */,
+				5570EED91CF4EC100033FCDC /* DateEnum.swift */,
 			);
 			path = "Conference App";
 			sourceTree = "<group>";
@@ -959,6 +968,7 @@
 				55DAC3561CEB547000941824 /* MyIten-25.png in Resources */,
 				55DAC3191CE526E600941824 /* placeholder.png in Resources */,
 				559F76681CEE5D52003BE6E6 /* Who-50.png in Resources */,
+				5570EED81CF4E48F0033FCDC /* StarFilled-50.png in Resources */,
 				559F766A1CEE5D6F003BE6E6 /* Who-25.png in Resources */,
 				0EE564D11CB83E6C001678B0 /* MapView.storyboard in Resources */,
 				0EBCE1E41CC2E128008CEA2C /* LiveBroadcast.storyboard in Resources */,
@@ -978,6 +988,7 @@
 				55DAC3751CEBAA0000941824 /* Instagram-50.png in Resources */,
 				55DAC37B1CEBAB3E00941824 /* Web-50.png in Resources */,
 				5570EECE1CF4AD8C0033FCDC /* MapMFilled-50.png in Resources */,
+				5570EED61CF4E48A0033FCDC /* Star-50.png in Resources */,
 				5570EEC61CF4AC510033FCDC /* SocialMediaFilled-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1057,6 +1068,7 @@
 				5570EED21CF4D5560033FCDC /* SponserUIViewController.swift in Sources */,
 				557D354C1CE4DC8B00562A7A /* MyItenController.swift in Sources */,
 				0EBCE1E61CC2E14E008CEA2C /* LiveBroadcastViewController.swift in Sources */,
+				5570EEDA1CF4EC100033FCDC /* DateEnum.swift in Sources */,
 				4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */,
 				555A7A6A1CF348580068F58C /* speakerHeaderCell.swift in Sources */,
 				A123500E1CB945F300B1233E /* AgendaViewController.swift in Sources */,

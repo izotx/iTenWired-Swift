@@ -212,8 +212,26 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
     
    
     func displayShareSheet(shareContent:String) {
-        let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
-        presentViewController(activityViewController, animated: true, completion: {})
+        
+        
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                let vc = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+                var barButtonItem: UIBarButtonItem! = UIBarButtonItem()
+                vc.popoverPresentationController?.sourceView = self.view
+                
+                self.presentViewController(vc, animated: true, completion: nil)
+                
+            } else{
+                let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+                presentViewController(activityViewController, animated: true, completion: {})
+            }
+        }
+        
+        
+        
+        
     }
     
     @IBAction func shareButtonAction(sender: AnyObject) {

@@ -13,7 +13,7 @@ class ItenWiredStyle{
 
     static var shareButtonColor:UIColor!{
         get{
-            return UIColor(red: 0.13, green: 0.33, blue: 0.57, alpha: 100)
+            return UIColor(hexString: "#099acc")//UIColor(red: 0.13, green: 0.33, blue: 0.57, alpha: 100)
         }
     }
     

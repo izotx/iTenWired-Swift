@@ -51,10 +51,28 @@ class AppData{
     }
     
     func saveData(){
-        let data = self.getDataFromURL(self.URL)
-        self.defaults.setObject(self.getDataFromURL(self.URL), forKey: "appData")
-        self.defaults.synchronize()
-        NSNotificationCenter.defaultCenter().postNotificationName(NetworkNotifications.DataLoaded.rawValue, object: data)
+        let sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        sessionConfiguration.requestCachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+        
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: self.URL)
+        let session = NSURLSession(configuration: sessionConfiguration)
+        
+        let task = session.dataTaskWithRequest(urlRequest) {
+            (data, response, error) -> Void in
+            
+            if let httpResponse = response as? NSHTTPURLResponse {
+                
+                let statusCode = httpResponse.statusCode
+                
+                if (statusCode == 200) {
+                    self.defaults.setObject(data, forKey: "appData")
+                    self.defaults.synchronize()
+                }else{
+                    print("Error while retriving data!")
+                }
+            }
+        }
+        task.resume()
     }
     
     func getDataFromURL(requestURL: NSURL) -> NSData?{
