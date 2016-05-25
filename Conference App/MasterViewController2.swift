@@ -72,6 +72,8 @@ class MasterViewController2 : UIViewController{
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.APPBecameActive.rawValue, object: nil)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.RemoteNotificationReceived.rawValue, object: nil)
+        
         loadMenuItems()
         self.UIConfig()
         
@@ -136,7 +138,7 @@ extension MasterViewController2 : UICollectionViewDataSource{
         cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
         cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
         cell.icon.backgroundColor = ItenWiredStyle.background.color.invertedColor
-        //cell.icon.setImage(UIImage?, forState: .Normal)
+        cell.icon.setImage(menuItems[indexPath.row].invertedColorIcon, forState: .Normal)
     }
     
     func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
@@ -145,9 +147,10 @@ extension MasterViewController2 : UICollectionViewDataSource{
             return
         }
         
-        //Changes the colors to main colors
         cell.backgroundColor = ItenWiredStyle.background.color.mainColor
         cell.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
+        cell.icon.backgroundColor = ItenWiredStyle.background.color.mainColor
+        cell.icon.setImage(menuItems[indexPath.row].image, forState: .Normal)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -192,10 +195,19 @@ extension MasterViewController2 : UICollectionViewDataSource{
 extension MasterViewController2: UICollectionViewDelegate{
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         
+        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
+            return
+        }
+        
+        cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
+        cell.icon.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        cell.icon.setImage(menuItems[indexPath.row].invertedColorIcon, forState: .Normal)
+        
         let index = indexPath.row
         let menuItem = menuItems[index]
         
-        if !MasterViewController.isConnectedToNetwork(){
+        if !NetworkConnection.isConnected() {
             if menuItem.name == "Live Broadcast"{
                 // create the alert
                 let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
@@ -208,6 +220,10 @@ extension MasterViewController2: UICollectionViewDelegate{
                 
                 return
             }
+        }
+        
+        if menuItem.name == "Announcements"{
+            self.collectionView.reloadData()
         }
         
         let storyboard = UIStoryboard.init(name: menuItem.storyboardId, bundle: nil)

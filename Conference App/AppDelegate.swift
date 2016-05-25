@@ -35,6 +35,7 @@ import CoreData
 
 enum NotificationObserver:String {
     case APPBecameActive
+    case RemoteNotificationReceived
 }
 
 @UIApplicationMain
@@ -55,6 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let notification = Notification(message: (alert!["body"] as? String)!, title: (alert!["title"] as? String)!, date: date)
         
         notificationController.addNotification(notification)
+        
+         NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.RemoteNotificationReceived.rawValue, object: self)
         
         UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         completionHandler(UIBackgroundFetchResult.NewData)

@@ -38,10 +38,4 @@ class MenuCellCollectionViewCell: UICollectionViewCell {
         self.icon.backgroundColor = ItenWiredStyle.background.color.mainColor
     }
     
-    
-    func invertIconColor(){
-    
-        icon.setImage(menuItem.image, forState: .Normal)
-    }
-    
 }
