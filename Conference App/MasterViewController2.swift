@@ -114,7 +114,7 @@ class MasterViewController2 : UIViewController{
         let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyItenFilled-50.png")
         self.menuItems.append(myIten)
         
-        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
+        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaNav", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
         self.menuItems.append(socialMedia)
         
         let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
@@ -200,15 +200,15 @@ extension MasterViewController2 : UICollectionViewDataSource{
 //MARK: - UICollectionViewDelegate
 extension MasterViewController2: UICollectionViewDelegate{
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
-        
-        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
-            return
-        }
-        
-        cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
-        cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
-        cell.icon.backgroundColor = ItenWiredStyle.background.color.invertedColor
-        cell.icon.setImage(menuItems[indexPath.row].invertedColorIcon, forState: .Normal)
+//        
+//        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
+//            return
+//        }
+//        
+//        cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
+//        cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
+//        cell.icon.backgroundColor = ItenWiredStyle.background.color.invertedColor
+//        cell.icon.setImage(menuItems[indexPath.row].invertedColorIcon, forState: .Normal)
         
         let index = indexPath.row
         let menuItem = menuItems[index]

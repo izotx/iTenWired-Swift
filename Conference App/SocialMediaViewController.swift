@@ -211,16 +211,17 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
     
     
    
-    func displayShareSheet(shareContent:String) {
+    func displayShareSheet(button: AnyObject, shareContent:String) {
         
         
         if let splitController = self.splitViewController{
             
             if !splitController.collapsed {
                 let vc = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
-                var barButtonItem: UIBarButtonItem! = UIBarButtonItem()
+//                var barButtonItem: UIBarButtonItem! = UIBarButtonItem()
+                vc.popoverPresentationController?.sourceRect = (button as! UIView).frame
                 vc.popoverPresentationController?.sourceView = self.view
-                
+               // vc.popoverPresentationController?.arrowDirection = .Default
                 self.presentViewController(vc, animated: true, completion: nil)
                 
             } else{
@@ -243,7 +244,7 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
         for hashtag in hashtags{
             content = "\(hashtag) \(content)"
         }
-        displayShareSheet(content)
+        displayShareSheet(sender, shareContent:content)
     }
     
 }

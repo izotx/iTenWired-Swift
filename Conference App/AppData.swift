@@ -37,7 +37,7 @@ class AppData{
     }
     
     func getDataFromFile()-> NSDictionary{
-        var dictionary:NSDictionary!
+        var dictionary:NSDictionary = NSDictionary()
         
         if let data = self.defaults.dataForKey("appData"){
             
