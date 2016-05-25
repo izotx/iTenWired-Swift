@@ -70,6 +70,8 @@ class MasterViewController2 : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.APPBecameActive.rawValue, object: nil)
+        
         loadMenuItems()
         self.UIConfig()
         
@@ -79,6 +81,10 @@ class MasterViewController2 : UIViewController{
         
         // SplitView Delegate
         splitViewController?.delegate = self
+    }
+    
+    func updateData(){
+        self.collectionView.reloadData()
     }
     
     internal func UIConfig(){

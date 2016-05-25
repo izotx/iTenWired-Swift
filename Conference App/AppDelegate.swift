@@ -33,6 +33,10 @@
 import UIKit
 import CoreData
 
+enum NotificationObserver:String {
+    case APPBecameActive
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
@@ -97,6 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
         
+    }
+    func applicationDidBecomeActive(application: UIApplication) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.APPBecameActive.rawValue, object: self)
     }
     
     func applicationWillResignActive(application: UIApplication) {
