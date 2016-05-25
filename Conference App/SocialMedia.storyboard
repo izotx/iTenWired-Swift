@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WoK-GL-0mb" id="dHQ-3G-lUb">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-5G-Cxe">
@@ -72,18 +72,19 @@
         <!--Navigation Controller-->
         <scene sceneID="UkG-tu-YUU">
             <objects>
-                <navigationController restorationIdentifier="SocialMediaNav" storyboardIdentifier="SocialMediaNav" id="bEe-z9-4FU" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SocialMediaNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bEe-z9-4FU" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffd-2O-w5w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="JTA-3c-jRR" kind="relationship" relationship="rootViewController" id="vMH-jK-njS"/>
+                        <segue destination="JTA-3c-jRR" kind="relationship" relationship="rootViewController" id="c7F-Ge-qsM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6AO-uQ-WTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="-752"/>
+            <point key="canvasLocation" x="583" y="-603"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gRQ-PA-gmr">
@@ -99,7 +100,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3h-lP-AUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205" y="62"/>
+            <point key="canvasLocation" x="356" y="130"/>
         </scene>
         <!--Social Media View Controller-->
         <scene sceneID="jPI-3X-NBg">
@@ -123,10 +124,10 @@
                                         <rect key="frame" x="0.0" y="92" width="320" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBT-oK-Cxo" id="pZL-pN-UMq">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="11W-U3-MIl">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="11W-U3-MIl">
                                                     <rect key="frame" x="19" y="14" width="50" height="50"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiS-Tk-vgB">
@@ -191,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzA-eh-lJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1626" y="-636"/>
+            <point key="canvasLocation" x="1211" y="-619"/>
         </scene>
         <!--TwitterViewController-->
         <scene sceneID="xbq-Cs-HRd">
@@ -206,7 +207,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="209"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fuh-4m-SZj" id="2aO-Pu-gRw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="208.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-qy-ydn">
@@ -298,7 +299,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJb-ty-Y4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="101"/>
+            <point key="canvasLocation" x="1426" y="130"/>
         </scene>
     </scenes>
     <resources>

@@ -117,16 +117,16 @@ class MasterViewController2 : UIViewController{
         let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaNav", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
         self.menuItems.append(socialMedia)
         
-        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
+        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcastNav", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
         self.menuItems.append(liveBroadcast)
         
-        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "AboutFilled-50.png")
+        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutViewNav", name: "About", imageUrl: "AboutFilled-50.png")
         self.menuItems.append(about)
         
         let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "WhoFilled-50.png")
         self.menuItems.append(atendees)
         
-        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "AnnouncementsFilled-50.png")
+        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewControllerNav", name: "Announcements", imageUrl: "AnnouncementsFilled-50.png")
         self.menuItems.append(notifications)
     }
     

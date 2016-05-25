@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Ke2-CB-BsN">
             <objects>
-                <navigationController id="cyD-S0-XLk" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AboutViewNav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cyD-S0-XLk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="P4G-sF-MFI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -48,7 +48,7 @@ class NotificationController{
         var notificationsArray = self.getAllNotifications()
         
         for n in notificationsArray {
-            if n.title == notification.title && n.title == notification.title{
+            if n.title == notification.title && n.title == notification.title && n.date.timeIntervalSince1970 == notification.date.timeIntervalSince1970 {
                 return
             }
         }
