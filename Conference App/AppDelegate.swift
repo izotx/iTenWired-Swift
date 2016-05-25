@@ -58,16 +58,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let date = NSDate()
         let notification = Notification(message: (alert!["body"] as? String)!, title: (alert!["title"] as? String)!, date: date)
         
-        notificationController.addNotification(notification)
+        
         
         if application.applicationState == UIApplicationState.Active {
             
+            notification.setDone(true)
             let alertView = SCLAlertView()
             
             let alertViewIcon = UIImage(named: "AnnouncementsFilled-50.png")
             
             alertView.showNotification(notification.title, subTitle: notification.message, circleIconImage: alertViewIcon)
         }
+        
+        notificationController.addNotification(notification)
         
          NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.RemoteNotificationReceived.rawValue, object: self)
         

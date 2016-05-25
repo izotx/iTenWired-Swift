@@ -226,6 +226,9 @@ public class SCLAlertView: UIViewController {
         self.appearance = appearance
         super.init(nibName:nil, bundle:nil)
         setup()
+        
+        viewText.editable = false
+        viewText.dataDetectorTypes = UIDataDetectorTypes.All
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -273,6 +276,7 @@ public class SCLAlertView: UIViewController {
         labelTitle.frame = CGRect(x:12, y:appearance.kTitleTop, width: appearance.kWindowWidth - 24, height:appearance.kTitleHeight)
         // View text
         viewText.editable = false
+        viewText.dataDetectorTypes = UIDataDetectorTypes.All
         viewText.textAlignment = .Center
         viewText.textContainerInset = UIEdgeInsetsZero
         viewText.textContainer.lineFragmentPadding = 0;
@@ -325,6 +329,9 @@ public class SCLAlertView: UIViewController {
             } else {
                 viewText.scrollEnabled = false
             }
+            
+            viewText.editable = false
+            viewText.dataDetectorTypes = UIDataDetectorTypes.All
         }
         
         let windowHeight = consumedHeight + viewTextHeight
@@ -397,6 +404,7 @@ public class SCLAlertView: UIViewController {
         if title != nil {
             txt.placeholder = title!
         }
+        
         contentView.addSubview(txt)
         inputs.append(txt)
         return txt
@@ -407,10 +415,15 @@ public class SCLAlertView: UIViewController {
         appearance.setkWindowHeight(appearance.kWindowHeight + appearance.kTextViewdHeight)
         // Add text view
         let txt = UITextView()
+        
+        
+        
         // No placeholder with UITextView but you can use KMPlaceholderTextView library
         txt.font = appearance.kTextFont
         //txt.autocapitalizationType = UITextAutocapitalizationType.Words
         //txt.clearButtonMode = UITextFieldViewMode.WhileEditing
+        txt.editable = false
+        txt.dataDetectorTypes = UIDataDetectorTypes.All
         txt.layer.masksToBounds = true
         txt.layer.borderWidth = 1.0
         contentView.addSubview(txt)
@@ -628,6 +641,8 @@ public class SCLAlertView: UIViewController {
         // Subtitle
         if !subTitle.isEmpty {
             viewText.text = subTitle
+            viewText.editable = false
+            viewText.dataDetectorTypes = UIDataDetectorTypes.All
             // Adjust text view size, if necessary
             let str = subTitle as NSString
             let attr = [NSFontAttributeName:viewText.font ?? UIFont()]

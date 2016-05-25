@@ -33,7 +33,7 @@
 
 import UIKit
 
-class NotificationViewController: UITableViewController {
+class NotificationViewController: UITableViewController{
     
     /// The Notification Handler
     let notificationController = NotificationController()
@@ -88,10 +88,5 @@ class NotificationViewController: UITableViewController {
                 rightNavController.popToRootViewControllerAnimated(true)
             }
         }
-        
-        let alert = SCLAlertView()
-        alert.showSuccess("Title", subTitle: "Subtitle")
     }
-    
-    
 }
