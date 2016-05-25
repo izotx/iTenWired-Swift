@@ -62,6 +62,8 @@ class MasterViewController2 : UIViewController{
                 }                
             }*/
         }
+        
+        self.collectionView.reloadData()
 
     }
     
@@ -127,6 +129,8 @@ extension MasterViewController2 : UICollectionViewDataSource{
         
         cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
         cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
+        cell.icon.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        //cell.icon.setImage(UIImage?, forState: .Normal)
     }
     
     func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
@@ -163,6 +167,16 @@ extension MasterViewController2 : UICollectionViewDataSource{
         cell?.layer.shadowColor = UIColor.blackColor().CGColor
         cell?.layer.shadowOffset = CGSizeMake(0,1.5)
         
+        if menuItems[indexPath.row].name == "Announcements"{
+            let notificationController = NotificationController()
+            cell?.icon.badgeString = ""
+            if notificationController.getNumberOfUnReadNotifications() > 0 {
+                cell?.icon.badgeString = "\(notificationController.getNumberOfUnReadNotifications())"
+            }
+        }else {
+        
+            cell?.icon.badgeString = ""
+        }
         
         return cell!
     }

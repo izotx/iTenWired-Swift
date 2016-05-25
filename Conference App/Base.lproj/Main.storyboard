@@ -184,28 +184,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="155" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Agenda-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="k4d-pH-XaJ">
-                                                    <rect key="frame" x="52" y="64" width="50" height="50"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWI-yQ-poO">
                                                     <rect key="frame" x="19" y="144" width="117" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITC-d8-oTt" customClass="MIBadgeButton" customModule="Conference_App" customModuleProvider="target">
+                                                    <rect key="frame" x="52" y="64" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="4db-4g-JBU"/>
+                                                        <constraint firstAttribute="width" constant="50" id="Hj9-MI-bYa"/>
+                                                    </constraints>
+                                                    <state key="normal" image="AboutFilled-50.png"/>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="0.62352941176470589" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="cWI-yQ-poO" firstAttribute="top" secondItem="k4d-pH-XaJ" secondAttribute="bottom" constant="30" id="Bcv-pN-5CI"/>
+                                            <constraint firstItem="ITC-d8-oTt" firstAttribute="centerX" secondItem="POx-Qa-k8a" secondAttribute="centerX" id="3YV-M0-k3o"/>
+                                            <constraint firstItem="ITC-d8-oTt" firstAttribute="centerY" secondItem="POx-Qa-k8a" secondAttribute="centerY" id="6jo-HW-ibP"/>
                                             <constraint firstItem="cWI-yQ-poO" firstAttribute="leading" secondItem="POx-Qa-k8a" secondAttribute="leadingMargin" constant="11" id="Dz1-WU-UTa"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="cWI-yQ-poO" secondAttribute="bottom" constant="5" id="YNq-HQ-5Pc"/>
-                                            <constraint firstItem="cWI-yQ-poO" firstAttribute="centerX" secondItem="k4d-pH-XaJ" secondAttribute="centerX" id="h62-1W-7mE"/>
                                             <constraint firstItem="cWI-yQ-poO" firstAttribute="centerX" secondItem="POx-Qa-k8a" secondAttribute="centerX" id="oy2-nk-PBk"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="icon" destination="k4d-pH-XaJ" id="dJm-Fp-uNA"/>
+                                            <outlet property="icon" destination="ITC-d8-oTt" id="ceW-np-KSW"/>
                                             <outlet property="nameLabel" destination="cWI-yQ-poO" id="vRh-Cl-RxB"/>
                                         </connections>
                                     </collectionViewCell>
@@ -248,7 +253,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Agenda-50.png" width="50" height="50"/>
+        <image name="AboutFilled-50.png" width="50" height="50"/>
         <image name="menu-25.png" width="25" height="25"/>
         <image name="placeholder.png" width="622" height="415"/>
     </resources>

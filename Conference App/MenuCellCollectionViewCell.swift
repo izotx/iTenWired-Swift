@@ -12,13 +12,17 @@ class MenuCellCollectionViewCell: UICollectionViewCell {
     
     var menuItem:MenuItem!
     
-    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+   
+    @IBOutlet weak var icon: MIBadgeButton!
+
+
     
     
     func build(menuItem:MenuItem){
         self.nameLabel.text = menuItem.name
-        self.icon.image = menuItem.image
+        
+        icon.setImage(menuItem.image, forState: .Normal)
         
        self.UIConfig()
     }
@@ -27,12 +31,17 @@ class MenuCellCollectionViewCell: UICollectionViewCell {
         self.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
         
-        
         self.contentView.layer.borderColor = ItenWiredStyle.background.color.invertedColor.CGColor
         
         self.contentView.layer.borderWidth = 2
         
-        
+        self.icon.backgroundColor = ItenWiredStyle.background.color.mainColor
+    }
+    
+    
+    func invertIconColor(){
+    
+        icon.setImage(menuItem.image, forState: .Normal)
     }
     
 }
