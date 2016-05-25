@@ -88,6 +88,9 @@ class NotificationViewController: UITableViewController {
                 rightNavController.popToRootViewControllerAnimated(true)
             }
         }
+        
+        let alert = SCLAlertView()
+        alert.showSuccess("Title", subTitle: "Subtitle")
     }
     
     

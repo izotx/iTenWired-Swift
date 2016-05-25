@@ -72,7 +72,7 @@ class MasterViewController2 : UIViewController{
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.APPBecameActive.rawValue, object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.RemoteNotificationReceived.rawValue, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("DidReceiveRemoteNotification"), name: NotificationObserver.RemoteNotificationReceived.rawValue, object: nil)
         
         loadMenuItems()
         self.UIConfig()
@@ -83,10 +83,19 @@ class MasterViewController2 : UIViewController{
         
         // SplitView Delegate
         splitViewController?.delegate = self
+        
+        //SCLAlertView().showInfo("Important info", subTitle: "You are great")
+        
+        
     }
     
     func updateData(){
         self.collectionView.reloadData()
+    }
+    
+    func DidReceiveRemoteNotification(){
+        //let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showInfo("Hello World", subTitle: "This is a more descriptive text.")
+        //alertViewResponder.alertview.viewColor = ItenWiredStyle.background.color.mainColor
     }
     
     internal func UIConfig(){

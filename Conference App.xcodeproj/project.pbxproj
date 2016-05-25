@@ -131,6 +131,8 @@
 		55FEE2171CF602ED0019F48D /* SocialMediaFilled-50-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FEE2161CF602ED0019F48D /* SocialMediaFilled-50-color.png */; };
 		55FEE2191CF603110019F48D /* MyItenFilled-50-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FEE2181CF603110019F48D /* MyItenFilled-50-color.png */; };
 		55FEE21B1CF6033C0019F48D /* AgendaFilled-50-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FEE21A1CF6033C0019F48D /* AgendaFilled-50-color.png */; };
+		55FEE21D1CF606680019F48D /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE21C1CF606680019F48D /* SCLAlertView.swift */; };
+		55FEE21F1CF606D10019F48D /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE21E1CF606D10019F48D /* SCLExtensions.swift */; };
 		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
@@ -298,6 +300,8 @@
 		55FEE2161CF602ED0019F48D /* SocialMediaFilled-50-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SocialMediaFilled-50-color.png"; sourceTree = "<group>"; };
 		55FEE2181CF603110019F48D /* MyItenFilled-50-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyItenFilled-50-color.png"; sourceTree = "<group>"; };
 		55FEE21A1CF6033C0019F48D /* AgendaFilled-50-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AgendaFilled-50-color.png"; sourceTree = "<group>"; };
+		55FEE21C1CF606680019F48D /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		55FEE21E1CF606D10019F48D /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
@@ -814,6 +818,8 @@
 				555A7A711CF365FF0068F58C /* NetworkConnection.swift */,
 				5570EED91CF4EC100033FCDC /* DateEnum.swift */,
 				55FEE2061CF500250019F48D /* MIBadgeButton.swift */,
+				55FEE21E1CF606D10019F48D /* SCLExtensions.swift */,
+				55FEE21C1CF606680019F48D /* SCLAlertView.swift */,
 			);
 			path = "Conference App";
 			sourceTree = "<group>";
@@ -1119,6 +1125,7 @@
 				0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */,
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,
 				559F76701CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift in Sources */,
+				55FEE21F1CF606D10019F48D /* SCLExtensions.swift in Sources */,
 				0E647B331CBF2E67006DFB68 /* AnnotationDetailViewController.swift in Sources */,
 				5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */,
 				D4C467CA1CB84BA000BD6157 /* AgendaDataLoader.swift in Sources */,
@@ -1144,6 +1151,7 @@
 				55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */,
 				0E647B2D1CBF2DDB006DFB68 /* MapData.swift in Sources */,
 				55DAC38F1CEDFC4D00941824 /* ShareButton.swift in Sources */,
+				55FEE21D1CF606680019F48D /* SCLAlertView.swift in Sources */,
 				552E692C1CE284DC0010C3C9 /* NotificationController.swift in Sources */,
 				4F2FBD121CBC5AEC0017A11F /* AttendTableViewController.swift in Sources */,
 				0ED487731CBD817D007DCC2B /* AboutData.swift in Sources */,

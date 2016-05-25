@@ -45,6 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
     
+        
+      
+        
         let notificationController = NotificationController()
         
         let data = userInfo.first!.1 as? NSDictionary
@@ -57,6 +60,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         notificationController.addNotification(notification)
         
+        if application.applicationState == UIApplicationState.Active {
+            
+            let alertView = SCLAlertView()
+            
+            let alertViewIcon = UIImage(named: "AnnouncementsFilled-50.png")
+            
+            alertView.showNotification(notification.title, subTitle: notification.message, circleIconImage: alertViewIcon)
+        }
+        
          NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.RemoteNotificationReceived.rawValue, object: self)
         
         UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
@@ -67,17 +79,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
             NSLog("OneSignal Notification opened:\nMessage: %@", message)
-            
-            
-            let storyboard = UIStoryboard.init(name: "Notification", bundle: nil)
-            let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("NotificationViewController")
-            let splitViewController = self.window!.rootViewController as! UISplitViewController
-            
-            splitViewController.showDetailViewController(destinationViewController, sender: self)
 
         }
         
-        OneSignal.defaultClient().enableInAppAlertNotification(true)
+        OneSignal.defaultClient().enableInAppAlertNotification(false)
         
        let appData = AppData()
         
