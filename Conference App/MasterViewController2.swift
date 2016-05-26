@@ -47,27 +47,22 @@ class MasterViewController2 : UIViewController{
     var managedObjectContext: NSManagedObjectContext? = nil
     
     override func viewWillAppear(animated: Bool) {
-        if reach.connectionStatus().description != "Offline"{
-            /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                
-                let aboutData = AboutData()
-                let about = aboutData.getAbout()
-                
-                let url = NSURL(string: about.image)
-                let data = NSData(contentsOfURL: url!)
-                
-                dispatch_async(dispatch_get_main_queue()){
-                
-                    self.logo.image = UIImage(data: data!)
-                }                
-            }*/
-        }
       //  screenBounds = UIScreen.mainScreen().bounds
           print(collectionView.frame.size)
         self.collectionView.reloadData()
         
+        self.navigationController?.navigationBarHidden = true
+//        self.navigationController?.navigationBar.barTintColor = ItenWiredStyle.background.color.mainColor
         
-
+//        let titleDict: [String : AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
+//        // Transparent navigation bar
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.translucent = true
+//        
+//        self.navigationController?.navigationBar.titleTextAttributes = titleDict
+        
     }
     
     override func viewDidLoad() {
@@ -91,11 +86,10 @@ class MasterViewController2 : UIViewController{
         splitViewController?.delegate = self
     }
     
-    override func viewDidAppear(animated: Bool) {
-          print(collectionView.frame.size)
+    
+    override func viewWillDisappear(animated: Bool) {
+         self.navigationController?.navigationBarHidden = false
     }
-    
-    
     
     func updateData(){
         self.collectionView.reloadData()
@@ -218,20 +212,12 @@ extension MasterViewController2 : UICollectionViewDataSource{
             return cell!
         
         }
-        
-        
-        
-        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? MenuCellCollectionViewCell
         
         cell?.build(self.menuItems[indexPath.row])
         
         cell?.layer.shadowColor = UIColor.blackColor().CGColor
         cell?.layer.shadowOffset = CGSizeMake(0,1.5)
-        
-        
-        
-        
         
         if menuItems[indexPath.row].name == "Announcements"{
             let notificationController = NotificationController()

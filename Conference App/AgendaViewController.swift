@@ -37,6 +37,83 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
             }
         }
+        
+        
+        let loginView : FBSDKLoginManager = FBSDKLoginManager()
+        
+        loginView.loginBehavior = FBSDKLoginBehavior.Browser
+        
+        loginView.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result : FBSDKLoginManagerLoginResult!, error : NSError!) -> Void in
+            
+            if ((error) != nil)
+            {
+                // Process error
+                
+                print("Login Error")
+            }
+            else if result.isCancelled {
+                // Handle cancellations
+                print("canceled")
+            }
+            else {
+                
+                let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "itenwired/posts", parameters: ["fields": "message"], tokenString: result.token.tokenString, version: nil, HTTPMethod: nil)//(graphPath: "me", parameters:["fields": "email"])
+                graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+                    
+                    
+                    if let e = error {
+                        
+                    }else {
+                        
+                        
+                        print(result.valueForKey("data"))
+                    }
+                    
+                })
+                
+            }
+            
+            
+            print()
+        })
+        
+       /* loginView.logInWithReadPermissions(["email"], handler: { (result : FBSDKLoginManagerLoginResult!, error : NSError!) -> Void in
+            
+            if ((error) != nil)
+            {
+                // Process error
+                
+                print("Login Error")
+            }
+            else if result.isCancelled {
+                // Handle cancellations
+            }
+            else {
+                
+              
+            }
+            
+            
+            print()
+        })*/
+        
+        
+        
+//       let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email"], tokenString: "466708945348493d570cb2f5079f9b6a", version: nil, HTTPMethod: nil)//(graphPath: "me", parameters:["fields": "email"])
+//        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+//            
+//            print("HERE")
+//            
+//            if let e = error {
+//                print(error)
+//                print("ERROR FACE!!")
+//            }else {
+//                let facebookID: NSString = (result.valueForKey("email") as? NSString)!
+//                
+//                print(facebookID)
+//            }
+//            
+//        })
     
     }
     override func viewWillAppear(animated: Bool) {

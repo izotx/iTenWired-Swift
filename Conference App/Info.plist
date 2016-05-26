@@ -69,9 +69,23 @@
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>fb</string>
-		<string>twitter</string>
-		<string>instagram</string>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1716084915327332</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1716084915327332</string>
+	<key>FacebookDisplayName</key>
+	<string>TestApp</string>
 </dict>
 </plist>

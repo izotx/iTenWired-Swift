@@ -33,6 +33,9 @@
 import UIKit
 import CoreData
 
+import FBSDKCoreKit
+import FBSDKLoginKit
+
 enum NotificationObserver:String {
     case APPBecameActive
     case RemoteNotificationReceived
@@ -45,21 +48,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
     
-        
-      
-        
         let notificationController = NotificationController()
-        
         let data = userInfo.first!.1 as? NSDictionary
-        
         let alert = data!["alert"]
-        
         
         let date = NSDate()
         let notification = Notification(message: (alert!["body"] as? String)!, title: (alert!["title"] as? String)!, date: date)
         
-        
-        
+
         if application.applicationState == UIApplicationState.Active {
             
             notification.setDone(true)
@@ -76,6 +72,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
         completionHandler(UIBackgroundFetchResult.NewData)
+        
+        
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -93,10 +95,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
             appData.saveData()
         }
         
-        
         //  Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+        
+        navigationController.navigationBar.translucent = true
+        
+        
         splitViewController.maximumPrimaryColumnWidth = 320 
         
         splitViewController.delegate = self
@@ -106,7 +111,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         let controller = masterNavigationController.topViewController as! MasterViewController2
         controller.managedObjectContext = self.managedObjectContext
-       
+        
+    
+        // Facebook sdk
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
+        
+        
+        
         return true
     }
     
@@ -115,6 +128,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     }
     func applicationDidBecomeActive(application: UIApplication) {
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.APPBecameActive.rawValue, object: self)
+        
+        //Facebook
+        FBSDKAppEvents.activateApp()
     }
     
     func applicationWillResignActive(application: UIApplication) {

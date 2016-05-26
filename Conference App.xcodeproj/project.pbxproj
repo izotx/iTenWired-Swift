@@ -133,6 +133,14 @@
 		55FEE21B1CF6033C0019F48D /* AgendaFilled-50-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FEE21A1CF6033C0019F48D /* AgendaFilled-50-color.png */; };
 		55FEE21D1CF606680019F48D /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE21C1CF606680019F48D /* SCLAlertView.swift */; };
 		55FEE21F1CF606D10019F48D /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE21E1CF606D10019F48D /* SCLExtensions.swift */; };
+		55FEE2231CF763400019F48D /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2221CF763400019F48D /* Twitter.swift */; };
+		55FEE2261CF764280019F48D /* TwitterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2251CF764280019F48D /* TwitterCell.swift */; };
+		55FEE2281CF764BD0019F48D /* TwitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2271CF764BD0019F48D /* TwitterController.swift */; };
+		55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22A1CF7654E0019F48D /* TwitterUser.swift */; };
+		55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22C1CF765C00019F48D /* TwitterViewController.swift */; };
+		55FEE22F1CF785A80019F48D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FEE22E1CF785A80019F48D /* FBSDKCoreKit.framework */; };
+		55FEE2331CF787730019F48D /* FacebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2321CF787730019F48D /* FacebookController.swift */; };
+		55FEE2351CF789460019F48D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FEE2341CF789460019F48D /* FBSDKLoginKit.framework */; };
 		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
@@ -302,6 +310,14 @@
 		55FEE21A1CF6033C0019F48D /* AgendaFilled-50-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AgendaFilled-50-color.png"; sourceTree = "<group>"; };
 		55FEE21C1CF606680019F48D /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		55FEE21E1CF606D10019F48D /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
+		55FEE2221CF763400019F48D /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
+		55FEE2251CF764280019F48D /* TwitterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterCell.swift; sourceTree = "<group>"; };
+		55FEE2271CF764BD0019F48D /* TwitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterController.swift; sourceTree = "<group>"; };
+		55FEE22A1CF7654E0019F48D /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
+		55FEE22C1CF765C00019F48D /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
+		55FEE22E1CF785A80019F48D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		55FEE2321CF787730019F48D /* FacebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookController.swift; sourceTree = "<group>"; };
+		55FEE2341CF789460019F48D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
@@ -340,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */,
+				55FEE22F1CF785A80019F48D /* FBSDKCoreKit.framework in Frameworks */,
+				55FEE2351CF789460019F48D /* FBSDKLoginKit.framework in Frameworks */,
 				0EE564CF1CB8331A001678B0 /* MapKit.framework in Frameworks */,
 				71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */,
 			);
@@ -448,6 +466,7 @@
 				D4C467C61CB84BA000BD6157 /* AgendaController.swift */,
 				552E692B1CE284DC0010C3C9 /* NotificationController.swift */,
 				557D354B1CE4DC8B00562A7A /* MyItenController.swift */,
+				55FEE2271CF764BD0019F48D /* TwitterController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -465,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */,
+				55FEE22C1CF765C00019F48D /* TwitterViewController.swift */,
 			);
 			name = Social;
 			sourceTree = "<group>";
@@ -622,6 +642,7 @@
 		55DAC3121CE5116A00941824 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				55FEE2291CF7653E0019F48D /* Twitter */,
 				55DAC37E1CEBAEDD00941824 /* SocialMedia.swift */,
 			);
 			name = Social;
@@ -707,11 +728,11 @@
 		55DAC38A1CEDFBFD00941824 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				55FEE2241CF764090019F48D /* Social Media */,
 				559F76711CEF5D93003BE6E6 /* Agenda */,
 				55450B891CE23B6E00A2712E /* speakerCell.swift */,
 				555A7A691CF348580068F58C /* speakerHeaderCell.swift */,
 				554980251CE3871500CC6E36 /* NotificationsCell.swift */,
-				55DAC36C1CEBA36700941824 /* SocialMediaCell.swift */,
 				559F76461CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift */,
 			);
 			name = Cell;
@@ -751,6 +772,43 @@
 			name = SplitView;
 			sourceTree = "<group>";
 		};
+		55FEE2241CF764090019F48D /* Social Media */ = {
+			isa = PBXGroup;
+			children = (
+				55DAC36C1CEBA36700941824 /* SocialMediaCell.swift */,
+				55FEE2251CF764280019F48D /* TwitterCell.swift */,
+			);
+			name = "Social Media";
+			sourceTree = "<group>";
+		};
+		55FEE2291CF7653E0019F48D /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				55FEE2221CF763400019F48D /* Twitter.swift */,
+				55FEE22A1CF7654E0019F48D /* TwitterUser.swift */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		55FEE2301CF785CB0019F48D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55FEE2341CF789460019F48D /* FBSDKLoginKit.framework */,
+				55FEE22E1CF785A80019F48D /* FBSDKCoreKit.framework */,
+				827BA99E1CC2E44B003085BA /* Social.framework */,
+				0EE564CE1CB8331A001678B0 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55FEE2311CF7875C0019F48D /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				55FEE2321CF787730019F48D /* FacebookController.swift */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
 		5CABC4C70AD5BD42C86B7A69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,8 +829,7 @@
 		FE2623951CAEFA940074C58F = {
 			isa = PBXGroup;
 			children = (
-				827BA99E1CC2E44B003085BA /* Social.framework */,
-				0EE564CE1CB8331A001678B0 /* MapKit.framework */,
+				55FEE2301CF785CB0019F48D /* Frameworks */,
 				FE2623A01CAEFA940074C58F /* Conference App */,
 				FE2623BA1CAEFA940074C58F /* Conference AppTests */,
 				FE2623C51CAEFA940074C58F /* Conference AppUITests */,
@@ -795,6 +852,7 @@
 		FE2623A01CAEFA940074C58F /* Conference App */ = {
 			isa = PBXGroup;
 			children = (
+				55FEE2311CF7875C0019F48D /* Facebook */,
 				55DAC3901CEDFEC200941824 /* Style */,
 				55DAC3151CE5256400941824 /* ImageClasses */,
 				551604F11CE2720F00D46D2B /* Conference App-Bridging-Header.h */,
@@ -1125,6 +1183,7 @@
 				0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */,
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,
 				559F76701CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift in Sources */,
+				55FEE2281CF764BD0019F48D /* TwitterController.swift in Sources */,
 				55FEE21F1CF606D10019F48D /* SCLExtensions.swift in Sources */,
 				0E647B331CBF2E67006DFB68 /* AnnotationDetailViewController.swift in Sources */,
 				5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */,
@@ -1133,6 +1192,7 @@
 				0E647B311CBF2E38006DFB68 /* AddAnnotation.swift in Sources */,
 				FE2623A51CAEFA940074C58F /* Conference_App.xcdatamodeld in Sources */,
 				892079D41CC9A05F008C1CAC /* SocialMediaData.swift in Sources */,
+				55FEE2231CF763400019F48D /* Twitter.swift in Sources */,
 				55DAC36D1CEBA36700941824 /* SocialMediaCell.swift in Sources */,
 				55DAC3171CE5258400941824 /* PhotoRecord.swift in Sources */,
 				FEF7E0C61CB852B1002A810B /* Event.swift in Sources */,
@@ -1147,6 +1207,7 @@
 				55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */,
 				55DAC31B1CE527A100941824 /* PendingOperations.swift in Sources */,
 				5543342A1CE27E7500A6001C /* Notification.swift in Sources */,
+				55FEE2261CF764280019F48D /* TwitterCell.swift in Sources */,
 				55DAC31D1CE528AC00941824 /* ImageDownloader.swift in Sources */,
 				55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */,
 				0E647B2D1CBF2DDB006DFB68 /* MapData.swift in Sources */,
@@ -1157,6 +1218,7 @@
 				0ED487731CBD817D007DCC2B /* AboutData.swift in Sources */,
 				55881A9A1CE12729009B8399 /* Location.swift in Sources */,
 				555A7A701CF35F390068F58C /* Reach.swift in Sources */,
+				55FEE2331CF787730019F48D /* FacebookController.swift in Sources */,
 				FEF7E0C51CB852A8002A810B /* EventViewController.swift in Sources */,
 				559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */,
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
@@ -1164,12 +1226,14 @@
 				D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */,
 				55DAC3811CEBC77A00941824 /* About.swift in Sources */,
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
+				55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */,
 				555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */,
 				55DAC37F1CEBAEDD00941824 /* SocialMedia.swift in Sources */,
 				55DAC3671CEB711800941824 /* SpeakerViewController.swift in Sources */,
 				55881AA01CE13506009B8399 /* AttendeeProtocol.swift in Sources */,
 				554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */,
 				A12350191CB9500400B1233E /* ItineraryViewController.swift in Sources */,
+				55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */,
 				FE2623A91CAEFA940074C58F /* DetailViewController.swift in Sources */,
 				55881A9C1CE129FF009B8399 /* Exhibitor.swift in Sources */,
 				55DAC3831CECAD8200941824 /* MasterViewController2.swift in Sources */,
@@ -1327,6 +1391,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Conference App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1344,6 +1412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Conference App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

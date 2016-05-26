@@ -36,7 +36,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var mainLatitude: CLLocationDegrees = 30.331991 // Need to get from JSON
     var mainLongitude: CLLocationDegrees = -87.136002 // Need to get from JSON
     
-    
     @IBAction func openDirections(sender: AnyObject) {
         
         // Segmented Control on the Bottom of Screen (iTenWired, My Location, & Directions)

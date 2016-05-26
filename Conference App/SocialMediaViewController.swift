@@ -36,7 +36,8 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
                                     SocialItem(name:"YouTube", logo: "YouTube-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Instagram", logo: "Instagram-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Web", logo: "Web-50.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Email", logo: "Email-50.png", storyboardId: "", viewControllerId: "")]
+                                    SocialItem(name:"Email", logo: "Email-50.png", storyboardId: "", viewControllerId: ""),
+                                    SocialItem(name:"Social", logo: "Twitter-50.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController")]
     
     
     override func viewDidLoad() {
@@ -51,7 +52,7 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
         shareButton.frame = CGRectMake(160, 100, 50, 50)
         
         shareButton.layer.cornerRadius = 0.75 * shareButton.bounds.size.width
-        
+  
     }
     
     internal func UIConfig(){
