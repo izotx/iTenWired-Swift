@@ -16,7 +16,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var segmentResult: UISegmentedControl!
     @IBOutlet weak var mainMap: MKMapView!
     @IBOutlet weak var segmentStyle: UISegmentedControl!
-    @IBOutlet weak var menuButtonMap: UIButton!
+   // @IBOutlet weak var menuButtonMap: UIButton!
     
 
     var locationManager: CLLocationManager = CLLocationManager()
@@ -85,11 +85,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let splitController = self.splitViewController{
-            if !splitController.collapsed {
-                self.menuButtonMap.hidden = false
-            }
-        }
+//        if let splitController = self.splitViewController{
+//            if !splitController.collapsed {
+//              //  self.menuButtonMap.hidden = false
+//            }
+//        }
         
         segmentStyle.layer.cornerRadius = 5
         

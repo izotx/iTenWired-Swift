@@ -39,3 +39,8 @@ class MenuCellCollectionViewCell: UICollectionViewCell {
     }
     
 }
+
+class MenuLongCellCollectionViewCell:MenuCellCollectionViewCell{
+
+
+}

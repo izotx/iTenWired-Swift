@@ -36,7 +36,7 @@ import CoreData
 
 class MasterViewController2 : UIViewController{
     
-    let screenBounds = UIScreen.mainScreen().bounds
+   // var screenBounds = UIScreen.mainScreen().bounds
     var menuItems:[MenuItem] = []
     let reach = Reach()
     
@@ -62,8 +62,11 @@ class MasterViewController2 : UIViewController{
                 }                
             }*/
         }
-        
+      //  screenBounds = UIScreen.mainScreen().bounds
+          print(collectionView.frame.size)
         self.collectionView.reloadData()
+        
+        
 
     }
     
@@ -79,9 +82,6 @@ class MasterViewController2 : UIViewController{
         loadMenuItems()
         self.UIConfig()
         
-        func DidReceiveRemoteNotification(){
-            
-        }
         
         //CollectionView Deleagte
         self.collectionView.delegate = self
@@ -91,6 +91,12 @@ class MasterViewController2 : UIViewController{
         splitViewController?.delegate = self
     }
     
+    override func viewDidAppear(animated: Bool) {
+          print(collectionView.frame.size)
+    }
+    
+    
+    
     func updateData(){
         self.collectionView.reloadData()
     }
@@ -99,35 +105,42 @@ class MasterViewController2 : UIViewController{
         self.collectionView.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.logo.image = UIImage(named: "logo-16.png")
+        self.navigationController?.navigationBarHidden = true 
+        
     }
     
     /**
         Loads the menu items into the MenuItems array
     */
     internal func loadMenuItems(){
-        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapStoryboard", name: "Map", imageUrl: "MapMFilled-50.png")
-        self.menuItems.append(map)
+  
         
         let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "AgendaFilled-50.png")
         self.menuItems.append(agenda)
         
+        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "WhoFilled-50.png")
+        self.menuItems.append(atendees)
+        
         let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyItenFilled-50.png")
         self.menuItems.append(myIten)
+        
+        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewControllerNav", name: "Announcements", imageUrl: "AnnouncementsFilled-50.png")
+        self.menuItems.append(notifications)
+
+        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapNavStoryboard", name: "Map", imageUrl: "MapMFilled-50.png")
+        self.menuItems.append(map)
         
         let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaNav", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
         self.menuItems.append(socialMedia)
         
-        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcastNav", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
-        self.menuItems.append(liveBroadcast)
+//        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcastNav", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
+//        self.menuItems.append(liveBroadcast)
         
         let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutViewNav", name: "About", imageUrl: "AboutFilled-50.png")
         self.menuItems.append(about)
         
-        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "WhoFilled-50.png")
-        self.menuItems.append(atendees)
+   
         
-        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewControllerNav", name: "Announcements", imageUrl: "AnnouncementsFilled-50.png")
-        self.menuItems.append(notifications)
     }
     
 }
@@ -168,12 +181,46 @@ extension MasterViewController2 : UICollectionViewDataSource{
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        print(collectionView.frame.size)
+        if let svc = self.splitViewController where svc.collapsed == false  {
+            return CGSize(width: ((collectionView.frame.size.width - 10)) , height: 60)
+        }
         
-        return CGSize(width: (screenBounds.width / 2) - 6, height: 150)
+        return CGSize(width: ((collectionView.frame.size.width - 10) / 2)  - 6 , height: 150)
     }
     
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        
+        
+        if let svc = self.splitViewController where svc.collapsed == false  {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCellLong", forIndexPath: indexPath) as? MenuCellCollectionViewCell
+            
+            cell?.build(self.menuItems[indexPath.row])
+            
+            cell?.layer.shadowColor = UIColor.blackColor().CGColor
+            cell?.layer.shadowOffset = CGSizeMake(0,1.5)
+            
+            if menuItems[indexPath.row].name == "Announcements"{
+                let notificationController = NotificationController()
+                cell?.icon.badgeString = ""
+                if notificationController.getNumberOfUnReadNotifications() > 0 {
+                    cell?.icon.badgeString = "\(notificationController.getNumberOfUnReadNotifications())"
+                }
+            }else {
+                
+                cell?.icon.badgeString = ""
+            }
+
+            
+            
+            return cell!
+        
+        }
+        
+        
+        
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? MenuCellCollectionViewCell
         
@@ -181,6 +228,10 @@ extension MasterViewController2 : UICollectionViewDataSource{
         
         cell?.layer.shadowColor = UIColor.blackColor().CGColor
         cell?.layer.shadowOffset = CGSizeMake(0,1.5)
+        
+        
+        
+        
         
         if menuItems[indexPath.row].name == "Announcements"{
             let notificationController = NotificationController()

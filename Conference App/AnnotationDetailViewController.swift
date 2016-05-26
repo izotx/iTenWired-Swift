@@ -62,6 +62,7 @@ class AnnotationDetailViewController: UIViewController {
         self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.pointTitle.textColor = ItenWiredStyle.text.color.mainColor
         self.pointInfo.textColor = ItenWiredStyle.text.color.mainColor
+        self.navigationController?.navigationBarHidden = false 
     }
     
     

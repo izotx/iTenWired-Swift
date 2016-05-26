@@ -52,6 +52,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.scrollView.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.scrollviewView.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.navigationController?.navigationBarHidden = false
     }
     
     func resizeScrollView(){
