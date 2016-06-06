@@ -12,6 +12,7 @@ import CoreMedia
 import AVKit
 import CoreData
 import SystemConfiguration
+import MediaPlayer
 
 class LiveBroadcastViewController: UIViewController {
     
@@ -46,6 +47,7 @@ class LiveBroadcastViewController: UIViewController {
             minutes.text = "00"
             seconds.text = "00"
             timer.invalidate()
+            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = nil
         }
     }
     
@@ -123,6 +125,13 @@ class LiveBroadcastViewController: UIViewController {
     // Starts the AVPlayer and NSTimer
     func startAudio() {
         
+        if let player = player where player.rate != 0 {
+            return
+        }
+        
+
+      
+        
         // Creates a timer that updates the duration labels (HH:MM:SS), calls audioDuration()
         let newtimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LiveBroadcastViewController.audioDuration), userInfo: nil, repeats: true)
         timer.invalidate()
@@ -134,12 +143,12 @@ class LiveBroadcastViewController: UIViewController {
         //let url = "http://pubint.ic.llnwd.net/stream/pubint_wuwfhd3"
         
         // Pensacola Business Radio URL
-        //let url = "http://199.180.72.2:9110/;stream.mp3" //- Public Business Radio
+        let url = "http://199.180.72.2:9110/;stream.mp3" //- Public Business Radio
         
         //let url = "http://199.180.72.2:9110/home.html"
         
         // Random Weather Radio URL for testing
-        let url = "http://audiostream.wunderground.com/2000grandprix/cedarfalls.mp3.m3u"
+        ///let url = "http://audiostream.wunderground.com/2000grandprix/cedarfalls.mp3.m3u"
         
         let playerItem = AVPlayerItem( URL:NSURL( string:url )! )
         player = AVPlayer(playerItem:playerItem)
@@ -147,6 +156,8 @@ class LiveBroadcastViewController: UIViewController {
         if let tempPlayer = player {
             tempPlayer.rate = 1.0;
             tempPlayer.play()
+            let audioDictionary = [MPMediaItemPropertyTitle: "Pensacola Business Radio" , MPMediaItemPropertyArtist:"Pensacola Business Radio"]
+            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = audioDictionary
         }
         
     }

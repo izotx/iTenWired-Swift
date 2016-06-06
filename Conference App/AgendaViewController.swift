@@ -38,44 +38,44 @@ class AgendaViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         
-        
-        let loginView : FBSDKLoginManager = FBSDKLoginManager()
-        
-        loginView.loginBehavior = FBSDKLoginBehavior.Browser
-        
-        loginView.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result : FBSDKLoginManagerLoginResult!, error : NSError!) -> Void in
-            
-            if ((error) != nil)
-            {
-                // Process error
-                
-                print("Login Error")
-            }
-            else if result.isCancelled {
-                // Handle cancellations
-                print("canceled")
-            }
-            else {
-                
-                let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "itenwired/posts", parameters: ["fields": "message"], tokenString: result.token.tokenString, version: nil, HTTPMethod: nil)//(graphPath: "me", parameters:["fields": "email"])
-                graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-                    
-                    
-                    if let e = error {
-                        
-                    }else {
-                        
-                        
-                        print(result.valueForKey("data"))
-                    }
-                    
-                })
-                
-            }
-            
-            
-            print()
-        })
+//        
+//        let loginView : FBSDKLoginManager = FBSDKLoginManager()
+//        
+//        loginView.loginBehavior = FBSDKLoginBehavior.Browser
+//        
+//        loginView.logInWithReadPermissions(["email"], fromViewController: self, handler: { (result : FBSDKLoginManagerLoginResult!, error : NSError!) -> Void in
+//            
+//            if ((error) != nil)
+//            {
+//                // Process error
+//                
+//                print("Login Error")
+//            }
+//            else if result.isCancelled {
+//                // Handle cancellations
+//                print("canceled")
+//            }
+//            else {
+//                
+//                let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "itenwired/posts", parameters: ["fields": "message"], tokenString: result.token.tokenString, version: nil, HTTPMethod: nil)//(graphPath: "me", parameters:["fields": "email"])
+//                graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+//                    
+//                    
+//                    if let e = error {
+//                        
+//                    }else {
+//                        
+//                        
+//                        print(result.valueForKey("data"))
+//                    }
+//                    
+//                })
+//                
+//            }
+//            
+//            
+//            print()
+//        })
         
        /* loginView.logInWithReadPermissions(["email"], handler: { (result : FBSDKLoginManagerLoginResult!, error : NSError!) -> Void in
             

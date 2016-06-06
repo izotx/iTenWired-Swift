@@ -69,5 +69,53 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Conference App/LiveBroadcastViewController.swift"
+            timestampString = "486920926.9642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "startAudio()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Conference_App.LiveBroadcastViewController.startAudio () -&gt; ()"
+                  moduleName = "Conference App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jchudzynski/Desktop/Repositories/iTenWired-Swift/Conference%20App/LiveBroadcastViewController.swift"
+                  timestampString = "486921601.409771"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Conference_App.LiveBroadcastViewController.startAudio () -&gt; ()"
+                  moduleName = "Conference App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jchudzynski/Desktop/Repositories/iTenWired-Swift/Conference%20App/LiveBroadcastViewController.swift"
+                  timestampString = "486921601.40985"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -33,8 +33,8 @@
 import UIKit
 import CoreData
 
-import FBSDKCoreKit
-import FBSDKLoginKit
+//import FBSDKCoreKit
+//import FBSDKLoginKit
 
 enum NotificationObserver:String {
     case APPBecameActive
@@ -76,9 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
     }
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-    }
+//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+//        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+//    }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -114,7 +114,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
     
         // Facebook sdk
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        //FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
         
@@ -130,7 +130,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.APPBecameActive.rawValue, object: self)
         
         //Facebook
-        FBSDKAppEvents.activateApp()
+      //  FBSDKAppEvents.activateApp()
     }
     
     func applicationWillResignActive(application: UIApplication) {

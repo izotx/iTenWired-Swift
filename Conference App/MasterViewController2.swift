@@ -250,20 +250,20 @@ extension MasterViewController2: UICollectionViewDelegate{
         let index = indexPath.row
         let menuItem = menuItems[index]
         
-        if !NetworkConnection.isConnected() {
-            if menuItem.name == "Live Broadcast"{
-                // create the alert
-                let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                // add an action (button)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                
-                // show the alert
-                self.presentViewController(alert, animated: true, completion: nil)
-                
-                return
-            }
-        }
+//        if !NetworkConnection.isConnected() {
+//            if menuItem.name == "Live Broadcast"{
+//                // create the alert
+//                let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
+//                
+//                // add an action (button)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//                
+//                // show the alert
+//                self.presentViewController(alert, animated: true, completion: nil)
+//                
+//                return
+//            }
+//        }
         
         if menuItem.name == "Announcements"{
             self.collectionView.reloadData()
