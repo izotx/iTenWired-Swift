@@ -16,7 +16,10 @@ class MapData {
     init() {
         
         let tempDictionary = AppData()
-        let dictionaryResult = tempDictionary.getDataFromFile()
+        
+        guard let dictionaryResult = tempDictionary.getDataFromFile() else {
+            return 
+        }
         
         // Parse Maps JSON Portion
         let locations = self.parseLocations(dictionaryResult)

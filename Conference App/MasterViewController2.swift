@@ -36,9 +36,11 @@ import CoreData
 
 class MasterViewController2 : UIViewController{
     
-   // var screenBounds = UIScreen.mainScreen().bounds
     var menuItems:[MenuItem] = []
     let reach = Reach()
+    let network = NetworkConnection()
+    
+    let appData = AppData()
     
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -47,28 +49,17 @@ class MasterViewController2 : UIViewController{
     var managedObjectContext: NSManagedObjectContext? = nil
     
     override func viewWillAppear(animated: Bool) {
-      //  screenBounds = UIScreen.mainScreen().bounds
-          print(collectionView.frame.size)
-        self.collectionView.reloadData()
+       self.collectionView.reloadData()
+        
+        if NetworkConnection.isConnected(){
+            self.appData.saveData()
+        }
         
         self.navigationController?.navigationBarHidden = true
-//        self.navigationController?.navigationBar.barTintColor = ItenWiredStyle.background.color.mainColor
-        
-//        let titleDict: [String : AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
-//        // Transparent navigation bar
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.translucent = true
-//        
-//        self.navigationController?.navigationBar.titleTextAttributes = titleDict
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //UITabBar.appearance().tintColor = ItenWiredStyle.background.color.mainColor
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.APPBecameActive.rawValue, object: nil)
         
@@ -127,14 +118,9 @@ class MasterViewController2 : UIViewController{
         let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaNav", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
         self.menuItems.append(socialMedia)
         
-//        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcastNav", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
-//        self.menuItems.append(liveBroadcast)
-        
         let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutViewNav", name: "About", imageUrl: "AboutFilled-50.png")
         self.menuItems.append(about)
-        
-   
-        
+ 
     }
     
 }
@@ -237,32 +223,31 @@ extension MasterViewController2 : UICollectionViewDataSource{
 //MARK: - UICollectionViewDelegate
 extension MasterViewController2: UICollectionViewDelegate{
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
-//        
-//        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
-//            return
-//        }
-//        
-//        cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
-//        cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
-//        cell.icon.backgroundColor = ItenWiredStyle.background.color.invertedColor
-//        cell.icon.setImage(menuItems[indexPath.row].invertedColorIcon, forState: .Normal)
         
         let index = indexPath.row
         let menuItem = menuItems[index]
-        
-//        if !NetworkConnection.isConnected() {
-//            if menuItem.name == "Live Broadcast"{
-//                // create the alert
-//                let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
+ 
+//        if menuItem.name == "Agenda"{
+//            if !NetworkConnection.isConnected(){
+//                let defaults = NSUserDefaults.standardUserDefaults()
 //                
-//                // add an action (button)
-//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-//                
-//                // show the alert
-//                self.presentViewController(alert, animated: true, completion: nil)
-//                
-//                return
+//                guard let data = defaults.dataForKey("appData")else {
+//                   
+//                    let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
+//                    
+//                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//               
+//                    self.presentViewController(alert, animated: true, completion: nil)
+//                    
+//                    return
+//                }
 //            }
+//            
+//            let defaults = NSUserDefaults.standardUserDefaults()
+//            
+////            guard let data = defaults.dataForKey("appData")else {
+////                return 
+////            }
 //        }
         
         if menuItem.name == "Announcements"{

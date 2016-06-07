@@ -157,10 +157,15 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="EHp-ue-iAE">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.1508229673" green="0.35499495269999998" blue="0.59834796189999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EHp-ue-iAE" firstAttribute="centerY" secondItem="m5w-3Z-O9S" secondAttribute="centerY" id="69x-xn-EM6"/>
                             <constraint firstItem="m5w-3Z-O9S" firstAttribute="top" secondItem="z0T-fq-rUo" secondAttribute="top" id="FP2-Cb-jp4"/>
+                            <constraint firstItem="EHp-ue-iAE" firstAttribute="centerX" secondItem="m5w-3Z-O9S" secondAttribute="centerX" id="GPT-Vd-J3F"/>
                             <constraint firstItem="m5w-3Z-O9S" firstAttribute="bottom" secondItem="cQI-AC-amp" secondAttribute="top" id="exN-eu-6kA"/>
                             <constraint firstItem="m5w-3Z-O9S" firstAttribute="leading" secondItem="z0T-fq-rUo" secondAttribute="leading" id="pMe-R7-qXJ"/>
                             <constraint firstAttribute="trailing" secondItem="m5w-3Z-O9S" secondAttribute="trailing" id="vbH-XE-QK5"/>
@@ -174,6 +179,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="EHp-ue-iAE" id="MZX-uh-b0G"/>
                         <outlet property="tableView" destination="m5w-3Z-O9S" id="diz-GI-BAO"/>
                     </connections>
                 </viewController>

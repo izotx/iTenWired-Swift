@@ -27,7 +27,9 @@ class AttendeeData{
     // Loads sponsers from file to memory
     func loadSponsers(){
         
-        let data = appData.getDataFromFile()
+        guard let data = appData.getDataFromFile() else{
+            return
+        }
         
         if let sponsersData = data["sponsors"] as? [NSDictionary]{
             for sponserData in sponsersData{
@@ -40,7 +42,10 @@ class AttendeeData{
     // loads exhibitors from file to memory
     func loadExibitors(){
         
-        let data = self.appData.getDataFromFile()
+        guard let data = self.appData.getDataFromFile() else{
+            return
+        }
+        
         if let exibitorsData = data["exhibitors"] as? [NSDictionary] {
             for exibitorData in exibitorsData{
                 let exibitor = Exibitor(dictionary: exibitorData)
@@ -52,7 +57,10 @@ class AttendeeData{
     //loads speakes from file to memory
     func loadSpeakers(){
     
-        let data = self.appData.getDataFromFile()
+        guard let data = self.appData.getDataFromFile() else {
+            return
+        }
+        
         if let speakersData = data["speakers"] as? [NSDictionary] {
             for speakerData in speakersData {
                 let speaker = Speaker(dictionary: speakerData)

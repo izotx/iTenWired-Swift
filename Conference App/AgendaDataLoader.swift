@@ -47,7 +47,9 @@ class AgendaDataLoader{
     func getAgenda() -> Agenda {
         let agenda = Agenda()
         
-        let data = appData.getDataFromFile()
+        guard let data = appData.getDataFromFile() else {
+            return agenda
+        }
         
         if let eventsData = data["events"] as? [NSDictionary]{
             for eventData in eventsData{
@@ -57,5 +59,22 @@ class AgendaDataLoader{
         }
         
         return agenda
+    }
+    
+    func getEvents(completion: (events:[Event]) -> Void){
+        appData.getDataFromFile { (dictionary) in
+            
+            var events : [Event] = []
+            
+            if let eventsData = dictionary["events"] as? [NSDictionary]{
+               
+                for eventData in eventsData{
+                    let event =  Event(dictionary: eventData)
+                    events.append(event)
+                }
+                
+                completion(events: events)
+            }
+        }
     }
 }

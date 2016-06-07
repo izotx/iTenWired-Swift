@@ -16,7 +16,9 @@ class TrackData{
     
         var tracks:[Track] = []
         
-        let data = appData.getDataFromFile()
+        guard let data = appData.getDataFromFile() else{
+            return tracks 
+        }
         
         if let tracksData = data["tracks"] as? [NSDictionary]{
             for trackData in tracksData{

@@ -76,9 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
     }
     
-//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-//        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
-//    }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -111,13 +108,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         let controller = masterNavigationController.topViewController as! MasterViewController2
         controller.managedObjectContext = self.managedObjectContext
-        
-    
-        // Facebook sdk
-        //FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        
-        
         
         
         return true

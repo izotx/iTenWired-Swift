@@ -17,12 +17,6 @@ class AppData{
     let defaults = NSUserDefaults.standardUserDefaults()
     var URL: NSURL =  NSURL(string: "http://djmobilesoftware.com/itenwired/jsondata.json")!
 
-    
-    init()
-    {
-    
-    }
-
     func getAllNotifications() -> [Notification] {
         let arr = [Notification]()
         var notificationsArray = NotificationList(notifications: arr)
@@ -36,7 +30,7 @@ class AppData{
         return notificationsArray.getArray().sort({$0.date.compare($1.date) == NSComparisonResult.OrderedDescending})
     }
     
-    func getDataFromFile()-> NSDictionary{
+    func getDataFromFile()-> NSDictionary?{
         var dictionary:NSDictionary = NSDictionary()
         
         if let data = self.defaults.dataForKey("appData"){
@@ -47,7 +41,23 @@ class AppData{
             } catch{
             }
         }
-        return dictionary
+        return nil 
+    }
+    
+    func getDataFromFile(completion: (dictionary:NSDictionary) -> Void){
+        
+        var dictionary:NSDictionary = NSDictionary()
+        
+        if let data = self.defaults.dataForKey("appData"){
+            
+            do {
+                dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary
+                
+                completion(dictionary: dictionary)
+            } catch{
+            }
+        }
+    
     }
     
     func saveData(){
@@ -104,13 +114,11 @@ class AppData{
             }
         }
         
-        
         task.resume()
         
         while(locked){ // Runs untill the response is received
             
         }
-        print("3")
 
         return returnData
     }

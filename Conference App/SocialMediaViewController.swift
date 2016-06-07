@@ -36,8 +36,7 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
                                     SocialItem(name:"YouTube", logo: "YouTube-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Instagram", logo: "Instagram-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Web", logo: "Web-50.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Email", logo: "Email-50.png", storyboardId: "", viewControllerId: ""),
-                                    SocialItem(name:"Social", logo: "Twitter-50.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController")]
+                                    SocialItem(name:"Email", logo: "Email-50.png", storyboardId: "", viewControllerId: "")]
     
     
     override func viewDidLoad() {
@@ -219,10 +218,8 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
             
             if !splitController.collapsed {
                 let vc = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
-//                var barButtonItem: UIBarButtonItem! = UIBarButtonItem()
                 vc.popoverPresentationController?.sourceRect = (button as! UIView).frame
                 vc.popoverPresentationController?.sourceView = self.view
-               // vc.popoverPresentationController?.arrowDirection = .Default
                 self.presentViewController(vc, animated: true, completion: nil)
                 
             } else{
@@ -230,10 +227,7 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
                 presentViewController(activityViewController, animated: true, completion: {})
             }
         }
-        
-        
-        
-        
+
     }
     
     @IBAction func shareButtonAction(sender: AnyObject) {

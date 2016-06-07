@@ -17,7 +17,9 @@ class SocialMediaData {
     func getSocialMedia(named : String) -> SocialMedia?{
     
         
-        let data = self.appData.getDataFromFile()
+        guard let data = self.appData.getDataFromFile() else{
+            return nil
+        }
         
         if let socialData = data["links"] as? [NSDictionary]{
             for social in socialData {
@@ -35,7 +37,9 @@ class SocialMediaData {
     
     func getHashTags() -> [String] {
     
-        let data = self.appData.getDataFromFile()
+        guard let data = self.appData.getDataFromFile() else{
+            return ["#ItenWired"]
+        }
         
         if let hashTags = data["hashtags"] as? [String]{
             return hashTags
