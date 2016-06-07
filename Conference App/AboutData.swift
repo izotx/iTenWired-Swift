@@ -38,16 +38,16 @@ class AboutData {
     
    let appData = AppData()
     
-    func getAbout() -> About {
+    func getAbout() -> About? {
         
         guard let data = appData.getDataFromFile() else{
-            return About(description: "", imageURL: "")
+            return nil
         }
         
         guard let description = data["conference_description"] as? String,
             let imageURL = data["header_image_path"] as? String else{
                 
-                return About(description: "", imageURL: "")
+                return nil
         }
         
         let about = About(description: description, imageURL: imageURL)

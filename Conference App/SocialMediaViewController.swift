@@ -152,77 +152,102 @@ extension SocialMediaViewController: UITableViewDelegate, UITableViewDataSource 
         
         if socialItem.name == "Web" {
             
-            let urlString = socialData.getSocialMedia("web")?.URL
+            if let socialMedia = socialData.getSocialMedia("web") {
             
-            if let url = NSURL(string: urlString!) {
-                UIApplication.sharedApplication().openURL(url)
+                let urlString = socialMedia.URL
+            
+                if let url = NSURL(string: urlString) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+                return
             }
             return
         }
         
         if socialItem.name == "YouTube" {
             
-            let urlString = socialData.getSocialMedia("YouTube")?.URL
+            if let socialMedia = socialData.getSocialMedia("YouTube"){
             
-            if let url = NSURL(string: urlString!) {
-                UIApplication.sharedApplication().openURL(url)
+                let urlString = socialMedia.URL
+            
+                if let url = NSURL(string: urlString) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+                return
             }
             return
         }
         
         if socialItem.name == "Google+" {
             
-            let urlString = socialData.getSocialMedia("google")?.URL
+            if let socialMedia = socialData.getSocialMedia("google"){
             
-            if let url = NSURL(string: urlString!) {
-                UIApplication.sharedApplication().openURL(url)
+                let urlString = socialMedia.URL
+                
+                if let url = NSURL(string: urlString) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+                return
             }
             return
         }
         
         if socialItem.name == "Instagram"{
             
-            let urlString = socialData.getSocialMedia("Instagram")?.URL
+            if let socialMedia = socialData.getSocialMedia("Instagram"){
             
+                let urlString = socialMedia.URL
             
-            // Gets username
-            let count = urlString?.componentsSeparatedByString("/").count
-            let username = urlString?.componentsSeparatedByString("/")[count!-1]
-            let instagramURLString = "instagram://user?username=\(username!)"
+                // Gets username
+                let count = urlString.componentsSeparatedByString("/").count
+                let username = urlString.componentsSeparatedByString("/")[count-1]
+                let instagramURLString = "instagram://user?username=\(username)"
             
-            let instagramURL = NSURL(string: instagramURLString)
+                let instagramURL = NSURL(string: instagramURLString)
             
-            if UIApplication.sharedApplication().canOpenURL(instagramURL!){
-                UIApplication.sharedApplication().openURL(instagramURL!)
-            } else {
-                if let url = NSURL(string: urlString!) {
+                if UIApplication.sharedApplication().canOpenURL(instagramURL!){
+                    UIApplication.sharedApplication().openURL(instagramURL!)
+                } else {
+                    if let url = NSURL(string: urlString) {
                     UIApplication.sharedApplication().openURL(url)
+                    }
                 }
+                return
             }
-            
             return
         }
         
         if socialItem.name == "LinkedIn" {
-            let urlString = socialData.getSocialMedia("linkedin")?.URL
             
-            if let url = NSURL(string: urlString!) {
-                UIApplication.sharedApplication().openURL(url)
+            if let socialMedia = socialData.getSocialMedia("linkedin"){
+            
+                let urlString = socialMedia.URL
+            
+                if let url = NSURL(string: urlString) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+                return
             }
             return
         }
         
         if socialItem.name == "Email" {
-            let urlString = socialData.getSocialMedia("email")?.URL
             
-            if let url = NSURL(string: "mailto:\(urlString!)") {
-                UIApplication.sharedApplication().openURL(url)
+            if let socialMedia = socialData.getSocialMedia("email"){
+            
+                let urlString = socialMedia.URL
+            
+                if let url = NSURL(string: "mailto:\(urlString)") {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+                return
             }
             return
         }
         
         if socialItem.name == "Twitter" {
-            let urlString = "twitter://search?query=%23iTenWired15"
+            
+            let urlString = "twitter://search?query=%23iTenWired16"
             let url = NSURL(string: urlString)
             
             if UIApplication.sharedApplication().canOpenURL(url!) {
@@ -237,25 +262,27 @@ extension SocialMediaViewController: UITableViewDelegate, UITableViewDataSource 
         
         if socialItem.name == "Facebook" {
             
-            let urlString = socialData.getSocialMedia("facebook")?.URL
+            if let socialMedia = socialData.getSocialMedia("facebook"){
             
+                let urlString = socialMedia.URL
+                
+                // Gets username
+                let count = urlString.componentsSeparatedByString("/").count
+                let username = urlString.componentsSeparatedByString("/")[count-1]
+                let fbURLString = "fb://\(username)"
             
-            // Gets username
-            let count = urlString?.componentsSeparatedByString("/").count
-            let username = urlString?.componentsSeparatedByString("/")[count!-1]
-            let fbURLString = "fb://\(username!)"
+                let fbURL = NSURL(string: fbURLString)
             
-            let fbURL = NSURL(string: fbURLString)
-            
-            if UIApplication.sharedApplication().canOpenURL(fbURL!){
-                UIApplication.sharedApplication().openURL(fbURL!)
-            } else {
-                if let url = NSURL(string: urlString!) {
-                    UIApplication.sharedApplication().openURL(url)
+                if UIApplication.sharedApplication().canOpenURL(fbURL!){
+                    UIApplication.sharedApplication().openURL(fbURL!)
+                } else {
+                    if let url = NSURL(string: urlString) {
+                        UIApplication.sharedApplication().openURL(url)
+                    }
                 }
+                return
             }
-            
-            return
+            return 
         }
         
         if socialItem.storyboardId != ""{
