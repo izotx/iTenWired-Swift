@@ -85,7 +85,6 @@ class TwitterViewController: UITableViewController{
             
         default: print("Do Nothing..")
         }
-        
     }
     
     func startDownloadForRecord(photoDetails: Photorecord, indexPath: NSIndexPath){

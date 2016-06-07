@@ -106,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
        
         
-        let controller = masterNavigationController.topViewController as! MasterViewController2
+        let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
         
         
@@ -118,9 +118,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     }
     func applicationDidBecomeActive(application: UIApplication) {
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.APPBecameActive.rawValue, object: self)
-        
-        //Facebook
-      //  FBSDKAppEvents.activateApp()
     }
     
     func applicationWillResignActive(application: UIApplication) {

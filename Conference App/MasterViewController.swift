@@ -25,7 +25,7 @@
 //    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //    POSSIBILITY OF SUCH DAMAGE.
 //
-//    MasterViewController2.swift
+//    MasterViewController.swift
 //    Conference App
 //    Created by Felipe Neves {felipenevesbrito@gmail.com} on 5/18/16.
 
@@ -34,7 +34,7 @@
 import UIKit
 import CoreData
 
-class MasterViewController2 : UIViewController{
+class MasterViewController : UIViewController{
     
     var menuItems:[MenuItem] = []
     let reach = Reach()
@@ -68,7 +68,6 @@ class MasterViewController2 : UIViewController{
         loadMenuItems()
         self.UIConfig()
         
-        
         //CollectionView Deleagte
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -76,7 +75,6 @@ class MasterViewController2 : UIViewController{
         // SplitView Delegate
         splitViewController?.delegate = self
     }
-    
     
     override func viewWillDisappear(animated: Bool) {
          self.navigationController?.navigationBarHidden = false
@@ -99,7 +97,6 @@ class MasterViewController2 : UIViewController{
     */
     internal func loadMenuItems(){
   
-        
         let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "AgendaFilled-50.png")
         self.menuItems.append(agenda)
         
@@ -126,7 +123,7 @@ class MasterViewController2 : UIViewController{
 }
 
 //MARK: - UICollectionViewDataSource
-extension MasterViewController2 : UICollectionViewDataSource{
+extension MasterViewController : UICollectionViewDataSource{
     
     func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
         
@@ -161,7 +158,6 @@ extension MasterViewController2 : UICollectionViewDataSource{
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        print(collectionView.frame.size)
         if let svc = self.splitViewController where svc.collapsed == false  {
             return CGSize(width: ((collectionView.frame.size.width - 10)) , height: 60)
         }
@@ -169,10 +165,7 @@ extension MasterViewController2 : UICollectionViewDataSource{
         return CGSize(width: ((collectionView.frame.size.width - 10) / 2)  - 6 , height: 150)
     }
     
-    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        
         
         if let svc = self.splitViewController where svc.collapsed == false  {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCellLong", forIndexPath: indexPath) as? MenuCellCollectionViewCell
@@ -192,8 +185,6 @@ extension MasterViewController2 : UICollectionViewDataSource{
                 
                 cell?.icon.badgeString = ""
             }
-
-            
             
             return cell!
         
@@ -215,40 +206,16 @@ extension MasterViewController2 : UICollectionViewDataSource{
         
             cell?.icon.badgeString = ""
         }
-        
         return cell!
     }
 }
 
 //MARK: - UICollectionViewDelegate
-extension MasterViewController2: UICollectionViewDelegate{
+extension MasterViewController: UICollectionViewDelegate{
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         
         let index = indexPath.row
         let menuItem = menuItems[index]
- 
-//        if menuItem.name == "Agenda"{
-//            if !NetworkConnection.isConnected(){
-//                let defaults = NSUserDefaults.standardUserDefaults()
-//                
-//                guard let data = defaults.dataForKey("appData")else {
-//                   
-//                    let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
-//                    
-//                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-//               
-//                    self.presentViewController(alert, animated: true, completion: nil)
-//                    
-//                    return
-//                }
-//            }
-//            
-//            let defaults = NSUserDefaults.standardUserDefaults()
-//            
-////            guard let data = defaults.dataForKey("appData")else {
-////                return 
-////            }
-//        }
         
         if menuItem.name == "Announcements"{
             self.collectionView.reloadData()
@@ -261,7 +228,7 @@ extension MasterViewController2: UICollectionViewDelegate{
 }
 
 //Mark: - UISplitViewControllerDelegate
-extension MasterViewController2: UISplitViewControllerDelegate{
+extension MasterViewController: UISplitViewControllerDelegate{
     func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
         return .PrimaryHidden
     }

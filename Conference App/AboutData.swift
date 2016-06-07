@@ -33,7 +33,7 @@
 
 import Foundation
 
-// Used to Parse About Page and Retrieve Logo - UIImage
+/// Used to Parse About Page and Retrieve Logo - UIImage
 class AboutData {
     
    let appData = AppData()

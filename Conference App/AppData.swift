@@ -108,7 +108,7 @@ class AppData{
                     
                     
                 }else{
-                    print("Error while retriving data!")
+                    print(error)
                 }
                 locked = false
             }

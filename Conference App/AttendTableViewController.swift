@@ -45,19 +45,15 @@ class AttendeesViewController: UITableViewController{
     var exhibitorPhotos = [Photorecord]()
     let exibitorPendingOperations = PendingOperarions()
     
-    
     // Photo loader and controller for sponsers
     var sponserPhotos = [Photorecord]()
     let sponserPendingoperations = PendingOperarions()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Starts the activity indicator. Runs until data is loading
         self.activityIndicator.startAnimating()
-        
         
         // Async data load
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
@@ -103,7 +99,6 @@ class AttendeesViewController: UITableViewController{
             self.exhibitorPhotos.append(photoRecord)
         }
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -131,7 +126,6 @@ class AttendeesViewController: UITableViewController{
             destinationViewController?.sponser = sponsers[index - 1]
             
             self.navigationController?.pushViewController(destinationViewController!, animated: true)
-            
         }
         
         index = index - (sponsers.count + 1)
@@ -171,14 +165,12 @@ class AttendeesViewController: UITableViewController{
        return self.exhibitors.count + self.sponsers.count + self.speakers.count
     }
     
-    
     //FIXME: IMPLEMENT
     func searchPerformed() -> Bool{
         return false
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        
         var index = indexPath.row
         
         //TODO: search must be implemented

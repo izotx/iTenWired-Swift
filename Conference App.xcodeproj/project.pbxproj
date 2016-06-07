@@ -65,7 +65,6 @@
 		559F76451CEE3CFB003BE6E6 /* Style.json in Resources */ = {isa = PBXBuildFile; fileRef = 559F76441CEE3CFB003BE6E6 /* Style.json */; };
 		559F76471CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F76461CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift */; };
 		559F76491CEE4C9C003BE6E6 /* Settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 559F76481CEE4C9C003BE6E6 /* Settings-25.png */; };
-		559F764D1CEE58AC003BE6E6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 559F764C1CEE58AC003BE6E6 /* logo.png */; };
 		559F76511CEE5AE0003BE6E6 /* Agenda-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 559F76501CEE5AE0003BE6E6 /* Agenda-50.png */; };
 		559F76561CEE5B5F003BE6E6 /* MyIten-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 559F76551CEE5B5F003BE6E6 /* MyIten-50.png */; };
 		559F76581CEE5B97003BE6E6 /* SocialMedia-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 559F76571CEE5B97003BE6E6 /* SocialMedia-50.png */; };
@@ -107,7 +106,7 @@
 		55DAC37D1CEBAB6900941824 /* Email-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC37C1CEBAB6900941824 /* Email-50.png */; };
 		55DAC37F1CEBAEDD00941824 /* SocialMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC37E1CEBAEDD00941824 /* SocialMedia.swift */; };
 		55DAC3811CEBC77A00941824 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3801CEBC77A00941824 /* About.swift */; };
-		55DAC3831CECAD8200941824 /* MasterViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3821CECAD8200941824 /* MasterViewController2.swift */; };
+		55DAC3831CECAD8200941824 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3821CECAD8200941824 /* MasterViewController.swift */; };
 		55DAC3851CECFD7200941824 /* Email-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3841CECFD7200941824 /* Email-25.png */; };
 		55DAC3871CECFDC600941824 /* Web-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3861CECFDC600941824 /* Web-25.png */; };
 		55DAC3891CECFDF200941824 /* LinkedIn-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3881CECFDF200941824 /* LinkedIn-25.png */; };
@@ -137,9 +136,6 @@
 		55FEE2281CF764BD0019F48D /* TwitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2271CF764BD0019F48D /* TwitterController.swift */; };
 		55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22A1CF7654E0019F48D /* TwitterUser.swift */; };
 		55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22C1CF765C00019F48D /* TwitterViewController.swift */; };
-		55FEE22F1CF785A80019F48D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FEE22E1CF785A80019F48D /* FBSDKCoreKit.framework */; };
-		55FEE2331CF787730019F48D /* FacebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2321CF787730019F48D /* FacebookController.swift */; };
-		55FEE2351CF789460019F48D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FEE2341CF789460019F48D /* FBSDKLoginKit.framework */; };
 		71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
@@ -241,7 +237,6 @@
 		559F76441CEE3CFB003BE6E6 /* Style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Style.json; sourceTree = "<group>"; };
 		559F76461CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		559F76481CEE4C9C003BE6E6 /* Settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-25.png"; sourceTree = "<group>"; };
-		559F764C1CEE58AC003BE6E6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		559F76501CEE5AE0003BE6E6 /* Agenda-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Agenda-50.png"; sourceTree = "<group>"; };
 		559F76551CEE5B5F003BE6E6 /* MyIten-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyIten-50.png"; sourceTree = "<group>"; };
 		559F76571CEE5B97003BE6E6 /* SocialMedia-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SocialMedia-50.png"; sourceTree = "<group>"; };
@@ -283,7 +278,7 @@
 		55DAC37C1CEBAB6900941824 /* Email-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Email-50.png"; sourceTree = "<group>"; };
 		55DAC37E1CEBAEDD00941824 /* SocialMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMedia.swift; sourceTree = "<group>"; };
 		55DAC3801CEBC77A00941824 /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
-		55DAC3821CECAD8200941824 /* MasterViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController2.swift; sourceTree = "<group>"; };
+		55DAC3821CECAD8200941824 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		55DAC3841CECFD7200941824 /* Email-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Email-25.png"; sourceTree = "<group>"; };
 		55DAC3861CECFDC600941824 /* Web-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Web-25.png"; sourceTree = "<group>"; };
 		55DAC3881CECFDF200941824 /* LinkedIn-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LinkedIn-25.png"; sourceTree = "<group>"; };
@@ -314,7 +309,6 @@
 		55FEE22A1CF7654E0019F48D /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
 		55FEE22C1CF765C00019F48D /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		55FEE22E1CF785A80019F48D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		55FEE2321CF787730019F48D /* FacebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookController.swift; sourceTree = "<group>"; };
 		55FEE2341CF789460019F48D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -354,8 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */,
-				55FEE22F1CF785A80019F48D /* FBSDKCoreKit.framework in Frameworks */,
-				55FEE2351CF789460019F48D /* FBSDKLoginKit.framework in Frameworks */,
 				0EE564CF1CB8331A001678B0 /* MapKit.framework in Frameworks */,
 				71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */,
 			);
@@ -381,16 +373,15 @@
 		40D07A941CE0CA4C005E361B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				55DAC32D1CEA487F00941824 /* Social Media */,
+				55DAC3461CEB514500941824 /* Main Menu */,
+				55DAC3631CEB579E00941824 /* Agenda */,
 				556F70211CF49DCB00428EB5 /* logo-16.png */,
 				555A7A651CEFB1460068F58C /* More-25.png */,
 				555A7A671CF33BAF0068F58C /* More-color-25.png */,
 				55DAC3841CECFD7200941824 /* Email-25.png */,
-				55DAC3631CEB579E00941824 /* Agenda */,
-				55DAC32D1CEA487F00941824 /* Social Media */,
-				55DAC3461CEB514500941824 /* Main Menu */,
 				55DAC3181CE526E600941824 /* placeholder.png */,
 				5570EEDB1CF4F84F0033FCDC /* header-logo-16.png */,
-				559F764C1CEE58AC003BE6E6 /* logo.png */,
 				55DAC3291CEA3B9100941824 /* menu-25.png */,
 				FE0E76C41CC9D0910027CEDD /* blank-image.png */,
 			);
@@ -764,7 +755,7 @@
 		55DAC3941CEE158D00941824 /* SplitView */ = {
 			isa = PBXGroup;
 			children = (
-				55DAC3821CECAD8200941824 /* MasterViewController2.swift */,
+				55DAC3821CECAD8200941824 /* MasterViewController.swift */,
 				FE2623A81CAEFA940074C58F /* DetailViewController.swift */,
 			);
 			name = SplitView;
@@ -797,14 +788,6 @@
 				0EE564CE1CB8331A001678B0 /* MapKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		55FEE2311CF7875C0019F48D /* Facebook */ = {
-			isa = PBXGroup;
-			children = (
-				55FEE2321CF787730019F48D /* FacebookController.swift */,
-			);
-			name = Facebook;
 			sourceTree = "<group>";
 		};
 		5CABC4C70AD5BD42C86B7A69 /* Frameworks */ = {
@@ -850,12 +833,11 @@
 		FE2623A01CAEFA940074C58F /* Conference App */ = {
 			isa = PBXGroup;
 			children = (
-				55FEE2311CF7875C0019F48D /* Facebook */,
-				55DAC3901CEDFEC200941824 /* Style */,
-				55DAC3151CE5256400941824 /* ImageClasses */,
 				551604F11CE2720F00D46D2B /* Conference App-Bridging-Header.h */,
 				FE2623A11CAEFA940074C58F /* AppDelegate.swift */,
 				0E7A8FE41CC19D150034513C /* AppData.swift */,
+				55DAC3901CEDFEC200941824 /* Style */,
+				55DAC3151CE5256400941824 /* ImageClasses */,
 				40D07A941CE0CA4C005E361B /* Images */,
 				55229BD01CE1237A0023EFD3 /* Data */,
 				55450B861CE2236F00A2712E /* UIView */,
@@ -1045,7 +1027,6 @@
 				55DAC3391CEA4B8100941824 /* email.png in Resources */,
 				55E5A0DD1CF4A89E00144CD6 /* MyItenFilled-50.png in Resources */,
 				A12350181CB9500400B1233E /* ItineraryStoryboard.storyboard in Resources */,
-				559F764D1CEE58AC003BE6E6 /* logo.png in Resources */,
 				5570EEC81CF4ACC20033FCDC /* AnnouncementsFilled-50.png in Resources */,
 				559F76641CEE5C92003BE6E6 /* Settings-50.png in Resources */,
 				55DAC35A1CEB550700941824 /* Announcements-25.png in Resources */,
@@ -1214,7 +1195,6 @@
 				0ED487731CBD817D007DCC2B /* AboutData.swift in Sources */,
 				55881A9A1CE12729009B8399 /* Location.swift in Sources */,
 				555A7A701CF35F390068F58C /* Reach.swift in Sources */,
-				55FEE2331CF787730019F48D /* FacebookController.swift in Sources */,
 				FEF7E0C51CB852A8002A810B /* EventViewController.swift in Sources */,
 				559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */,
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
@@ -1232,7 +1212,7 @@
 				55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */,
 				FE2623A91CAEFA940074C58F /* DetailViewController.swift in Sources */,
 				55881A9C1CE129FF009B8399 /* Exhibitor.swift in Sources */,
-				55DAC3831CECAD8200941824 /* MasterViewController2.swift in Sources */,
+				55DAC3831CECAD8200941824 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

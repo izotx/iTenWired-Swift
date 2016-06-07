@@ -1,17 +1,49 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
 //
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
+
 //  SociaMedia.swift
 //  Conference App
 //
 //  Created by Felipe Neves on 5/16/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
-//
 
 import UIKit
 
 class SocialItem {
+    
+    /// Social Media Name
     var name:String = ""
+    
+    /// Social Media icon path
     var logo:String = ""
+    
+    /// The Social Media Storyboard ID
     var storyboardId = ""
+    
+    /// The Social Media's ViewController ID
     var viewControllerId = ""
     
     init(name:String, logo:String, storyboardId:String, viewControllerId: String){
@@ -23,7 +55,7 @@ class SocialItem {
 }
 
 
-class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SocialMediaViewController: UIViewController{
     
     let socialData = SocialMediaData()
     
@@ -42,34 +74,72 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.UIConfig()
+        UIConfig()
         
         // TableView Delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        shareButton.frame = CGRectMake(160, 100, 50, 50)
-        
-        shareButton.layer.cornerRadius = 0.75 * shareButton.bounds.size.width
-  
     }
     
     internal func UIConfig(){
         self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.shareButton.backgroundColor = ItenWiredStyle.background.color.mainColor
+        
+        shareButton.frame = CGRectMake(160, 100, 50, 50)
+        shareButton.layer.cornerRadius = 0.75 * shareButton.bounds.size.width
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func showMenu(sender: AnyObject) {
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
     }
+   
+    func displayShareSheet(button: AnyObject, shareContent:String) {
+        
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                let vc = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+                vc.popoverPresentationController?.sourceRect = (button as! UIView).frame
+                vc.popoverPresentationController?.sourceView = self.view
+                self.presentViewController(vc, animated: true, completion: nil)
+                
+            } else{
+                let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
+                presentViewController(activityViewController, animated: true, completion: {})
+            }
+        }
+    }
+    
+    @IBAction func shareButtonAction(sender: AnyObject) {
+        
+        let hashtags = self.socialData.getHashTags()
+        var content = ""
+        for hashtag in hashtags{
+            content = "\(hashtag) \(content)"
+        }
+        displayShareSheet(sender, shareContent:content)
+    }
+}
+
+//MARK:  UITableViewDelegate, UITableViewDataSource
+extension SocialMediaViewController: UITableViewDelegate, UITableViewDataSource {
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("SocialMediaCell", forIndexPath: indexPath) as? SocialMediaCell
         
         cell?.build(socialItems[indexPath.row])
-        
         return cell!
     }
     
@@ -130,9 +200,7 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
                 }
             }
             
-            
             return
-            
         }
         
         if socialItem.name == "LinkedIn" {
@@ -159,12 +227,15 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
             
             if UIApplication.sharedApplication().canOpenURL(url!) {
                 UIApplication.sharedApplication().openURL(url!)
+            }else {
+                if let url = NSURL(string: urlString) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
             }
             return
         }
         
         if socialItem.name == "Facebook" {
-            
             
             let urlString = socialData.getSocialMedia("facebook")?.URL
             
@@ -187,7 +258,6 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
             return
         }
         
-        //TODO: Finish social item ids
         if socialItem.storyboardId != ""{
             
             let storyboard = UIStoryboard.init(name: socialItem.storyboardId, bundle: nil)
@@ -195,51 +265,4 @@ class SocialMediaViewController: UIViewController, UITableViewDelegate, UITableV
             splitViewController?.showDetailViewController(destinationViewController, sender: nil)
         }
     }
-    
-    @IBAction func showMenu(sender: AnyObject) {
-        if let splitController = self.splitViewController{
-            
-            if !splitController.collapsed {
-                splitController.toggleMasterView()
-                
-            } else{
-                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
-                rightNavController.popToRootViewControllerAnimated(true)
-            }
-        }
-    }
-    
-    
-   
-    func displayShareSheet(button: AnyObject, shareContent:String) {
-        
-        
-        if let splitController = self.splitViewController{
-            
-            if !splitController.collapsed {
-                let vc = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
-                vc.popoverPresentationController?.sourceRect = (button as! UIView).frame
-                vc.popoverPresentationController?.sourceView = self.view
-                self.presentViewController(vc, animated: true, completion: nil)
-                
-            } else{
-                let activityViewController = UIActivityViewController(activityItems: [shareContent as NSString], applicationActivities: nil)
-                presentViewController(activityViewController, animated: true, completion: {})
-            }
-        }
-
-    }
-    
-    @IBAction func shareButtonAction(sender: AnyObject) {
-        
-        let hashtags = self.socialData.getHashTags()
-        
-        var content = ""
-        
-        for hashtag in hashtags{
-            content = "\(hashtag) \(content)"
-        }
-        displayShareSheet(sender, shareContent:content)
-    }
-    
 }
