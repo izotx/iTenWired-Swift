@@ -15,7 +15,7 @@ enum NetworkNotifications:String{
 class AppData{
    
     let defaults = NSUserDefaults.standardUserDefaults()
-    var URL: NSURL =  NSURL(string: "http://djmobilesoftware.com/itenwired/jsondata.json")!
+    var URL: NSURL =  NSURL(string: "http://badges.uwf.edu/data.json")!
 
     func getAllNotifications() -> [Notification] {
         let arr = [Notification]()

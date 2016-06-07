@@ -23,6 +23,7 @@ class EventCell: UITableViewCell {
     @IBOutlet var timeStopLable: UILabel!
     
     var event:Event!
+    let myItenController = MyItenController()
     
     func setName(name:String){
         nameLable.text = name
@@ -42,12 +43,12 @@ class EventCell: UITableViewCell {
     }
     
     func build(event:Event){
+        self.event = event
        self.UIConfig()
         self.setName(event.name)
         self.setStartTime(event.timeStart)
         self.setStopTime(event.timeStop)
         self.setDate(event.date)
-        self.event = event
     }
     
     internal func UIConfig(){
@@ -59,6 +60,10 @@ class EventCell: UITableViewCell {
         
         if let view = self.view {
             view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        }
+        
+        if self.addButton != nil {
+            setStartButton(myItenController.isPresent(self.event))
         }
     }
     
@@ -72,7 +77,6 @@ class EventCell: UITableViewCell {
   
     
     @IBAction func addMyItenAction(sender: AnyObject) {
-        let myItenController = MyItenController()
         
         if myItenController.isPresent(event) {
             myItenController.deleteFromMyIten(event)
