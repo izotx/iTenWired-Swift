@@ -1,4 +1,30 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
 //
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
+
 //  AttendeeData.swift
 //  Conference App
 //
@@ -13,8 +39,13 @@ class AttendeeData{
     
     private let appData = AppData()
     
+    /// List of Sponsers
     private var sponsers:[Sponser] = []
+    
+    /// List of exhibitors
     private var exibitors:[Exibitor] = []
+    
+    /// List of Spealkers
     private var speakers:[Speaker] = []
 
     
@@ -27,7 +58,9 @@ class AttendeeData{
     // Loads sponsers from file to memory
     func loadSponsers(){
         
-        let data = appData.getDataFromFile()
+        guard let data = appData.getDataFromFile() else{
+            return
+        }
         
         if let sponsersData = data["sponsors"] as? [NSDictionary]{
             for sponserData in sponsersData{
@@ -40,7 +73,10 @@ class AttendeeData{
     // loads exhibitors from file to memory
     func loadExibitors(){
         
-        let data = self.appData.getDataFromFile()
+        guard let data = self.appData.getDataFromFile() else{
+            return
+        }
+        
         if let exibitorsData = data["exhibitors"] as? [NSDictionary] {
             for exibitorData in exibitorsData{
                 let exibitor = Exibitor(dictionary: exibitorData)
@@ -52,7 +88,10 @@ class AttendeeData{
     //loads speakes from file to memory
     func loadSpeakers(){
     
-        let data = self.appData.getDataFromFile()
+        guard let data = self.appData.getDataFromFile() else {
+            return
+        }
+        
         if let speakersData = data["speakers"] as? [NSDictionary] {
             for speakerData in speakersData {
                 let speaker = Speaker(dictionary: speakerData)

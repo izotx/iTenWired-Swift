@@ -1,120 +1,144 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
+//    
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//    
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//    
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
+
 //
 //  AppDelegate.swift
 //  Conference App
-//
 //  Created by B4TH Administrator on 4/1/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
-//
 
 import UIKit
 import CoreData
 
+//import FBSDKCoreKit
+//import FBSDKLoginKit
+
+enum NotificationObserver:String {
+    case APPBecameActive
+    case RemoteNotificationReceived
+}
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
 
-    var testMe = true
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
     
-    func testingNotifications(){
         let notificationController = NotificationController()
-        let data = NSDictionary()
+        let data = userInfo.first!.1 as? NSDictionary
+        let alert = data!["alert"]
+        
         let date = NSDate()
-        // Creates a notification
-        let notification = Notification(message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum, dolor sit amet blandit imperdiet, nisl est iaculis massa, sed.", aditionalData: data, date: date)
+        let notification = Notification(message: (alert!["body"] as? String)!, title: (alert!["title"] as? String)!, date: date)
+        
+
+        if application.applicationState == UIApplicationState.Active {
+            
+            notification.setDone(true)
+            let alertView = SCLAlertView()
+            
+            let alertViewIcon = UIImage(named: "AnnouncementsFilled-50.png")
+            
+            alertView.showNotification(notification.title, subTitle: notification.message, circleIconImage: alertViewIcon)
+        }
+        
         notificationController.addNotification(notification)
         
-        //notification = Notification(message: "This is another notification", aditionalData: data, date: date)
-        //notificationController.addNotification(notification)
-
+         NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.RemoteNotificationReceived.rawValue, object: self)
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = UIApplication.sharedApplication().applicationIconBadgeNumber + 1
+        completionHandler(UIBackgroundFetchResult.NewData)
+        
+        
     }
+    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-       if testMe{
-            testingNotifications()
-        }
-        
-        let notificationController = NotificationController()
-        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
-        
-        // Recives and deals with notifications
         _ = OneSignal(launchOptions: launchOptions, appId: "d7ae9182-b319-4654-a5e1-9107872f2a2b") { (message, additionalData, isActive) in
             NSLog("OneSignal Notification opened:\nMessage: %@", message)
-            
-                let notificationController = NotificationController()
-                let date = NSDate()
-                var data:NSDictionary = NSDictionary()
-            
-                if additionalData != nil {
-                    data = additionalData
-                }
-            
-                let notificaton = Notification(message: message, aditionalData: data, date: date)
-                notificationController.addNotification(notificaton)
+
         }
         
-        OneSignal.defaultClient().enableInAppAlertNotification(true)
+        OneSignal.defaultClient().enableInAppAlertNotification(false)
         
-        //TDOD: remove appData Instantiation
        let appData = AppData()
-       appData.initData()
+        
+        if NetworkConnection.isConnected(){
+            appData.saveData()
+        }
         
         //  Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-    ///    navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+        
+        navigationController.navigationBar.translucent = true
+        
+        
+        splitViewController.maximumPrimaryColumnWidth = 320 
         
         splitViewController.delegate = self
 
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
        
         
-        let controller = masterNavigationController.topViewController as! MasterViewController2
+        let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
-       
+        
+        
         return true
     }
-
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        
+    }
+    func applicationDidBecomeActive(application: UIApplication) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.APPBecameActive.rawValue, object: self)
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        let notificationController = NotificationController()
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        let appData = AppData()
-        appData.initData()
         self.saveContext()
+        
+        let notificationController = NotificationController()
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = notificationController.getNumberOfUnReadNotifications()
     }
 
-    // MARK: - Split view
-
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
-        //return true
-        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
-            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-            //return true
-            return true
-        }
-        return false
-    }
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
@@ -176,6 +200,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 abort()
             }
         }
+    }
+}
+
+
+//Mark: - UISplitViewControllerDelegate
+extension AppDelegate: UISplitViewControllerDelegate {
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
+        //return true
+        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
+        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
+        if topAsDetailController.detailItem == nil {
+            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+            //return true
+            return true
+        }
+        return false
     }
 }
 

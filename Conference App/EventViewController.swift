@@ -1,4 +1,30 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
 //
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
+
 //  EventViewController.swift
 //  Agenda1
 //
@@ -8,7 +34,7 @@
 
 import UIKit
 
-class EventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EventViewController: UIViewController{
     var event:Event?
     
    // @IBOutlet var NameLabel: UILabel!
@@ -16,6 +42,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var titleLabel: UILabel!
   
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollviewView: UIView!
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -24,11 +51,20 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIConfig()
+        
         // TableView Delegate
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    internal func UIConfig(){
         
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if event?.presentorsIDs.count <= 0 {
+            self.tableView.hidden = true
+        }
+        
         summaryLabel.text = event?.summary
         titleLabel.text = event?.name
         
@@ -36,10 +72,13 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         resizeTableview()
         resizeScrollView()
         
-        
-        if event?.presentorsIDs.count <= 0 {
-            self.tableView.hidden = true
-        }
+        self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.summaryLabel.textColor = ItenWiredStyle.text.color.mainColor
+        self.titleLabel.textColor = ItenWiredStyle.text.color.mainColor
+        self.scrollView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.scrollviewView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.navigationController?.navigationBarHidden = false
     }
     
     func resizeScrollView(){
@@ -74,13 +113,19 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+}
+
+//MARK: UITableViewDataSource, UITableViewDelegate
+extension EventViewController : UITableViewDataSource, UITableViewDelegate{
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerCell = tableView.dequeueReusableCellWithIdentifier("speakerHeaderCell")
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("speakerHeaderCell") as? SpeakerHeaderCell
+        
+        headerCell?.build()
         return headerCell
     }
     
@@ -92,6 +137,8 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         let presenter = self.attendeeController.getSpeakerById(presenterId!)
         
         cell?.build(presenter!)
+        cell?.invertTheme()
+        
         return cell!
     }
     
@@ -105,7 +152,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-       
+        
         guard let speakerID = self.event?.presentorsIDs[indexPath.row],
             let speaker = self.attendeeController.getSpeakerById(speakerID) else{
                 
@@ -118,10 +165,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         destinationViewController?.speaker = speaker
-  
-        self.navigationController?.pushViewController(destinationViewController!, animated: true)
         
+        self.navigationController?.pushViewController(destinationViewController!, animated: true)
     }
 }
-
-

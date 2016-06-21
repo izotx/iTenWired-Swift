@@ -1,4 +1,30 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
 //
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
+
 //  IteneraryViewController.swift
 //  Conference App
 //
@@ -8,7 +34,7 @@
 
 import UIKit
 
-class ItineraryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ItineraryViewController: UIViewController{
 
     @IBAction func AgendaBTN(sender: AnyObject) {
         let storyboard = UIStoryboard.init(name: "AgendaMain", bundle: nil)
@@ -42,8 +68,43 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    override func setEditing(editing: Bool, animated: Bool) {
+       
+        self.ItinTable.setEditing(!ItinTable.editing, animated: animated)
+        if ItinTable.editing{
+            self.navigationItem.rightBarButtonItem?.title = "Done"
+        }
+        else{
+            self.navigationItem.rightBarButtonItem?.title = "Edit"
+        }
+    }
+
+    @IBAction func showMenu(sender: AnyObject) {
+        if let splitController = self.splitViewController{
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
+    }
+}
+
+//Mark: UITableViewDataSource and  UITableViewDelegate
+extension ItineraryViewController:  UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete{
+            self.myItenController.deleteFromMyIten(self.myItenController.getMyItenEvents()[indexPath.row])
+            tableView.reloadData()
+        }
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,11 +120,11 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         cell.userInteractionEnabled = true
         
         return cell
-
+        
     }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        print("Row Selected")
         let destinationViewController: EventViewController
             = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
         
@@ -72,61 +133,13 @@ class ItineraryViewController: UIViewController, UITableViewDataSource, UITableV
         
         self.navigationController?.pushViewController(destinationViewController, animated: true)
     }
+    
     func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
         ItinTable.reloadData()
     }
     
-    /*func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        
-        let delete = UITableViewRowAction(style: .Normal, title: "Remove from my Iten") { action, index in
-            self.myItenController.deleteFromMyIten(self.myItenController.getMyItenEvents()[indexPath.row])
-            tableView.reloadData()
-        }
-        delete.backgroundColor = UIColor.lightGrayColor()
-        
-        
-        return [delete]
-    }*/
-    
-    override func setEditing(editing: Bool, animated: Bool) {
-       
-        
-        self.ItinTable.setEditing(!ItinTable.editing, animated: animated)
-        if ItinTable.editing{
-            self.navigationItem.rightBarButtonItem?.title = "Done"
-        }
-        else{
-            self.navigationItem.rightBarButtonItem?.title = "Edit"
-        }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
-    
-    
-    
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if editingStyle == .Delete{
-            self.myItenController.deleteFromMyIten(self.myItenController.getMyItenEvents()[indexPath.row])
-            tableView.reloadData()
-        }
-    }
-    
-    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    
-   
 
-    
-    @IBAction func showMenu(sender: AnyObject) {
-        if let splitController = self.splitViewController{
-            if !splitController.collapsed {
-                splitController.toggleMasterView()
-                
-            } else{
-                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
-                rightNavController.popToRootViewControllerAnimated(true)
-            }
-        }
-    }
-    
 }

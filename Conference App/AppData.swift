@@ -8,79 +8,93 @@
 
 import Foundation
 
-class AppData {
+enum NetworkNotifications:String{
+    case DataLoaded
+}
+
+class AppData{
    
-    
-    var path: String
-    var mainFile: String
-    var agenda: Agenda
-    var status: Bool = true
-    //Make sure that this url is the main json request
-    var dataPath: NSURL =  NSURL(string: "http://djmobilesoftware.com/itenwired/jsondata.json")!
-    var otherPath: String
-    
-    init()
-    {
-        let dir:NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first!
-        mainFile = "jsonData.json"
-        agenda = Agenda()
-        otherPath = dir.stringByAppendingPathComponent("data.dat")
-        path = dir.stringByAppendingPathComponent(mainFile);
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var URL: NSURL =  NSURL(string: "XXXXXXX")!
+
+    func getAllNotifications() -> [Notification] {
+        let arr = [Notification]()
+        var notificationsArray = NotificationList(notifications: arr)
         
-    }
-    func initData()
-    {
-        let data:NSData = getDataFromURL(dataPath)!
-        data.writeToFile(path as String, atomically: false)
-        checkForPurgeFiles()
-        if(!status)
-        {
-            print("Out of date files")
+        NSKeyedUnarchiver.setClass(NotificationList.self, forClassName: "NotificationList")
+        if let data = self.defaults.objectForKey("Notifications") as? NSData{
+            if let notifications = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? NotificationList {
+                notificationsArray = notifications
+            }
         }
+        return notificationsArray.getArray().sort({$0.date.compare($1.date) == NSComparisonResult.OrderedDescending})
     }
     
-    func getDataBear()->NSDictionary
-    {
-        var resultDictionary: NSData?
-        var dictionary: NSDictionary?
-        do {
-            resultDictionary =  NSData(contentsOfFile:path)
-            if((resultDictionary) != nil)
-            {
-                dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as? NSDictionary
-            }
-            else
-            {
-                initData()
-                do {
-                    resultDictionary =  NSData(contentsOfFile:path)
-                    dictionary =  try NSJSONSerialization.JSONObjectWithData(resultDictionary!, options: .MutableContainers) as? NSDictionary
-                }
-                catch {
-                    
-                }
-            }
-        }
-        catch {
+    func getDataFromFile()-> NSDictionary?{
+        var dictionary:NSDictionary = NSDictionary()
+        
+        if let data = self.defaults.dataForKey("appData"){
             
+            do {
+                dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary
+                return dictionary
+            } catch{
+            }
         }
-        
-        return dictionary!
+        return nil 
     }
     
-    func getDataFromFile()-> NSDictionary
-    {
-        checkForPurgeFiles()
-        return getDataBear()
+    func getDataFromFile(completion: (dictionary:NSDictionary) -> Void){
+        
+        var dictionary:NSDictionary = NSDictionary()
+        
+        if let data = self.defaults.dataForKey("appData"){
+            
+            do {
+                dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! NSDictionary
+                
+                completion(dictionary: dictionary)
+            } catch{
+            }
+        }
+    
+    }
+    
+    func saveData(){
+        let sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        sessionConfiguration.requestCachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+        
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: self.URL)
+        let session = NSURLSession(configuration: sessionConfiguration)
+        
+        let task = session.dataTaskWithRequest(urlRequest) {
+            (data, response, error) -> Void in
+            
+            if let httpResponse = response as? NSHTTPURLResponse {
+                
+                let statusCode = httpResponse.statusCode
+                
+                if (statusCode == 200) {
+                    self.defaults.setObject(data, forKey: "appData")
+                    self.defaults.synchronize()
+                }else{
+                    print("Error while retriving data!")
+                }
+            }
+        }
+        task.resume()
     }
     
     func getDataFromURL(requestURL: NSURL) -> NSData?{
         
         var locked = true       // Flag to make sure the
         var returnData:NSData?
-        
+        let sessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        sessionConfiguration.requestCachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
+
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
-        let session = NSURLSession.sharedSession()
+        let session = NSURLSession(configuration: sessionConfiguration)
+        
         let task = session.dataTaskWithRequest(urlRequest) {
             (data, response, error) -> Void in
             
@@ -90,60 +104,23 @@ class AppData {
                 
                 if (statusCode == 200) {
                     returnData = data!
+                    //print(returnData)
+                    
+                    
                 }else{
-                    print("Error while retriving data!")
+                    print(error)
                 }
                 locked = false
             }
         }
-        
         
         task.resume()
         
         while(locked){ // Runs untill the response is received
             
         }
-        
+
         return returnData
     }
     
-    //
-    func checkForPurgeFiles()
-    {
-        
-        let data: NSDictionary = getDataBear()
-        
-        if let eventsJSON = data["events"] as? [NSDictionary] {
-            
-            for eventJson in eventsJSON {
-                    
-                let event =  Event(dictionary: eventJson)
-                agenda.addEvent(event)
-            }
-        }
-    
-        for event in agenda.events
-        {
-            var dateFromString:[Int] = [Int]()
-            var dateString = (event.date).characters.split{$0 == "/"}.map(String.init)
-            dateFromString.append(Int(dateString[0])!)
-            dateFromString.append(Int(dateString[1])!)
-            dateFromString.append(Int(dateString[2])!)
-            
-        }
-        if(!status)
-        {
-            let str:NSData = NSData()
-            str.writeToFile(path as String, atomically: false)
-            str.writeToFile(otherPath as String, atomically: false)
-        }
-    }
-    func clearItin()
-    {
-        let str:NSData = NSData()
-        str.writeToFile(otherPath as String, atomically: false)
-    }
-    
-    //Credit to http://stackoverflow.com/questions/24097826/read-and-write-data-from-text-file by user Adam on the stack
-    //overflow site
 }

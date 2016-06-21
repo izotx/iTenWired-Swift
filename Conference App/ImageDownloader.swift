@@ -11,6 +11,7 @@ import UIKit
 class ImageDownloader : NSOperation{
 
     let photoRecord: Photorecord
+    let reach = Reach()
     
     init(photoRecord : Photorecord){
         self.photoRecord = photoRecord
@@ -22,13 +23,19 @@ class ImageDownloader : NSOperation{
             return
         }
         
+        let flag = !NetworkConnection.isConnected()
+        
+        if  flag {
+            self.photoRecord.state = PhotoRecordState.Failed
+            return
+        }
         let imageData = NSData(contentsOfURL: self.photoRecord.url)
         
         if self.cancelled {
             return
         }
     
-        if imageData?.length > 0 {
+        if imageData?.length > 0{
             self.photoRecord.image = UIImage(data: imageData!)
             self.photoRecord.state = PhotoRecordState.Downloaded
         }else {

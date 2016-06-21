@@ -1,127 +1,229 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
+//    
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//    
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//    
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
 //
-//  MasterViewController.swift
-//  Conference App
-//
-//  Created by B4TH Administrator on 4/1/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
-//
+//    MasterViewController.swift
+//    Conference App
+//    Created by Felipe Neves {felipenevesbrito@gmail.com} on 5/18/16.
+
+
 
 import UIKit
 import CoreData
-import SystemConfiguration
 
-
-class MenuItem{
-    var storyboardId:String
-    var viewControllerId:String
-    var name:String
-    var image:UIImage
-    
-    
-    init(storyboardId: String, viewControllerId: String, name: String, imageUrl: String){
-        self.storyboardId = storyboardId
-        self.viewControllerId = viewControllerId
-        self.name = name
-        self.image = UIImage(named: imageUrl)!
-    }
-}
-
-class MasterViewController: UITableViewController, UISplitViewControllerDelegate{
+class MasterViewController : UIViewController{
     
     var menuItems:[MenuItem] = []
+    let reach = Reach()
+    let network = NetworkConnection()
+    
+    let appData = AppData()
+    
+    @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
-    var items: NSMutableArray!
-    var images: NSMutableArray!
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
-    
-        return .PrimaryHidden
-    }
-    
-    
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
-        return true
+    override func viewWillAppear(animated: Bool) {
+       self.collectionView.reloadData()
+        
+        if NetworkConnection.isConnected(){
+            self.appData.saveData()
+        }
+        
+        self.navigationController?.navigationBarHidden = true
     }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
-        splitViewController?.delegate = self
-    
-      ///  navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem()
-      //  navigationItem.leftItemsSupplementBackButton = true
-  
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.APPBecameActive.rawValue, object: nil)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("updateData"), name: NotificationObserver.RemoteNotificationReceived.rawValue, object: nil)
         
-        // Tableview delegates
-        self.tableView!.delegate = self
-        self.tableView!.dataSource = self
-        
+        loadMenuItems()
         self.UIConfig()
         
-        // Loads menu items into array
-        self.loadMenuItems()
+        //CollectionView Deleagte
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
+        // SplitView Delegate
+        splitViewController?.delegate = self
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+         self.navigationController?.navigationBarHidden = false
+    }
+    
+    func updateData(){
+        self.collectionView.reloadData()
     }
     
     internal func UIConfig(){
-        
-        self.title = "iTen Wired"
-        self.tableView = UITableView(frame:self.view!.frame)
-        
-        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        self.tableView.rowHeight = CGFloat(65.00)
+        self.collectionView.backgroundColor = ItenWiredStyle.background.color.mainColor
         self.view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.logo.image = UIImage(named: "logo-16.png")
+        self.navigationController?.navigationBarHidden = true 
+        
     }
     
+    /**
+        Loads the menu items into the MenuItems array
+    */
     internal func loadMenuItems(){
-        // Loading menu items into array
-        let map = MenuItem(storyboardId: "Main", viewControllerId: "collectionViewController", name: "Main", imageUrl: "MapM-25.png")
-        self.menuItems.append(map)
-        
-        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "Agenda-25.png")
+  
+        let agenda = MenuItem(storyboardId: "AgendaMain", viewControllerId: "AgendaInitial", name: "Agenda", imageUrl: "AgendaFilled-50.png")
         self.menuItems.append(agenda)
         
-        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyIten-25.png")
-        self.menuItems.append(myIten)
-        
-        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaRoot", name: "Social Media", imageUrl: "SocialMedia-25.png")
-        self.menuItems.append(socialMedia)
-        
-        let liveBroadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcast-25.png")
-        self.menuItems.append(liveBroadcast)
-        
-        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutView", name: "About", imageUrl: "About-25.png")
-        self.menuItems.append(about)
-        
-        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "Who-25.png")
+        let atendees = MenuItem(storyboardId: "Attendees", viewControllerId: "Attendee", name: "Who is here", imageUrl: "WhoFilled-50.png")
         self.menuItems.append(atendees)
         
-        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewController", name: "Announcements", imageUrl: "Announcements-25.png")
+        let myIten = MenuItem(storyboardId: "ItineraryStoryboard", viewControllerId: "Itinerary", name: "My Iten", imageUrl: "MyItenFilled-50.png")
+        self.menuItems.append(myIten)
+        
+        let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewControllerNav", name: "Announcements", imageUrl: "AnnouncementsFilled-50.png")
         self.menuItems.append(notifications)
+
+        let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapNavStoryboard", name: "Map", imageUrl: "MapMFilled-50.png")
+        self.menuItems.append(map)
+        
+        let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaNav", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
+        self.menuItems.append(socialMedia)
+        
+        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutViewNav", name: "About", imageUrl: "AboutFilled-50.png")
+        self.menuItems.append(about)
+ 
     }
     
-    //Animates view
-    override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
-        super.viewWillAppear(animated)
-    }
+}
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//MARK: - UICollectionViewDataSource
+extension MasterViewController : UICollectionViewDataSource{
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
+            return
+        }
+        
+        cell.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        cell.nameLabel.textColor = ItenWiredStyle.text.color.invertedColor
+        cell.icon.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        cell.icon.setImage(menuItems[indexPath.row].invertedColorIcon, forState: .Normal)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        guard let cell = self.collectionView.cellForItemAtIndexPath(indexPath) as? MenuCellCollectionViewCell else {
+            return
+        }
+        
+        cell.backgroundColor = ItenWiredStyle.background.color.mainColor
+        cell.nameLabel.textColor = ItenWiredStyle.text.color.mainColor
+        cell.icon.backgroundColor = ItenWiredStyle.background.color.mainColor
+        cell.icon.setImage(menuItems[indexPath.row].image, forState: .Normal)
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.menuItems.count
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        if let svc = self.splitViewController where svc.collapsed == false  {
+            return CGSize(width: ((collectionView.frame.size.width - 10)) , height: 60)
+        }
+        
+        return CGSize(width: ((collectionView.frame.size.width - 10) / 2)  - 6 , height: 150)
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        if let svc = self.splitViewController where svc.collapsed == false  {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCellLong", forIndexPath: indexPath) as? MenuCellCollectionViewCell
+            
+            cell?.build(self.menuItems[indexPath.row])
+            
+            cell?.layer.shadowColor = UIColor.blackColor().CGColor
+            cell?.layer.shadowOffset = CGSizeMake(0,1.5)
+            
+            if menuItems[indexPath.row].name == "Announcements"{
+                let notificationController = NotificationController()
+                cell?.icon.badgeString = ""
+                if notificationController.getNumberOfUnReadNotifications() > 0 {
+                    cell?.icon.badgeString = "\(notificationController.getNumberOfUnReadNotifications())"
+                }
+            }else {
+                
+                cell?.icon.badgeString = ""
+            }
+            
+            return cell!
+        
+        }
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? MenuCellCollectionViewCell
+        
+        cell?.build(self.menuItems[indexPath.row])
+        
+        cell?.layer.shadowColor = UIColor.blackColor().CGColor
+        cell?.layer.shadowOffset = CGSizeMake(0,1.5)
+        
+        if menuItems[indexPath.row].name == "Announcements"{
+            let notificationController = NotificationController()
+            cell?.icon.badgeString = ""
+            if notificationController.getNumberOfUnReadNotifications() > 0 {
+                cell?.icon.badgeString = "\(notificationController.getNumberOfUnReadNotifications())"
+            }
+        }else {
+        
+            cell?.icon.badgeString = ""
+        }
+        return cell!
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+extension MasterViewController: UICollectionViewDelegate{
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath){
         
         let index = indexPath.row
         let menuItem = menuItems[index]
         
-        if !MasterViewController.isConnectedToNetwork(){
-            if menuItem.name == "Live Broadcast"{
+        if menuItem.name == "Announcements"{
+            self.collectionView.reloadData()
+        }
+        
+        if NetworkConnection.isConnected() == false {
+            if menuItem.name == "Social Media"{
+                
                 // create the alert
                 let alert = UIAlertController(title: "No Internet Connection", message: "Make sure your connected to the internet before accessing \(menuItem.name)", preferredStyle: UIAlertControllerStyle.Alert)
                 
@@ -130,7 +232,6 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
                 
                 // show the alert
                 self.presentViewController(alert, animated: true, completion: nil)
-                
                 return
             }
         }
@@ -138,57 +239,16 @@ class MasterViewController: UITableViewController, UISplitViewControllerDelegate
         let storyboard = UIStoryboard.init(name: menuItem.storyboardId, bundle: nil)
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(menuItem.viewControllerId)
         splitViewController?.showDetailViewController(destinationViewController, sender: nil)
-        
-        
     }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.menuItems.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      
-        let index = indexPath.row
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as UITableViewCell
-        
-        cell.textLabel!.text = menuItems[index].name
-        
-        if let q : UIImage? = menuItems[index].image{
-            cell.imageView?.image = q
-        }
-        
-        cell.backgroundColor = UIColor(red: 0.15, green: 0.353, blue: 0.6, alpha: 0.5)
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        
-        let bgColorView = UIView()
-        
-        bgColorView.backgroundColor = UIColor.cyanColor()
-        cell.selectedBackgroundView = bgColorView
-        
-        return cell
-    }
-    
-    /*
-     * Voodoo Magic, Don't question it! (from stack overflow)
-     * http://stackoverflow.com/users/2303865/leo-dabus : http://stackoverflow.com/questions/30743408/check-for-internet-connection-in-swift-2-ios-9
-     */
-    
-    //FIXME: find better solution
-    class func isConnectedToNetwork() -> Bool {
-        var zeroAddress = sockaddr_in()
-        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
-        zeroAddress.sin_family = sa_family_t(AF_INET)
-        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
-            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
-        }
-        var flags = SCNetworkReachabilityFlags()
-        if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
-            return false
-        }
-        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
-        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
-        return (isReachable && !needsConnection)
-    }
+}
 
+//Mark: - UISplitViewControllerDelegate
+extension MasterViewController: UISplitViewControllerDelegate{
+    func targetDisplayModeForActionInSplitViewController(svc: UISplitViewController) -> UISplitViewControllerDisplayMode{
+        return .PrimaryHidden
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
+    }
 }

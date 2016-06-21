@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z03-iX-fkq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-ti-aBt">
-                                <rect key="frame" x="20" y="607" width="335" height="41"/>
+                                <rect key="frame" x="99" y="607" width="177" height="41"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="y7h-9d-wcb"/>
@@ -39,10 +39,9 @@
                         <constraints>
                             <constraint firstItem="Z8o-ti-aBt" firstAttribute="top" secondItem="IQg-u6-wIp" secondAttribute="bottom" constant="-48" id="26Z-ct-sLW"/>
                             <constraint firstItem="Z8o-ti-aBt" firstAttribute="top" secondItem="IQg-u6-wIp" secondAttribute="bottom" constant="-60" id="2Ud-D9-6Zp"/>
-                            <constraint firstItem="Z8o-ti-aBt" firstAttribute="leading" secondItem="IZL-tC-iwY" secondAttribute="leading" constant="20" id="2uX-Qt-Nft"/>
-                            <constraint firstAttribute="trailing" secondItem="Z8o-ti-aBt" secondAttribute="trailing" constant="20" id="E7b-wf-CmY"/>
                             <constraint firstAttribute="trailing" secondItem="IQg-u6-wIp" secondAttribute="trailing" id="NyH-8s-qLS"/>
                             <constraint firstItem="IQg-u6-wIp" firstAttribute="leading" secondItem="IZL-tC-iwY" secondAttribute="leading" id="SRp-uf-0Br"/>
+                            <constraint firstItem="Z8o-ti-aBt" firstAttribute="centerX" secondItem="IZL-tC-iwY" secondAttribute="centerX" id="gF3-4Y-rX7"/>
                             <constraint firstItem="IQg-u6-wIp" firstAttribute="top" secondItem="DZE-eF-m4K" secondAttribute="bottom" id="gZ2-SQ-aHG"/>
                             <constraint firstItem="mE7-Fn-gVL" firstAttribute="top" secondItem="IQg-u6-wIp" secondAttribute="bottom" id="sTm-df-WxA"/>
                         </constraints>
@@ -52,10 +51,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Maps" id="6yB-UH-T94">
-                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="sOR-na-0FF">
+                    <navigationItem key="navigationItem" title="Map" id="8Cr-wH-SlA">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="n1H-eU-LQD">
                             <connections>
-                                <action selector="showMenu:" destination="raM-Z0-ecJ" id="mj6-HW-CAr"/>
+                                <action selector="showMenu:" destination="raM-Z0-ecJ" id="Bib-g1-P4u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -69,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qrd-I3-JPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646.5" y="369.5"/>
+            <point key="canvasLocation" x="716.5" y="436.5"/>
         </scene>
         <!--Location Detail-->
         <scene sceneID="Wdv-uI-4zO">
@@ -138,7 +137,7 @@
         <!--Map-->
         <scene sceneID="etO-ae-HDs">
             <objects>
-                <navigationController title="Map" automaticallyAdjustsScrollViewInsets="NO" id="Z03-iX-fkq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapNavStoryboard" title="Map" automaticallyAdjustsScrollViewInsets="NO" id="Z03-iX-fkq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPJ-Gl-1OV">

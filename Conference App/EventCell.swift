@@ -14,6 +14,7 @@ class EventCell: UITableViewCell {
     
     @IBOutlet var timeLable: UILabel!
     
+    @IBOutlet weak var view: UIView!
 
     @IBOutlet weak var addButton: UIButton!
     
@@ -22,6 +23,7 @@ class EventCell: UITableViewCell {
     @IBOutlet var timeStopLable: UILabel!
     
     var event:Event!
+    let myItenController = MyItenController()
     
     func setName(name:String){
         nameLable.text = name
@@ -38,16 +40,15 @@ class EventCell: UITableViewCell {
     func setDate(date:String){
         let day = date.componentsSeparatedByString("/")[1]
         dateLable.text = day
-        print(day)
     }
     
     func build(event:Event){
-        //self.UIConfig()
+        self.event = event
+       self.UIConfig()
         self.setName(event.name)
         self.setStartTime(event.timeStart)
         self.setStopTime(event.timeStop)
         self.setDate(event.date)
-        self.event = event
     }
     
     internal func UIConfig(){
@@ -56,26 +57,33 @@ class EventCell: UITableViewCell {
         self.timeLable.textColor = ItenWiredStyle.text.color.mainColor
         self.dateLable.textColor = ItenWiredStyle.text.color.mainColor
         self.timeStopLable.textColor = ItenWiredStyle.text.color.mainColor
+        
+        if let view = self.view {
+            view.backgroundColor = ItenWiredStyle.background.color.mainColor
+        }
+        
+        if self.addButton != nil {
+            setStartButton(myItenController.isPresent(self.event))
+        }
     }
     
     func setStartButton(isPresentMyIten: Bool){
         if isPresentMyIten {
-            self.addButton.setImage(UIImage(named: "StarFilled-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "StarFilled-50.png"), forState: UIControlState.Normal)
         } else {
-            self.addButton.setImage(UIImage(named: "Star-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "Star-50.png"), forState: UIControlState.Normal)
         }
     }
   
     
     @IBAction func addMyItenAction(sender: AnyObject) {
-        let myItenController = MyItenController()
         
         if myItenController.isPresent(event) {
             myItenController.deleteFromMyIten(event)
-            self.addButton.setImage(UIImage(named: "Star-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "Star-50.png"), forState: UIControlState.Normal)
         } else {
             myItenController.addToMyIten(event)
-            self.addButton.setImage(UIImage(named: "StarFilled-25.png"), forState: UIControlState.Normal)
+            self.addButton.setImage(UIImage(named: "StarFilled-50.png"), forState: UIControlState.Normal)
         }
     }
 }

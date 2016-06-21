@@ -6,3 +6,5 @@
 //  Copyright © 2016 Chrystech Systems. All rights reserved.
 //
 #import <OneSignal/OneSignal.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>

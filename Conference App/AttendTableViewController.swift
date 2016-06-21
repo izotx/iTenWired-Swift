@@ -1,10 +1,33 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
 //
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//
+
 //  AttendeesViewController.swift
 //  Conference App
-//
 //  Created by tuong on 4/11/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
-//
 
 import UIKit
 
@@ -22,19 +45,15 @@ class AttendeesViewController: UITableViewController{
     var exhibitorPhotos = [Photorecord]()
     let exibitorPendingOperations = PendingOperarions()
     
-    
     // Photo loader and controller for sponsers
     var sponserPhotos = [Photorecord]()
     let sponserPendingoperations = PendingOperarions()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Starts the activity indicator. Runs until data is loading
         self.activityIndicator.startAnimating()
-        
         
         // Async data load
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
@@ -80,7 +99,6 @@ class AttendeesViewController: UITableViewController{
             self.exhibitorPhotos.append(photoRecord)
         }
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -94,7 +112,6 @@ class AttendeesViewController: UITableViewController{
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var index = indexPath.row
         
-//        tableView.reloadRowsAtIndexPaths([index], withRowAnimation: )
         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
         
         // Sponser Cell
@@ -102,7 +119,13 @@ class AttendeesViewController: UITableViewController{
             if index == 0 { //excludes header
                 return
             }
-            print("\(index-1) cell of sponsers")
+            
+            let storyboard = UIStoryboard.init(name: "Attendees", bundle: nil)
+            let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("SponserDescriptionViewController") as? SponserUIViewController
+            
+            destinationViewController?.sponser = sponsers[index - 1]
+            
+            self.navigationController?.pushViewController(destinationViewController!, animated: true)
         }
         
         index = index - (sponsers.count + 1)
@@ -111,7 +134,12 @@ class AttendeesViewController: UITableViewController{
             if index == 0{  // Excludes Header
                 return
             }
-            print("\(index - 1) cell of exhibitors")
+            
+            let storyboard = UIStoryboard.init(name: "Attendees", bundle: nil)
+            let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("SponserDescriptionViewController") as? SponserUIViewController
+            
+            destinationViewController?.exhibitor = exhibitors[index - 1]
+            self.navigationController?.pushViewController(destinationViewController!, animated: true)
         }
         
         index = index - (exhibitors.count + 1)
@@ -137,14 +165,12 @@ class AttendeesViewController: UITableViewController{
        return self.exhibitors.count + self.sponsers.count + self.speakers.count
     }
     
-    
     //FIXME: IMPLEMENT
     func searchPerformed() -> Bool{
         return false
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        
         var index = indexPath.row
         
         //TODO: search must be implemented
@@ -222,16 +248,25 @@ class AttendeesViewController: UITableViewController{
     }
     
     @IBAction func showMenu(sender: AnyObject) {
-        let rightNavController = splitViewController!.viewControllers.last as! UINavigationController
-        
-        rightNavController.popToRootViewControllerAnimated(true)
+        if let splitController = self.splitViewController{
+            
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
     }
     
     func startOperationForPhotoRecord(photoDetails: Photorecord, indexPath: NSIndexPath, pendingOperations: PendingOperarions){
         
         switch (photoDetails.state) {
         case PhotoRecordState.New:
-            startDownloadForRecord(photoDetails, indexPath: indexPath, pendingOperations: pendingOperations)
+            if NetworkConnection.isConnected(){
+                startDownloadForRecord(photoDetails, indexPath: indexPath, pendingOperations: pendingOperations)
+            }
             break
             
         default: print("Do Nothing..")
