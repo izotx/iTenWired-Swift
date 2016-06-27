@@ -8,3 +8,4 @@
 #import <OneSignal/OneSignal.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "STKAudioPlayer.h"

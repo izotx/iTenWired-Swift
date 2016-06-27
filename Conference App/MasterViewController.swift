@@ -118,6 +118,11 @@ class MasterViewController : UIViewController{
         let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutViewNav", name: "About", imageUrl: "AboutFilled-50.png")
         self.menuItems.append(about)
  
+        let broadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
+        self.menuItems.append(broadcast)
+        
+        
+        
     }
     
 }

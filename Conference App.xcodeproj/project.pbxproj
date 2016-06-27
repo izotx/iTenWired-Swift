@@ -18,6 +18,34 @@
 		0EE564D11CB83E6C001678B0 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE564D01CB83E6C001678B0 /* MapView.storyboard */; };
 		0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE564D41CB845E7001678B0 /* AboutView.storyboard */; };
 		0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE564D61CB84DC1001678B0 /* AboutViewController.swift */; };
+		1F134D343237D76531721F31 /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71637ACD698BEAF42278E065 /* libPods-Conference App.a */; };
+		407BE0941D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */; };
+		407BE0951D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */; };
+		407BE0961D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */; };
+		407BE0971D216C87005D61CF /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0841D216C87005D61CF /* STKAudioPlayer.m */; };
+		407BE0981D216C87005D61CF /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0841D216C87005D61CF /* STKAudioPlayer.m */; };
+		407BE0991D216C87005D61CF /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0841D216C87005D61CF /* STKAudioPlayer.m */; };
+		407BE09A1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0861D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m */; };
+		407BE09B1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0861D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m */; };
+		407BE09C1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0861D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m */; };
+		407BE09D1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0881D216C87005D61CF /* STKCoreFoundationDataSource.m */; };
+		407BE09E1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0881D216C87005D61CF /* STKCoreFoundationDataSource.m */; };
+		407BE09F1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0881D216C87005D61CF /* STKCoreFoundationDataSource.m */; };
+		407BE0A01D216C87005D61CF /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08A1D216C87005D61CF /* STKDataSource.m */; };
+		407BE0A11D216C87005D61CF /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08A1D216C87005D61CF /* STKDataSource.m */; };
+		407BE0A21D216C87005D61CF /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08A1D216C87005D61CF /* STKDataSource.m */; };
+		407BE0A31D216C87005D61CF /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08C1D216C87005D61CF /* STKDataSourceWrapper.m */; };
+		407BE0A41D216C87005D61CF /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08C1D216C87005D61CF /* STKDataSourceWrapper.m */; };
+		407BE0A51D216C87005D61CF /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08C1D216C87005D61CF /* STKDataSourceWrapper.m */; };
+		407BE0A61D216C87005D61CF /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08E1D216C87005D61CF /* STKHTTPDataSource.m */; };
+		407BE0A71D216C87005D61CF /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08E1D216C87005D61CF /* STKHTTPDataSource.m */; };
+		407BE0A81D216C87005D61CF /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE08E1D216C87005D61CF /* STKHTTPDataSource.m */; };
+		407BE0A91D216C87005D61CF /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0901D216C87005D61CF /* STKLocalFileDataSource.m */; };
+		407BE0AA1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0901D216C87005D61CF /* STKLocalFileDataSource.m */; };
+		407BE0AB1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0901D216C87005D61CF /* STKLocalFileDataSource.m */; };
+		407BE0AC1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
+		407BE0AD1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
+		407BE0AE1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
 		4F2FBD121CBC5AEC0017A11F /* AttendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2FBD111CBC5AEC0017A11F /* AttendTableViewController.swift */; };
 		4F2FBD141CBC5C7C0017A11F /* AttendeesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */; };
 		4F3A78DB1CB5AAF500A87EE6 /* Attendees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A78DA1CB5AAF500A87EE6 /* Attendees.storyboard */; };
@@ -194,6 +222,25 @@
 		0EE564D41CB845E7001678B0 /* AboutView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutView.storyboard; sourceTree = "<group>"; };
 		0EE564D61CB84DC1001678B0 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		34F3630C96D4FC35912B1A71 /* Pods-Conference App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.debug.xcconfig"; sourceTree = "<group>"; };
+		407BE0811D216C87005D61CF /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
+		407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
+		407BE0831D216C87005D61CF /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAudioPlayer.h; sourceTree = "<group>"; };
+		407BE0841D216C87005D61CF /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAudioPlayer.m; sourceTree = "<group>"; };
+		407BE0851D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
+		407BE0861D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
+		407BE0871D216C87005D61CF /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
+		407BE0881D216C87005D61CF /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
+		407BE0891D216C87005D61CF /* STKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSource.h; sourceTree = "<group>"; };
+		407BE08A1D216C87005D61CF /* STKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSource.m; sourceTree = "<group>"; };
+		407BE08B1D216C87005D61CF /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSourceWrapper.h; sourceTree = "<group>"; };
+		407BE08C1D216C87005D61CF /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSourceWrapper.m; sourceTree = "<group>"; };
+		407BE08D1D216C87005D61CF /* STKHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKHTTPDataSource.h; sourceTree = "<group>"; };
+		407BE08E1D216C87005D61CF /* STKHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKHTTPDataSource.m; sourceTree = "<group>"; };
+		407BE08F1D216C87005D61CF /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKLocalFileDataSource.h; sourceTree = "<group>"; };
+		407BE0901D216C87005D61CF /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKLocalFileDataSource.m; sourceTree = "<group>"; };
+		407BE0911D216C87005D61CF /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
+		407BE0921D216C87005D61CF /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
+		407BE0931D216C87005D61CF /* StreamingKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-Prefix.pch"; sourceTree = "<group>"; };
 		4F2FBD111CBC5AEC0017A11F /* AttendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendTableViewController.swift; sourceTree = "<group>"; };
 		4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendeesCell.swift; sourceTree = "<group>"; };
 		4F3A78DA1CB5AAF500A87EE6 /* Attendees.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Attendees.storyboard; sourceTree = "<group>"; };
@@ -311,6 +358,7 @@
 		55FEE22E1CF785A80019F48D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		55FEE2341CF789460019F48D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
+		71637ACD698BEAF42278E065 /* libPods-Conference App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Conference App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
 		827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
@@ -350,6 +398,7 @@
 				827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */,
 				0EE564CF1CB8331A001678B0 /* MapKit.framework in Frameworks */,
 				71187E357A0B10911141570F /* libPods-Conference App.a in Frameworks */,
+				1F134D343237D76531721F31 /* libPods-Conference App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +419,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		407BE0801D216C87005D61CF /* StreamingKit */ = {
+			isa = PBXGroup;
+			children = (
+				407BE0811D216C87005D61CF /* NSMutableArray+STKAudioPlayer.h */,
+				407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */,
+				407BE0831D216C87005D61CF /* STKAudioPlayer.h */,
+				407BE0841D216C87005D61CF /* STKAudioPlayer.m */,
+				407BE0851D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.h */,
+				407BE0861D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m */,
+				407BE0871D216C87005D61CF /* STKCoreFoundationDataSource.h */,
+				407BE0881D216C87005D61CF /* STKCoreFoundationDataSource.m */,
+				407BE0891D216C87005D61CF /* STKDataSource.h */,
+				407BE08A1D216C87005D61CF /* STKDataSource.m */,
+				407BE08B1D216C87005D61CF /* STKDataSourceWrapper.h */,
+				407BE08C1D216C87005D61CF /* STKDataSourceWrapper.m */,
+				407BE08D1D216C87005D61CF /* STKHTTPDataSource.h */,
+				407BE08E1D216C87005D61CF /* STKHTTPDataSource.m */,
+				407BE08F1D216C87005D61CF /* STKLocalFileDataSource.h */,
+				407BE0901D216C87005D61CF /* STKLocalFileDataSource.m */,
+				407BE0911D216C87005D61CF /* STKQueueEntry.h */,
+				407BE0921D216C87005D61CF /* STKQueueEntry.m */,
+				407BE0931D216C87005D61CF /* StreamingKit-Prefix.pch */,
+			);
+			path = StreamingKit;
+			sourceTree = "<group>";
+		};
 		40D07A941CE0CA4C005E361B /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,6 +861,7 @@
 				55FEE22E1CF785A80019F48D /* FBSDKCoreKit.framework */,
 				827BA99E1CC2E44B003085BA /* Social.framework */,
 				0EE564CE1CB8331A001678B0 /* MapKit.framework */,
+				71637ACD698BEAF42278E065 /* libPods-Conference App.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -810,6 +886,7 @@
 		FE2623951CAEFA940074C58F = {
 			isa = PBXGroup;
 			children = (
+				407BE0801D216C87005D61CF /* StreamingKit */,
 				55FEE2301CF785CB0019F48D /* Frameworks */,
 				FE2623A01CAEFA940074C58F /* Conference App */,
 				FE2623BA1CAEFA940074C58F /* Conference AppTests */,
@@ -886,12 +963,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE2623CB1CAEFA940074C58F /* Build configuration list for PBXNativeTarget "Conference App" */;
 			buildPhases = (
-				2A16A9D166B7868905406D80 /* 📦 Check Pods Manifest.lock */,
+				2A16A9D166B7868905406D80 /* [CP] Check Pods Manifest.lock */,
 				FE26239A1CAEFA940074C58F /* Sources */,
 				FE26239B1CAEFA940074C58F /* Frameworks */,
 				FE26239C1CAEFA940074C58F /* Resources */,
-				A259EA5B77302391D62EE215 /* 📦 Embed Pods Frameworks */,
-				E705A329564CC0E7FE7FDA29 /* 📦 Copy Pods Resources */,
+				A259EA5B77302391D62EE215 /* [CP] Embed Pods Frameworks */,
+				E705A329564CC0E7FE7FDA29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1094,14 +1171,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A16A9D166B7868905406D80 /* 📦 Check Pods Manifest.lock */ = {
+		2A16A9D166B7868905406D80 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1109,14 +1186,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A259EA5B77302391D62EE215 /* 📦 Embed Pods Frameworks */ = {
+		A259EA5B77302391D62EE215 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1124,14 +1201,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Conference App/Pods-Conference App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E705A329564CC0E7FE7FDA29 /* 📦 Copy Pods Resources */ = {
+		E705A329564CC0E7FE7FDA29 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1153,6 +1230,8 @@
 				557D354C1CE4DC8B00562A7A /* MyItenController.swift in Sources */,
 				0EBCE1E61CC2E14E008CEA2C /* LiveBroadcastViewController.swift in Sources */,
 				5570EEDA1CF4EC100033FCDC /* DateEnum.swift in Sources */,
+				407BE0A01D216C87005D61CF /* STKDataSource.m in Sources */,
+				407BE0971D216C87005D61CF /* STKAudioPlayer.m in Sources */,
 				4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */,
 				555A7A6A1CF348580068F58C /* speakerHeaderCell.swift in Sources */,
 				55FEE20B1CF5FF8D0019F48D /* MenuItem.swift in Sources */,
@@ -1161,6 +1240,7 @@
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,
 				559F76701CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift in Sources */,
 				55FEE2281CF764BD0019F48D /* TwitterController.swift in Sources */,
+				407BE09D1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */,
 				55FEE21F1CF606D10019F48D /* SCLExtensions.swift in Sources */,
 				0E647B331CBF2E67006DFB68 /* AnnotationDetailViewController.swift in Sources */,
 				5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */,
@@ -1171,6 +1251,7 @@
 				892079D41CC9A05F008C1CAC /* SocialMediaData.swift in Sources */,
 				55FEE2231CF763400019F48D /* Twitter.swift in Sources */,
 				55DAC36D1CEBA36700941824 /* SocialMediaCell.swift in Sources */,
+				407BE09A1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				55DAC3171CE5258400941824 /* PhotoRecord.swift in Sources */,
 				FEF7E0C61CB852B1002A810B /* Event.swift in Sources */,
 				559F76751CEF5E3C003BE6E6 /* Track.swift in Sources */,
@@ -1181,6 +1262,7 @@
 				559F76471CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift in Sources */,
 				554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */,
 				55FEE2071CF500250019F48D /* MIBadgeButton.swift in Sources */,
+				407BE0A61D216C87005D61CF /* STKHTTPDataSource.m in Sources */,
 				55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */,
 				55DAC31B1CE527A100941824 /* PendingOperations.swift in Sources */,
 				5543342A1CE27E7500A6001C /* Notification.swift in Sources */,
@@ -1200,7 +1282,9 @@
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
 				4F2FBD141CBC5C7C0017A11F /* AttendeesCell.swift in Sources */,
 				D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */,
+				407BE0A91D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 				55DAC3811CEBC77A00941824 /* About.swift in Sources */,
+				407BE0A31D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
 				55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */,
 				555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */,
@@ -1210,6 +1294,8 @@
 				554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */,
 				A12350191CB9500400B1233E /* ItineraryViewController.swift in Sources */,
 				55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */,
+				407BE0AC1D216C87005D61CF /* STKQueueEntry.m in Sources */,
+				407BE0941D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				FE2623A91CAEFA940074C58F /* DetailViewController.swift in Sources */,
 				55881A9C1CE129FF009B8399 /* Exhibitor.swift in Sources */,
 				55DAC3831CECAD8200941824 /* MasterViewController.swift in Sources */,
@@ -1224,6 +1310,15 @@
 				557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */,
 				557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */,
 				552E692F1CE285810010C3C9 /* Notification.swift in Sources */,
+				407BE0981D216C87005D61CF /* STKAudioPlayer.m in Sources */,
+				407BE0A41D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
+				407BE09E1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */,
+				407BE0A71D216C87005D61CF /* STKHTTPDataSource.m in Sources */,
+				407BE09B1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				407BE0AD1D216C87005D61CF /* STKQueueEntry.m in Sources */,
+				407BE0A11D216C87005D61CF /* STKDataSource.m in Sources */,
+				407BE0951D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				407BE0AA1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1235,6 +1330,15 @@
 				557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */,
 				557D354A1CE4BBA300562A7A /* NotificationController.swift in Sources */,
 				FE2623C71CAEFA940074C58F /* Conference_AppUITests.swift in Sources */,
+				407BE0991D216C87005D61CF /* STKAudioPlayer.m in Sources */,
+				407BE0A51D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
+				407BE09F1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */,
+				407BE0A81D216C87005D61CF /* STKHTTPDataSource.m in Sources */,
+				407BE09C1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				407BE0AE1D216C87005D61CF /* STKQueueEntry.m in Sources */,
+				407BE0A21D216C87005D61CF /* STKDataSource.m in Sources */,
+				407BE0961D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				407BE0AB1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
