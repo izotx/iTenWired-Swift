@@ -7,42 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20AB69E8E7C0905C2A28BB7EF848EC87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		398528B9CCCA0812F4BBE32A124E6506 /* Pods-Conference App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF003AFFE0232C74E72F72E14EE00C6 /* Pods-Conference App-dummy.m */; };
+		15BCDB5DE771A20391EEA08BE4B4D9E6 /* PWDisplayLinkerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C43F302E327F415D448F4C83F24C46 /* PWDisplayLinkerDelegate.swift */; };
+		1AB83CC3F5A76053D6087AD4E23D783C /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2383B6BA20730D8F28DDEC913F677 /* DataStructures.swift */; };
+		1CFDACC35DB38CA3141A4A14E815E1DC /* Pods-Conference App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */; };
+		2B22F1C15027A27BA577ADA0E742AE54 /* JMCiBeaconManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C902EA0BFE9C2D3BBE022177A5748B24 /* JMCiBeaconManager-dummy.m */; };
+		2DB1A57EACF9DE5ADF00E4F0CB96F928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		3C310EE8F56C6FD5AACB11DAA7626980 /* PWDisplayLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA150EA1C4D756BAD10A16E9D2A90835 /* PWDisplayLinker.swift */; };
+		479BE14B6E6024BF115C72CB567461A9 /* Pods-Conference App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62D2CC96AF2915D3A65C9810047D9A66 /* RadarScannerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBECAE69B9C7EBAD2131367635B9EC3 /* RadarScannerShape.swift */; };
+		6E1FDD47BCBDC30DEB1B17152E4A0A97 /* JMCBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBB658E19151CD0EF988FE5D5CD64D /* JMCBluetoothManager.swift */; };
+		B4C0631D44981217BD9E957DE77F0865 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B6D8B8C8C91DABA9F589589F09545F1A /* BeaconShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FFAD635D864BAE1EC88644BF09A12D /* BeaconShape.swift */; };
+		BE2EBC20B8BBD254B4EB81D4D04A6644 /* JMCiBeaconManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE766647F25AC468E83F89CF4641127 /* JMCiBeaconManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D134F29E2A36899BCDB0FAA486601697 /* JMCRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519CD752593FFC753B1AF32FB827196 /* JMCRadarView.swift */; };
+		E1AAE154123E6F2C989875B1BED6CA8A /* JMCBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BFF5F1E7E7D733AF0182DD5493A9D /* JMCBeaconManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BE1E252C836731BF8F325C88CD21D617 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61290FB0253531D2C0D469258A0417DE;
+			remoteInfo = JMCiBeaconManager;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		27C3DDF14BA732E6BC379CA5C2CCCFD8 /* Pods-Conference App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-frameworks.sh"; sourceTree = "<group>"; };
-		5AF003AFFE0232C74E72F72E14EE00C6 /* Pods-Conference App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Conference App-dummy.m"; sourceTree = "<group>"; };
-		72B8382DD8548889DE56DDBB9FDD83E9 /* Pods-Conference App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Conference App-acknowledgements.plist"; sourceTree = "<group>"; };
-		7E16E46E2BC04DBE9A767E47B285F757 /* Pods-Conference App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-resources.sh"; sourceTree = "<group>"; };
-		88CF3BEDFC2EEBA35E081080610E6C31 /* libPods-Conference App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Conference App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A98DA003BC3D16244E1E32F64E16E21 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		080E04793D79DA23A4BB8E1C813DB0F4 /* JMCiBeaconManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMCiBeaconManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		134B940329C66C7F325E2E20EF772374 /* Pods-Conference App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-resources.sh"; sourceTree = "<group>"; };
+		205ACBE9F6271F34E7DB9BEE0A76F5D5 /* JMCiBeaconManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-prefix.pch"; sourceTree = "<group>"; };
+		33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Conference App-umbrella.h"; sourceTree = "<group>"; };
+		3519CD752593FFC753B1AF32FB827196 /* JMCRadarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCRadarView.swift; path = JMCiBeaconManager/Classes/JMCRadarView.swift; sourceTree = "<group>"; };
+		5220BD7FC5F8B2B8FB0635089534D027 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.debug.xcconfig"; sourceTree = "<group>"; };
+		67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
+		76FFAD635D864BAE1EC88644BF09A12D /* BeaconShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconShape.swift; path = JMCiBeaconManager/Classes/BeaconShape.swift; sourceTree = "<group>"; };
+		8551CED925E57C8FAAD6A9C00A7BDB0A /* Pods-Conference App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Conference App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		85C43F302E327F415D448F4C83F24C46 /* PWDisplayLinkerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinkerDelegate.swift; path = JMCiBeaconManager/Classes/PWDisplayLinkerDelegate.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C7E71528D89A8AF52F3B944F840BAD03 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
+		9415C804E4BA1FB27634166A957FB3AB /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BCBB658E19151CD0EF988FE5D5CD64D /* JMCBluetoothManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBluetoothManager.swift; path = JMCiBeaconManager/Classes/JMCBluetoothManager.swift; sourceTree = "<group>"; };
+		9D1CFB293B03E7F2F56478A543484708 /* JMCiBeaconManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JMCiBeaconManager.modulemap; sourceTree = "<group>"; };
+		9F070D35F9450795D5537D55D81FDEA7 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		A2C2383B6BA20730D8F28DDEC913F677 /* DataStructures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStructures.swift; path = JMCiBeaconManager/Classes/DataStructures.swift; sourceTree = "<group>"; };
+		AD31636541C246F5BA65ACBADEC6BB28 /* Pods-Conference App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-frameworks.sh"; sourceTree = "<group>"; };
+		B3381B954FF0573C0BBEE073A9E69E8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C800003B7D1D7104D29612A132CF281E /* Pods-Conference App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Conference App.modulemap"; sourceTree = "<group>"; };
+		C902EA0BFE9C2D3BBE022177A5748B24 /* JMCiBeaconManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMCiBeaconManager-dummy.m"; sourceTree = "<group>"; };
+		CA150EA1C4D756BAD10A16E9D2A90835 /* PWDisplayLinker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinker.swift; path = JMCiBeaconManager/Classes/PWDisplayLinker.swift; sourceTree = "<group>"; };
+		CE5356B61B0AFB0BC8F05DE195B2DE79 /* Pods-Conference App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Conference App-acknowledgements.plist"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F352C112282BB72FE89AD161DD4F90B5 /* Pods-Conference App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.debug.xcconfig"; sourceTree = "<group>"; };
-		FA6A887126D8F575DFE10EC482798DB4 /* Pods-Conference App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Conference App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Conference App-dummy.m"; sourceTree = "<group>"; };
+		EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JMCiBeaconManager.xcconfig; sourceTree = "<group>"; };
+		ECE766647F25AC468E83F89CF4641127 /* JMCiBeaconManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-umbrella.h"; sourceTree = "<group>"; };
+		EDBECAE69B9C7EBAD2131367635B9EC3 /* RadarScannerShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarScannerShape.swift; path = JMCiBeaconManager/Classes/RadarScannerShape.swift; sourceTree = "<group>"; };
+		FF1BFF5F1E7E7D733AF0182DD5493A9D /* JMCBeaconManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBeaconManager.swift; path = JMCiBeaconManager/Classes/JMCBeaconManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3E6984EB577A851D533F44220B5B6047 /* Frameworks */ = {
+		0FC8F2602D193A43A9C40A0DB2932567 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AB69E8E7C0905C2A28BB7EF848EC87 /* Foundation.framework in Frameworks */,
+				2DB1A57EACF9DE5ADF00E4F0CB96F928 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FFD7E8F73DD12FC4A0C367E0833058C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4C0631D44981217BD9E957DE77F0865 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3952C87A0347E8E0E11A4F42716A66E0 /* Targets Support Files */ = {
+		02FE4FC2D5D5AE284504438598D10818 /* Pods-Conference App */ = {
 			isa = PBXGroup;
 			children = (
-				EB2FCF911C22D3FD311F1D9E8E808845 /* Pods-Conference App */,
+				B3381B954FF0573C0BBEE073A9E69E8C /* Info.plist */,
+				C800003B7D1D7104D29612A132CF281E /* Pods-Conference App.modulemap */,
+				8551CED925E57C8FAAD6A9C00A7BDB0A /* Pods-Conference App-acknowledgements.markdown */,
+				CE5356B61B0AFB0BC8F05DE195B2DE79 /* Pods-Conference App-acknowledgements.plist */,
+				E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */,
+				AD31636541C246F5BA65ACBADEC6BB28 /* Pods-Conference App-frameworks.sh */,
+				134B940329C66C7F325E2E20EF772374 /* Pods-Conference App-resources.sh */,
+				33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */,
+				5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */,
+				67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-Conference App";
+			path = "Target Support Files/Pods-Conference App";
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -53,12 +111,36 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6202124E9D433C3EA7B1CF2F09917CA5 /* Pods */ = {
+		534F60D0A8E5989E1190554E2A818DE0 /* JMCiBeaconManager */ = {
 			isa = PBXGroup;
 			children = (
-				B109A558AEC0464E1C8AD13A3517ECA8 /* OneSignal */,
+				76FFAD635D864BAE1EC88644BF09A12D /* BeaconShape.swift */,
+				A2C2383B6BA20730D8F28DDEC913F677 /* DataStructures.swift */,
+				FF1BFF5F1E7E7D733AF0182DD5493A9D /* JMCBeaconManager.swift */,
+				9BCBB658E19151CD0EF988FE5D5CD64D /* JMCBluetoothManager.swift */,
+				3519CD752593FFC753B1AF32FB827196 /* JMCRadarView.swift */,
+				CA150EA1C4D756BAD10A16E9D2A90835 /* PWDisplayLinker.swift */,
+				85C43F302E327F415D448F4C83F24C46 /* PWDisplayLinkerDelegate.swift */,
+				EDBECAE69B9C7EBAD2131367635B9EC3 /* RadarScannerShape.swift */,
+				D9CF69D27F7292B51E9A73C3FCCAF376 /* Support Files */,
 			);
-			name = Pods;
+			path = JMCiBeaconManager;
+			sourceTree = "<group>";
+		};
+		54297A67335D1656839186D026D3105C /* OneSignal */ = {
+			isa = PBXGroup;
+			children = (
+				54C03C487312B9DF7CD04895A524738A /* Frameworks */,
+			);
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
+		54C03C487312B9DF7CD04895A524738A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F070D35F9450795D5537D55D81FDEA7 /* OneSignal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -66,26 +148,19 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6202124E9D433C3EA7B1CF2F09917CA5 /* Pods */,
-				96C62983050D32FB372446FA6E956EF5 /* Products */,
-				3952C87A0347E8E0E11A4F42716A66E0 /* Targets Support Files */,
+				A6063C150AE6DF5C4EA5878CF46D29EF /* Pods */,
+				F0094D07BEAA5B0E23AAF3C027F7FED6 /* Products */,
+				E38CC51AE345FDC0ED6C1F836AF05209 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		96C62983050D32FB372446FA6E956EF5 /* Products */ = {
+		A6063C150AE6DF5C4EA5878CF46D29EF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				88CF3BEDFC2EEBA35E081080610E6C31 /* libPods-Conference App.a */,
+				534F60D0A8E5989E1190554E2A818DE0 /* JMCiBeaconManager */,
+				54297A67335D1656839186D026D3105C /* OneSignal */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B109A558AEC0464E1C8AD13A3517ECA8 /* OneSignal */ = {
-			isa = PBXGroup;
-			children = (
-				FF9CEBD734AC19E8ADE2CA12CDF9AD21 /* Frameworks */,
-			);
-			path = OneSignal;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -96,47 +171,93 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB2FCF911C22D3FD311F1D9E8E808845 /* Pods-Conference App */ = {
+		D9CF69D27F7292B51E9A73C3FCCAF376 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA6A887126D8F575DFE10EC482798DB4 /* Pods-Conference App-acknowledgements.markdown */,
-				72B8382DD8548889DE56DDBB9FDD83E9 /* Pods-Conference App-acknowledgements.plist */,
-				5AF003AFFE0232C74E72F72E14EE00C6 /* Pods-Conference App-dummy.m */,
-				27C3DDF14BA732E6BC379CA5C2CCCFD8 /* Pods-Conference App-frameworks.sh */,
-				7E16E46E2BC04DBE9A767E47B285F757 /* Pods-Conference App-resources.sh */,
-				F352C112282BB72FE89AD161DD4F90B5 /* Pods-Conference App.debug.xcconfig */,
-				C7E71528D89A8AF52F3B944F840BAD03 /* Pods-Conference App.release.xcconfig */,
+				5220BD7FC5F8B2B8FB0635089534D027 /* Info.plist */,
+				9D1CFB293B03E7F2F56478A543484708 /* JMCiBeaconManager.modulemap */,
+				EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */,
+				C902EA0BFE9C2D3BBE022177A5748B24 /* JMCiBeaconManager-dummy.m */,
+				205ACBE9F6271F34E7DB9BEE0A76F5D5 /* JMCiBeaconManager-prefix.pch */,
+				ECE766647F25AC468E83F89CF4641127 /* JMCiBeaconManager-umbrella.h */,
 			);
-			name = "Pods-Conference App";
-			path = "Target Support Files/Pods-Conference App";
+			name = "Support Files";
+			path = "../Target Support Files/JMCiBeaconManager";
 			sourceTree = "<group>";
 		};
-		FF9CEBD734AC19E8ADE2CA12CDF9AD21 /* Frameworks */ = {
+		E38CC51AE345FDC0ED6C1F836AF05209 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8A98DA003BC3D16244E1E32F64E16E21 /* OneSignal.framework */,
+				02FE4FC2D5D5AE284504438598D10818 /* Pods-Conference App */,
 			);
-			name = Frameworks;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F0094D07BEAA5B0E23AAF3C027F7FED6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				080E04793D79DA23A4BB8E1C813DB0F4 /* JMCiBeaconManager.framework */,
+				9415C804E4BA1FB27634166A957FB3AB /* Pods_Conference_App.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		10E92E986678C9612708317121157BA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2EBC20B8BBD254B4EB81D4D04A6644 /* JMCiBeaconManager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C1CA503E43FB381FCD496E2A32FEC0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				479BE14B6E6024BF115C72CB567461A9 /* Pods-Conference App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		1CCD2D579609832F3E1B93CB20CBFBA1 /* Pods-Conference App */ = {
+		61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFF8E6FC57FAC5A763765BEDD0548621 /* Build configuration list for PBXNativeTarget "Pods-Conference App" */;
+			buildConfigurationList = B4CB58A11D032A539303719F9A68B7D8 /* Build configuration list for PBXNativeTarget "JMCiBeaconManager" */;
 			buildPhases = (
-				285F32EA9E163258BA7840506C8D8C24 /* Sources */,
-				3E6984EB577A851D533F44220B5B6047 /* Frameworks */,
+				1E583279515D4E50164DF496D47BCD5F /* Sources */,
+				0FC8F2602D193A43A9C40A0DB2932567 /* Frameworks */,
+				10E92E986678C9612708317121157BA1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = JMCiBeaconManager;
+			productName = JMCiBeaconManager;
+			productReference = 080E04793D79DA23A4BB8E1C813DB0F4 /* JMCiBeaconManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE90AC0047CC18A413E8E5B2BA37A0E8 /* Pods-Conference App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11CE65DA809B75E6BD57E387E2F735BA /* Build configuration list for PBXNativeTarget "Pods-Conference App" */;
+			buildPhases = (
+				93D2D927AA99A70175B6AE2508313258 /* Sources */,
+				7FFD7E8F73DD12FC4A0C367E0833058C /* Frameworks */,
+				3C1CA503E43FB381FCD496E2A32FEC0C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E61CD6C521DC7C554FCDC5A600029C0 /* PBXTargetDependency */,
+			);
 			name = "Pods-Conference App";
 			productName = "Pods-Conference App";
-			productReference = 88CF3BEDFC2EEBA35E081080610E6C31 /* libPods-Conference App.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 9415C804E4BA1FB27634166A957FB3AB /* Pods_Conference_App.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,25 +276,51 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 96C62983050D32FB372446FA6E956EF5 /* Products */;
+			productRefGroup = F0094D07BEAA5B0E23AAF3C027F7FED6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CCD2D579609832F3E1B93CB20CBFBA1 /* Pods-Conference App */,
+				61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */,
+				BE90AC0047CC18A413E8E5B2BA37A0E8 /* Pods-Conference App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		285F32EA9E163258BA7840506C8D8C24 /* Sources */ = {
+		1E583279515D4E50164DF496D47BCD5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398528B9CCCA0812F4BBE32A124E6506 /* Pods-Conference App-dummy.m in Sources */,
+				B6D8B8C8C91DABA9F589589F09545F1A /* BeaconShape.swift in Sources */,
+				1AB83CC3F5A76053D6087AD4E23D783C /* DataStructures.swift in Sources */,
+				E1AAE154123E6F2C989875B1BED6CA8A /* JMCBeaconManager.swift in Sources */,
+				6E1FDD47BCBDC30DEB1B17152E4A0A97 /* JMCBluetoothManager.swift in Sources */,
+				2B22F1C15027A27BA577ADA0E742AE54 /* JMCiBeaconManager-dummy.m in Sources */,
+				D134F29E2A36899BCDB0FAA486601697 /* JMCRadarView.swift in Sources */,
+				3C310EE8F56C6FD5AACB11DAA7626980 /* PWDisplayLinker.swift in Sources */,
+				15BCDB5DE771A20391EEA08BE4B4D9E6 /* PWDisplayLinkerDelegate.swift in Sources */,
+				62D2CC96AF2915D3A65C9810047D9A66 /* RadarScannerShape.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93D2D927AA99A70175B6AE2508313258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CFDACC35DB38CA3141A4A14E815E1DC /* Pods-Conference App-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E61CD6C521DC7C554FCDC5A600029C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JMCiBeaconManager;
+			target = 61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */;
+			targetProxy = BE1E252C836731BF8F325C88CD21D617 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		034014829C1E4434983CF3A690C12017 /* Debug */ = {
@@ -218,26 +365,64 @@
 			};
 			name = Debug;
 		};
-		5867DCA2FF93AE4CA382D1464A349365 /* Release */ = {
+		55E0A7F10D207D2A449B9F0882A8E5C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7E71528D89A8AF52F3B944F840BAD03 /* Pods-Conference App.release.xcconfig */;
+			baseConfigurationReference = EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/JMCiBeaconManager/JMCiBeaconManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JMCiBeaconManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JMCiBeaconManager/JMCiBeaconManager.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JMCiBeaconManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		A92051B2473232140037261E3B084C82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JMCiBeaconManager/JMCiBeaconManager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JMCiBeaconManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JMCiBeaconManager/JMCiBeaconManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JMCiBeaconManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -277,30 +462,85 @@
 			};
 			name = Release;
 		};
-		E2ED67AD939DEA104A9136E16CCFED42 /* Debug */ = {
+		E16573C116AF782FC1381EC590661CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F352C112282BB72FE89AD161DD4F90B5 /* Pods-Conference App.debug.xcconfig */;
+			baseConfigurationReference = 67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Conference_App;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F942ABC4B5C860F4E862975B744DED16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Pods_Conference_App;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		11CE65DA809B75E6BD57E387E2F735BA /* Build configuration list for PBXNativeTarget "Pods-Conference App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F942ABC4B5C860F4E862975B744DED16 /* Debug */,
+				E16573C116AF782FC1381EC590661CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -310,11 +550,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFF8E6FC57FAC5A763765BEDD0548621 /* Build configuration list for PBXNativeTarget "Pods-Conference App" */ = {
+		B4CB58A11D032A539303719F9A68B7D8 /* Build configuration list for PBXNativeTarget "JMCiBeaconManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E2ED67AD939DEA104A9136E16CCFED42 /* Debug */,
-				5867DCA2FF93AE4CA382D1464A349365 /* Release */,
+				A92051B2473232140037261E3B084C82 /* Debug */,
+				55E0A7F10D207D2A449B9F0882A8E5C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

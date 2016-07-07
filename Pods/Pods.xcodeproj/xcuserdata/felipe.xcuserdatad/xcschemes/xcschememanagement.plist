@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JMCiBeaconManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Conference App.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CCD2D579609832F3E1B93CB20CBFBA1</key>
+		<key>61290FB0253531D2C0D469258A0417DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE90AC0047CC18A413E8E5B2BA37A0E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
