@@ -1,10 +1,34 @@
+//    Copyright (c) 2016, UWF
+//    All rights reserved.
+//
+//    Redistribution and use in source and binary forms, with or without
+//    modification, are permitted provided that the following conditions are met:
+//
+//    * Redistributions of source code must retain the above copyright notice,
+//    this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above copyright
+//    notice, this list of conditions and the following disclaimer in the
+//    documentation and/or other materials provided with the distribution.
+//    * Neither the name of UWF nor the names of its contributors may be used to
+//    endorse or promote products derived from this software without specific
+//    prior written permission.
+//
+//    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+//    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+//    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+//    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+//    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+//    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+//    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+//    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+//    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+//    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+//    POSSIBILITY OF SUCH DAMAGE.
 //
 //  ViewController.swift
 //  liveStream
 //
 //  Created by Julian L on 4/16/16.
-//  Copyright © 2016 Julian Loftis. All rights reserved.
-//
 
 import UIKit
 import AVFoundation
@@ -51,6 +75,19 @@ class LiveBroadcastViewController: UIViewController {
         }
     }
     
+    override func remoteControlReceivedWithEvent(event: UIEvent?) {
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
+        self.becomeFirstResponder()
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -86,14 +123,11 @@ class LiveBroadcastViewController: UIViewController {
         {
             // Stream is not likely to proceed
             badStreamCount = badStreamCount + 1
-            // print("Not likely - Count - \(count) - Bad Count - \(badStreamCount)")
         }
         else if (self.player?.rate == 0.0) {
             // Internet Connection drops during stream
             badStreamCount = badStreamCount + 1
             player?.rate = 1.0
-            // print("Internet Drop - Count - \(count) - Bad Count - \(badStreamCount)")
-
         }
         else {
             // Stream is successful, and will keep playing
@@ -101,12 +135,12 @@ class LiveBroadcastViewController: UIViewController {
                 badStreamCount = badStreamCount - 1
                 
             }
-            // print("Likely - Count - \(count) - Bad Count - \(badStreamCount)")
         }
         
         // If the count of badStreamCount > 3, display an alert saying stream unavailable
-        if badStreamCount > 3 {
+        if badStreamCount > 15 {
             timer.invalidate()
+            
             let noStream = UIAlertController(title: "Stream Unavailable", message: "Stream cannot be loaded or is unavailable at this time.", preferredStyle: UIAlertControllerStyle.Alert)
             
             noStream.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: { (action: UIAlertAction!) in
@@ -119,7 +153,6 @@ class LiveBroadcastViewController: UIViewController {
             
             presentViewController(noStream, animated: true, completion: nil)
         }
-        
     }
     
     // Starts the AVPlayer and NSTimer
@@ -129,8 +162,6 @@ class LiveBroadcastViewController: UIViewController {
             return
         }
         
-
-      
         
         // Creates a timer that updates the duration labels (HH:MM:SS), calls audioDuration()
         let newtimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LiveBroadcastViewController.audioDuration), userInfo: nil, repeats: true)
@@ -139,16 +170,9 @@ class LiveBroadcastViewController: UIViewController {
         
         // Initiate the new AVPlayer instance
         
-        // WUWF Radio URL
-        //let url = "http://pubint.ic.llnwd.net/stream/pubint_wuwfhd3"
         
         // Pensacola Business Radio URL
         let url = "http://199.180.72.2:9110/;stream.mp3" //- Public Business Radio
-        
-        //let url = "http://199.180.72.2:9110/home.html"
-        
-        // Random Weather Radio URL for testing
-        ///let url = "http://audiostream.wunderground.com/2000grandprix/cedarfalls.mp3.m3u"
         
         let playerItem = AVPlayerItem( URL:NSURL( string:url )! )
         player = AVPlayer(playerItem:playerItem)
@@ -159,7 +183,6 @@ class LiveBroadcastViewController: UIViewController {
             let audioDictionary = [MPMediaItemPropertyTitle: "Pensacola Business Radio" , MPMediaItemPropertyArtist:"Pensacola Business Radio"]
             MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = audioDictionary
         }
-        
     }
     
     // Converts seconds to (HH:MM:SS) to display on screen
@@ -187,8 +210,5 @@ class LiveBroadcastViewController: UIViewController {
             }
         }
     }
-    
-    
-    
 }
 

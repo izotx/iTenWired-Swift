@@ -129,7 +129,6 @@ extension AgendaViewController: UITableViewDelegate, UITableViewDataSource{
         
         //builds cell data
         cell.build(event)
-//        cell.setStartButton(myItenController.isPresent(event))
         
         return cell
     }
@@ -145,52 +144,10 @@ extension AgendaViewController: UITableViewDelegate, UITableViewDataSource{
         
         let date = events[0].date
         
-        //FIXEME: Refactor
         let month = Int(date.componentsSeparatedByString("/")[0])
         let year = date.componentsSeparatedByString("/")[2]
         
-        var monthString = ""
-        
-        switch(month!){
-        case 1: monthString = DateEnum.January.rawValue
-            break
-            
-        case 2: monthString = DateEnum.Feburary.rawValue
-            break
-            
-        case 3: monthString = DateEnum.March.rawValue
-            break
-            
-        case 4: monthString = DateEnum.April.rawValue
-            break
-            
-        case 5: monthString = DateEnum.May.rawValue
-            break
-            
-        case 6: monthString = DateEnum.June.rawValue
-            break
-            
-        case 7: monthString = DateEnum.July.rawValue
-            break
-            
-        case 8: monthString = DateEnum.Agust.rawValue
-            break
-            
-        case 9: monthString = DateEnum.September.rawValue
-            break
-            
-        case 10: monthString = DateEnum.October.rawValue
-            break
-            
-        case 11: monthString = DateEnum.November.rawValue
-            break
-            
-        case 5: monthString = DateEnum.December.rawValue
-            break
-            
-        default:
-            break
-        }
+        let monthString = DateEnum.getMonth(month!)
         
         cell?.dateLabel.text = "\(monthString) \(year)"
         
@@ -210,5 +167,4 @@ extension AgendaViewController: UITableViewDelegate, UITableViewDataSource{
         
         self.navigationController?.pushViewController(destinationViewController, animated: true)
     }
-
 }

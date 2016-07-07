@@ -43,4 +43,25 @@ enum DateEnum: String{
     case October
     case November
     case December
+    
+    static func getMonth(i : Int) -> String{
+        
+        switch(i){
+            
+        case 1:     return DateEnum.January.rawValue
+        case 2:     return DateEnum.Feburary.rawValue
+        case 3:     return DateEnum.March.rawValue
+        case 4:     return DateEnum.April.rawValue
+        case 5:     return DateEnum.May.rawValue
+        case 6:     return DateEnum.June.rawValue
+        case 7:     return DateEnum.July.rawValue
+        case 8:     return DateEnum.Agust.rawValue
+        case 9:     return DateEnum.September.rawValue
+        case 10:    return DateEnum.October.rawValue
+        case 11:    return DateEnum.November.rawValue
+        case 12:    return DateEnum.December.rawValue
+        
+        default: return ""
+        }
+    }
 }

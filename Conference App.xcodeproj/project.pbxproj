@@ -105,6 +105,7 @@
 		559F76701CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F766F1CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift */; };
 		559F76751CEF5E3C003BE6E6 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F76741CEF5E3C003BE6E6 /* Track.swift */; };
 		559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F76761CEF6085003BE6E6 /* TrackData.swift */; };
+		55B988B71D2EB40700B48349 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B988B61D2EB40700B48349 /* Images.xcassets */; };
 		55DAC3171CE5258400941824 /* PhotoRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3161CE5258400941824 /* PhotoRecord.swift */; };
 		55DAC3191CE526E600941824 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 55DAC3181CE526E600941824 /* placeholder.png */; };
 		55DAC31B1CE527A100941824 /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC31A1CE527A100941824 /* PendingOperations.swift */; };
@@ -296,6 +297,7 @@
 		559F766F1CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		559F76741CEF5E3C003BE6E6 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		559F76761CEF6085003BE6E6 /* TrackData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackData.swift; sourceTree = "<group>"; };
+		55B988B61D2EB40700B48349 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		55DAC3161CE5258400941824 /* PhotoRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoRecord.swift; sourceTree = "<group>"; };
 		55DAC3181CE526E600941824 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		55DAC31A1CE527A100941824 /* PendingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
@@ -923,6 +925,7 @@
 				552E692A1CE284B60010C3C9 /* Controllers */,
 				55229BD11CE124E60023EFD3 /* Entity */,
 				0E647B301CBF2E38006DFB68 /* AddAnnotation.swift */,
+				55B988B61D2EB40700B48349 /* Images.xcassets */,
 				FE2623AD1CAEFA940074C58F /* Assets.xcassets */,
 				FE2623A31CAEFA940074C58F /* Conference_App.xcdatamodeld */,
 				FE2623B21CAEFA940074C58F /* Info.plist */,
@@ -1112,6 +1115,7 @@
 				55DAC3771CEBAA8600941824 /* Google-50.png in Resources */,
 				5570EECC1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png in Resources */,
 				559F76511CEE5AE0003BE6E6 /* Agenda-50.png in Resources */,
+				55B988B71D2EB40700B48349 /* Images.xcassets in Resources */,
 				559F76451CEE3CFB003BE6E6 /* Style.json in Resources */,
 				55DAC3791CEBAACF00941824 /* LinkedIn-50.png in Resources */,
 				55DAC3891CECFDF200941824 /* LinkedIn-25.png in Resources */,

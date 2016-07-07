@@ -33,9 +33,6 @@
 import UIKit
 import CoreData
 
-//import FBSDKCoreKit
-//import FBSDKLoginKit
-
 enum NotificationObserver:String {
     case APPBecameActive
     case RemoteNotificationReceived
