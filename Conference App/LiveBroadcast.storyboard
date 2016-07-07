@@ -120,7 +120,7 @@
                             <constraint firstItem="4aR-X7-cpy" firstAttribute="top" secondItem="48x-Dz-gls" secondAttribute="bottom" constant="8" id="tYJ-vJ-NQX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="byL-hR-Q6p">
+                    <navigationItem key="navigationItem" title="Live Broadcast" id="byL-hR-Q6p">
                         <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="HzM-5j-eUt">
                             <connections>
                                 <action selector="showMenu:" destination="eDK-YJ-Q42" id="npg-zN-D7R"/>
@@ -132,12 +132,14 @@
                         <outlet property="broadcastTitle" destination="48x-Dz-gls" id="GcI-pA-agw"/>
                         <outlet property="hours" destination="cVq-49-vlu" id="C0P-Ib-D6g"/>
                         <outlet property="minutes" destination="lHg-8g-VGo" id="7Il-8P-0CR"/>
+                        <outlet property="pauseButton" destination="PPS-oR-Mef" id="SYT-Hb-1Rh"/>
+                        <outlet property="playButton" destination="hMB-5o-tte" id="Uiy-Tg-8Fa"/>
                         <outlet property="seconds" destination="Me8-n5-pil" id="jhy-yt-iWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZD2-za-OeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221" y="-369"/>
+            <point key="canvasLocation" x="369" y="-359"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a02-bu-TWH">

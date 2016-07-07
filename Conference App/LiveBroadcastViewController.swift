@@ -48,6 +48,8 @@ class LiveBroadcastViewController: UIViewController {
     var count: Int = 0
     var badStreamCount: Int = 0
     
+    var session : AVAudioSession!
+    
     
     @IBOutlet var broadcastTitle: UILabel!
     
@@ -59,6 +61,12 @@ class LiveBroadcastViewController: UIViewController {
     // Starts the Audio Stream
     @IBAction func playAudio(sender: AnyObject) {
         startAudio()
+        
+        playButton.enabled = false
+        playButton.alpha = 0.5
+        
+        pauseButton.enabled = true
+        pauseButton.alpha = 1.0
     }
     
     // Pauses the Stream
@@ -66,16 +74,31 @@ class LiveBroadcastViewController: UIViewController {
         if let tempPlayer = player {
             tempPlayer.pause()
             player = nil
-            count = 0
-            hours.text = "00"
-            minutes.text = "00"
-            seconds.text = "00"
+            onPause()
             timer.invalidate()
             MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = nil
         }
     }
     
-    override func remoteControlReceivedWithEvent(event: UIEvent?) {
+    @IBOutlet var playButton: UIButton!
+    @IBOutlet var pauseButton: UIButton!
+    
+    /**
+        Called when pause is performed. Responsable for reseting the timer and the counters.
+     */
+
+    private func onPause(){
+        badStreamCount = 0
+        count = 0
+        hours.text = "00"
+        minutes.text = "00"
+        seconds.text = "00"
+    
+        pauseButton.enabled = false
+        pauseButton.alpha = 0.5
+        
+        playButton.enabled = true
+        playButton.alpha = 1.0
     }
     
     override func canBecomeFirstResponder() -> Bool {
@@ -85,6 +108,7 @@ class LiveBroadcastViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
         self.becomeFirstResponder()
+        
 
     }
     
@@ -92,12 +116,34 @@ class LiveBroadcastViewController: UIViewController {
         super.viewDidLoad()
         
         self.UIConfig()
+        pauseButton.alpha = 0.5
+        pauseButton.enabled = false
+        
         // This Code Lets the App Play MP3 in Background, Not Implemented Yet
-        let session:AVAudioSession = AVAudioSession.sharedInstance()
+        session = AVAudioSession.sharedInstance()
         
         do { try session.setCategory(AVAudioSessionCategoryPlayback) }
         catch { }
         
+    }
+    
+    override func remoteControlReceivedWithEvent(event: UIEvent?) {
+        
+        if event!.subtype == UIEventSubtype.RemoteControlPause {
+            
+            if let tempPlayer = player {
+                tempPlayer.pause()
+                player = nil
+                onPause()
+                timer.invalidate()
+               // MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = nil
+            }
+            
+            //pauseButton.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
+
+        } else if event!.subtype == UIEventSubtype.RemoteControlPlay {
+            playButton.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
+        }
     }
     
     internal func UIConfig(){
@@ -137,18 +183,14 @@ class LiveBroadcastViewController: UIViewController {
             }
         }
         
-        // If the count of badStreamCount > 3, display an alert saying stream unavailable
-        if badStreamCount > 15 {
+        // If the count of badStreamCount > 10, display an alert saying stream unavailable
+        if badStreamCount > 10 {
             timer.invalidate()
             
             let noStream = UIAlertController(title: "Stream Unavailable", message: "Stream cannot be loaded or is unavailable at this time.", preferredStyle: UIAlertControllerStyle.Alert)
             
             noStream.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: { (action: UIAlertAction!) in
-                self.count = 0
-                self.badStreamCount = 0
-                self.hours.text = "00"
-                self.minutes.text = "00"
-                self.seconds.text = "00"
+               self.onPause()
             }))
             
             presentViewController(noStream, animated: true, completion: nil)
@@ -161,7 +203,6 @@ class LiveBroadcastViewController: UIViewController {
         if let player = player where player.rate != 0 {
             return
         }
-        
         
         // Creates a timer that updates the duration labels (HH:MM:SS), calls audioDuration()
         let newtimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(LiveBroadcastViewController.audioDuration), userInfo: nil, repeats: true)
@@ -180,7 +221,7 @@ class LiveBroadcastViewController: UIViewController {
         if let tempPlayer = player {
             tempPlayer.rate = 1.0;
             tempPlayer.play()
-            let audioDictionary = [MPMediaItemPropertyTitle: "Pensacola Business Radio" , MPMediaItemPropertyArtist:"Pensacola Business Radio"]
+            let audioDictionary = [MPMediaItemPropertyTitle: "iTenWired - Live Broadcast" , MPMediaItemPropertyArtist:"Pensacola Business Radio"]
             MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = audioDictionary
         }
     }
@@ -197,7 +238,6 @@ class LiveBroadcastViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func showMenu(sender: AnyObject) {
         if let splitController = self.splitViewController{
