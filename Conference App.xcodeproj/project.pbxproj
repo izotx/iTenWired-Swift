@@ -70,6 +70,10 @@
 		555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A711CF365FF0068F58C /* NetworkConnection.swift */; };
 		5569DA1E1D2EF3890004F0C1 /* NearBy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5569DA1D1D2EF3890004F0C1 /* NearBy.storyboard */; };
 		5569DA201D2EF3D80004F0C1 /* NearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA1F1D2EF3D80004F0C1 /* NearByViewController.swift */; };
+		5569DA221D2EF7260004F0C1 /* NearByFilled-50-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 5569DA211D2EF7260004F0C1 /* NearByFilled-50-color.png */; };
+		5569DA241D2EF73A0004F0C1 /* NearByFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5569DA231D2EF73A0004F0C1 /* NearByFilled-50.png */; };
+		5569DA261D2EFDAC0004F0C1 /* IBeaconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA251D2EFDAC0004F0C1 /* IBeaconData.swift */; };
+		5569DA281D2EFE2B0004F0C1 /* ItenWiredBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA271D2EFE2B0004F0C1 /* ItenWiredBeacon.swift */; };
 		556F70221CF49DCB00428EB5 /* logo-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F70211CF49DCB00428EB5 /* logo-16.png */; };
 		5570EEC61CF4AC510033FCDC /* SocialMediaFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */; };
 		5570EEC81CF4ACC20033FCDC /* AnnouncementsFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */; };
@@ -266,6 +270,10 @@
 		555A7A711CF365FF0068F58C /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		5569DA1D1D2EF3890004F0C1 /* NearBy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NearBy.storyboard; sourceTree = "<group>"; };
 		5569DA1F1D2EF3D80004F0C1 /* NearByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByViewController.swift; sourceTree = "<group>"; };
+		5569DA211D2EF7260004F0C1 /* NearByFilled-50-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NearByFilled-50-color.png"; sourceTree = "<group>"; };
+		5569DA231D2EF73A0004F0C1 /* NearByFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NearByFilled-50.png"; sourceTree = "<group>"; };
+		5569DA251D2EFDAC0004F0C1 /* IBeaconData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconData.swift; sourceTree = "<group>"; };
+		5569DA271D2EFE2B0004F0C1 /* ItenWiredBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItenWiredBeacon.swift; sourceTree = "<group>"; };
 		556F70211CF49DCB00428EB5 /* logo-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-16.png"; sourceTree = "<group>"; };
 		5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SocialMediaFilled-50.png"; sourceTree = "<group>"; };
 		5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AnnouncementsFilled-50.png"; sourceTree = "<group>"; };
@@ -506,6 +514,7 @@
 				4F4590E51CBEC8DE00F51BCE /* AttendeeData.swift */,
 				892079D31CC9A05F008C1CAC /* SocialMediaData.swift */,
 				559F76761CEF6085003BE6E6 /* TrackData.swift */,
+				5569DA251D2EFDAC0004F0C1 /* IBeaconData.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -521,6 +530,7 @@
 				5549801B1CE3734200CC6E36 /* NotificationList.swift */,
 				55DAC3801CEBC77A00941824 /* About.swift */,
 				55FEE20A1CF5FF8D0019F48D /* MenuItem.swift */,
+				5569DA271D2EFE2B0004F0C1 /* ItenWiredBeacon.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -746,6 +756,8 @@
 		55DAC3461CEB514500941824 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				5569DA231D2EF73A0004F0C1 /* NearByFilled-50.png */,
+				5569DA211D2EF7260004F0C1 /* NearByFilled-50-color.png */,
 				559F76621CEE5C77003BE6E6 /* Settings */,
 				559F76611CEE5C53003BE6E6 /* Announcements */,
 				559F76601CEE5C4D003BE6E6 /* About */,
@@ -1124,6 +1136,7 @@
 				5570EED01CF4AE2B0033FCDC /* WhoFilled-50.png in Resources */,
 				55FEE2111CF6026B0019F48D /* AboutFilled-50-color.png in Resources */,
 				559F76661CEE5CBB003BE6E6 /* About-50.png in Resources */,
+				5569DA241D2EF73A0004F0C1 /* NearByFilled-50.png in Resources */,
 				0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */,
 				55DAC3561CEB547000941824 /* MyIten-25.png in Resources */,
 				55DAC3191CE526E600941824 /* placeholder.png in Resources */,
@@ -1134,6 +1147,7 @@
 				0EE564D11CB83E6C001678B0 /* MapView.storyboard in Resources */,
 				0EBCE1E41CC2E128008CEA2C /* LiveBroadcast.storyboard in Resources */,
 				55DAC37D1CEBAB6900941824 /* Email-50.png in Resources */,
+				5569DA221D2EF7260004F0C1 /* NearByFilled-50-color.png in Resources */,
 				D4C467D01CB84D9700BD6157 /* AgendaMain.storyboard in Resources */,
 				559F76491CEE4C9C003BE6E6 /* Settings-25.png in Resources */,
 				827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */,
@@ -1297,6 +1311,7 @@
 				0E7A8FE51CC19D150034513C /* AppData.swift in Sources */,
 				0E647B311CBF2E38006DFB68 /* AddAnnotation.swift in Sources */,
 				FE2623A51CAEFA940074C58F /* Conference_App.xcdatamodeld in Sources */,
+				5569DA281D2EFE2B0004F0C1 /* ItenWiredBeacon.swift in Sources */,
 				892079D41CC9A05F008C1CAC /* SocialMediaData.swift in Sources */,
 				55FEE2231CF763400019F48D /* Twitter.swift in Sources */,
 				55DAC36D1CEBA36700941824 /* SocialMediaCell.swift in Sources */,
@@ -1316,6 +1331,7 @@
 				55DAC31B1CE527A100941824 /* PendingOperations.swift in Sources */,
 				5543342A1CE27E7500A6001C /* Notification.swift in Sources */,
 				55FEE2261CF764280019F48D /* TwitterCell.swift in Sources */,
+				5569DA261D2EFDAC0004F0C1 /* IBeaconData.swift in Sources */,
 				55DAC31D1CE528AC00941824 /* ImageDownloader.swift in Sources */,
 				55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */,
 				0E647B2D1CBF2DDB006DFB68 /* MapData.swift in Sources */,

@@ -37,8 +37,45 @@ import JMCiBeaconManager
 
 class NearByViewController: UIViewController {
 
+    
+    @IBOutlet var collectionView: UICollectionView!
+    
+    /// iBeaconManager - Awsome Lib :)
+    let beaconManager = JMCBeaconManager()
+    
+    /// iBeacons Data drom the JSON file
+    let beaconData = IBeaconData()
+    
+    /// iBeacons Ranged List
+    var beacons = [iBeacon]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //CollectionView Delegate
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        // iBeaconManager Setup
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsRanged(_:)), name: iBeaconNotifications.BeaconProximity.rawValue, object: nil)
+        
+        let kontaktIOBeacon = iBeacon(minor: nil, major: nil, proximityId: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
+        let estimoteBeacon = iBeacon(minor: nil, major: nil, proximityId: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
+        
+        var beacons = [iBeacon]()
+        
+        for beacon in beaconData.getBeacons() {
+            beacons.append(iBeacon(minor: UInt16(beacon.minor), major: UInt16(beacon.major), proximityId: beacon.id))
+        }
+        
+        beaconManager.registerBeacons(beacons)
+        
+        beaconManager.startMonitoring({
+            
+        }) { (messages) in
+            print("Error Messages \(messages)")
+        }
+
 
         // Do any additional setup after loading the view.
     }
@@ -47,4 +84,38 @@ class NearByViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+//MARK: JMCiBeaconManager
+extension NearByViewController {
+    
+    /**Called when the beacons are ranged*/
+    func beaconsRanged(notification:NSNotification){
+        if let visibleIbeacons = notification.object as? [iBeacon]{
+            for beacon in visibleIbeacons{
+                beacons.append(beacon)
+            }
+        }
+        collectionView.reloadData()
+    }
+
+}
+
+
+//MARK: UICollectionViewDelegate, UICollectionViewDataSource
+extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return beacons.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? MenuCellCollectionViewCell
+        
+        cell?.nameLabel.text = "Name"
+        
+        return cell!
+    }
+    
 }

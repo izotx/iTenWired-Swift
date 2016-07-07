@@ -121,8 +121,8 @@ class MasterViewController : UIViewController{
         let broadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
         self.menuItems.append(broadcast)
         
-        
-        
+        let nearBy = MenuItem(storyboardId: "NearBy", viewControllerId: "NearByViewController", name: "Near Me", imageUrl: "NearByFilled-50.png")
+        self.menuItems.append(nearBy)
     }
     
 }

@@ -27,7 +27,7 @@
 
 //  Notification.swift
 //  Conference App
-//  Created by Felipe Brito on 5/10/16.
+//  Created by Felipe N. Brito on 5/10/16.
 
 
 import Foundation

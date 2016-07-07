@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -21,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-685.5" y="471.5"/>
         </scene>
-        <!--View Controller-->
+        <!--NearByViewController-->
         <scene sceneID="ERD-i9-R3N">
             <objects>
-                <viewController id="jwc-ku-zux" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NearByViewController" title="NearByViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jwc-ku-zux" customClass="NearByViewController" customModule="Conference_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q9E-t6-bID"/>
                         <viewControllerLayoutGuide type="bottom" id="6pN-el-Lnc"/>
@@ -32,13 +33,75 @@
                     <view key="view" contentMode="scaleToFill" id="Zsx-EU-7d2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-fO-exr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uzu-Nb-rXS">
+                                    <size key="itemSize" width="178" height="215"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="LxL-TC-nxl" customClass="MenuCellCollectionViewCell" customModule="Conference_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="178" height="215"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="178" height="215"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-qf-Xue">
+                                                    <rect key="frame" x="19" y="135" width="109" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcr-E1-jab" customClass="MIBadgeButton" customModule="Conference_App" customModuleProvider="target">
+                                                    <rect key="frame" x="48" y="59" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="IEe-Gw-4hO"/>
+                                                        <constraint firstAttribute="width" constant="50" id="RUe-Yb-F9k"/>
+                                                    </constraints>
+                                                    <state key="normal" image="AboutFilled-50.png"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.62352941179999999" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xLS-qf-Xue" secondAttribute="bottom" constant="5" id="Wv6-2d-VSS"/>
+                                            <constraint firstItem="xLS-qf-Xue" firstAttribute="centerX" secondItem="LxL-TC-nxl" secondAttribute="centerX" id="chI-O7-glX"/>
+                                            <constraint firstItem="kcr-E1-jab" firstAttribute="centerY" secondItem="LxL-TC-nxl" secondAttribute="centerY" id="qzB-Mz-fJ4"/>
+                                            <constraint firstItem="kcr-E1-jab" firstAttribute="centerX" secondItem="LxL-TC-nxl" secondAttribute="centerX" id="uSJ-k3-6pw"/>
+                                            <constraint firstItem="xLS-qf-Xue" firstAttribute="leading" secondItem="LxL-TC-nxl" secondAttribute="leadingMargin" constant="11" id="xBm-QT-dUB"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="icon" destination="kcr-E1-jab" id="TKv-uD-RMo"/>
+                                            <outlet property="nameLabel" destination="xLS-qf-Xue" id="jEq-S3-M6v"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Tt-fO-exr" firstAttribute="top" secondItem="Zsx-EU-7d2" secondAttribute="top" id="8Kb-cN-76G"/>
+                            <constraint firstItem="8Tt-fO-exr" firstAttribute="bottom" secondItem="6pN-el-Lnc" secondAttribute="top" id="lGV-Fx-cQg"/>
+                            <constraint firstItem="8Tt-fO-exr" firstAttribute="leading" secondItem="Zsx-EU-7d2" secondAttribute="leading" id="tyY-oU-676"/>
+                            <constraint firstAttribute="trailing" secondItem="8Tt-fO-exr" secondAttribute="trailing" id="xPx-Me-V7Z"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fiI-kx-U4C"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8Tt-fO-exr" id="YmD-KY-gHd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlB-TI-SmR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-245.5" y="471.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AboutFilled-50.png" width="50" height="50"/>
+    </resources>
 </document>
