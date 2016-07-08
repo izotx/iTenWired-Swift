@@ -43,7 +43,7 @@ class AttendeeController{
      
         - Returns: An array with the confference Sponsers
     */
-    func getSponsers() -> [Sponser]{
+    func getSponsers() -> [Sponsor]{
        return dataLoader.getSponsers()
     }
     
@@ -107,7 +107,7 @@ class AttendeeController{
      
         - Returns: A sponser from the specified index
     */
-    func getSponserAtIndex(index: Int) -> Sponser {
+    func getSponserAtIndex(index: Int) -> Sponsor {
         return self.getSponsers()[index]
     }
     

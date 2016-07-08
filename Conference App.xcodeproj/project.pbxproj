@@ -74,6 +74,9 @@
 		5569DA241D2EF73A0004F0C1 /* NearByFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5569DA231D2EF73A0004F0C1 /* NearByFilled-50.png */; };
 		5569DA261D2EFDAC0004F0C1 /* IBeaconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA251D2EFDAC0004F0C1 /* IBeaconData.swift */; };
 		5569DA281D2EFE2B0004F0C1 /* ItenWiredBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA271D2EFE2B0004F0C1 /* ItenWiredBeacon.swift */; };
+		5569DA2A1D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA291D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift */; };
+		5569DA2C1D302C800004F0C1 /* NearMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA2B1D302C800004F0C1 /* NearMeController.swift */; };
+		5569DA2E1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA2D1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift */; };
 		556F70221CF49DCB00428EB5 /* logo-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F70211CF49DCB00428EB5 /* logo-16.png */; };
 		5570EEC61CF4AC510033FCDC /* SocialMediaFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */; };
 		5570EEC81CF4ACC20033FCDC /* AnnouncementsFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */; };
@@ -94,7 +97,7 @@
 		557D354E1CE4DDDF00562A7A /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D354D1CE4DDDF00562A7A /* EventList.swift */; };
 		55881A9A1CE12729009B8399 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A991CE12729009B8399 /* Location.swift */; };
 		55881A9C1CE129FF009B8399 /* Exhibitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9B1CE129FF009B8399 /* Exhibitor.swift */; };
-		55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9D1CE12AD3009B8399 /* Sponser.swift */; };
+		55881A9E1CE12AD3009B8399 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9D1CE12AD3009B8399 /* Sponsor.swift */; };
 		55881AA01CE13506009B8399 /* AttendeeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55881A9F1CE13506009B8399 /* AttendeeProtocol.swift */; };
 		559F76451CEE3CFB003BE6E6 /* Style.json in Resources */ = {isa = PBXBuildFile; fileRef = 559F76441CEE3CFB003BE6E6 /* Style.json */; };
 		559F76471CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F76461CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift */; };
@@ -274,6 +277,9 @@
 		5569DA231D2EF73A0004F0C1 /* NearByFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NearByFilled-50.png"; sourceTree = "<group>"; };
 		5569DA251D2EFDAC0004F0C1 /* IBeaconData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconData.swift; sourceTree = "<group>"; };
 		5569DA271D2EFE2B0004F0C1 /* ItenWiredBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItenWiredBeacon.swift; sourceTree = "<group>"; };
+		5569DA291D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconNearMeProtocol.swift; sourceTree = "<group>"; };
+		5569DA2B1D302C800004F0C1 /* NearMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeController.swift; sourceTree = "<group>"; };
+		5569DA2D1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeCollectionViewCell.swift; sourceTree = "<group>"; };
 		556F70211CF49DCB00428EB5 /* logo-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-16.png"; sourceTree = "<group>"; };
 		5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SocialMediaFilled-50.png"; sourceTree = "<group>"; };
 		5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AnnouncementsFilled-50.png"; sourceTree = "<group>"; };
@@ -290,7 +296,7 @@
 		557D354D1CE4DDDF00562A7A /* EventList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
 		55881A991CE12729009B8399 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		55881A9B1CE129FF009B8399 /* Exhibitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exhibitor.swift; sourceTree = "<group>"; };
-		55881A9D1CE12AD3009B8399 /* Sponser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponser.swift; sourceTree = "<group>"; };
+		55881A9D1CE12AD3009B8399 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		55881A9F1CE13506009B8399 /* AttendeeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendeeProtocol.swift; sourceTree = "<group>"; };
 		559F76441CEE3CFB003BE6E6 /* Style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Style.json; sourceTree = "<group>"; };
 		559F76461CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -543,6 +549,7 @@
 				552E692B1CE284DC0010C3C9 /* NotificationController.swift */,
 				557D354B1CE4DC8B00562A7A /* MyItenController.swift */,
 				55FEE2271CF764BD0019F48D /* TwitterController.swift */,
+				5569DA2B1D302C800004F0C1 /* NearMeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -708,7 +715,7 @@
 			isa = PBXGroup;
 			children = (
 				55881A9B1CE129FF009B8399 /* Exhibitor.swift */,
-				55881A9D1CE12AD3009B8399 /* Sponser.swift */,
+				55881A9D1CE12AD3009B8399 /* Sponsor.swift */,
 				55881A9F1CE13506009B8399 /* AttendeeProtocol.swift */,
 				55450B871CE234EE00A2712E /* Speaker.swift */,
 			);
@@ -812,6 +819,7 @@
 				555A7A691CF348580068F58C /* speakerHeaderCell.swift */,
 				554980251CE3871500CC6E36 /* NotificationsCell.swift */,
 				559F76461CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift */,
+				5569DA2D1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -945,6 +953,7 @@
 				55FEE2061CF500250019F48D /* MIBadgeButton.swift */,
 				55FEE21E1CF606D10019F48D /* SCLExtensions.swift */,
 				55FEE21C1CF606680019F48D /* SCLAlertView.swift */,
+				5569DA291D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift */,
 			);
 			path = "Conference App";
 			sourceTree = "<group>";
@@ -1309,6 +1318,7 @@
 				5549801C1CE3734200CC6E36 /* NotificationList.swift in Sources */,
 				D4C467CA1CB84BA000BD6157 /* AgendaDataLoader.swift in Sources */,
 				0E7A8FE51CC19D150034513C /* AppData.swift in Sources */,
+				5569DA2E1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift in Sources */,
 				0E647B311CBF2E38006DFB68 /* AddAnnotation.swift in Sources */,
 				FE2623A51CAEFA940074C58F /* Conference_App.xcdatamodeld in Sources */,
 				5569DA281D2EFE2B0004F0C1 /* ItenWiredBeacon.swift in Sources */,
@@ -1323,11 +1333,12 @@
 				FEF7E0C71CB852B5002A810B /* EventCell.swift in Sources */,
 				55450B881CE234EE00A2712E /* Speaker.swift in Sources */,
 				4F4590E61CBEC8DE00F51BCE /* AttendeeData.swift in Sources */,
+				5569DA2C1D302C800004F0C1 /* NearMeController.swift in Sources */,
 				559F76471CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift in Sources */,
 				554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */,
 				55FEE2071CF500250019F48D /* MIBadgeButton.swift in Sources */,
 				407BE0A61D216C87005D61CF /* STKHTTPDataSource.m in Sources */,
-				55881A9E1CE12AD3009B8399 /* Sponser.swift in Sources */,
+				55881A9E1CE12AD3009B8399 /* Sponsor.swift in Sources */,
 				55DAC31B1CE527A100941824 /* PendingOperations.swift in Sources */,
 				5543342A1CE27E7500A6001C /* Notification.swift in Sources */,
 				55FEE2261CF764280019F48D /* TwitterCell.swift in Sources */,
@@ -1350,6 +1361,7 @@
 				407BE0A91D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 				55DAC3811CEBC77A00941824 /* About.swift in Sources */,
 				407BE0A31D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
+				5569DA2A1D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift in Sources */,
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
 				55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */,
 				555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */,

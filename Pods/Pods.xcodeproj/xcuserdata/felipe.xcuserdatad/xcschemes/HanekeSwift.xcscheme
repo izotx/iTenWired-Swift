@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CFECFB0E7990A6253E56EA393775C122"
-               BuildableName = "Pods_Conference_App.framework"
-               BlueprintName = "Pods-Conference App"
+               BlueprintIdentifier = "2C2B1953A91633859BF7AD238FF567A0"
+               BuildableName = "Haneke.framework"
+               BlueprintName = "HanekeSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CFECFB0E7990A6253E56EA393775C122"
-            BuildableName = "Pods_Conference_App.framework"
-            BlueprintName = "Pods-Conference App"
+            BlueprintIdentifier = "2C2B1953A91633859BF7AD238FF567A0"
+            BuildableName = "Haneke.framework"
+            BlueprintName = "HanekeSwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

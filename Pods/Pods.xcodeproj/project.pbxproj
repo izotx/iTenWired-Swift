@@ -7,24 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15BCDB5DE771A20391EEA08BE4B4D9E6 /* PWDisplayLinkerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C43F302E327F415D448F4C83F24C46 /* PWDisplayLinkerDelegate.swift */; };
-		1AB83CC3F5A76053D6087AD4E23D783C /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C2383B6BA20730D8F28DDEC913F677 /* DataStructures.swift */; };
-		1CFDACC35DB38CA3141A4A14E815E1DC /* Pods-Conference App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */; };
-		2B22F1C15027A27BA577ADA0E742AE54 /* JMCiBeaconManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C902EA0BFE9C2D3BBE022177A5748B24 /* JMCiBeaconManager-dummy.m */; };
+		0D361BC02EA3B8C476545E29A293CCB8 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDAE63AAECE2ACAD944BD4E2F5FE5E5 /* Format.swift */; };
+		15BCDB5DE771A20391EEA08BE4B4D9E6 /* PWDisplayLinkerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE665C264EF8C5D7FDACCED59930C12F /* PWDisplayLinkerDelegate.swift */; };
+		1AB83CC3F5A76053D6087AD4E23D783C /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3417166791A31FD25DADCF5C1014FBF /* DataStructures.swift */; };
+		1D27B06296C346D4F23F5ED14B0A5D1A /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC07E67FDCA8454DF41999858B78C45 /* UIButton+Haneke.swift */; };
+		24E7FCE3DF42DC6D616DC39F8AC69566 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F46E3319F66177A3427481A6E6D19C /* UIImageView+Haneke.swift */; };
+		2B22F1C15027A27BA577ADA0E742AE54 /* JMCiBeaconManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 297B925023019FAA354F8F760C616871 /* JMCiBeaconManager-dummy.m */; };
 		2DB1A57EACF9DE5ADF00E4F0CB96F928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		3C310EE8F56C6FD5AACB11DAA7626980 /* PWDisplayLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA150EA1C4D756BAD10A16E9D2A90835 /* PWDisplayLinker.swift */; };
-		479BE14B6E6024BF115C72CB567461A9 /* Pods-Conference App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62D2CC96AF2915D3A65C9810047D9A66 /* RadarScannerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBECAE69B9C7EBAD2131367635B9EC3 /* RadarScannerShape.swift */; };
-		6E1FDD47BCBDC30DEB1B17152E4A0A97 /* JMCBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBB658E19151CD0EF988FE5D5CD64D /* JMCBluetoothManager.swift */; };
-		B4C0631D44981217BD9E957DE77F0865 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		B6D8B8C8C91DABA9F589589F09545F1A /* BeaconShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FFAD635D864BAE1EC88644BF09A12D /* BeaconShape.swift */; };
-		BE2EBC20B8BBD254B4EB81D4D04A6644 /* JMCiBeaconManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE766647F25AC468E83F89CF4641127 /* JMCiBeaconManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D134F29E2A36899BCDB0FAA486601697 /* JMCRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519CD752593FFC753B1AF32FB827196 /* JMCRadarView.swift */; };
-		E1AAE154123E6F2C989875B1BED6CA8A /* JMCBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BFF5F1E7E7D733AF0182DD5493A9D /* JMCBeaconManager.swift */; };
+		3AEC422A729B36FE79DCA8D7607413B1 /* Pods-Conference App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */; };
+		3C310EE8F56C6FD5AACB11DAA7626980 /* PWDisplayLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54B6BB8A857A6FB3E6293BB945C078 /* PWDisplayLinker.swift */; };
+		3D90F67A3A10F71FD01DEDA59496C1D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9B561DE18A2D03A2C81B4ED389144 /* Data.swift */; };
+		3EA2C091B8672D75066EEEEFE63B5A86 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA98F5010666E767467EF1884AF1777 /* NetworkFetcher.swift */; };
+		410D0641B813947CA53F07D75F4624CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		49A5E2B820A83801CEE267AA6E1D923F /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BEC02D2999F7C4402E958817893883 /* DiskFetcher.swift */; };
+		4D2F2792AEDE677A4EBB07D450DE4D74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		51FDBB4974F7723AD98264B83EF3EC18 /* Pods-Conference App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55F3BC1465BB2EB6F02ADC5A2D1F9F83 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A102C0060B508C6A9F5C7D69456058 /* String+Haneke.swift */; };
+		62D2CC96AF2915D3A65C9810047D9A66 /* RadarScannerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BFA5E21F337E3C364EFA1FDFBD163 /* RadarScannerShape.swift */; };
+		6E1FDD47BCBDC30DEB1B17152E4A0A97 /* JMCBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8AE95A741AA52A3BECA74001F4ECDF /* JMCBluetoothManager.swift */; };
+		8A85C4CDF0FE775E0BD0C44B0C3E6159 /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252BCB84AE186BF9D292F5C1D9EED2E /* NSURLResponse+Haneke.swift */; };
+		8C357B44EA2BC147AA0219CD8CC03B5F /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26752CD11FE6DC976859BA877B4175BA /* Fetcher.swift */; };
+		92A2D4839D45ABA48D77923C035C8943 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F2DE14146FC42107E28394EE93D014 /* NSFileManager+Haneke.swift */; };
+		9831DDC5256EF014D93FF2DBE055E7B6 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCF8F7F72F5910D0E156D1C343F9A9C /* Cache.swift */; };
+		9911E1A886CD44872C07FAA6A1521A85 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0105CA1141F7F02DEB3056DDA7C5F7B9 /* Log.swift */; };
+		9D5F6868132325D38051C5A07F128C5C /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A895C3B4A53AE11D04A4198E8773363 /* UIView+Haneke.swift */; };
+		9E629066D218DC1DC616E339DB68E49C /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56E5A32C3A26E8BA8A59F935FC4D30 /* CryptoSwiftMD5.swift */; };
+		9F4D113C6A4469F0DFAC637F1CA2C087 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE53D0E8A06D074AF15C1B1077891ED /* CGSize+Swift.swift */; };
+		A8CF635DBE430F95FB17D371B918B3FB /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2569585458709CD5DD2C427F969EA /* UIImage+Haneke.swift */; };
+		AB02DD775A289B55B03F87A73525B611 /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F052D93A7690195DCD43DB377F6787 /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEB48C925DC8D4B812C4ABF9F15C822E /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F526E7D10FFA064E3F3A66BF63446B /* DiskCache.swift */; };
+		B1CCF02E757EE856275CE85BF171ED90 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A00E49AE05CCDD0220C6F0E4226664 /* Fetch.swift */; };
+		B6D8B8C8C91DABA9F589589F09545F1A /* BeaconShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508DBBF3F82BED87DB456FD9B9947DB3 /* BeaconShape.swift */; };
+		BD038EFFD2D1B49B136B42B5E07D59C5 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5119CDADE46EA1D0275F0CA48BC46D /* Haneke.swift */; };
+		BE2EBC20B8BBD254B4EB81D4D04A6644 /* JMCiBeaconManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B541443450B2A91F7C36B5965F8EC46 /* JMCiBeaconManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D134F29E2A36899BCDB0FAA486601697 /* JMCRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC2AC0797720242498333CEF56CE79 /* JMCRadarView.swift */; };
+		DF6DBB5FA4E663A5AE7F272CA1CBA3BB /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FF5C2A697EA1FD959BA7741FF1C8C6 /* NSHTTPURLResponse+Haneke.swift */; };
+		E1AAE154123E6F2C989875B1BED6CA8A /* JMCBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4CC096B93C3282CBB59437420837B /* JMCBeaconManager.swift */; };
+		F03916F3658FFB4643AD5FC815A4F5A7 /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6288E62B6D966CFCAD28C8D179B13C /* HanekeSwift-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BE1E252C836731BF8F325C88CD21D617 /* PBXContainerItemProxy */ = {
+		55FB75EDC05ACB368FB4DFF823870E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C2B1953A91633859BF7AD238FF567A0;
+			remoteInfo = HanekeSwift;
+		};
+		EFB0533C617AC026F1ED657C077D1281 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -34,35 +64,62 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		080E04793D79DA23A4BB8E1C813DB0F4 /* JMCiBeaconManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMCiBeaconManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0105CA1141F7F02DEB3056DDA7C5F7B9 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
+		04E9B561DE18A2D03A2C81B4ED389144 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		0A56E5A32C3A26E8BA8A59F935FC4D30 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
+		12CAA421B2A02F72A293A61F6CF79D95 /* JMCiBeaconManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-prefix.pch"; sourceTree = "<group>"; };
 		134B940329C66C7F325E2E20EF772374 /* Pods-Conference App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-resources.sh"; sourceTree = "<group>"; };
-		205ACBE9F6271F34E7DB9BEE0A76F5D5 /* JMCiBeaconManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-prefix.pch"; sourceTree = "<group>"; };
+		26752CD11FE6DC976859BA877B4175BA /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
+		26F0D071F9707E9B6EF4E2A9DEE4A280 /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		297B925023019FAA354F8F760C616871 /* JMCiBeaconManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMCiBeaconManager-dummy.m"; sourceTree = "<group>"; };
+		29C4CC096B93C3282CBB59437420837B /* JMCBeaconManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBeaconManager.swift; path = JMCiBeaconManager/Classes/JMCBeaconManager.swift; sourceTree = "<group>"; };
+		2B541443450B2A91F7C36B5965F8EC46 /* JMCiBeaconManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-umbrella.h"; sourceTree = "<group>"; };
+		2CC07E67FDCA8454DF41999858B78C45 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
+		2D4BFA5E21F337E3C364EFA1FDFBD163 /* RadarScannerShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarScannerShape.swift; path = JMCiBeaconManager/Classes/RadarScannerShape.swift; sourceTree = "<group>"; };
 		33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Conference App-umbrella.h"; sourceTree = "<group>"; };
-		3519CD752593FFC753B1AF32FB827196 /* JMCRadarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCRadarView.swift; path = JMCiBeaconManager/Classes/JMCRadarView.swift; sourceTree = "<group>"; };
-		5220BD7FC5F8B2B8FB0635089534D027 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A895C3B4A53AE11D04A4198E8773363 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
+		44FF5C2A697EA1FD959BA7741FF1C8C6 /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JMCiBeaconManager.xcconfig; sourceTree = "<group>"; };
+		508DBBF3F82BED87DB456FD9B9947DB3 /* BeaconShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconShape.swift; path = JMCiBeaconManager/Classes/BeaconShape.swift; sourceTree = "<group>"; };
+		5252BCB84AE186BF9D292F5C1D9EED2E /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		567A3769C4CAB971B691DA8369139E90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.debug.xcconfig"; sourceTree = "<group>"; };
+		5CCFFF29BB624C9A368041B130C932A9 /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
+		62A00E49AE05CCDD0220C6F0E4226664 /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
+		674A00267B88B74729DB8A7729EC88A4 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
-		76FFAD635D864BAE1EC88644BF09A12D /* BeaconShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconShape.swift; path = JMCiBeaconManager/Classes/BeaconShape.swift; sourceTree = "<group>"; };
+		67F46E3319F66177A3427481A6E6D19C /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
+		6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
+		6DDAE63AAECE2ACAD944BD4E2F5FE5E5 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
 		8551CED925E57C8FAAD6A9C00A7BDB0A /* Pods-Conference App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Conference App-acknowledgements.markdown"; sourceTree = "<group>"; };
-		85C43F302E327F415D448F4C83F24C46 /* PWDisplayLinkerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinkerDelegate.swift; path = JMCiBeaconManager/Classes/PWDisplayLinkerDelegate.swift; sourceTree = "<group>"; };
+		90F052D93A7690195DCD43DB377F6787 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
+		90F526E7D10FFA064E3F3A66BF63446B /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9415C804E4BA1FB27634166A957FB3AB /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BCBB658E19151CD0EF988FE5D5CD64D /* JMCBluetoothManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBluetoothManager.swift; path = JMCiBeaconManager/Classes/JMCBluetoothManager.swift; sourceTree = "<group>"; };
-		9D1CFB293B03E7F2F56478A543484708 /* JMCiBeaconManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JMCiBeaconManager.modulemap; sourceTree = "<group>"; };
-		9F070D35F9450795D5537D55D81FDEA7 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
-		A2C2383B6BA20730D8F28DDEC913F677 /* DataStructures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStructures.swift; path = JMCiBeaconManager/Classes/DataStructures.swift; sourceTree = "<group>"; };
+		98F2DE14146FC42107E28394EE93D014 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
+		9B5119CDADE46EA1D0275F0CA48BC46D /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
 		AD31636541C246F5BA65ACBADEC6BB28 /* Pods-Conference App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-frameworks.sh"; sourceTree = "<group>"; };
 		B3381B954FF0573C0BBEE073A9E69E8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3417166791A31FD25DADCF5C1014FBF /* DataStructures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStructures.swift; path = JMCiBeaconManager/Classes/DataStructures.swift; sourceTree = "<group>"; };
+		C396C0AD9BB630BACBA878E50821B673 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C800003B7D1D7104D29612A132CF281E /* Pods-Conference App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Conference App.modulemap"; sourceTree = "<group>"; };
-		C902EA0BFE9C2D3BBE022177A5748B24 /* JMCiBeaconManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMCiBeaconManager-dummy.m"; sourceTree = "<group>"; };
-		CA150EA1C4D756BAD10A16E9D2A90835 /* PWDisplayLinker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinker.swift; path = JMCiBeaconManager/Classes/PWDisplayLinker.swift; sourceTree = "<group>"; };
 		CE5356B61B0AFB0BC8F05DE195B2DE79 /* Pods-Conference App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Conference App-acknowledgements.plist"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CEF6E6C983DC1925BD44D08AEBAE8245 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		D0BEC02D2999F7C4402E958817893883 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
+		D1086AC26FE53CCF1A0CD0894676CF94 /* JMCiBeaconManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMCiBeaconManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A102C0060B508C6A9F5C7D69456058 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
+		DB8AE95A741AA52A3BECA74001F4ECDF /* JMCBluetoothManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBluetoothManager.swift; path = JMCiBeaconManager/Classes/JMCBluetoothManager.swift; sourceTree = "<group>"; };
+		DC6288E62B6D966CFCAD28C8D179B13C /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		DCCF8F7F72F5910D0E156D1C343F9A9C /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
+		DE54B6BB8A857A6FB3E6293BB945C078 /* PWDisplayLinker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinker.swift; path = JMCiBeaconManager/Classes/PWDisplayLinker.swift; sourceTree = "<group>"; };
+		DEA98F5010666E767467EF1884AF1777 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		DEB194AF2B5F55B682581D6FDB35E24C /* JMCiBeaconManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JMCiBeaconManager.modulemap; sourceTree = "<group>"; };
+		DFE53D0E8A06D074AF15C1B1077891ED /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
 		E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Conference App-dummy.m"; sourceTree = "<group>"; };
-		EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JMCiBeaconManager.xcconfig; sourceTree = "<group>"; };
-		ECE766647F25AC468E83F89CF4641127 /* JMCiBeaconManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-umbrella.h"; sourceTree = "<group>"; };
-		EDBECAE69B9C7EBAD2131367635B9EC3 /* RadarScannerShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarScannerShape.swift; path = JMCiBeaconManager/Classes/RadarScannerShape.swift; sourceTree = "<group>"; };
-		FF1BFF5F1E7E7D733AF0182DD5493A9D /* JMCBeaconManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBeaconManager.swift; path = JMCiBeaconManager/Classes/JMCBeaconManager.swift; sourceTree = "<group>"; };
+		ECE2569585458709CD5DD2C427F969EA /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		EE665C264EF8C5D7FDACCED59930C12F /* PWDisplayLinkerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinkerDelegate.swift; path = JMCiBeaconManager/Classes/PWDisplayLinkerDelegate.swift; sourceTree = "<group>"; };
+		FA0C9C3E359A74B3DB209AEB8E8C0E00 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
+		FAEC2AC0797720242498333CEF56CE79 /* JMCRadarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCRadarView.swift; path = JMCiBeaconManager/Classes/JMCRadarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,11 +131,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FFD7E8F73DD12FC4A0C367E0833058C /* Frameworks */ = {
+		234668E85174FCAD3EF8C866C8C6AA48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4C0631D44981217BD9E957DE77F0865 /* Foundation.framework in Frameworks */,
+				4D2F2792AEDE677A4EBB07D450DE4D74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E55176A5AF13111D389E09381931E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410D0641B813947CA53F07D75F4624CE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +168,42 @@
 			path = "Target Support Files/Pods-Conference App";
 			sourceTree = "<group>";
 		};
+		07368D1B31244C7544F55868F179644F /* HanekeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				DCCF8F7F72F5910D0E156D1C343F9A9C /* Cache.swift */,
+				DFE53D0E8A06D074AF15C1B1077891ED /* CGSize+Swift.swift */,
+				0A56E5A32C3A26E8BA8A59F935FC4D30 /* CryptoSwiftMD5.swift */,
+				04E9B561DE18A2D03A2C81B4ED389144 /* Data.swift */,
+				90F526E7D10FFA064E3F3A66BF63446B /* DiskCache.swift */,
+				D0BEC02D2999F7C4402E958817893883 /* DiskFetcher.swift */,
+				62A00E49AE05CCDD0220C6F0E4226664 /* Fetch.swift */,
+				26752CD11FE6DC976859BA877B4175BA /* Fetcher.swift */,
+				6DDAE63AAECE2ACAD944BD4E2F5FE5E5 /* Format.swift */,
+				9B5119CDADE46EA1D0275F0CA48BC46D /* Haneke.swift */,
+				0105CA1141F7F02DEB3056DDA7C5F7B9 /* Log.swift */,
+				DEA98F5010666E767467EF1884AF1777 /* NetworkFetcher.swift */,
+				98F2DE14146FC42107E28394EE93D014 /* NSFileManager+Haneke.swift */,
+				44FF5C2A697EA1FD959BA7741FF1C8C6 /* NSHTTPURLResponse+Haneke.swift */,
+				5252BCB84AE186BF9D292F5C1D9EED2E /* NSURLResponse+Haneke.swift */,
+				D4A102C0060B508C6A9F5C7D69456058 /* String+Haneke.swift */,
+				2CC07E67FDCA8454DF41999858B78C45 /* UIButton+Haneke.swift */,
+				ECE2569585458709CD5DD2C427F969EA /* UIImage+Haneke.swift */,
+				67F46E3319F66177A3427481A6E6D19C /* UIImageView+Haneke.swift */,
+				3A895C3B4A53AE11D04A4198E8773363 /* UIView+Haneke.swift */,
+				C5BFE3944A8316254D5BF37C1E399F28 /* Support Files */,
+			);
+			path = HanekeSwift;
+			sourceTree = "<group>";
+		};
+		0FA7B2194367FAAD567EDE54E0C9A9CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF6E6C983DC1925BD44D08AEBAE8245 /* OneSignal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,36 +212,26 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		534F60D0A8E5989E1190554E2A818DE0 /* JMCiBeaconManager */ = {
+		41329F541C88DE7E5579206007060EFD /* OneSignal */ = {
 			isa = PBXGroup;
 			children = (
-				76FFAD635D864BAE1EC88644BF09A12D /* BeaconShape.swift */,
-				A2C2383B6BA20730D8F28DDEC913F677 /* DataStructures.swift */,
-				FF1BFF5F1E7E7D733AF0182DD5493A9D /* JMCBeaconManager.swift */,
-				9BCBB658E19151CD0EF988FE5D5CD64D /* JMCBluetoothManager.swift */,
-				3519CD752593FFC753B1AF32FB827196 /* JMCRadarView.swift */,
-				CA150EA1C4D756BAD10A16E9D2A90835 /* PWDisplayLinker.swift */,
-				85C43F302E327F415D448F4C83F24C46 /* PWDisplayLinkerDelegate.swift */,
-				EDBECAE69B9C7EBAD2131367635B9EC3 /* RadarScannerShape.swift */,
-				D9CF69D27F7292B51E9A73C3FCCAF376 /* Support Files */,
-			);
-			path = JMCiBeaconManager;
-			sourceTree = "<group>";
-		};
-		54297A67335D1656839186D026D3105C /* OneSignal */ = {
-			isa = PBXGroup;
-			children = (
-				54C03C487312B9DF7CD04895A524738A /* Frameworks */,
+				0FA7B2194367FAAD567EDE54E0C9A9CD /* Frameworks */,
 			);
 			path = OneSignal;
 			sourceTree = "<group>";
 		};
-		54C03C487312B9DF7CD04895A524738A /* Frameworks */ = {
+		528687B4EA7FD1C1CD63FC057D89F1F0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9F070D35F9450795D5537D55D81FDEA7 /* OneSignal.framework */,
+				C396C0AD9BB630BACBA878E50821B673 /* Info.plist */,
+				DEB194AF2B5F55B682581D6FDB35E24C /* JMCiBeaconManager.modulemap */,
+				4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */,
+				297B925023019FAA354F8F760C616871 /* JMCiBeaconManager-dummy.m */,
+				12CAA421B2A02F72A293A61F6CF79D95 /* JMCiBeaconManager-prefix.pch */,
+				2B541443450B2A91F7C36B5965F8EC46 /* JMCiBeaconManager-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/JMCiBeaconManager";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -148,19 +239,36 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A6063C150AE6DF5C4EA5878CF46D29EF /* Pods */,
-				F0094D07BEAA5B0E23AAF3C027F7FED6 /* Products */,
+				F56CABEDEA131B5335E0176E2FBEED39 /* Pods */,
+				B41EB69C97AD7F0EE71745B35452929B /* Products */,
 				E38CC51AE345FDC0ED6C1F836AF05209 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A6063C150AE6DF5C4EA5878CF46D29EF /* Pods */ = {
+		8A7C6FF7E0CE1A72DC780C3E334ECA2B /* JMCiBeaconManager */ = {
 			isa = PBXGroup;
 			children = (
-				534F60D0A8E5989E1190554E2A818DE0 /* JMCiBeaconManager */,
-				54297A67335D1656839186D026D3105C /* OneSignal */,
+				508DBBF3F82BED87DB456FD9B9947DB3 /* BeaconShape.swift */,
+				C3417166791A31FD25DADCF5C1014FBF /* DataStructures.swift */,
+				29C4CC096B93C3282CBB59437420837B /* JMCBeaconManager.swift */,
+				DB8AE95A741AA52A3BECA74001F4ECDF /* JMCBluetoothManager.swift */,
+				FAEC2AC0797720242498333CEF56CE79 /* JMCRadarView.swift */,
+				DE54B6BB8A857A6FB3E6293BB945C078 /* PWDisplayLinker.swift */,
+				EE665C264EF8C5D7FDACCED59930C12F /* PWDisplayLinkerDelegate.swift */,
+				2D4BFA5E21F337E3C364EFA1FDFBD163 /* RadarScannerShape.swift */,
+				528687B4EA7FD1C1CD63FC057D89F1F0 /* Support Files */,
 			);
-			name = Pods;
+			path = JMCiBeaconManager;
+			sourceTree = "<group>";
+		};
+		B41EB69C97AD7F0EE71745B35452929B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				674A00267B88B74729DB8A7729EC88A4 /* Haneke.framework */,
+				D1086AC26FE53CCF1A0CD0894676CF94 /* JMCiBeaconManager.framework */,
+				26F0D071F9707E9B6EF4E2A9DEE4A280 /* Pods_Conference_App.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -171,18 +279,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D9CF69D27F7292B51E9A73C3FCCAF376 /* Support Files */ = {
+		C5BFE3944A8316254D5BF37C1E399F28 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5220BD7FC5F8B2B8FB0635089534D027 /* Info.plist */,
-				9D1CFB293B03E7F2F56478A543484708 /* JMCiBeaconManager.modulemap */,
-				EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */,
-				C902EA0BFE9C2D3BBE022177A5748B24 /* JMCiBeaconManager-dummy.m */,
-				205ACBE9F6271F34E7DB9BEE0A76F5D5 /* JMCiBeaconManager-prefix.pch */,
-				ECE766647F25AC468E83F89CF4641127 /* JMCiBeaconManager-umbrella.h */,
+				FA0C9C3E359A74B3DB209AEB8E8C0E00 /* HanekeSwift.modulemap */,
+				6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */,
+				DC6288E62B6D966CFCAD28C8D179B13C /* HanekeSwift-dummy.m */,
+				5CCFFF29BB624C9A368041B130C932A9 /* HanekeSwift-prefix.pch */,
+				90F052D93A7690195DCD43DB377F6787 /* HanekeSwift-umbrella.h */,
+				567A3769C4CAB971B691DA8369139E90 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/JMCiBeaconManager";
+			path = "../Target Support Files/HanekeSwift";
 			sourceTree = "<group>";
 		};
 		E38CC51AE345FDC0ED6C1F836AF05209 /* Targets Support Files */ = {
@@ -193,18 +301,27 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F0094D07BEAA5B0E23AAF3C027F7FED6 /* Products */ = {
+		F56CABEDEA131B5335E0176E2FBEED39 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				080E04793D79DA23A4BB8E1C813DB0F4 /* JMCiBeaconManager.framework */,
-				9415C804E4BA1FB27634166A957FB3AB /* Pods_Conference_App.framework */,
+				07368D1B31244C7544F55868F179644F /* HanekeSwift */,
+				8A7C6FF7E0CE1A72DC780C3E334ECA2B /* JMCiBeaconManager */,
+				41329F541C88DE7E5579206007060EFD /* OneSignal */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0C64655B97B501711541511851F1C8EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB02DD775A289B55B03F87A73525B611 /* HanekeSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10E92E986678C9612708317121157BA1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,17 +330,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C1CA503E43FB381FCD496E2A32FEC0C /* Headers */ = {
+		1F280C7FF5E82DC83FF8114BAF062D65 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				479BE14B6E6024BF115C72CB567461A9 /* Pods-Conference App-umbrella.h in Headers */,
+				51FDBB4974F7723AD98264B83EF3EC18 /* Pods-Conference App-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72681BE87943D4976033F6522AE72050 /* Build configuration list for PBXNativeTarget "HanekeSwift" */;
+			buildPhases = (
+				CF172C07C6DA054AC5D84164A26DAE24 /* Sources */,
+				8F0E55176A5AF13111D389E09381931E /* Frameworks */,
+				0C64655B97B501711541511851F1C8EB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HanekeSwift;
+			productName = HanekeSwift;
+			productReference = 674A00267B88B74729DB8A7729EC88A4 /* Haneke.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4CB58A11D032A539303719F9A68B7D8 /* Build configuration list for PBXNativeTarget "JMCiBeaconManager" */;
@@ -238,25 +372,26 @@
 			);
 			name = JMCiBeaconManager;
 			productName = JMCiBeaconManager;
-			productReference = 080E04793D79DA23A4BB8E1C813DB0F4 /* JMCiBeaconManager.framework */;
+			productReference = D1086AC26FE53CCF1A0CD0894676CF94 /* JMCiBeaconManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BE90AC0047CC18A413E8E5B2BA37A0E8 /* Pods-Conference App */ = {
+		CFECFB0E7990A6253E56EA393775C122 /* Pods-Conference App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11CE65DA809B75E6BD57E387E2F735BA /* Build configuration list for PBXNativeTarget "Pods-Conference App" */;
+			buildConfigurationList = D79A7A678AEF2D5B0F328F981034396C /* Build configuration list for PBXNativeTarget "Pods-Conference App" */;
 			buildPhases = (
-				93D2D927AA99A70175B6AE2508313258 /* Sources */,
-				7FFD7E8F73DD12FC4A0C367E0833058C /* Frameworks */,
-				3C1CA503E43FB381FCD496E2A32FEC0C /* Headers */,
+				BD09E7797E39A9BAC33DC87924D304D5 /* Sources */,
+				234668E85174FCAD3EF8C866C8C6AA48 /* Frameworks */,
+				1F280C7FF5E82DC83FF8114BAF062D65 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7E61CD6C521DC7C554FCDC5A600029C0 /* PBXTargetDependency */,
+				E997F9D9147AB7BDB272B8414EB0A949 /* PBXTargetDependency */,
+				3102F6D587960334EF0E0744C249A3C3 /* PBXTargetDependency */,
 			);
 			name = "Pods-Conference App";
 			productName = "Pods-Conference App";
-			productReference = 9415C804E4BA1FB27634166A957FB3AB /* Pods_Conference_App.framework */;
+			productReference = 26F0D071F9707E9B6EF4E2A9DEE4A280 /* Pods_Conference_App.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -276,12 +411,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F0094D07BEAA5B0E23AAF3C027F7FED6 /* Products */;
+			productRefGroup = B41EB69C97AD7F0EE71745B35452929B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */,
 				61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */,
-				BE90AC0047CC18A413E8E5B2BA37A0E8 /* Pods-Conference App */,
+				CFECFB0E7990A6253E56EA393775C122 /* Pods-Conference App */,
 			);
 		};
 /* End PBXProject section */
@@ -303,22 +439,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93D2D927AA99A70175B6AE2508313258 /* Sources */ = {
+		BD09E7797E39A9BAC33DC87924D304D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CFDACC35DB38CA3141A4A14E815E1DC /* Pods-Conference App-dummy.m in Sources */,
+				3AEC422A729B36FE79DCA8D7607413B1 /* Pods-Conference App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF172C07C6DA054AC5D84164A26DAE24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9831DDC5256EF014D93FF2DBE055E7B6 /* Cache.swift in Sources */,
+				9F4D113C6A4469F0DFAC637F1CA2C087 /* CGSize+Swift.swift in Sources */,
+				9E629066D218DC1DC616E339DB68E49C /* CryptoSwiftMD5.swift in Sources */,
+				3D90F67A3A10F71FD01DEDA59496C1D7 /* Data.swift in Sources */,
+				AEB48C925DC8D4B812C4ABF9F15C822E /* DiskCache.swift in Sources */,
+				49A5E2B820A83801CEE267AA6E1D923F /* DiskFetcher.swift in Sources */,
+				B1CCF02E757EE856275CE85BF171ED90 /* Fetch.swift in Sources */,
+				8C357B44EA2BC147AA0219CD8CC03B5F /* Fetcher.swift in Sources */,
+				0D361BC02EA3B8C476545E29A293CCB8 /* Format.swift in Sources */,
+				BD038EFFD2D1B49B136B42B5E07D59C5 /* Haneke.swift in Sources */,
+				F03916F3658FFB4643AD5FC815A4F5A7 /* HanekeSwift-dummy.m in Sources */,
+				9911E1A886CD44872C07FAA6A1521A85 /* Log.swift in Sources */,
+				3EA2C091B8672D75066EEEEFE63B5A86 /* NetworkFetcher.swift in Sources */,
+				92A2D4839D45ABA48D77923C035C8943 /* NSFileManager+Haneke.swift in Sources */,
+				DF6DBB5FA4E663A5AE7F272CA1CBA3BB /* NSHTTPURLResponse+Haneke.swift in Sources */,
+				8A85C4CDF0FE775E0BD0C44B0C3E6159 /* NSURLResponse+Haneke.swift in Sources */,
+				55F3BC1465BB2EB6F02ADC5A2D1F9F83 /* String+Haneke.swift in Sources */,
+				1D27B06296C346D4F23F5ED14B0A5D1A /* UIButton+Haneke.swift in Sources */,
+				A8CF635DBE430F95FB17D371B918B3FB /* UIImage+Haneke.swift in Sources */,
+				24E7FCE3DF42DC6D616DC39F8AC69566 /* UIImageView+Haneke.swift in Sources */,
+				9D5F6868132325D38051C5A07F128C5C /* UIView+Haneke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7E61CD6C521DC7C554FCDC5A600029C0 /* PBXTargetDependency */ = {
+		3102F6D587960334EF0E0744C249A3C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JMCiBeaconManager;
 			target = 61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */;
-			targetProxy = BE1E252C836731BF8F325C88CD21D617 /* PBXContainerItemProxy */;
+			targetProxy = EFB0533C617AC026F1ED657C077D1281 /* PBXContainerItemProxy */;
+		};
+		E997F9D9147AB7BDB272B8414EB0A949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HanekeSwift;
+			target = 2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */;
+			targetProxy = 55FB75EDC05ACB368FB4DFF823870E66 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -365,9 +535,42 @@
 			};
 			name = Debug;
 		};
+		527FE0753770CD700A2F721380E7FFD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Conference_App;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		55E0A7F10D207D2A449B9F0882A8E5C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */;
+			baseConfigurationReference = 4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -394,9 +597,102 @@
 			};
 			name = Release;
 		};
+		569AADD228C350837BF12426E5584D88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Conference_App;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6396977BD54CF323E225E3BA478F0B6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A789AD15C7069B9487F6E2A93DE8D319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A92051B2473232140037261E3B084C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBD98775FDF4C5C32881295F0532DED2 /* JMCiBeaconManager.xcconfig */;
+			baseConfigurationReference = 4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -462,85 +758,9 @@
 			};
 			name = Release;
 		};
-		E16573C116AF782FC1381EC590661CC0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Conference_App;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F942ABC4B5C860F4E862975B744DED16 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Conference_App;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11CE65DA809B75E6BD57E387E2F735BA /* Build configuration list for PBXNativeTarget "Pods-Conference App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F942ABC4B5C860F4E862975B744DED16 /* Debug */,
-				E16573C116AF782FC1381EC590661CC0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -550,11 +770,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		72681BE87943D4976033F6522AE72050 /* Build configuration list for PBXNativeTarget "HanekeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6396977BD54CF323E225E3BA478F0B6B /* Debug */,
+				A789AD15C7069B9487F6E2A93DE8D319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B4CB58A11D032A539303719F9A68B7D8 /* Build configuration list for PBXNativeTarget "JMCiBeaconManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A92051B2473232140037261E3B084C82 /* Debug */,
 				55E0A7F10D207D2A449B9F0882A8E5C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D79A7A678AEF2D5B0F328F981034396C /* Build configuration list for PBXNativeTarget "Pods-Conference App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				569AADD228C350837BF12426E5584D88 /* Debug */,
+				527FE0753770CD700A2F721380E7FFD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

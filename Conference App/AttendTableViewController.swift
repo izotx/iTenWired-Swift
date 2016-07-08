@@ -37,7 +37,7 @@ class AttendeesViewController: UITableViewController{
     
     let atendeeControler = AttendeeController()
     
-    var sponsers:[Sponser] = []
+    var sponsers:[Sponsor] = []
     var exhibitors:[Exibitor] = []
     var speakers:[Speaker] = []
     

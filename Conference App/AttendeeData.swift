@@ -40,7 +40,7 @@ class AttendeeData{
     private let appData = AppData()
     
     /// List of Sponsers
-    private var sponsers:[Sponser] = []
+    private var sponsers:[Sponsor] = []
     
     /// List of exhibitors
     private var exibitors:[Exibitor] = []
@@ -64,7 +64,7 @@ class AttendeeData{
         
         if let sponsersData = data["sponsors"] as? [NSDictionary]{
             for sponserData in sponsersData{
-                let sponser =  Sponser(dictionary: sponserData)
+                let sponser =  Sponsor(dictionary: sponserData)
                 self.sponsers.append(sponser)
             }
         }
@@ -100,7 +100,7 @@ class AttendeeData{
         }
     }
     
-    func getSponsers() -> [Sponser] {
+    func getSponsers() -> [Sponsor] {
         return self.sponsers
     }
     

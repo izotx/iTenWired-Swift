@@ -25,60 +25,43 @@
 //    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //    POSSIBILITY OF SUCH DAMAGE.
 //
-//
-//  ItenWiredBeacon.swift
+//  NearMeCollectionViewCell.swift
 //  Conference App
 //
-//  Created by Felipe on 7/7/16.
+//  Created by Felipe N. Brito on 7/8/16.
 //
 //
 
-import Foundation
-import JMCiBeaconManager
+import UIKit
+import Haneke
 
 
-enum ItenWiredBeaconEnum : String {
-    case id
-    case minor
-    case major
-    case name
-}
-
-class ItenWiredBeacon : iBeacon {
+class NearMeCollectionViewCell: UICollectionViewCell {
     
+    var nearMeItem: iBeaconNearMeProtocol!
     
-    /// Date the beacon was last ranged
-    internal var lastRanged : NSDate!
+    @IBOutlet var icon: MIBadgeButton!
+    @IBOutlet var title: UILabel!
+ 
     
-    /**
-     Initializes the Beacon with the data provided in the dictionary
-     */
-    init(dictionary: NSDictionary) {
+    func build(nearMeItem: iBeaconNearMeProtocol){
         
+        icon.hnk_setImageFromURL(NSURL(string: nearMeItem.getNearMeIconURL())!)
+        title.text = nearMeItem.getNearMeTitle()
         
-        var minor: UInt16 = 0
-        var major: UInt16 = 0
-        var proximityId = ""
-        
-        if let unwrapedMinor = dictionary.objectForKey(ItenWiredBeaconEnum.minor.rawValue) as? UInt16 {
-            minor = unwrapedMinor
-        }
-        
-        if let unwrapedMajor = dictionary.objectForKey(ItenWiredBeaconEnum.major.rawValue) as? UInt16 {
-            major = unwrapedMajor
-        }
-      
-        
-        if let unwrapedID = dictionary.objectForKey(ItenWiredBeaconEnum.id.rawValue) as? String {
-            proximityId = unwrapedID
-        }
-
-        super.init(minor: nil, major: nil, proximityId: proximityId)
+        self.UIConfig()
     }
     
-    init(with beacon: iBeacon){
-        super.init(minor: beacon.minor, major: beacon.major, proximityId: beacon.UUID)
+    internal func UIConfig(){
+        self.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        
+        title.textColor = ItenWiredStyle.text.color.invertedColor
+        
+        self.contentView.layer.borderColor = ItenWiredStyle.background.color.invertedColor.CGColor
+        
+        self.contentView.layer.borderWidth = 2
+        
     }
+    
 }
-
 

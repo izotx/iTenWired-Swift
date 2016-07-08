@@ -37,17 +37,17 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-fO-exr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uzu-Nb-rXS">
-                                    <size key="itemSize" width="178" height="215"/>
+                                    <size key="itemSize" width="148" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="LxL-TC-nxl" customClass="MenuCellCollectionViewCell" customModule="Conference_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="178" height="215"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="LxL-TC-nxl" customClass="NearMeCollectionViewCell" customModule="Conference_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="148" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="178" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-qf-Xue">
@@ -76,8 +76,8 @@
                                             <constraint firstItem="xLS-qf-Xue" firstAttribute="leading" secondItem="LxL-TC-nxl" secondAttribute="leadingMargin" constant="11" id="xBm-QT-dUB"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="icon" destination="kcr-E1-jab" id="TKv-uD-RMo"/>
-                                            <outlet property="nameLabel" destination="xLS-qf-Xue" id="jEq-S3-M6v"/>
+                                            <outlet property="icon" destination="kcr-E1-jab" id="Phg-zg-uSr"/>
+                                            <outlet property="title" destination="xLS-qf-Xue" id="d3A-JN-tKA"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

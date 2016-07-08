@@ -40,8 +40,9 @@ class NearByViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    /// iBeaconManager - Awsome Lib :)
-    let beaconManager = JMCBeaconManager()
+    
+    /// Near me Controller
+    let nearMeController = NearMeController()
     
     /// iBeacons Data drom the JSON file
     let beaconData = IBeaconData()
@@ -56,20 +57,8 @@ class NearByViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        // iBeaconManager Setup
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsRanged(_:)), name: iBeaconNotifications.BeaconProximity.rawValue, object: nil)
-        
-        let registeredBeacons = beaconData.getBeacons()
-        
-        beaconManager.registerBeacons(registeredBeacons)
-        
-        beaconManager.startMonitoring({
-            
-        }) { (messages) in
-            print("Error Messages \(messages)")
-        }
 
-
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearByViewController.newBeaconRanged), name: NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -77,36 +66,25 @@ class NearByViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-}
-
-//MARK: JMCiBeaconManager
-extension NearByViewController {
     
-    /**Called when the beacons are ranged*/
-    func beaconsRanged(notification:NSNotification){
-        if let visibleIbeacons = notification.object as? [iBeacon]{
-            for beacon in visibleIbeacons{
-                beacons.append(beacon)
-            }
-        }
+    func newBeaconRanged() {
         collectionView.reloadData()
     }
 
 }
-
 
 //MARK: UICollectionViewDelegate, UICollectionViewDataSource
 extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return beacons.count
+        return nearMeController.getAllNearMe().count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? MenuCellCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? NearMeCollectionViewCell
         
-        cell?.nameLabel.text = "Name"
+        cell?.build(nearMeController.getAllNearMe()[indexPath.row])
         
         return cell!
     }

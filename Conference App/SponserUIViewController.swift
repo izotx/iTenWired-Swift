@@ -36,8 +36,8 @@ import UIKit
 
 class SponserUIViewController: UIViewController {
 
-    var sponser:Sponser!
-    var exhibitor:Exibitor!
+    var sponser : Sponsor!
+    var exhibitor : Exibitor!
     
     @IBOutlet weak var logo: UIImageView!
     
@@ -77,7 +77,7 @@ class SponserUIViewController: UIViewController {
         self.websiteLabel.text = exhibitor.website
     }
     
-    func build(sponser: Sponser){
+    func build(sponser: Sponsor){
         // Gets the logo from the url
         if NetworkConnection.isConnected() {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {

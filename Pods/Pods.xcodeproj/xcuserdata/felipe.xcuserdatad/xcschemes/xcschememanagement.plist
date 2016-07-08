@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HanekeSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JMCiBeaconManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2C2B1953A91633859BF7AD238FF567A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>61290FB0253531D2C0D469258A0417DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE90AC0047CC18A413E8E5B2BA37A0E8</key>
+		<key>CFECFB0E7990A6253E56EA393775C122</key>
 		<dict>
 			<key>primary</key>
 			<true/>
