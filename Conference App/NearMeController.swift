@@ -110,14 +110,16 @@ class NearMeController {
             }
         }
         
+        for exhibitor in attendeeData.getExibitors() {
+        
+            if exhibitor.iBeaconId.equalsIgnoreCase(beacon.UUID) {
+                activeNearMe.append(exhibitor)
+                break
+            }
+        }
+        
         // Notify that a new beacon was ranged
         NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
     }
 
-}
-
-extension String {
-    func equalsIgnoreCase(other: String) -> Bool {
-        return other.caseInsensitiveCompare(self) == .OrderedSame
-    }
 }

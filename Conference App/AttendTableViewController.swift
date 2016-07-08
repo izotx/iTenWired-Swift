@@ -38,7 +38,7 @@ class AttendeesViewController: UITableViewController{
     let atendeeControler = AttendeeController()
     
     var sponsers:[Sponsor] = []
-    var exhibitors:[Exibitor] = []
+    var exhibitors:[Exhibitor] = []
     var speakers:[Speaker] = []
     
     // Photo Loader and controller for exhibitor photos

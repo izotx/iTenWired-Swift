@@ -25,43 +25,17 @@
 //    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //    POSSIBILITY OF SUCH DAMAGE.
 //
-//  NearMeCollectionViewCell.swift
+//  String+ItenWired.swift
 //  Conference App
 //
-//  Created by Felipe N. Brito on 7/8/16.
+//  Created by Felipe on 7/8/16.
 //
 //
 
-import UIKit
-import Haneke
+import Foundation
 
-
-class NearMeCollectionViewCell: UICollectionViewCell {
-    
-    var nearMeItem: iBeaconNearMeProtocol!
-    
-    @IBOutlet var icon: MIBadgeButton!
-    @IBOutlet var title: UILabel!
- 
-    
-    func build(nearMeItem: iBeaconNearMeProtocol){
-        
-        icon.hnk_setImageFromURL(NSURL(string: nearMeItem.getNearMeIconURL())!)
-        title.text = nearMeItem.getNearMeTitle()
-        
-        self.UIConfig()
+extension String {
+    func equalsIgnoreCase(other: String) -> Bool {
+        return other.caseInsensitiveCompare(self) == .OrderedSame
     }
-    
-    internal func UIConfig(){
-        self.backgroundColor = ItenWiredStyle.background.color.invertedColor
-        
-        title.textColor = ItenWiredStyle.text.color.invertedColor
-        
-        self.contentView.layer.borderColor = ItenWiredStyle.background.color.mainColor.CGColor
-        
-        self.contentView.layer.borderWidth = 2
-        
-    }
-    
 }
-

@@ -77,6 +77,7 @@
 		5569DA2A1D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA291D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift */; };
 		5569DA2C1D302C800004F0C1 /* NearMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA2B1D302C800004F0C1 /* NearMeController.swift */; };
 		5569DA2E1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA2D1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift */; };
+		5569DA311D30470C0004F0C1 /* String+ItenWired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569DA301D30470C0004F0C1 /* String+ItenWired.swift */; };
 		556F70221CF49DCB00428EB5 /* logo-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 556F70211CF49DCB00428EB5 /* logo-16.png */; };
 		5570EEC61CF4AC510033FCDC /* SocialMediaFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */; };
 		5570EEC81CF4ACC20033FCDC /* AnnouncementsFilled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */; };
@@ -280,6 +281,7 @@
 		5569DA291D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iBeaconNearMeProtocol.swift; sourceTree = "<group>"; };
 		5569DA2B1D302C800004F0C1 /* NearMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeController.swift; sourceTree = "<group>"; };
 		5569DA2D1D303D6A0004F0C1 /* NearMeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearMeCollectionViewCell.swift; sourceTree = "<group>"; };
+		5569DA301D30470C0004F0C1 /* String+ItenWired.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ItenWired.swift"; sourceTree = "<group>"; };
 		556F70211CF49DCB00428EB5 /* logo-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-16.png"; sourceTree = "<group>"; };
 		5570EEC51CF4AC510033FCDC /* SocialMediaFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SocialMediaFilled-50.png"; sourceTree = "<group>"; };
 		5570EEC71CF4ACC20033FCDC /* AnnouncementsFilled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AnnouncementsFilled-50.png"; sourceTree = "<group>"; };
@@ -561,6 +563,14 @@
 				55DAC38A1CEDFBFD00941824 /* Cell */,
 			);
 			name = UIView;
+			sourceTree = "<group>";
+		};
+		5569DA2F1D3046EF0004F0C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5569DA301D30470C0004F0C1 /* String+ItenWired.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		557D35531CE50B2200562A7A /* Social */ = {
@@ -929,6 +939,7 @@
 		FE2623A01CAEFA940074C58F /* Conference App */ = {
 			isa = PBXGroup;
 			children = (
+				5569DA2F1D3046EF0004F0C1 /* Extensions */,
 				551604F11CE2720F00D46D2B /* Conference App-Bridging-Header.h */,
 				FE2623A11CAEFA940074C58F /* AppDelegate.swift */,
 				0E7A8FE41CC19D150034513C /* AppData.swift */,
@@ -1301,6 +1312,7 @@
 				557D354C1CE4DC8B00562A7A /* MyItenController.swift in Sources */,
 				0EBCE1E61CC2E14E008CEA2C /* LiveBroadcastViewController.swift in Sources */,
 				5570EEDA1CF4EC100033FCDC /* DateEnum.swift in Sources */,
+				5569DA311D30470C0004F0C1 /* String+ItenWired.swift in Sources */,
 				407BE0A01D216C87005D61CF /* STKDataSource.m in Sources */,
 				407BE0971D216C87005D61CF /* STKAudioPlayer.m in Sources */,
 				4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */,

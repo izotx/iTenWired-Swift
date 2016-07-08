@@ -39,10 +39,11 @@ enum ExibitorEnum : String {
     case description
     case logo
     case website
+    case beacon
 }
 
 /// Information of the conference Exhibitors
-class Exibitor : AttendeeProtocol{
+class Exhibitor : AttendeeProtocol{
     
     /// Exhibitors unique id
     var id:Int = 0
@@ -58,6 +59,9 @@ class Exibitor : AttendeeProtocol{
     
     ///Exhibitos website URL
     var website:String = ""
+    
+    /// iBeacon ID
+    var iBeaconId = ""
 
     init(dictionary: NSDictionary){
         
@@ -80,5 +84,29 @@ class Exibitor : AttendeeProtocol{
         if let website = dictionary.objectForKey(ExibitorEnum.website.rawValue) as? String {
             self.website = website
         }
+        
+        if let beacon = dictionary.objectForKey(ExibitorEnum.beacon.rawValue) as? NSDictionary {
+            
+            if let beaconId = beacon.objectForKey(ExibitorEnum.id.rawValue) as? String {
+                self.iBeaconId = beaconId
+            }
+        }
+
+    }
+}
+
+//MARK: iBeaconNearMeProtocol
+extension Exhibitor : iBeaconNearMeProtocol {
+    
+    func getNearMeIconURL() -> String {
+        return logo
+    }
+    
+    func getNearMeTitle() -> String {
+        return name
+    }
+    
+    func getBeaconId() -> String {
+        return iBeaconId
     }
 }

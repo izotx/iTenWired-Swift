@@ -53,6 +53,9 @@ class NearByViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Apply ItenWired Style
+        UIConfig()
+        
         //CollectionView Delegate
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -60,6 +63,13 @@ class NearByViewController: UIViewController {
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearByViewController.newBeaconRanged), name: NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    private func UIConfig() {
+        
+        self.view.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        self.collectionView.backgroundColor = ItenWiredStyle.background.color.invertedColor
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,6 +97,14 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell?.build(nearMeController.getAllNearMe()[indexPath.row])
         
         return cell!
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        if let svc = self.splitViewController where svc.collapsed == false  {
+            return CGSize(width: ((collectionView.frame.size.width - 2)) , height: 60)
+        }
+        
+        return CGSize(width: ((collectionView.frame.size.width - 10) / 2)  - 6 , height: 150)
     }
     
 }

@@ -23,7 +23,7 @@ class AttendeesCell: UITableViewCell {
         setLevel(sponser.level)
     }
     
-    func build(exibitor:Exibitor){
+    func build(exibitor:Exhibitor){
         setName(exibitor.name)
         setLevel(exibitor.website)
     }

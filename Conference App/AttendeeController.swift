@@ -61,7 +61,7 @@ class AttendeeController{
      
      - Returns: An array with the confference Exhibitors
      */
-    func getExibitors() -> [Exibitor] {
+    func getExibitors() -> [Exhibitor] {
         return dataLoader.getExibitors()
     }
     
@@ -117,7 +117,7 @@ class AttendeeController{
      
      - Returns: A exhibitor from the specified index
      */
-    func getExibitorAtIndex(index: Int) -> Exibitor {
+    func getExibitorAtIndex(index: Int) -> Exhibitor {
         return self.getExibitors()[index]
     }
     

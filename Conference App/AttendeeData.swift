@@ -43,7 +43,7 @@ class AttendeeData{
     private var sponsers:[Sponsor] = []
     
     /// List of exhibitors
-    private var exibitors:[Exibitor] = []
+    private var exibitors:[Exhibitor] = []
     
     /// List of Spealkers
     private var speakers:[Speaker] = []
@@ -79,7 +79,7 @@ class AttendeeData{
         
         if let exibitorsData = data["exhibitors"] as? [NSDictionary] {
             for exibitorData in exibitorsData{
-                let exibitor = Exibitor(dictionary: exibitorData)
+                let exibitor = Exhibitor(dictionary: exibitorData)
                 exibitors.append(exibitor)
             }
         }
@@ -104,7 +104,7 @@ class AttendeeData{
         return self.sponsers
     }
     
-    func getExibitors() -> [Exibitor] {
+    func getExibitors() -> [Exhibitor] {
         return self.exibitors
     }
     
