@@ -59,16 +59,9 @@ class NearByViewController: UIViewController {
         // iBeaconManager Setup
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsRanged(_:)), name: iBeaconNotifications.BeaconProximity.rawValue, object: nil)
         
-        let kontaktIOBeacon = iBeacon(minor: nil, major: nil, proximityId: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
-        let estimoteBeacon = iBeacon(minor: nil, major: nil, proximityId: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
+        let registeredBeacons = beaconData.getBeacons()
         
-        var beacons = [iBeacon]()
-        
-        for beacon in beaconData.getBeacons() {
-            beacons.append(iBeacon(minor: UInt16(beacon.minor), major: UInt16(beacon.major), proximityId: beacon.id))
-        }
-        
-        beaconManager.registerBeacons(beacons)
+        beaconManager.registerBeacons(registeredBeacons)
         
         beaconManager.startMonitoring({
             

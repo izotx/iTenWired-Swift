@@ -3,13 +3,23 @@ PODS:
   - OneSignal (1.13.3)
 
 DEPENDENCIES:
-  - JMCiBeaconManager
+  - JMCiBeaconManager (from `https://github.com/FelipeNBrito/iBeacon.git`, commit `c21ab0724aa3612b88f0f6ec6a0db0b3e83aa5a0`)
   - OneSignal
+
+EXTERNAL SOURCES:
+  JMCiBeaconManager:
+    :commit: c21ab0724aa3612b88f0f6ec6a0db0b3e83aa5a0
+    :git: https://github.com/FelipeNBrito/iBeacon.git
+
+CHECKOUT OPTIONS:
+  JMCiBeaconManager:
+    :commit: c21ab0724aa3612b88f0f6ec6a0db0b3e83aa5a0
+    :git: https://github.com/FelipeNBrito/iBeacon.git
 
 SPEC CHECKSUMS:
   JMCiBeaconManager: cec30b1fb7428c2dc282485d8af25194c49672b9
   OneSignal: 434facae3389cb0d4d3fc57b9a6cf66db685205e
 
-PODFILE CHECKSUM: 75d36560e360f74c86492f67247cc0187cf464be
+PODFILE CHECKSUM: d062e2bf7ca5359223c6af5d0972b1a68aff585e
 
 COCOAPODS: 1.0.0

@@ -54,7 +54,7 @@ class IBeaconData {
             return beacons
         }
         
-        if let beaconsData = data["iBeacons"] as? [NSDictionary]{
+        if let beaconsData = data["ibeacons"] as? [NSDictionary]{
             for beaconData in beaconsData{
                 
                 let beacon = ItenWiredBeacon(dictionary: beaconData)

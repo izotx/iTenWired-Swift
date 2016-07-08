@@ -40,7 +40,7 @@ enum NetworkNotifications:String{
 class AppData{
    
     let defaults = NSUserDefaults.standardUserDefaults()
-    var URL: NSURL =  NSURL(string: "XXXXXXX")!
+    var URL: NSURL =  NSURL(string: "http://badges.uwf.edu/data.json")!
 
     func getAllNotifications() -> [Notification] {
         let arr = [Notification]()
@@ -129,7 +129,6 @@ class AppData{
                 
                 if (statusCode == 200) {
                     returnData = data!
-                    //print(returnData)
                     
                     
                 }else{

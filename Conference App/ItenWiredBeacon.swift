@@ -34,8 +34,9 @@
 //
 
 import Foundation
+import JMCiBeaconManager
 
-/// Beacon Object Atribuites
+
 enum ItenWiredBeaconEnum : String {
     case id
     case minor
@@ -43,41 +44,32 @@ enum ItenWiredBeaconEnum : String {
     case name
 }
 
-class ItenWiredBeacon {
-    
-    /// iBeacon unique id
-    var id = ""
-    
-    /// iBeacon Minor
-    var minor = 0
-    
-    /// iBeacon Major
-    var major = 0
-    
-    /// iBeacon Human Readable Name
-    var name = ""
-    
+class ItenWiredBeacon : iBeacon {
     
     /**
      Initializes the Beacon with the data provided in the dictionary
      */
     init(dictionary: NSDictionary) {
         
-        if let id = dictionary.objectForKey(ItenWiredBeaconEnum.name.rawValue) as? String {
-            self.id = id
+        
+        var minor: UInt16 = 0
+        var major: UInt16 = 0
+        var proximityId = ""
+        
+        if let unwrapedMinor = dictionary.objectForKey(ItenWiredBeaconEnum.minor.rawValue) as? UInt16 {
+            minor = unwrapedMinor
         }
         
-        if let minor = dictionary.objectForKey(ItenWiredBeaconEnum.minor.rawValue) as? Int {
-            self.minor = minor
+        if let unwrapedMajor = dictionary.objectForKey(ItenWiredBeaconEnum.major.rawValue) as? UInt16 {
+            major = unwrapedMajor
         }
+      
         
-        if let major = dictionary.objectForKey(ItenWiredBeaconEnum.major.rawValue) as? Int {
-            self.major = major
+        if let unwrapedID = dictionary.objectForKey(ItenWiredBeaconEnum.id.rawValue) as? String {
+            proximityId = unwrapedID
         }
-        
-        if let name = dictionary.objectForKey(ItenWiredBeaconEnum.name.rawValue) as? String {
-            self.name = name
-        }
+
+        super.init(minor: nil, major: nil, proximityId: proximityId)
     }
 }
 
