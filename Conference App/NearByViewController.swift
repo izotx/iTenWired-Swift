@@ -80,6 +80,21 @@ class NearByViewController: UIViewController {
     func newBeaconRanged() {
         collectionView.reloadData()
     }
+    
+    
+    @IBAction func showMenu(sender: AnyObject) {
+    
+        if let splitController = self.splitViewController{
+            if !splitController.collapsed {
+                splitController.toggleMasterView()
+                
+            } else{
+                let rightNavController = splitViewController!.viewControllers.first as! UINavigationController
+                rightNavController.popToRootViewControllerAnimated(true)
+            }
+        }
+    
+    }
 
 }
 
@@ -107,4 +122,36 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: ((collectionView.frame.size.width - 10) / 2)  - 6 , height: 150)
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let item = nearMeController.getAllNearMe()[indexPath.row]
+        
+        if item is Sponsor {
+            
+            if let sponsor = item as? Sponsor {
+            
+                let storyboard = UIStoryboard.init(name: "Attendees", bundle: nil)
+                let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("SponserDescriptionViewController") as? SponserUIViewController
+            
+                destinationViewController?.sponser = sponsor
+            
+                self.navigationController?.pushViewController(destinationViewController!, animated: true)
+            }
+            
+            return
+        }
+        
+        if item is Location {
+            
+            if let location = item as? Location {
+            
+                let storyboard = UIStoryboard.init(name: "Location", bundle: nil)
+                let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("LocationViewController") as? LocationViewController
+                
+                destinationViewController?.location = location
+                
+                self.navigationController?.pushViewController(destinationViewController!, animated: true)
+            }
+        }
+    }
 }

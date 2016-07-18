@@ -35,7 +35,7 @@
 import Foundation
 
 
-class AttendeeData{
+class AttendeeData {
     
     private let appData = AppData()
     
@@ -56,9 +56,9 @@ class AttendeeData{
     }
     
     // Loads sponsers from file to memory
-    func loadSponsers(){
+    private func loadSponsers(){
         
-        guard let data = appData.getDataFromFile() else{
+        guard let data = appData.getDataFromFile() else {
             return
         }
         
@@ -71,7 +71,7 @@ class AttendeeData{
     }
     
     // loads exhibitors from file to memory
-    func loadExibitors(){
+    private func loadExibitors(){
         
         guard let data = self.appData.getDataFromFile() else{
             return
@@ -86,7 +86,7 @@ class AttendeeData{
     }
     
     //loads speakes from file to memory
-    func loadSpeakers(){
+    private func loadSpeakers(){
     
         guard let data = self.appData.getDataFromFile() else {
             return

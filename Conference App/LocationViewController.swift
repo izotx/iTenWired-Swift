@@ -24,37 +24,45 @@
 //    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 //    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //    POSSIBILITY OF SUCH DAMAGE.
-
-//  ViewController.swift
-//  Agenda
 //
-//  Created by Felipe Neves Brito on 4/5/16.
-
+//  LocationViewController.swift
+//  Conference App
+//
+//  Created by Felipe N. Brito on 7/18/16.
+//
+//
 
 import UIKit
 
-class AgendaViewController: UIViewController{
-
-    /// List of all events
-    var events: [Event] = []
-
+class LocationViewController: UIViewController {
+    
     /// loading activity indicator
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    
+
     /// main tableview
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
-    let myItenController = MyItenController()
+    /// Location Object
+    var location : Location!
+    
+    /// Location Controller
+    var locationController = LocationController()
+    
+    /// Events list
+    var events : [Event]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        loadEvents()
-        
-        //TablewView delegate 
+        //TablewView delegate
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        // Load data
+        events = locationController.getAllEvents(fromLocation: location)
+        
+        self.navigationItem.title = location.name
         
     }
     
@@ -63,33 +71,14 @@ class AgendaViewController: UIViewController{
         self.UIConfig()
     }
     
-    internal func loadEvents(){
-    
-        let agendaDataLoader = AgendaDataLoader()
-        
-        activityIndicator.startAnimating()
-        activityIndicator.hidden = false 
-        agendaDataLoader.getEvents { (events) in
-            self.events.appendContentsOf(events)
-            self.activityIndicator.stopAnimating()
-            self.tableView.reloadData()
-        }
-    }
     
     internal func UIConfig(){
         tableView.backgroundColor = ItenWiredStyle.background.color.mainColor
-       
+        
         self.navigationController?.navigationBarHidden = false
         self.tableView.estimatedRowHeight = 85.0
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
-        if let splitController = self.splitViewController{
-            
-            if !splitController.collapsed {
-                splitController.toggleMasterView()
-                
-            }
-        }
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -112,7 +101,7 @@ class AgendaViewController: UIViewController{
 }
 
 //MARK: UITableViewDelegate, UITableViewDataSource
-extension AgendaViewController: UITableViewDelegate, UITableViewDataSource{
+extension LocationViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return events.count
@@ -162,8 +151,11 @@ extension AgendaViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let storyboard = UIStoryboard.init(name: "AgendaMain", bundle: nil)
+        
         let destinationViewController: EventViewController
-            = (storyboard?.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
+            = (storyboard.instantiateViewControllerWithIdentifier("EventViewController") as? EventViewController)!
         
         let event = events[indexPath.row]
         destinationViewController.event = event

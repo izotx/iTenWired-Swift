@@ -59,6 +59,9 @@ class NearMeController {
     /// Attendee Data from JSON
     private var attendeeData = AttendeeData()
     
+    /// Locations Data from JSON
+    private var locationsData = LocationData()
+    
     
     init(){
         
@@ -83,15 +86,17 @@ class NearMeController {
     @objc func beaconsRanged(notification:NSNotification){
         if let visibleIbeacons = notification.object as? [iBeacon]{
             for beacon in visibleIbeacons{
+                
+                print(beacon.UUID)
             
                 let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
                 iTenWiredBeacon.lastRanged = NSDate()
                 
-                if(activeBeacons[iTenWiredBeacon.id] == nil){
+                if(activeBeacons[iTenWiredBeacon.UUID] == nil){
                    newBeaconRanged(iTenWiredBeacon)
                 }
 
-                activeBeacons[iTenWiredBeacon.id] = iTenWiredBeacon
+                activeBeacons[iTenWiredBeacon.UUID] = iTenWiredBeacon
             }
         }
     }
@@ -104,7 +109,7 @@ class NearMeController {
         
         for sponsor in attendeeData.getSponsers() {
             
-            if sponsor.iBeaconId.equalsIgnoreCase(beacon.UUID) {
+            if sponsor.getBeaconId().equalsIgnoreCase(beacon.UUID) {
                 activeNearMe.append(sponsor)
                 break
             }
@@ -112,8 +117,16 @@ class NearMeController {
         
         for exhibitor in attendeeData.getExibitors() {
         
-            if exhibitor.iBeaconId.equalsIgnoreCase(beacon.UUID) {
+            if exhibitor.getBeaconId().equalsIgnoreCase(beacon.UUID) {
                 activeNearMe.append(exhibitor)
+                break
+            }
+        }
+        
+        for location in locationsData.getLocations() {
+            
+            if location.getBeaconId().equalsIgnoreCase(beacon.UUID) {
+                activeNearMe.append(location)
                 break
             }
         }

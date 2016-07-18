@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WoK-GL-0mb" id="dHQ-3G-lUb">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-5G-Cxe">
@@ -125,7 +125,7 @@
                                         <rect key="frame" x="0.0" y="92" width="320" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBT-oK-Cxo" id="pZL-pN-UMq">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook-50.png" translatesAutoresizingMaskIntoConstraints="NO" id="11W-U3-MIl">
@@ -208,7 +208,7 @@
                                 <rect key="frame" x="0.0" y="92" width="320" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fuh-4m-SZj" id="2aO-Pu-gRw">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-qy-ydn">
@@ -251,7 +251,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB3-ch-h0c">
                                             <rect key="frame" x="285" y="7" width="19" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -286,7 +286,7 @@
                                 <rect key="frame" x="0.0" y="191" width="320" height="279"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7X2-0p-6P1" id="HYT-ig-gLY">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="278.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

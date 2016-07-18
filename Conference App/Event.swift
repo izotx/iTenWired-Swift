@@ -41,6 +41,7 @@ enum EventEnum : String{
     case date
     case presenters
     case track
+    case location_id
 }
 
 
@@ -70,6 +71,10 @@ class Event : NSObject{
     
     /// A list with all the events presentors
     var presentorsIDs:[Int] = []
+    
+    
+    /// The Id of the location of the event 
+    var locationId = 0
     
     init(id:Int){
         self.id = id
@@ -134,6 +139,10 @@ class Event : NSObject{
         
         if let trackIDString = dictionary.objectForKey(EventEnum.track.rawValue) as? String {
             self.trackID = Int(trackIDString)!
+        }
+        
+        if let locationId = dictionary.objectForKey(EventEnum.location_id.rawValue) as? Int {
+            self.locationId = locationId
         }
     }
     

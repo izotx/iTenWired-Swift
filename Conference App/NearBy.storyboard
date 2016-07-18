@@ -92,16 +92,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-qf-Xue">
-                                                    <rect key="frame" x="19" y="135" width="109" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-qf-Xue">
+                                                    <rect key="frame" x="20" y="156" width="109" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcr-E1-jab" customClass="MIBadgeButton" customModule="Conference_App" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="191"/>
+                                                    <rect key="frame" x="0.0" y="51" width="148" height="83"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="191" id="IEe-Gw-4hO"/>
+                                                        <constraint firstAttribute="height" constant="83" id="IEe-Gw-4hO"/>
                                                         <constraint firstAttribute="width" constant="148" id="RUe-Yb-F9k"/>
                                                     </constraints>
                                                     <state key="normal" image="AboutFilled-50.png"/>
@@ -111,11 +111,11 @@
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="0.62352941179999999" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="xLS-qf-Xue" secondAttribute="bottom" constant="5" id="Wv6-2d-VSS"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xLS-qf-Xue" secondAttribute="bottom" id="Wv6-2d-VSS"/>
                                             <constraint firstItem="xLS-qf-Xue" firstAttribute="centerX" secondItem="LxL-TC-nxl" secondAttribute="centerX" id="chI-O7-glX"/>
-                                            <constraint firstItem="kcr-E1-jab" firstAttribute="centerY" secondItem="LxL-TC-nxl" secondAttribute="centerY" constant="3" id="qzB-Mz-fJ4"/>
+                                            <constraint firstItem="kcr-E1-jab" firstAttribute="centerY" secondItem="LxL-TC-nxl" secondAttribute="centerY" constant="0.5" id="qzB-Mz-fJ4"/>
                                             <constraint firstItem="kcr-E1-jab" firstAttribute="centerX" secondItem="LxL-TC-nxl" secondAttribute="centerX" id="uSJ-k3-6pw"/>
-                                            <constraint firstItem="xLS-qf-Xue" firstAttribute="leading" secondItem="LxL-TC-nxl" secondAttribute="leadingMargin" constant="11" id="xBm-QT-dUB"/>
+                                            <constraint firstItem="xLS-qf-Xue" firstAttribute="leading" secondItem="LxL-TC-nxl" secondAttribute="leadingMargin" constant="12" id="xBm-QT-dUB"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="icon" destination="kcr-E1-jab" id="Phg-zg-uSr"/>
@@ -133,7 +133,13 @@
                             <constraint firstAttribute="trailing" secondItem="8Tt-fO-exr" secondAttribute="trailing" id="xPx-Me-V7Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fiI-kx-U4C"/>
+                    <navigationItem key="navigationItem" title="Near Me" id="fiI-kx-U4C">
+                        <barButtonItem key="leftBarButtonItem" image="menu-25.png" id="tl8-DI-OgF">
+                            <connections>
+                                <action selector="showMenu:" destination="jwc-ku-zux" id="EhY-DT-NgT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="8Tt-fO-exr" id="YmD-KY-gHd"/>
                     </connections>
@@ -145,5 +151,6 @@
     </scenes>
     <resources>
         <image name="AboutFilled-50.png" width="50" height="50"/>
+        <image name="menu-25.png" width="25" height="25"/>
     </resources>
 </document>

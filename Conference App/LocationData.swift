@@ -25,8 +25,7 @@
 //    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //    POSSIBILITY OF SUCH DAMAGE.
 //
-//
-//  Location.swift
+//  LocationData.swift
 //  Conference App
 //
 //  Created by Felipe N. Brito on 7/18/16.
@@ -35,57 +34,33 @@
 
 import Foundation
 
-enum LocationEmum: String {
-    case id
-    case name
-    case description
-    case icon
-    case beacon
-}
 
-class Location {
+class LocationData {
 
-    var id = 0
-    var name = ""
-    var icon = ""
-    var description = ""
-    var iBeaconId = ""
+    private let appData = AppData()
     
-    init(dictionary: NSDictionary) {
+    /// List of locations
+    private var locations:[Location] = []
     
-        if let id = dictionary.objectForKey(LocationEmum.id.rawValue) as? Int {
-            self.id = id
+    init() {
+        loadLocations()
+    }
+    
+    private func loadLocations() {
+    
+        guard let data = appData.getDataFromFile() else {
+            return
         }
         
-        if let name = dictionary.objectForKey(LocationEmum.name.rawValue) as? String {
-            self.name = name
-        }
-        
-        if let icon = dictionary.objectForKey(LocationEmum.icon.rawValue) as? String {
-            self.icon = icon
-        }
-        
-        if let beacon = dictionary.objectForKey(LocationEmum.beacon.rawValue) as? NSDictionary {
-            
-            if let iBeaconId = beacon.objectForKey(LocationEmum.id.rawValue) as? String {
-                self.iBeaconId = iBeaconId
+        if let locationsData = data["locations"] as? [NSDictionary] {
+            for locationData in locationsData {
+                let location = Location(dictionary: locationData)
+                locations.append(location)
             }
         }
     }
-}
-
-//MARK: iBeaconNearMeProtocol
-extension Location : iBeaconNearMeProtocol {
     
-    func getNearMeIconURL() -> String {
-        return icon
-    }
-    
-    func getNearMeTitle() -> String {
-        return name
-    }
-    
-    func getBeaconId() -> String {
-        return iBeaconId
+    func getLocations() -> [Location] {
+        return locations
     }
 }

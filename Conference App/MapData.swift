@@ -36,7 +36,7 @@ import Foundation
 class MapData {
     
     // Array of Conference Locations
-    var conferenceLocations: [Location] = []
+    var conferenceLocations: [ConferenceLocation] = []
     
     init() {
         
@@ -56,11 +56,11 @@ class MapData {
     }
     
     // Parses Locations using Dictionary, Returns Array of Locations (as Loc() objects)
-    func parseLocations(dictionary:NSDictionary)->[Location] {
+    func parseLocations(dictionary:NSDictionary)->[ConferenceLocation] {
         // Array of locations
-        var tempLoc: [Location] = []
+        var tempLoc: [ConferenceLocation] = []
         
-        if let locations = dictionary.objectForKey("locations") as? NSArray {
+        if let locations = dictionary.objectForKey("conference_location") as? NSArray {
             for locs in locations {
                 let locationName = locs["name"] as? String
                 let locationLat = locs["latitude"] as? String
@@ -68,7 +68,7 @@ class MapData {
                 let locationDate = locs["date"] as? String
                 let locationDesc = locs["description"] as? String
                 
-                tempLoc.append(Location(name:locationName!, latitude: locationLat!, longitude: locationLong!, date: locationDate!, description: locationDesc!))
+                tempLoc.append(ConferenceLocation(name:locationName!, latitude: locationLat!, longitude: locationLong!, date: locationDate!, description: locationDesc!))
             }
         }
         return tempLoc

@@ -52,7 +52,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     // Pulls Map Data
     var mapController: MapData = MapData()
-    var locArray: [Location] = []
+    var locArray: [ConferenceLocation] = []
     var annotationArray: [AddAnnotation] = []
     
     // Coordinates for Center Location

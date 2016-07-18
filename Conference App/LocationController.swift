@@ -25,8 +25,7 @@
 //    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 //    POSSIBILITY OF SUCH DAMAGE.
 //
-//
-//  Location.swift
+//  LocationController.swift
 //  Conference App
 //
 //  Created by Felipe N. Brito on 7/18/16.
@@ -35,57 +34,25 @@
 
 import Foundation
 
-enum LocationEmum: String {
-    case id
-    case name
-    case description
-    case icon
-    case beacon
-}
 
-class Location {
+class LocationController {
+    
+    /// Event Data
+    private var eventData = AgendaDataLoader()
 
-    var id = 0
-    var name = ""
-    var icon = ""
-    var description = ""
-    var iBeaconId = ""
+
+    func getAllEvents(fromLocation location : Location) -> [Event] {
     
-    init(dictionary: NSDictionary) {
-    
-        if let id = dictionary.objectForKey(LocationEmum.id.rawValue) as? Int {
-            self.id = id
-        }
+        var locationEvents : [Event] = []
         
-        if let name = dictionary.objectForKey(LocationEmum.name.rawValue) as? String {
-            self.name = name
-        }
+        let events = eventData.getAgenda().events
         
-        if let icon = dictionary.objectForKey(LocationEmum.icon.rawValue) as? String {
-            self.icon = icon
-        }
+        for event in events {
         
-        if let beacon = dictionary.objectForKey(LocationEmum.beacon.rawValue) as? NSDictionary {
-            
-            if let iBeaconId = beacon.objectForKey(LocationEmum.id.rawValue) as? String {
-                self.iBeaconId = iBeaconId
+            if event.locationId == location.id {
+                locationEvents.append(event)
             }
         }
-    }
-}
-
-//MARK: iBeaconNearMeProtocol
-extension Location : iBeaconNearMeProtocol {
-    
-    func getNearMeIconURL() -> String {
-        return icon
-    }
-    
-    func getNearMeTitle() -> String {
-        return name
-    }
-    
-    func getBeaconId() -> String {
-        return iBeaconId
+        return locationEvents
     }
 }
