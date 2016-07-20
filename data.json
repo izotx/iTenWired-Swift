@@ -53,8 +53,8 @@
 		"major": 46518,
 		"name": "estimoteBeacon"
 	}, {
-    "udid": "beacon3",
-    "id": "B0702980-A295-A8AB-F734-032A98A512DE",
+    "id": "beacon3",
+    "udid": "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
 		"minor": 53,
 		"major": 46518,
 		"name": "location ID 1 - test device"
