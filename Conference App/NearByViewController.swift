@@ -115,9 +115,9 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        if let svc = self.splitViewController where svc.collapsed == false  {
-            return CGSize(width: ((collectionView.frame.size.width - 2)) , height: 60)
-        }
+//        if let svc = self.splitViewController where svc.collapsed == false  {
+//            return CGSize(width: ((collectionView.frame.size.width - 2)) , height: 80)
+//        }
         
         return CGSize(width: ((collectionView.frame.size.width - 10) / 2)  - 6 , height: 150)
     }
@@ -136,6 +136,9 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 destinationViewController?.sponser = sponsor
             
                 self.navigationController?.pushViewController(destinationViewController!, animated: true)
+                
+                print(self.navigationController)
+                
             }
             
             return

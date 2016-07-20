@@ -18,7 +18,24 @@
 		0EE564D11CB83E6C001678B0 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE564D01CB83E6C001678B0 /* MapView.storyboard */; };
 		0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE564D41CB845E7001678B0 /* AboutView.storyboard */; };
 		0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE564D61CB84DC1001678B0 /* AboutViewController.swift */; };
-		1F134D343237D76531721F31 /* libPods-Conference App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71637ACD698BEAF42278E065 /* libPods-Conference App.a */; };
+		403F70A71D3FFE0B00A3205C /* AttendeeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */; };
+		403F70A81D3FFE0B00A3205C /* ConferenceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A21D3FFE0B00A3205C /* ConferenceLocation.swift */; };
+		403F70A91D3FFE0B00A3205C /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403F70A31D3FFE0B00A3205C /* Location.storyboard */; };
+		403F70AA1D3FFE0B00A3205C /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A41D3FFE0B00A3205C /* LocationController.swift */; };
+		403F70AB1D3FFE0B00A3205C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A51D3FFE0B00A3205C /* LocationData.swift */; };
+		403F70AC1D3FFE0B00A3205C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A61D3FFE0B00A3205C /* LocationViewController.swift */; };
+		403F70AD1D3FFE1100A3205C /* AttendeeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */; };
+		403F70AE1D3FFE1100A3205C /* AttendeeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */; };
+		403F70AF1D3FFE1500A3205C /* ConferenceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A21D3FFE0B00A3205C /* ConferenceLocation.swift */; };
+		403F70B01D3FFE1500A3205C /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403F70A31D3FFE0B00A3205C /* Location.storyboard */; };
+		403F70B11D3FFE1500A3205C /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A41D3FFE0B00A3205C /* LocationController.swift */; };
+		403F70B21D3FFE1500A3205C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A51D3FFE0B00A3205C /* LocationData.swift */; };
+		403F70B31D3FFE1500A3205C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A61D3FFE0B00A3205C /* LocationViewController.swift */; };
+		403F70B41D3FFE1600A3205C /* ConferenceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A21D3FFE0B00A3205C /* ConferenceLocation.swift */; };
+		403F70B51D3FFE1600A3205C /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403F70A31D3FFE0B00A3205C /* Location.storyboard */; };
+		403F70B61D3FFE1600A3205C /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A41D3FFE0B00A3205C /* LocationController.swift */; };
+		403F70B71D3FFE1600A3205C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A51D3FFE0B00A3205C /* LocationData.swift */; };
+		403F70B81D3FFE1600A3205C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A61D3FFE0B00A3205C /* LocationViewController.swift */; };
 		407BE0941D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */; };
 		407BE0951D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */; };
 		407BE0961D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */; };
@@ -178,6 +195,7 @@
 		55FEE2281CF764BD0019F48D /* TwitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2271CF764BD0019F48D /* TwitterController.swift */; };
 		55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22A1CF7654E0019F48D /* TwitterUser.swift */; };
 		55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22C1CF765C00019F48D /* TwitterViewController.swift */; };
+		7A4842F484A1144F17FEDDBE /* Pods_Conference_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897F2AE7C1400623A40A7102 /* Pods_Conference_App.framework */; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
 		827BA9A31CC2E48F003085BA /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */; };
@@ -189,7 +207,6 @@
 		D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C51CB84BA000BD6157 /* Agenda.swift */; };
 		D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C61CB84BA000BD6157 /* AgendaController.swift */; };
 		D4C467D01CB84D9700BD6157 /* AgendaMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C467CF1CB84D9700BD6157 /* AgendaMain.storyboard */; };
-		EEFC23E9ADE51A2B88389925 /* Pods_Conference_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DDB3833DC69A0285DF2675 /* Pods_Conference_App.framework */; };
 		FE0E76C51CC9D0920027CEDD /* blank-image.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0E76C41CC9D0910027CEDD /* blank-image.png */; };
 		FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2623A11CAEFA940074C58F /* AppDelegate.swift */; };
 		FE2623A51CAEFA940074C58F /* Conference_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE2623A31CAEFA940074C58F /* Conference_App.xcdatamodeld */; };
@@ -236,6 +253,12 @@
 		0EE564D41CB845E7001678B0 /* AboutView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutView.storyboard; sourceTree = "<group>"; };
 		0EE564D61CB84DC1001678B0 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		34F3630C96D4FC35912B1A71 /* Pods-Conference App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.debug.xcconfig"; sourceTree = "<group>"; };
+		403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendeeStruct.swift; path = "Conference App/AttendeeStruct.swift"; sourceTree = "<group>"; };
+		403F70A21D3FFE0B00A3205C /* ConferenceLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConferenceLocation.swift; path = "Conference App/ConferenceLocation.swift"; sourceTree = "<group>"; };
+		403F70A31D3FFE0B00A3205C /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Location.storyboard; path = "Conference App/Location.storyboard"; sourceTree = "<group>"; };
+		403F70A41D3FFE0B00A3205C /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationController.swift; path = "Conference App/LocationController.swift"; sourceTree = "<group>"; };
+		403F70A51D3FFE0B00A3205C /* LocationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationData.swift; path = "Conference App/LocationData.swift"; sourceTree = "<group>"; };
+		403F70A61D3FFE0B00A3205C /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationViewController.swift; path = "Conference App/LocationViewController.swift"; sourceTree = "<group>"; };
 		407BE0811D216C87005D61CF /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
 		407BE0821D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
 		407BE0831D216C87005D61CF /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAudioPlayer.h; sourceTree = "<group>"; };
@@ -261,7 +284,6 @@
 		4F4590E51CBEC8DE00F51BCE /* AttendeeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendeeData.swift; sourceTree = "<group>"; };
 		4F4590E71CBEC98F00F51BCE /* AttendeeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendeeController.swift; sourceTree = "<group>"; };
 		4F72CBAD1CC884BA00C30D2B /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
-		536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Conference App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		551604F11CE2720F00D46D2B /* Conference App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Conference App-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		552E692B1CE284DC0010C3C9 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		554334291CE27E7500A6001C /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -384,15 +406,14 @@
 		55FEE22A1CF7654E0019F48D /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
 		55FEE22C1CF765C00019F48D /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
-		71637ACD698BEAF42278E065 /* libPods-Conference App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Conference App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
 		827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
 		892079D31CC9A05F008C1CAC /* SocialMediaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaData.swift; sourceTree = "<group>"; };
+		897F2AE7C1400623A40A7102 /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A123500D1CB945F300B1233E /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		A12350161CB9500400B1233E /* ItineraryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItineraryStoryboard.storyboard; sourceTree = "<group>"; };
 		A12350171CB9500400B1233E /* ItineraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
-		D0DDB3833DC69A0285DF2675 /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C467C31CB84BA000BD6157 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		D4C467C41CB84BA000BD6157 /* AgendaDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDataLoader.swift; sourceTree = "<group>"; };
 		D4C467C51CB84BA000BD6157 /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
@@ -424,8 +445,7 @@
 			files = (
 				827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */,
 				0EE564CF1CB8331A001678B0 /* MapKit.framework in Frameworks */,
-				1F134D343237D76531721F31 /* libPods-Conference App.a in Frameworks */,
-				EEFC23E9ADE51A2B88389925 /* Pods_Conference_App.framework in Frameworks */,
+				7A4842F484A1144F17FEDDBE /* Pods_Conference_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,7 +927,7 @@
 			children = (
 				827BA99E1CC2E44B003085BA /* Social.framework */,
 				0EE564CE1CB8331A001678B0 /* MapKit.framework */,
-				D0DDB3833DC69A0285DF2675 /* Pods_Conference_App.framework */,
+				897F2AE7C1400623A40A7102 /* Pods_Conference_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -915,7 +935,6 @@
 		5CABC4C70AD5BD42C86B7A69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				536FFA7F7B5205E260F0C4BA /* libPods-Conference App.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -932,6 +951,12 @@
 		FE2623951CAEFA940074C58F = {
 			isa = PBXGroup;
 			children = (
+				403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */,
+				403F70A21D3FFE0B00A3205C /* ConferenceLocation.swift */,
+				403F70A31D3FFE0B00A3205C /* Location.storyboard */,
+				403F70A41D3FFE0B00A3205C /* LocationController.swift */,
+				403F70A51D3FFE0B00A3205C /* LocationData.swift */,
+				403F70A61D3FFE0B00A3205C /* LocationViewController.swift */,
 				407BE0801D216C87005D61CF /* StreamingKit */,
 				55FEE2301CF785CB0019F48D /* Frameworks */,
 				FE2623A01CAEFA940074C58F /* Conference App */,
@@ -1160,6 +1185,7 @@
 				55DAC35A1CEB550700941824 /* Announcements-25.png in Resources */,
 				55DAC3871CECFDC600941824 /* Web-25.png in Resources */,
 				FE0E76C51CC9D0920027CEDD /* blank-image.png in Resources */,
+				403F70A91D3FFE0B00A3205C /* Location.storyboard in Resources */,
 				55DAC3771CEBAA8600941824 /* Google-50.png in Resources */,
 				5570EECC1CF4AD3F0033FCDC /* LiveBroadcastFilled-50.png in Resources */,
 				559F76511CEE5AE0003BE6E6 /* Agenda-50.png in Resources */,
@@ -1211,6 +1237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403F70B01D3FFE1500A3205C /* Location.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1218,6 +1245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403F70B51D3FFE1600A3205C /* Location.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,6 +1414,8 @@
 				55881A9A1CE12729009B8399 /* ConferenceLocation.swift in Sources */,
 				555A7A701CF35F390068F58C /* Reach.swift in Sources */,
 				FEF7E0C51CB852A8002A810B /* EventViewController.swift in Sources */,
+				403F70A81D3FFE0B00A3205C /* ConferenceLocation.swift in Sources */,
+				403F70AA1D3FFE0B00A3205C /* LocationController.swift in Sources */,
 				559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */,
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
 				4F2FBD141CBC5C7C0017A11F /* AttendeesCell.swift in Sources */,
@@ -1394,6 +1424,7 @@
 				55DAC3811CEBC77A00941824 /* About.swift in Sources */,
 				407BE0A31D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
 				5569DA2A1D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift in Sources */,
+				403F70AC1D3FFE0B00A3205C /* LocationViewController.swift in Sources */,
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
 				55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */,
 				555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */,
@@ -1401,8 +1432,10 @@
 				55DAC3671CEB711800941824 /* SpeakerViewController.swift in Sources */,
 				55881AA01CE13506009B8399 /* AttendeeProtocol.swift in Sources */,
 				554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */,
+				403F70AB1D3FFE0B00A3205C /* LocationData.swift in Sources */,
 				A12350191CB9500400B1233E /* ItineraryViewController.swift in Sources */,
 				55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */,
+				403F70A71D3FFE0B00A3205C /* AttendeeStruct.swift in Sources */,
 				407BE0AC1D216C87005D61CF /* STKQueueEntry.m in Sources */,
 				407BE0941D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				FE2623A91CAEFA940074C58F /* DetailViewController.swift in Sources */,
@@ -1415,6 +1448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403F70B11D3FFE1500A3205C /* LocationController.swift in Sources */,
 				FE2623BC1CAEFA940074C58F /* Conference_AppTests.swift in Sources */,
 				557D35471CE4BB9A00562A7A /* NotificationList.swift in Sources */,
 				557D35491CE4BBA200562A7A /* NotificationController.swift in Sources */,
@@ -1423,9 +1457,13 @@
 				407BE0A41D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
 				407BE09E1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */,
 				407BE0A71D216C87005D61CF /* STKHTTPDataSource.m in Sources */,
+				403F70B21D3FFE1500A3205C /* LocationData.swift in Sources */,
+				403F70AD1D3FFE1100A3205C /* AttendeeStruct.swift in Sources */,
 				407BE09B1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				407BE0AD1D216C87005D61CF /* STKQueueEntry.m in Sources */,
+				403F70AF1D3FFE1500A3205C /* ConferenceLocation.swift in Sources */,
 				407BE0A11D216C87005D61CF /* STKDataSource.m in Sources */,
+				403F70B31D3FFE1500A3205C /* LocationViewController.swift in Sources */,
 				407BE0951D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				407BE0AA1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 			);
@@ -1435,6 +1473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403F70B61D3FFE1600A3205C /* LocationController.swift in Sources */,
 				552E69301CE285810010C3C9 /* Notification.swift in Sources */,
 				557D35481CE4BB9B00562A7A /* NotificationList.swift in Sources */,
 				557D354A1CE4BBA300562A7A /* NotificationController.swift in Sources */,
@@ -1443,9 +1482,13 @@
 				407BE0A51D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
 				407BE09F1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */,
 				407BE0A81D216C87005D61CF /* STKHTTPDataSource.m in Sources */,
+				403F70B71D3FFE1600A3205C /* LocationData.swift in Sources */,
+				403F70AE1D3FFE1100A3205C /* AttendeeStruct.swift in Sources */,
 				407BE09C1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				407BE0AE1D216C87005D61CF /* STKQueueEntry.m in Sources */,
+				403F70B41D3FFE1600A3205C /* ConferenceLocation.swift in Sources */,
 				407BE0A21D216C87005D61CF /* STKDataSource.m in Sources */,
+				403F70B81D3FFE1600A3205C /* LocationViewController.swift in Sources */,
 				407BE0961D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				407BE0AB1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 			);
