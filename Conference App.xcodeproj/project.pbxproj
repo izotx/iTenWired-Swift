@@ -185,6 +185,7 @@
 		D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C51CB84BA000BD6157 /* Agenda.swift */; };
 		D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C467C61CB84BA000BD6157 /* AgendaController.swift */; };
 		D4C467D01CB84D9700BD6157 /* AgendaMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C467CF1CB84D9700BD6157 /* AgendaMain.storyboard */; };
+		EEFC23E9ADE51A2B88389925 /* Pods_Conference_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DDB3833DC69A0285DF2675 /* Pods_Conference_App.framework */; };
 		FE0E76C51CC9D0920027CEDD /* blank-image.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0E76C41CC9D0910027CEDD /* blank-image.png */; };
 		FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2623A11CAEFA940074C58F /* AppDelegate.swift */; };
 		FE2623A51CAEFA940074C58F /* Conference_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE2623A31CAEFA940074C58F /* Conference_App.xcdatamodeld */; };
@@ -383,6 +384,7 @@
 		A123500D1CB945F300B1233E /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		A12350161CB9500400B1233E /* ItineraryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItineraryStoryboard.storyboard; sourceTree = "<group>"; };
 		A12350171CB9500400B1233E /* ItineraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
+		D0DDB3833DC69A0285DF2675 /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C467C31CB84BA000BD6157 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		D4C467C41CB84BA000BD6157 /* AgendaDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDataLoader.swift; sourceTree = "<group>"; };
 		D4C467C51CB84BA000BD6157 /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */,
 				0EE564CF1CB8331A001678B0 /* MapKit.framework in Frameworks */,
 				1F134D343237D76531721F31 /* libPods-Conference App.a in Frameworks */,
+				EEFC23E9ADE51A2B88389925 /* Pods_Conference_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +894,7 @@
 			children = (
 				827BA99E1CC2E44B003085BA /* Social.framework */,
 				0EE564CE1CB8331A001678B0 /* MapKit.framework */,
+				D0DDB3833DC69A0285DF2675 /* Pods_Conference_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -994,7 +998,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE2623CB1CAEFA940074C58F /* Build configuration list for PBXNativeTarget "Conference App" */;
 			buildPhases = (
-				47D1BA44D3DA44F478DE7ABE /* 📦 Check Pods Manifest.lock */,
+				47D1BA44D3DA44F478DE7ABE /* [CP] Check Pods Manifest.lock */,
 				2A16A9D166B7868905406D80 /* [CP] Check Pods Manifest.lock */,
 				FE26239A1CAEFA940074C58F /* Sources */,
 				FE26239B1CAEFA940074C58F /* Frameworks */,
@@ -1223,14 +1227,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		47D1BA44D3DA44F478DE7ABE /* 📦 Check Pods Manifest.lock */ = {
+		47D1BA44D3DA44F478DE7ABE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

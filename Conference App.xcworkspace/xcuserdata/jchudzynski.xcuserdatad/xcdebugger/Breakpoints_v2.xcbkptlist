@@ -81,7 +81,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
             endingLineNumber = "127"
-            landmarkName = "startAudio()"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
             <Locations>
                <Location
