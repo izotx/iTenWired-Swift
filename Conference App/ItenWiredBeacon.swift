@@ -39,6 +39,7 @@ import JMCiBeaconManager
 
 enum ItenWiredBeaconEnum : String {
     case id
+    case udid
     case minor
     case major
     case name
@@ -58,7 +59,8 @@ class ItenWiredBeacon : iBeacon {
         
         var minor: UInt16 = 0
         var major: UInt16 = 0
-        var proximityId = ""
+        var id:String = ""
+        var uuid = ""
         
         if let unwrapedMinor = dictionary.objectForKey(ItenWiredBeaconEnum.minor.rawValue) as? UInt16 {
             minor = unwrapedMinor
@@ -70,14 +72,18 @@ class ItenWiredBeacon : iBeacon {
       
         
         if let unwrapedID = dictionary.objectForKey(ItenWiredBeaconEnum.id.rawValue) as? String {
-            proximityId = unwrapedID
+            id = unwrapedID
+        }
+        
+        if let unwrapedUdid = dictionary.objectForKey(ItenWiredBeaconEnum.udid.rawValue) as?  String {
+            uuid = unwrapedUdid
         }
 
-        super.init(minor: nil, major: nil, proximityId: proximityId)
+        super.init(minor: nil, major: nil, proximityId:uuid, id:id)
     }
     
     init(with beacon: iBeacon){
-        super.init(minor: beacon.minor, major: beacon.major, proximityId: beacon.UUID)
+        super.init(minor: beacon.minor, major: beacon.major, proximityId: beacon.UUID, id: beacon.id)
     }
 }
 
