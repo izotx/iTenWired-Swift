@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HanekeSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JMCiBeaconManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Conference App.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -12,7 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CCD2D579609832F3E1B93CB20CBFBA1</key>
+		<key>2C2B1953A91633859BF7AD238FF567A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>61290FB0253531D2C0D469258A0417DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFECFB0E7990A6253E56EA393775C122</key>
 		<dict>
 			<key>primary</key>
 			<true/>
