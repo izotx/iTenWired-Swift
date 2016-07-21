@@ -92,11 +92,11 @@ class NearMeController {
                 let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
                 iTenWiredBeacon.lastRanged = NSDate()
                 
-                if(activeBeacons[iTenWiredBeacon.UUID] == nil){
+                if(activeBeacons[iTenWiredBeacon.id] == nil){
                    newBeaconRanged(iTenWiredBeacon)
                 }
 
-                activeBeacons[iTenWiredBeacon.UUID] = iTenWiredBeacon
+                activeBeacons[iTenWiredBeacon.id] = iTenWiredBeacon
             }
         }
     }
@@ -107,30 +107,21 @@ class NearMeController {
     
     private func newBeaconRanged(beacon: ItenWiredBeacon){
         
-        for sponsor in attendeeData.getSponsers() {
-            
-            if sponsor.getBeaconId().equalsIgnoreCase(beacon.UUID) {
-                activeNearMe.append(sponsor)
-                break
-            }
+        
+        if let object = attendeeData.getSponsers().filter({$0.getBeaconId() == beacon.id}).first{
+                activeNearMe.append(object)
         }
         
-        for exhibitor in attendeeData.getExibitors() {
         
-            if exhibitor.getBeaconId().equalsIgnoreCase(beacon.UUID) {
-                activeNearMe.append(exhibitor)
-                break
-            }
+        if let object = attendeeData.getExibitors().filter({$0.getBeaconId() == beacon.id}).first{
+            activeNearMe.append(object)
         }
         
-        for location in locationsData.getLocations() {
-            
-            if location.getBeaconId().equalsIgnoreCase(beacon.UUID) {
-                activeNearMe.append(location)
-                break
-            }
-        }
         
+        if let object = locationsData.getLocations().filter({$0.getBeaconId() == beacon.id}).first{
+            activeNearMe.append(object)
+        }
+               
         // Notify that a new beacon was ranged
         NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
     }
