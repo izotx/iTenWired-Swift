@@ -123,30 +123,31 @@ class NearMeController {
             
             //list will contain all visible beacons + some that should not be visible anymore 
             
-            var toDelete = [ItenWiredBeacon]()
+    //        var toDelete = [ItenWiredBeacon]()
             //loop through activeBeacons and check if they are in visible beacons if not ignore
            
-            //Remove it from the active beacons list
-            for (_, beacon) in activeBeacons{
-                if !visibleITenWiredBeacons.contains(beacon){
-                    toDelete.append(beacon)
-                }
-            }
-            //Remove not visible ibeacons
-            for beacon in toDelete{
-                activeBeacons[beacon.id] = nil
-               //remove not visible associated objecs
-               //get index
-                var index = -1;
-                for (i,a) in activeNearMe.enumerate(){
-                    if a.getBeaconId() == beacon.id{
-                        index = i
-                    }
-                }
-                if index != -1 {
-                    activeNearMe.removeAtIndex(index)
-                }
-            }
+//            //Remove it from the active beacons list
+//            for (_, beacon) in activeBeacons{
+//                if !visibleITenWiredBeacons.contains(beacon){
+//                    toDelete.append(beacon)
+//                }
+//            }
+
+//Remove not visible ibeacons
+//            for beacon in toDelete{
+//  //              activeBeacons[beacon.id] = nil
+//               //remove not visible associated objecs
+//               //get index
+//                var index = -1;
+//                for (i,a) in activeNearMe.enumerate(){
+//                    if a.getBeaconId() == beacon.id{
+//                        index = i
+//                    }
+//                }
+//                if index != -1 {
+////                    activeNearMe.removeAtIndex(index)
+//                }
+//            }
            
         }else{//No beacons are currently visible
             //send update anyways 

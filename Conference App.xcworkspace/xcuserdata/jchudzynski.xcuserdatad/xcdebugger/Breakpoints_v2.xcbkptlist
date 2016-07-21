@@ -156,27 +156,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Conference App/NearMeController.swift"
-            timestampString = "490806235.64853"
+            timestampString = "490808028.695889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "beaconsRanged(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Conference App/NearMeController.swift"
-            timestampString = "490805822.770732"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "beaconsRanged(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -236,27 +220,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Conference App/NearMeController.swift"
-            timestampString = "490806094.786645"
+            timestampString = "490808028.695889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "beaconsRanged(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Conference App/NearMeController.swift"
-            timestampString = "490806816.143392"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "newBeaconRanged(_:)"
             landmarkType = "5">
             <Locations>
