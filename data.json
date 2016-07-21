@@ -702,7 +702,12 @@
 		"level": "Opening Breakfast Sponsor",
 		"description": "Konica Minolta Business Solutions U.S.A., Inc. is a leader in enterprise content management, technology optimization and cloud services. Our solutions help organizations improve their speed to market, manage technology costs, and facilitate the sharing of information to increase productivity. With over 41,000 worldwide employees and cutting-edge research programs, Konica Minolta Business Solutions, U.S.A., Inc., is a leader in enterprise content management, technology optimization and cloud services. Recognized for seven consecutive years as a #1 Brand for Customer Loyalty by Brand Keys, clients trust Konica Minolta to help them envision how they can achieve their goals and deliver innovative solutions to give shape to their ideas. For more information, visit CountOnKonicaMinolta.com and also follow us @KonicaMinoltaUS on Twitter, Facebook and YouTube.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/konica_minolta_logo.png",
-		"website": "http://www.CountOnKonicaMinolta.com"
+		"website": "http://www.CountOnKonicaMinolta.com",
+		
+		"beacon": {
+			"id": "beacon16",
+			"sensitivity": "near"
+		}
 	}, {
 		"id": "43",
 		"name": "TEKsystems",
