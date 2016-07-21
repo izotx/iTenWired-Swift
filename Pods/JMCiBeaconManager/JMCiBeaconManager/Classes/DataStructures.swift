@@ -107,7 +107,7 @@ public class iBeacon : NSObject {
         self.UUID = proximityId
         self.major = major
         self.minor = minor
-        self.id = id        
+        self.id = id
         super.init()
     }
     

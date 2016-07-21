@@ -137,7 +137,7 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
             
                 self.navigationController?.pushViewController(destinationViewController!, animated: true)
                 
-                print(self.navigationController)
+                //print(self.navigationController)
                 
             }
             

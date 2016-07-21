@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kch-jx-FS6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Kch-jx-FS6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-fO-exr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="10" y="0.0" width="355" height="667"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uzu-Nb-rXS">
                                     <size key="itemSize" width="148" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -44,7 +44,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gld-9Q-036">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="291"/>
+                                        <rect key="frame" x="-10" y="74" width="375" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="291"/>
@@ -86,7 +86,7 @@
                                         <size key="customSize" width="375" height="291"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="LxL-TC-nxl" customClass="NearMeCollectionViewCell" customModule="Conference_App" customModuleProvider="target">
-                                        <rect key="frame" x="113.5" y="365" width="148" height="185"/>
+                                        <rect key="frame" x="0.0" y="375" width="148" height="185"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="185"/>
@@ -136,8 +136,8 @@
                         <constraints>
                             <constraint firstItem="8Tt-fO-exr" firstAttribute="top" secondItem="Zsx-EU-7d2" secondAttribute="top" id="8Kb-cN-76G"/>
                             <constraint firstItem="8Tt-fO-exr" firstAttribute="bottom" secondItem="6pN-el-Lnc" secondAttribute="top" id="lGV-Fx-cQg"/>
-                            <constraint firstItem="8Tt-fO-exr" firstAttribute="leading" secondItem="Zsx-EU-7d2" secondAttribute="leading" id="tyY-oU-676"/>
-                            <constraint firstAttribute="trailing" secondItem="8Tt-fO-exr" secondAttribute="trailing" id="xPx-Me-V7Z"/>
+                            <constraint firstItem="8Tt-fO-exr" firstAttribute="leading" secondItem="Zsx-EU-7d2" secondAttribute="leading" constant="10" id="tyY-oU-676"/>
+                            <constraint firstAttribute="trailing" secondItem="8Tt-fO-exr" secondAttribute="trailing" constant="10" id="xPx-Me-V7Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Near Me" id="fiI-kx-U4C">

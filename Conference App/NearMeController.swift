@@ -99,14 +99,23 @@ class NearMeController {
                 activeBeacons[iTenWiredBeacon.id] = iTenWiredBeacon
             }
         }
+        //Remove beacons 
+        
+        
+        
     }
     
     internal func getAllNearMe() -> [iBeaconNearMeProtocol] {
         return self.activeNearMe
     }
     
-    private func newBeaconRanged(beacon: ItenWiredBeacon){
+    private func newBeaconRanged(candidateBeacon: ItenWiredBeacon){
         
+        //Check if are monitoring ghr beacons
+        guard let beacon = beaconData.getBeacons()
+            .filter({$0 == candidateBeacon}).first else {
+                return
+        }
         
         if let object = attendeeData.getSponsers().filter({$0.getBeaconId() == beacon.id}).first{
                 activeNearMe.append(object)

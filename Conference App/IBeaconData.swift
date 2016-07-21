@@ -59,6 +59,7 @@ class IBeaconData {
                 
                 let beacon = ItenWiredBeacon(dictionary: beaconData)
                 beacons.append(beacon)
+                
             }
         }
         return beacons
