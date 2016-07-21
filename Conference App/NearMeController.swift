@@ -36,6 +36,16 @@ import Foundation
 import JMCiBeaconManager
 
 
+extension RangeReplaceableCollectionType where Generator.Element : Equatable {
+    
+    // Remove first collection element that is equal to the given `object`:
+    mutating func removeObject(object : Generator.Element) {
+        if let index = self.indexOf(object) {
+            self.removeAtIndex(index)
+        }
+    }
+}
+
 enum NearMeControllerEnum : String {
     case NewBeaconRanged
 }
@@ -82,55 +92,113 @@ class NearMeController {
         }
     }
     
+
+    
     /**Called when the beacons are ranged*/
     @objc func beaconsRanged(notification:NSNotification){
+        //Currently visible ibeacons
+        var visibleITenWiredBeacons = [ItenWiredBeacon]()
         if let visibleIbeacons = notification.object as? [iBeacon]{
-            for beacon in visibleIbeacons{
+
+            //Sanitizing th beacons - checking if we are monitoring them
+            let visibleITenWiredCandidateBeacons = visibleIbeacons.map({return ItenWiredBeacon(with:$0)}) as [ItenWiredBeacon]
+            let alliTenWiredBeacons = beaconData.getBeacons() //All iTen Wired iBeacons
+            
+            for beacon in visibleITenWiredCandidateBeacons{
+                if let first = alliTenWiredBeacons.filter({$0 == beacon}).first{
+                    //Make sure we are using the right kind of id
+                    //beacon.id = first.id
+                    visibleITenWiredBeacons.append(first)
+                }
+            }
+            
+            for beacon in visibleITenWiredBeacons{
                 
                 print(beacon.UUID)
-            
-                let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
-                iTenWiredBeacon.lastRanged = NSDate()
-                
-                if(activeBeacons[iTenWiredBeacon.id] == nil){
-                   newBeaconRanged(iTenWiredBeacon)
+                beacon.lastRanged = NSDate()
+                if(activeBeacons[beacon.id] == nil){
+                    activeBeacons[beacon.id] = beacon
                 }
-
-                activeBeacons[iTenWiredBeacon.id] = iTenWiredBeacon
+             }
+            
+            //list will contain all visible beacons + some that should not be visible anymore 
+            
+            var toDelete = [ItenWiredBeacon]()
+            //loop through activeBeacons and check if they are in visible beacons if not ignore
+           
+            //Remove it from the active beacons list
+            for (_, beacon) in activeBeacons{
+                if !visibleITenWiredBeacons.contains(beacon){
+                    toDelete.append(beacon)
+                }
             }
+            //Remove not visible ibeacons
+            for beacon in toDelete{
+                activeBeacons[beacon.id] = nil
+               //remove not visible associated objecs
+               //get index
+                var index = -1;
+                for (i,a) in activeNearMe.enumerate(){
+                    if a.getBeaconId() == beacon.id{
+                        index = i
+                    }
+                }
+                if index != -1 {
+                    activeNearMe.removeAtIndex(index)
+                }
+            }
+           
+        }else{//No beacons are currently visible
+            //send update anyways 
+             activeNearMe.removeAll()
         }
-        //Remove beacons 
         
         
-        
+        //Notify about changes
+        newBeaconRanged(visibleITenWiredBeacons)
     }
     
     internal func getAllNearMe() -> [iBeaconNearMeProtocol] {
         return self.activeNearMe
     }
     
-    private func newBeaconRanged(candidateBeacon: ItenWiredBeacon){
+    
+    
+    
+    
+    private func newBeaconRanged(candidateBeacons: [ItenWiredBeacon]){
+       
+//        let loc = locationsData.getLocations()
+//        let beacons = beaconData.getBeacons()
+//        let exh = attendeeData.getExibitors()
+//        let spo = attendeeData.getSponsers()
+//        let spe = attendeeData.getSpeakers()
+//        
+//        //we have a candidate beacon and we need to match it with a location
+//        //locations
+//        
         
-        //Check if are monitoring ghr beacons
-        guard let beacon = beaconData.getBeacons()
-            .filter({$0 == candidateBeacon}).first else {
-                return
-        }
-        
-        if let object = attendeeData.getSponsers().filter({$0.getBeaconId() == beacon.id}).first{
+        for beacon in candidateBeacons{
+
+            //check if we already added it or not
+            if let _  = activeNearMe.filter({$0.getBeaconId() == beacon.id}).first
+            {
+                continue
+            }
+            
+            if let object = attendeeData.getSponsers().filter({$0.getBeaconId() == beacon.id}).first {
                 activeNearMe.append(object)
+            }
+            
+            if let object = attendeeData.getExibitors().filter({$0.getBeaconId() == beacon.id}).first{
+                activeNearMe.append(object)
+            }
+            
+            if let object = locationsData.getLocations().filter({$0.getBeaconId() == beacon.id}).first{
+                activeNearMe.append(object)
+            }
         }
         
-        
-        if let object = attendeeData.getExibitors().filter({$0.getBeaconId() == beacon.id}).first{
-            activeNearMe.append(object)
-        }
-        
-        
-        if let object = locationsData.getLocations().filter({$0.getBeaconId() == beacon.id}).first{
-            activeNearMe.append(object)
-        }
-               
         // Notify that a new beacon was ranged
         NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
     }

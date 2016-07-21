@@ -45,6 +45,8 @@ enum ItenWiredBeaconEnum : String {
     case name
 }
 
+
+
 class ItenWiredBeacon : iBeacon {
     
     
@@ -79,7 +81,7 @@ class ItenWiredBeacon : iBeacon {
             uuid = unwrapedUdid
         }
         
-        super.init(minor: nil, major: nil, proximityId:uuid, id:id)
+        super.init(minor: minor, major: major, proximityId:uuid, id:id)
     }
     
     init(with beacon: iBeacon){
