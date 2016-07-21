@@ -42,22 +42,23 @@
 	}],
 	"ibeacons": [{
     "id":"beacon1",
-    "udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
-		"minor": 41662,
-		"major": 46518,
-		"name": "kontaktIOBeacon"
-	}, {
+		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+		"minor": 6687,
+		"major": 18792,
+		"name": "1hlm"
+	}, 
+	{
 		"id": "beacon2",
-		"udid": "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
-		"minor": 41662,
+		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
 		"major": 46518,
-		"name": "estimoteBeacon"
+		"minor": 41662,
+		"name": "uehk"
 	}, {
     "id": "beacon3",
-    "udid": "B9407F30-F5F8-466E-AFF9-25556B57FE6D",
-		"minor": 53,
-		"major": 46518,
-		"name": "location ID 1 - test device"
+    		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+		"major": 34865,
+		"minor": 26948,
+		"name": "fc3w"
 	}],
 	"tracks": [{
 		"id": "1",
