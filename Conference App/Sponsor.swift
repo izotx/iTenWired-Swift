@@ -117,4 +117,8 @@ extension Sponsor : iBeaconNearMeProtocol {
     func getBeaconId() -> String {
         return iBeaconId
     }
+    
+    func getNearMeMenuItem() -> NearMeMenuItem {
+        return NearMeMenuItem(storyBoardId: "Attendees", viewControllerId: "SponserDescriptionViewController")
+    }
 }

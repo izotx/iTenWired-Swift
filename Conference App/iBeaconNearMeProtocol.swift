@@ -34,10 +34,25 @@
 
 import Foundation
 
+class NearMeMenuItem {
+    
+    var storyBoardId : String!
+    var viewControllerId: String!
+    
+    init(storyBoardId: String, viewControllerId: String) {
+        self.storyBoardId = storyBoardId
+        self.viewControllerId = viewControllerId
+    }
+}
 
-protocol iBeaconNearMeProtocol{
+protocol iBeaconNearMeProtocol {
 
     func getBeaconId() -> String
     func getNearMeIconURL() -> String
     func getNearMeTitle() -> String
+    func getNearMeMenuItem() -> NearMeMenuItem
+}
+
+protocol iBeaconNearMeViewControllerProtocol {
+    func build(with nearMeItem: iBeaconNearMeProtocol)
 }

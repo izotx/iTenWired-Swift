@@ -43,7 +43,7 @@ class LocationViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     /// Location Object
-    var location : Location!
+    internal var location : Location!
     
     /// Location Controller
     var locationController = LocationController()
@@ -162,4 +162,15 @@ extension LocationViewController: UITableViewDelegate, UITableViewDataSource{
         
         self.navigationController?.pushViewController(destinationViewController, animated: true)
     }
+}
+
+extension LocationViewController : iBeaconNearMeViewControllerProtocol {
+    
+    func build(with nearMeItem: iBeaconNearMeProtocol){
+    
+        if let location = nearMeItem as? Location{
+           self.location = location
+        }        
+    }
+
 }

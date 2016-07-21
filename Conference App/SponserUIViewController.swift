@@ -33,6 +33,7 @@
 //
 
 import UIKit
+import Haneke
 
 class SponserUIViewController: UIViewController {
 
@@ -56,20 +57,13 @@ class SponserUIViewController: UIViewController {
             self.build(exhibitor)
         }
         
-        
         self.UIConfig()
     }
     
     func build(exhibitor: Exhibitor){
-        // Gets the logo from the url
-        if NetworkConnection.isConnected() {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                guard let url = NSURL(string: exhibitor.logo),
-                    let data = NSData(contentsOfURL: url) else {
-                        return
-                }
-                self.logo.image = UIImage(data: data)
-            }
+        
+        if let url = NSURL(string: exhibitor.logo) {
+            self.logo.hnk_setImageFromURL(url)
         }
         
         self.nameLabel.text = exhibitor.name
@@ -77,21 +71,15 @@ class SponserUIViewController: UIViewController {
         self.websiteLabel.text = exhibitor.website
     }
     
-    func build(sponser: Sponsor){
-        // Gets the logo from the url
-        if NetworkConnection.isConnected() {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                guard let url = NSURL(string: self.sponser.logo),
-                    let data = NSData(contentsOfURL: url) else {
-                        return
-                }
-                self.logo.image = UIImage(data: data)
-            }
+    func build(sponsor: Sponsor){
+       
+        if let url = NSURL(string: sponsor.logo) {
+            self.logo.hnk_setImageFromURL(url)
         }
         
-        self.nameLabel.text = sponser.name
-        self.descriptionLabel.text = sponser.description
-        self.websiteLabel.text = sponser.website
+        self.nameLabel.text = sponsor.name
+        self.descriptionLabel.text = sponsor.description
+        self.websiteLabel.text = sponsor.website
     }
     
     internal func UIConfig(){
@@ -99,5 +87,20 @@ class SponserUIViewController: UIViewController {
         self.descriptionLabel.textColor = ItenWiredStyle.text.color.invertedColor
         self.websiteLabel.textColor = ItenWiredStyle.text.color.invertedColor
         self.view.backgroundColor = ItenWiredStyle.background.color.invertedColor
+    }
+}
+
+//MARK: iBeaconNearMeViewControllerProtocol
+extension SponserUIViewController : iBeaconNearMeViewControllerProtocol {
+
+    func build(with nearMeItem: iBeaconNearMeProtocol){
+        
+        if let s = nearMeItem as? Sponsor {
+            self.sponser = s
+        }
+        
+        if let e = nearMeItem as? Exhibitor {
+            self.exhibitor = e
+        }
     }
 }

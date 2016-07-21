@@ -88,4 +88,8 @@ extension Location : iBeaconNearMeProtocol {
     func getBeaconId() -> String {
         return iBeaconId
     }
+    
+    func getNearMeMenuItem() -> NearMeMenuItem {
+        return NearMeMenuItem(storyBoardId: "Location", viewControllerId: "LocationViewController")
+    }
 }

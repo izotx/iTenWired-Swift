@@ -126,32 +126,11 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let item = nearMeController.getAllNearMe()[indexPath.row]
         
-        if item is Sponsor {
-            
-            if let sponsor = item as? Sponsor {
-            
-                let storyboard = UIStoryboard.init(name: "Attendees", bundle: nil)
-                let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("SponserDescriptionViewController") as? SponserUIViewController
-            
-                destinationViewController?.sponser = sponsor
-            
-                self.navigationController?.pushViewController(destinationViewController!, animated: true)
-            }
-            
-            return
-        }
+        let storyboard = UIStoryboard.init(name:  item.getNearMeMenuItem().storyBoardId, bundle: nil)
         
-        if item is Location {
-            
-            if let location = item as? Location {
-            
-                let storyboard = UIStoryboard.init(name: "Location", bundle: nil)
-                let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("LocationViewController") as? LocationViewController
-                
-                destinationViewController?.location = location
-                
-                self.navigationController?.pushViewController(destinationViewController!, animated: true)
-            }
-        }
+        let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(item.getNearMeMenuItem().viewControllerId) as? iBeaconNearMeViewControllerProtocol
+        
+        destinationViewController?.build(with: item)
+        self.navigationController?.pushViewController((destinationViewController as? UIViewController)!, animated: true)
     }
 }
