@@ -773,7 +773,7 @@
 		"website": "http://www.mediacombusiness.com",
 		"beacon": {
 			"id": "beacon4",
-			"sensitivity": "far"
+			"sensitivity": "immediate"
 		}
 	}, {
 		"id": "44",
