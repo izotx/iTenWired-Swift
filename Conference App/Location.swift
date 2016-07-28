@@ -107,6 +107,11 @@ extension Location : iBeaconNearMeProtocol {
         return iBeaconId
     }
     
+    func getBeaconProximity() -> CLProximity {
+        return beaconProximity
+    }
+    
+    
     func getNearMeMenuItem() -> NearMeMenuItem {
         return NearMeMenuItem(storyBoardId: "Location", viewControllerId: "LocationViewController")
     }
