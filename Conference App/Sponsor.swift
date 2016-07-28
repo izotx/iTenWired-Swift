@@ -77,8 +77,8 @@ class Sponsor: AttendeeProtocol{
     
     init(dictionary: NSDictionary){
         
-        if let id =   dictionary.objectForKey(SponserEnum.id.rawValue) as? Int {
-            self.id = id
+        if let id =   dictionary.objectForKey(SponserEnum.id.rawValue) as? NSString {
+            self.id = id.integerValue
         }
         
         if let name = dictionary.objectForKey(SponserEnum.name.rawValue) as? String{
