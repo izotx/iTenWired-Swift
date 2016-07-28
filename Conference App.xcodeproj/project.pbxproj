@@ -18,6 +18,7 @@
 		0EE564D11CB83E6C001678B0 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE564D01CB83E6C001678B0 /* MapView.storyboard */; };
 		0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE564D41CB845E7001678B0 /* AboutView.storyboard */; };
 		0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE564D61CB84DC1001678B0 /* AboutViewController.swift */; };
+		402D938B1D4A62500029AFEA /* NSDate+ItenWired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D938A1D4A62500029AFEA /* NSDate+ItenWired.swift */; };
 		403F70A71D3FFE0B00A3205C /* AttendeeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */; };
 		403F70A91D3FFE0B00A3205C /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403F70A31D3FFE0B00A3205C /* Location.storyboard */; };
 		403F70AD1D3FFE1100A3205C /* AttendeeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */; };
@@ -241,6 +242,7 @@
 		0EE564D41CB845E7001678B0 /* AboutView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutView.storyboard; sourceTree = "<group>"; };
 		0EE564D61CB84DC1001678B0 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		34F3630C96D4FC35912B1A71 /* Pods-Conference App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.debug.xcconfig"; sourceTree = "<group>"; };
+		402D938A1D4A62500029AFEA /* NSDate+ItenWired.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+ItenWired.swift"; path = "Conference App/NSDate+ItenWired.swift"; sourceTree = "<group>"; };
 		403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendeeStruct.swift; path = "Conference App/AttendeeStruct.swift"; sourceTree = "<group>"; };
 		403F70A31D3FFE0B00A3205C /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Location.storyboard; path = "Conference App/Location.storyboard"; sourceTree = "<group>"; };
 		407BE0811D216C87005D61CF /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
@@ -935,6 +937,7 @@
 		FE2623951CAEFA940074C58F = {
 			isa = PBXGroup;
 			children = (
+				402D938A1D4A62500029AFEA /* NSDate+ItenWired.swift */,
 				403F70A11D3FFE0B00A3205C /* AttendeeStruct.swift */,
 				403F70A31D3FFE0B00A3205C /* Location.storyboard */,
 				407BE0801D216C87005D61CF /* StreamingKit */,
@@ -1363,6 +1366,7 @@
 				55FEE2231CF763400019F48D /* Twitter.swift in Sources */,
 				55DAC36D1CEBA36700941824 /* SocialMediaCell.swift in Sources */,
 				407BE09A1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				402D938B1D4A62500029AFEA /* NSDate+ItenWired.swift in Sources */,
 				559F54EA1D3D31D200F2754B /* LocationController.swift in Sources */,
 				55DAC3171CE5258400941824 /* PhotoRecord.swift in Sources */,
 				559F54E21D3D1DD000F2754B /* Location.swift in Sources */,

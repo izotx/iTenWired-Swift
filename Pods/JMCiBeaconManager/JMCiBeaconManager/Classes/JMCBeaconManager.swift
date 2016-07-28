@@ -17,6 +17,7 @@ public enum iBeaconNotifications:String{
     case Location // new location discoverd
     case iBeaconEnabled
     case iBeaconDisabled
+    
 
 }
 
