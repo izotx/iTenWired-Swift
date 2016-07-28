@@ -92,14 +92,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-qf-Xue">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-qf-Xue">
                                                     <rect key="frame" x="20" y="156" width="109" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcr-E1-jab" customClass="MIBadgeButton" customModule="Conference_App" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="8" width="148" height="143"/>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcr-E1-jab" customClass="MIBadgeButton" customModule="Conference_App" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="185"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="83" id="IEe-Gw-4hO"/>
                                                         <constraint firstAttribute="width" constant="148" id="RUe-Yb-F9k"/>
@@ -117,12 +117,8 @@
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="0.62352941179999999" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="kcr-E1-jab" secondAttribute="trailing" constant="-8" id="MZN-4h-ggm"/>
-                                            <constraint firstItem="kcr-E1-jab" firstAttribute="leading" secondItem="LxL-TC-nxl" secondAttribute="leadingMargin" constant="-8" id="P30-G3-jPy"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="xLS-qf-Xue" secondAttribute="bottom" id="Wv6-2d-VSS"/>
-                                            <constraint firstItem="xLS-qf-Xue" firstAttribute="centerX" secondItem="LxL-TC-nxl" secondAttribute="centerX" id="chI-O7-glX"/>
-                                            <constraint firstItem="xLS-qf-Xue" firstAttribute="top" secondItem="kcr-E1-jab" secondAttribute="bottom" constant="5" id="fhg-54-7EW"/>
-                                            <constraint firstItem="kcr-E1-jab" firstAttribute="top" secondItem="LxL-TC-nxl" secondAttribute="topMargin" id="l4R-EH-neo"/>
+                                            <constraint firstItem="kcr-E1-jab" firstAttribute="centerX" secondItem="LxL-TC-nxl" secondAttribute="centerX" id="XPV-UG-TCl"/>
+                                            <constraint firstItem="kcr-E1-jab" firstAttribute="centerY" secondItem="LxL-TC-nxl" secondAttribute="centerY" id="esF-fb-Q6g"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="icon" destination="kcr-E1-jab" id="Phg-zg-uSr"/>
