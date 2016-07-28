@@ -694,7 +694,7 @@
 		"website": "http://www.northropgrumman.com/Pages/default.aspx",
 		"beacon": {
 			"id": "beacon3",
-			"sensitivity": "immediate"
+			"sensitivity": "far"
 		}
 	}, {
 		"id": "203",
