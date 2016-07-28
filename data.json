@@ -801,10 +801,6 @@
 		"description": "Metro Systems Incorporated (MSI) is a certified small business, with a successful history of providing IT professionals on a project or full-time basis. We specialize in placement of technology professionals for government, commercial, and non-profit organizations, large and small. Our mission is to provide these organizations with the highest quality IT talent and to match candidates to the best possible IT careers. Headquartered in the Washington DC metropolitan area with locations in Alexandria, VA, Richmond, VA and Pensacola, FL, MSI has nationwide reach capabilities.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/metro.png",
 		"website": "http://www.metrosystemsinc.com",
-		"beacon": {
-			"id": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
-			"sensitivity": "near"
-		}
 	}, {
 		"id": "237",
 		"name": "National Flight Academy",
