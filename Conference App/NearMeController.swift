@@ -201,12 +201,7 @@ class NearMeController {
             
             if let object = beaconData.getBeaconById(sponsor.iBeaconId) {
                 
-                if object.UUID.equalsIgnoreCase(beacon.UUID){
-                
-                    if object.major == beacon.major && object.minor == beacon.minor {
-
-                        
-                        
+                if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
                         if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: sponsor.getBeaconProximity()){
                             if let _ = activeNearMe.filter({$0 is Sponsor}).filter({($0 as! Sponsor).id == sponsor.id}).first
                             {
@@ -219,49 +214,53 @@ class NearMeController {
     
                             break
                         }
-                        
-                    }
                 }
             }
         }
         
-//        for exhibitor in attendeeData.getExibitors() {
-//            
-//            if let object = beaconData.getBeaconById(exhibitor.iBeaconId) {
-//                
-//                if object.UUID.equalsIgnoreCase(beacon.UUID){
-//                    
-//                    if object.major == beacon.major && object.minor == beacon.minor {
-//                        
-//                        if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: exhibitor.getBeaconProximity()){
-//                            activeNearMe.append(exhibitor)
-//                            flag = true
-//                            break
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//        
-//        for location in locationsData.getLocations() {
-//            
-//            if let object = beaconData.getBeaconById(location.iBeaconId) {
-//                
-//                if object.UUID.equalsIgnoreCase(beacon.UUID){
-//                    
-//                    if object.major == beacon.major && object.minor == beacon.minor {
-//                        
-//                        if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: location.beaconProximity){
-//                            activeNearMe.append(location)
-//                            flag = true
-//                            break
-//                        }
-//                        
-//    
-//                    }
-//                }
-//            }
-//        }
+        
+        for exhibitor in attendeeData.getExibitors() {
+            
+            if let object = beaconData.getBeaconById(exhibitor.iBeaconId) {
+                
+                if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
+                        if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: exhibitor.getBeaconProximity()){
+                            if let _ = activeNearMe.filter({$0 is Exhibitor}).filter({($0 as! Exhibitor).id == exhibitor.id}).first
+                            {
+                                
+                            }
+                            else{
+                                activeNearMe.append(exhibitor)
+                                flag = true
+                            }
+                            
+                            break
+                        }
+                    }
+                }
+        }
+
+        for location in locationsData.getLocations() {
+            
+            if let object = beaconData.getBeaconById(location.iBeaconId) {
+                
+                if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
+                        
+                        if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: location.getBeaconProximity()){
+                            if let _ = activeNearMe.filter({$0 is Location}).filter({($0 as! Location).id == location.id}).first
+                            {
+                                
+                            }
+                            else{
+                                activeNearMe.append(location)
+                                flag = true
+                            }
+                            
+                            break
+                        }
+                    }                
+            }
+        }
         
         if flag{
             // Notify that a new beacon was ranged
