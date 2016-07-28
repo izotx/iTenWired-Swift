@@ -62,9 +62,9 @@
 	}, 
 	
 	{"id": "beacon4",
-    		"udid": "05F62A3D-F60F-44BC-B36E-2B80FD6C9679",
-		"major": 25,
-		"minor": 33,
+    		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+		"major": 21268,
+		"minor": 46554,
 		"name": "iphone"
 	}],
 	"tracks": [{
