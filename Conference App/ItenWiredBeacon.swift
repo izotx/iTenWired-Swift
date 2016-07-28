@@ -57,16 +57,16 @@ class ItenWiredBeacon : iBeacon {
     init(dictionary: NSDictionary) {
         
         
-        var minor: UInt16 = 0
-        var major: UInt16 = 0
+        var minor = 0
+        var major = 0
         var id:String = ""
         var uuid = ""
         
-        if let unwrapedMinor = dictionary.objectForKey(ItenWiredBeaconEnum.minor.rawValue) as? UInt16 {
+        if let unwrapedMinor = dictionary.objectForKey(ItenWiredBeaconEnum.minor.rawValue) as? Int {
             minor = unwrapedMinor
         }
         
-        if let unwrapedMajor = dictionary.objectForKey(ItenWiredBeaconEnum.major.rawValue) as? UInt16 {
+        if let unwrapedMajor = dictionary.objectForKey(ItenWiredBeaconEnum.major.rawValue) as? Int {
             major = unwrapedMajor
         }
       
@@ -79,11 +79,13 @@ class ItenWiredBeacon : iBeacon {
             uuid = unwrapedUdid
         }
 
-        super.init(minor: nil, major: nil, proximityId:uuid, id:id)
+        super.init(minor: UInt16(minor), major: UInt16(major), proximityId:uuid, id:id)
     }
     
     init(with beacon: iBeacon){
         super.init(minor: beacon.minor, major: beacon.major, proximityId: beacon.UUID, id: beacon.id)
+        
+        self.proximity = beacon.proximity
     }
 }
 

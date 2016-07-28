@@ -63,4 +63,8 @@ class IBeaconData {
         }
         return beacons
     }
+    
+    func getBeaconById(id: String) -> ItenWiredBeacon? {
+        return self.getBeacons().filter({$0.id == id}).first
+    }
 }

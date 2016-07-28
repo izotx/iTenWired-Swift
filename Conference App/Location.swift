@@ -34,6 +34,8 @@
 //
 
 import Foundation
+import CoreLocation
+import JMCiBeaconManager
 
 enum LocationEmum: String {
     case id
@@ -41,6 +43,7 @@ enum LocationEmum: String {
     case description
     case icon
     case beacon
+    case sensitivity
 }
 
 class Location {
@@ -50,6 +53,8 @@ class Location {
     var icon = ""
     var description = ""
     var iBeaconId = ""
+    
+    var beaconProximity = CLProximity.Unknown
     
     init(dictionary: NSDictionary) {
     
@@ -69,6 +74,19 @@ class Location {
             
             if let iBeaconId = beacon.objectForKey(LocationEmum.id.rawValue) as? String {
                 self.iBeaconId = iBeaconId
+            }
+            
+            if let sensitivity = beacon.objectForKey(LocationEmum.sensitivity.rawValue) as? String {
+                
+                if sensitivity.equalsIgnoreCase("near") {
+                    self.beaconProximity = CLProximity.Near
+                } else if sensitivity.equalsIgnoreCase("far") {
+                    self.beaconProximity = CLProximity.Far
+                } else if sensitivity.equalsIgnoreCase("immediate") {
+                    self.beaconProximity = CLProximity.Immediate
+                } else {
+                    self.beaconProximity = CLProximity.Unknown
+                }
             }
         }
     }
