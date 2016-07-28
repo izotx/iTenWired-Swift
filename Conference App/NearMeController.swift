@@ -258,7 +258,7 @@ class NearMeController {
                             
                             break
                         }
-                    }                
+                    }
             }
         }
         
