@@ -59,6 +59,13 @@
 		"major": 4071,
 		"minor": 31565,
 		"name": "fc3w"
+	}, 
+	
+	{"id": "beacon4",
+    		"udid": "05F62A3D-F60F-44BC-B36E-2B80FD6C9679",
+		"major": 25,
+		"minor": 33,
+		"name": "iphone"
 	}],
 	"tracks": [{
 		"id": "1",
@@ -763,7 +770,11 @@
 		"level": "IGNITE Session Sponsor",
 		"description": "Mediacom Business delivers Internet, Phone and TV services via cable-exclusive DOCSIS 3.0 technology. We have invested over $2.5 billion over the past 10 years to expand our product delivery systems. With a coast-to-coast fiber network, Mediacom Business offers anchor institutions bandwidth and connectivity with speeds of 1 Gigabit and beyond.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/mediacom_MEANSbusiness-300.png",
-		"website": "http://www.mediacombusiness.com"
+		"website": "http://www.mediacombusiness.com",
+		"beacon": {
+			"id": "beacon4",
+			"sensitivity": "far"
+		}
 	}, {
 		"id": "44",
 		"name": "Duncan McCall Advertising & Marketing",
