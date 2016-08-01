@@ -115,8 +115,9 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-        return CGSize(width: ((collectionView.frame.size.width - 10) / 2)  - 6 , height: 150)
+       
+        let minValue = min(200, ((collectionView.frame.size.width - 20) / 2  - 6))
+        return CGSize(width: minValue, height: 150)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
