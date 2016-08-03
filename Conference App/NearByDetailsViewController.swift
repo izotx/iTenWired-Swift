@@ -84,6 +84,9 @@ class NearByDetailsViewController: UIViewController {
     var currentClosestIbeacon:iBeacon?
     var currentItem:iBeaconNearMeProtocol?
 
+    var emptyCount = 0 // Optimization
+    var emptyThreshold = 5
+    var previousCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,7 +96,9 @@ class NearByDetailsViewController: UIViewController {
         UIConfig()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearByDetailsViewController.beaconsRanged(_:)), name:   iBeaconNotifications.BeaconProximity.rawValue, object: nil)
-    
+       
+        _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(NearByDetailsViewController.removeOldBeacons), userInfo: nil, repeats: true)
+
     }
     
     @IBAction func showDetails(sender: AnyObject) {
@@ -110,6 +115,31 @@ class NearByDetailsViewController: UIViewController {
     }
     
     
+    func removeOldBeacons(){
+        var index = 0
+        var indexes = [Int]()
+        for item in beaconsData{
+            
+            if NSDate().timeIntervalSinceDate(item.1) > 3 {
+                //older than 3 remove
+                indexes.append(index)
+                if let beacon = currentClosestIbeacon{
+                    let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
+                    let id1 = item.0
+                    if id1 == id {
+                        currentClosestIbeacon =  nil
+                        clearData()
+                        refreshUI()
+                       
+                        break
+                    }
+                }
+            
+            }
+            index += 1
+        }
+    }
+    
     private func UIConfig() {
         
         view.backgroundColor = ItenWiredStyle.background.color.mainColor
@@ -119,6 +149,9 @@ class NearByDetailsViewController: UIViewController {
 
     let locationsData = LocationData()
     let attendeeData = AttendeeData()
+    
+//    let activeBeacons = [String:]
+    
     
     private func refreshUI(){
         if let beacon = currentClosestIbeacon{
@@ -174,25 +207,53 @@ class NearByDetailsViewController: UIViewController {
     
     @objc func beaconsRanged(notification:NSNotification){
         guard let  visibleIbeacons = notification.object as? [iBeacon] else{
-            currentClosestIbeacon = nil
-            clearData()
-            refreshUI()
+            //currentClosestIbeacon = nil
+           // clearData()
+           // refreshUI()
             return
         }
         
         guard let immediateIbeacon = visibleIbeacons.filter({$0.proximity == .Immediate}).first else {
-            currentClosestIbeacon = nil
-            clearData()
-            refreshUI()
+//            //currentClosestIbeacon = nil
+//            //clearData()
+//            //refreshUI()
+//            emptyCount += 1
+//            
+//            
+//            if previousCount > 0{
+//                previousCount = 0
+//                return
+//            }
+//            
+//            if emptyCount >= emptyThreshold{
+//                currentClosestIbeacon = nil
+//                clearData()
+//                refreshUI()
+//                emptyCount = 0
+//            }
+            
             
                 return
             }
+
+        //check if previous count = 0 
+        
+        
         //refresh UI if we found a new iBeacon
         if currentClosestIbeacon != immediateIbeacon {
             currentClosestIbeacon = immediateIbeacon
+           
+            previousCount = 1
             refreshUI()
+            let id = "\(currentClosestIbeacon!.major)\(currentClosestIbeacon!.minor)\(currentClosestIbeacon!.UUID)"
+            beaconsData[id] = NSDate()
         }
-        
-            
-        }
+       }
+    
+    
+    
+    var beaconsData = [String:NSDate]()
+    
+    
+    
     }
