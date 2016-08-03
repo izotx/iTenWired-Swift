@@ -47,7 +47,32 @@ class FNBJSocialFeedTwitterController{
         self.hashtag = hashtag
     }
     
+    func loginWithReadPermissions(viewController: UIViewController?, completion: () -> Void){
+        
+        Twitter.sharedInstance().logInWithViewController(viewController) { (session, error) in
+            
+            print("HERE")
+            
+            if (error != nil) {
+                completion()
+            }
+            
+            completion()
+        }
+    }
+    
+    func hasViewPermission() -> Bool {
+        
+        if (Twitter.sharedInstance().sessionStore.session() == nil) {
+            return false
+        }
+        
+        return true
+    }
+    
+    
     func favorite(tweet: FNBJSocialFeedTwitterTweet, completion: () -> Void){
+        
         
         if let userID = Twitter.sharedInstance().sessionStore.session()?.userID {
             

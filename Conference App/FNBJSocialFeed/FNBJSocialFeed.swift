@@ -141,13 +141,19 @@ class FNBJSocialFeed{
     
     func hasViewPermissions() -> Bool{
         let fb = fbController.hasViewPermission()
-        return fb
+        
+        let twt = twtController.hasViewPermission()
+        
+        return fb && twt
     }
     
     func loginWithReadPermissions(vc: UIViewController, completion: () -> Void){
-    
+
         fbController.loginWithReadPermissions([FNBJSocialFeedFacebookPermissionsEnum.public_profile], fromViewController: vc) { (token) in
-            completion()
+            
+            self.twtController.loginWithReadPermissions(vc) {
+                completion()
+            }
         }
     }
     
