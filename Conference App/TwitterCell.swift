@@ -1,4 +1,4 @@
-//    Copyright (c) 2016, Izotx
+//    Copyright (c) 2016, UWF
 //    All rights reserved.
 //
 //    Redistribution and use in source and binary forms, with or without
@@ -9,7 +9,7 @@
 //    * Redistributions in binary form must reproduce the above copyright
 //    notice, this list of conditions and the following disclaimer in the
 //    documentation and/or other materials provided with the distribution.
-//    * Neither the name of Izotx nor the names of its contributors may be used to
+//    * Neither the name of UWF nor the names of its contributors may be used to
 //    endorse or promote products derived from this software without specific
 //    prior written permission.
 //
@@ -33,11 +33,20 @@
 
 
 import UIKit
+import Haneke
 
 class TwitterCell: UITableViewCell {
     
-    @IBOutlet weak var tweetLabel: UILabel!
+    var tweet:FNBJSocialFeedTwitterTweet!
+    
+    
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var tweetText: UILabel!
+    @IBOutlet weak var retweetButton: UIButton!
+
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var date: UILabel!
+  
     
     @IBOutlet weak var userScreenNameLabel: UILabel!
     @IBOutlet weak var profileImageLabel: UIImageView!
@@ -45,10 +54,45 @@ class TwitterCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     
-    func build(tweet:Twitter){
-        self.tweetLabel.text = tweet.text
-        self.userNameLabel.text = tweet.user.name
-        self.userScreenNameLabel.text = "@\(tweet.user.screenName)"
+    ///Callback function to show the keyboard on the tableview
+    var showKeyboard : (feed: FNBJSocialFeedFeedObject, indexPath: NSIndexPath) -> Void = { arg in }
+    
+    // Cell's actual indexPath on the tableview
+    var indexPath = NSIndexPath()
+    
+    @IBAction func retweetAction(sender: AnyObject) {
+        
+        let count = self.tweet.retweetCount + 1
+        
+        self.retweetButton.setTitle("Retweet \(count)", forState: .Normal)
+        let twtController = FNBJSocialFeedTwitterController(hashtag: "#itenwired16")
+        
+        twtController.retweet(self.tweet) { (tweet) in
+            
+            
+        }
+        
+    }
+    
+    @IBAction func favoriteAction(sender: AnyObject) {
+        let count = self.tweet.favoriteCount + 1
+        self.favoriteButton.setTitle("Favourite \(count)", forState: .Normal)
+        
+        let twtController = FNBJSocialFeedTwitterController(hashtag: "#itenwired16")
+        
+        twtController.favorite(self.tweet) { 
+            
+        }
+    }
+    
+    
+    @IBAction func replyAction(sender: AnyObject) {
+       
+        let feed = FNBJSocialFeedFeedObject()
+        feed.feed = tweet
+        feed.date = tweet.date
+        
+        self.showKeyboard(feed: feed, indexPath: self.indexPath)
     }
     
     internal func setProfileImage(url:String){
@@ -57,8 +101,39 @@ class TwitterCell: UITableViewCell {
         self.profileImageLabel.image = UIImage(data: data!)
     }
     
-    func setProfileImage(photoRecord: Photorecord){
-        self.profileImageLabel.image = photoRecord.image!
+    func build(tweet: FNBJSocialFeedTwitterTweet, indexPath: NSIndexPath, callback: (feed: FNBJSocialFeedFeedObject, indexPath: NSIndexPath)->Void){
+        
+        self.showKeyboard = callback
+        self.indexPath = indexPath
+        
+        self.tweet = tweet
+        
+        if self.tweet.retweetCount > 0{
+            self.retweetButton.setTitle("Retweet \(self.tweet.retweetCount)", forState: .Normal)
+        }else{
+            self.retweetButton.setTitle("Retweet", forState: .Normal)
+        }
+        
+        if self.tweet.favoriteCount > 0 {
+            self.favoriteButton.setTitle("Favorite \(self.tweet.favoriteCount)", forState: .Normal)
+        }else{
+            self.favoriteButton.setTitle("Favorite", forState: .Normal)
+        }
+       
+        
+        self.tweetText.text = tweet.text
+        self.userNameLabel.text = tweet.user.name
+        self.userScreenNameLabel.text = "@\(tweet.user.screenName)"
+        
+        let URL = NSURL(string: tweet.user.profileImage)
+        self.profileImageLabel.hnk_setImageFromURL(URL!)
+        
+        self.profileImageLabel.layer.cornerRadius = self.profileImageLabel.frame.size.width / 4
+        self.profileImageLabel.clipsToBounds = true
+        
+        self.date.text = tweet.date.stringDateSinceNow()
+        
+        
     }
     
 }

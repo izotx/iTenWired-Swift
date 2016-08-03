@@ -7,54 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D361BC02EA3B8C476545E29A293CCB8 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDAE63AAECE2ACAD944BD4E2F5FE5E5 /* Format.swift */; };
-		15BCDB5DE771A20391EEA08BE4B4D9E6 /* PWDisplayLinkerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE665C264EF8C5D7FDACCED59930C12F /* PWDisplayLinkerDelegate.swift */; };
-		1AB83CC3F5A76053D6087AD4E23D783C /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3417166791A31FD25DADCF5C1014FBF /* DataStructures.swift */; };
-		1D27B06296C346D4F23F5ED14B0A5D1A /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC07E67FDCA8454DF41999858B78C45 /* UIButton+Haneke.swift */; };
-		24E7FCE3DF42DC6D616DC39F8AC69566 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F46E3319F66177A3427481A6E6D19C /* UIImageView+Haneke.swift */; };
-		2B22F1C15027A27BA577ADA0E742AE54 /* JMCiBeaconManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 297B925023019FAA354F8F760C616871 /* JMCiBeaconManager-dummy.m */; };
+		0D361BC02EA3B8C476545E29A293CCB8 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCF8B2490C442699DDAC4D7616CC842 /* Format.swift */; };
+		15BCDB5DE771A20391EEA08BE4B4D9E6 /* PWDisplayLinkerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D591F24188CC9E9EAEAE544C5C1C105 /* PWDisplayLinkerDelegate.swift */; };
+		1AB83CC3F5A76053D6087AD4E23D783C /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AC4B45C644F799F761B36926E9E95E /* DataStructures.swift */; };
+		1BCC3CD8E28BA768E8B388B531581AD6 /* ALTextInputBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CEDA094DAD1D3AC97BBAC6FC19B5CC /* ALTextInputBarDelegate.swift */; };
+		1D27B06296C346D4F23F5ED14B0A5D1A /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87094F409BC1CABE76CAED1F12A8F7FC /* UIButton+Haneke.swift */; };
+		2044DEEBA577B5B67C234F75D664DFFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		24E7FCE3DF42DC6D616DC39F8AC69566 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A4771E3F3BBBD084608327CAED7EE /* UIImageView+Haneke.swift */; };
+		2B22F1C15027A27BA577ADA0E742AE54 /* JMCiBeaconManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 823F16EA78B49D954FC51F3AE20A20D2 /* JMCiBeaconManager-dummy.m */; };
 		2DB1A57EACF9DE5ADF00E4F0CB96F928 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		3AEC422A729B36FE79DCA8D7607413B1 /* Pods-Conference App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */; };
-		3C310EE8F56C6FD5AACB11DAA7626980 /* PWDisplayLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE54B6BB8A857A6FB3E6293BB945C078 /* PWDisplayLinker.swift */; };
-		3D90F67A3A10F71FD01DEDA59496C1D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9B561DE18A2D03A2C81B4ED389144 /* Data.swift */; };
-		3EA2C091B8672D75066EEEEFE63B5A86 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA98F5010666E767467EF1884AF1777 /* NetworkFetcher.swift */; };
+		337CD418C4779806C6460A7A16FB241E /* Pods-Conference App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C310EE8F56C6FD5AACB11DAA7626980 /* PWDisplayLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCE3CEDA7B8BF4D2742BEA0EB44F92D /* PWDisplayLinker.swift */; };
+		3D90F67A3A10F71FD01DEDA59496C1D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000A2260C230C9E103CCE2E27ECEED5 /* Data.swift */; };
+		3EA2C091B8672D75066EEEEFE63B5A86 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889037352EC00B7A81741E139537B620 /* NetworkFetcher.swift */; };
 		410D0641B813947CA53F07D75F4624CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		49A5E2B820A83801CEE267AA6E1D923F /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BEC02D2999F7C4402E958817893883 /* DiskFetcher.swift */; };
-		4D2F2792AEDE677A4EBB07D450DE4D74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		51FDBB4974F7723AD98264B83EF3EC18 /* Pods-Conference App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55F3BC1465BB2EB6F02ADC5A2D1F9F83 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A102C0060B508C6A9F5C7D69456058 /* String+Haneke.swift */; };
-		62D2CC96AF2915D3A65C9810047D9A66 /* RadarScannerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BFA5E21F337E3C364EFA1FDFBD163 /* RadarScannerShape.swift */; };
-		6E1FDD47BCBDC30DEB1B17152E4A0A97 /* JMCBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8AE95A741AA52A3BECA74001F4ECDF /* JMCBluetoothManager.swift */; };
-		8A85C4CDF0FE775E0BD0C44B0C3E6159 /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5252BCB84AE186BF9D292F5C1D9EED2E /* NSURLResponse+Haneke.swift */; };
-		8C357B44EA2BC147AA0219CD8CC03B5F /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26752CD11FE6DC976859BA877B4175BA /* Fetcher.swift */; };
-		92A2D4839D45ABA48D77923C035C8943 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F2DE14146FC42107E28394EE93D014 /* NSFileManager+Haneke.swift */; };
-		9831DDC5256EF014D93FF2DBE055E7B6 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCF8F7F72F5910D0E156D1C343F9A9C /* Cache.swift */; };
-		9911E1A886CD44872C07FAA6A1521A85 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0105CA1141F7F02DEB3056DDA7C5F7B9 /* Log.swift */; };
-		9D5F6868132325D38051C5A07F128C5C /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A895C3B4A53AE11D04A4198E8773363 /* UIView+Haneke.swift */; };
-		9E629066D218DC1DC616E339DB68E49C /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56E5A32C3A26E8BA8A59F935FC4D30 /* CryptoSwiftMD5.swift */; };
-		9F4D113C6A4469F0DFAC637F1CA2C087 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE53D0E8A06D074AF15C1B1077891ED /* CGSize+Swift.swift */; };
-		A8CF635DBE430F95FB17D371B918B3FB /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE2569585458709CD5DD2C427F969EA /* UIImage+Haneke.swift */; };
-		AB02DD775A289B55B03F87A73525B611 /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90F052D93A7690195DCD43DB377F6787 /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AEB48C925DC8D4B812C4ABF9F15C822E /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F526E7D10FFA064E3F3A66BF63446B /* DiskCache.swift */; };
-		B1CCF02E757EE856275CE85BF171ED90 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A00E49AE05CCDD0220C6F0E4226664 /* Fetch.swift */; };
-		B6D8B8C8C91DABA9F589589F09545F1A /* BeaconShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508DBBF3F82BED87DB456FD9B9947DB3 /* BeaconShape.swift */; };
-		BD038EFFD2D1B49B136B42B5E07D59C5 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5119CDADE46EA1D0275F0CA48BC46D /* Haneke.swift */; };
-		BE2EBC20B8BBD254B4EB81D4D04A6644 /* JMCiBeaconManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B541443450B2A91F7C36B5965F8EC46 /* JMCiBeaconManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D134F29E2A36899BCDB0FAA486601697 /* JMCRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC2AC0797720242498333CEF56CE79 /* JMCRadarView.swift */; };
-		DF6DBB5FA4E663A5AE7F272CA1CBA3BB /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FF5C2A697EA1FD959BA7741FF1C8C6 /* NSHTTPURLResponse+Haneke.swift */; };
-		E1AAE154123E6F2C989875B1BED6CA8A /* JMCBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4CC096B93C3282CBB59437420837B /* JMCBeaconManager.swift */; };
-		F03916F3658FFB4643AD5FC815A4F5A7 /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6288E62B6D966CFCAD28C8D179B13C /* HanekeSwift-dummy.m */; };
+		451F9ABF16737407C7ADECAB9EC194A1 /* ALTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C03ACB585358B642D5BCBDFA0ACBE1C /* ALTextView.swift */; };
+		49A5E2B820A83801CEE267AA6E1D923F /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6D60E93718A6F0F8BFF1940570B6F4 /* DiskFetcher.swift */; };
+		55F3BC1465BB2EB6F02ADC5A2D1F9F83 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF68C48AD0143D982CADD12A59BCC91C /* String+Haneke.swift */; };
+		62D2CC96AF2915D3A65C9810047D9A66 /* RadarScannerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A438C8BD8428EA369F644BCA0F2A42 /* RadarScannerShape.swift */; };
+		665CE1C2C96F348BFB5C604F5530A336 /* ALTextInputUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C374C8ECF9740148ED17AE4D1FEBD3 /* ALTextInputUtilities.swift */; };
+		6E1FDD47BCBDC30DEB1B17152E4A0A97 /* JMCBluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6627CB85965FC9FA52BDBB33D3D40D7A /* JMCBluetoothManager.swift */; };
+		795CA86A7E5D28B3BF630796E6A624E0 /* ALTextInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE78DDC6F2BF613AC3EABC2770F33B6 /* ALTextInputBar.swift */; };
+		8A85C4CDF0FE775E0BD0C44B0C3E6159 /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB77B333903C1737E32C6ACEEFA07B /* NSURLResponse+Haneke.swift */; };
+		8C357B44EA2BC147AA0219CD8CC03B5F /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405683E3B36D302D3CFAA76EC7FF21D4 /* Fetcher.swift */; };
+		92A2D4839D45ABA48D77923C035C8943 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3D6CFE02B88B9E4D98148735F37F5 /* NSFileManager+Haneke.swift */; };
+		975B0BC09268FF999B29B3B672C8F996 /* Pods-Conference App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */; };
+		9831DDC5256EF014D93FF2DBE055E7B6 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393109C749CD880B4A12C194E595BF43 /* Cache.swift */; };
+		9911E1A886CD44872C07FAA6A1521A85 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BCA285982E70B9D44ACAEF26857DCB /* Log.swift */; };
+		9D5F6868132325D38051C5A07F128C5C /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0CFD993BD1954E331CE7FCF201584E /* UIView+Haneke.swift */; };
+		9E629066D218DC1DC616E339DB68E49C /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F629F17A875E882E7AAA299E7D603743 /* CryptoSwiftMD5.swift */; };
+		9F4D113C6A4469F0DFAC637F1CA2C087 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD76669B0F5A0F7EBF1C4C8322EEC06 /* CGSize+Swift.swift */; };
+		A8CF635DBE430F95FB17D371B918B3FB /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91906E86CDE50D31FC29753CAC99D9AB /* UIImage+Haneke.swift */; };
+		AB02DD775A289B55B03F87A73525B611 /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D2A4746B905629B0905D848EB1A199 /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEB48C925DC8D4B812C4ABF9F15C822E /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD15C7DAD75ACC9A590F9356B42EF9C9 /* DiskCache.swift */; };
+		B1CCF02E757EE856275CE85BF171ED90 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10928C923B025612A68B0DE4056BD5 /* Fetch.swift */; };
+		B6D8B8C8C91DABA9F589589F09545F1A /* BeaconShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3092AA44C6ED7D057C46468FCB6167 /* BeaconShape.swift */; };
+		BCD516A98C8BBAADF9B9EEE9F6EA38D4 /* ALTextInputBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE79D57B24278CE505B8D133AD454E /* ALTextInputBar-dummy.m */; };
+		BD038EFFD2D1B49B136B42B5E07D59C5 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D21A9AD2A09CB496652FFFD3136DDC /* Haneke.swift */; };
+		BE2EBC20B8BBD254B4EB81D4D04A6644 /* JMCiBeaconManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADD49F9C3564385C15FF83B316709E8A /* JMCiBeaconManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7EE2410DF26AF3B05155D08C9E4087B /* ALKeyboardObservingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4B772B109F60702C45476E00E2315 /* ALKeyboardObservingView.swift */; };
+		CB684C9E34333E0863D0BB300E56C10A /* ALTextInputBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E93C2FAECEAC2DE090300A2EEAC89DA9 /* ALTextInputBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D134F29E2A36899BCDB0FAA486601697 /* JMCRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21CF4944F84ABDBF983C8D61DE17D04 /* JMCRadarView.swift */; };
+		DF6DBB5FA4E663A5AE7F272CA1CBA3BB /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA2CB4667DF86D9BAB84E4E2F7BE2A /* NSHTTPURLResponse+Haneke.swift */; };
+		E1AAE154123E6F2C989875B1BED6CA8A /* JMCBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050DE8B504F27A881E1A6CC5EFFA68C5 /* JMCBeaconManager.swift */; };
+		E309CCFE44C6169F4B3D7212606069E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		F03916F3658FFB4643AD5FC815A4F5A7 /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8AD5A6A5AEFB1BFCE3CE5487FE6922 /* HanekeSwift-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		55FB75EDC05ACB368FB4DFF823870E66 /* PBXContainerItemProxy */ = {
+		43DC7DAA1273A873A842914F18E8918C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7C2C36F506779D474C9297DA18D7ADB;
+			remoteInfo = ALTextInputBar;
+		};
+		6AD6314A874E4C044CC1E96BA3B687F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2C2B1953A91633859BF7AD238FF567A0;
 			remoteInfo = HanekeSwift;
 		};
-		EFB0533C617AC026F1ED657C077D1281 /* PBXContainerItemProxy */ = {
+		DD15C097085D8DFE8AC7B28759BADEC3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -64,65 +79,89 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0105CA1141F7F02DEB3056DDA7C5F7B9 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
-		04E9B561DE18A2D03A2C81B4ED389144 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
-		0A56E5A32C3A26E8BA8A59F935FC4D30 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
-		12CAA421B2A02F72A293A61F6CF79D95 /* JMCiBeaconManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-prefix.pch"; sourceTree = "<group>"; };
+		0000A2260C230C9E103CCE2E27ECEED5 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		050DE8B504F27A881E1A6CC5EFFA68C5 /* JMCBeaconManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBeaconManager.swift; path = JMCiBeaconManager/Classes/JMCBeaconManager.swift; sourceTree = "<group>"; };
+		09CDD5A1CFFF961310B23E09C40E7F4E /* TwitterKitResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		0AEB77B333903C1737E32C6ACEEFA07B /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		0B359304C62E71CF185B44383084461E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B6D60E93718A6F0F8BFF1940570B6F4 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
+		0CEDEB975B7C6BD5F012E75785CEB7F4 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		12BCA285982E70B9D44ACAEF26857DCB /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
 		134B940329C66C7F325E2E20EF772374 /* Pods-Conference App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-resources.sh"; sourceTree = "<group>"; };
-		26752CD11FE6DC976859BA877B4175BA /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
-		26F0D071F9707E9B6EF4E2A9DEE4A280 /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		297B925023019FAA354F8F760C616871 /* JMCiBeaconManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMCiBeaconManager-dummy.m"; sourceTree = "<group>"; };
-		29C4CC096B93C3282CBB59437420837B /* JMCBeaconManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBeaconManager.swift; path = JMCiBeaconManager/Classes/JMCBeaconManager.swift; sourceTree = "<group>"; };
-		2B541443450B2A91F7C36B5965F8EC46 /* JMCiBeaconManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-umbrella.h"; sourceTree = "<group>"; };
-		2CC07E67FDCA8454DF41999858B78C45 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
-		2D4BFA5E21F337E3C364EFA1FDFBD163 /* RadarScannerShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarScannerShape.swift; path = JMCiBeaconManager/Classes/RadarScannerShape.swift; sourceTree = "<group>"; };
+		195D7B0CE3E0ACE08A76998718D201C3 /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
+		2BFE79D57B24278CE505B8D133AD454E /* ALTextInputBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ALTextInputBar-dummy.m"; sourceTree = "<group>"; };
+		2C64A1B2C20A17039A81E18F37074000 /* JMCiBeaconManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JMCiBeaconManager.xcconfig; sourceTree = "<group>"; };
+		314D9EA23097609AFEF82A8026BCB09B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		33354CEB9B667D167519F15FF206443F /* Pods-Conference App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Conference App-umbrella.h"; sourceTree = "<group>"; };
-		3A895C3B4A53AE11D04A4198E8773363 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
-		44FF5C2A697EA1FD959BA7741FF1C8C6 /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
-		4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JMCiBeaconManager.xcconfig; sourceTree = "<group>"; };
-		508DBBF3F82BED87DB456FD9B9947DB3 /* BeaconShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconShape.swift; path = JMCiBeaconManager/Classes/BeaconShape.swift; sourceTree = "<group>"; };
-		5252BCB84AE186BF9D292F5C1D9EED2E /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
-		567A3769C4CAB971B691DA8369139E90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		393109C749CD880B4A12C194E595BF43 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
+		3FEA2CB4667DF86D9BAB84E4E2F7BE2A /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		405683E3B36D302D3CFAA76EC7FF21D4 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
+		40A3A08334079ED794F5513180448C4A /* JMCiBeaconManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-prefix.pch"; sourceTree = "<group>"; };
+		45C374C8ECF9740148ED17AE4D1FEBD3 /* ALTextInputUtilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ALTextInputUtilities.swift; path = ALTextInputBar/ALTextInputUtilities.swift; sourceTree = "<group>"; };
+		4AE78DDC6F2BF613AC3EABC2770F33B6 /* ALTextInputBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ALTextInputBar.swift; path = ALTextInputBar/ALTextInputBar.swift; sourceTree = "<group>"; };
+		4D591F24188CC9E9EAEAE544C5C1C105 /* PWDisplayLinkerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinkerDelegate.swift; path = JMCiBeaconManager/Classes/PWDisplayLinkerDelegate.swift; sourceTree = "<group>"; };
+		4EB4B772B109F60702C45476E00E2315 /* ALKeyboardObservingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ALKeyboardObservingView.swift; path = ALTextInputBar/ALKeyboardObservingView.swift; sourceTree = "<group>"; };
 		5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.debug.xcconfig"; sourceTree = "<group>"; };
-		5CCFFF29BB624C9A368041B130C932A9 /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
-		62A00E49AE05CCDD0220C6F0E4226664 /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
-		674A00267B88B74729DB8A7729EC88A4 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FE64683AD8B0B09048EBEC87ABD1976 /* ALTextInputBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALTextInputBar-prefix.pch"; sourceTree = "<group>"; };
+		6627CB85965FC9FA52BDBB33D3D40D7A /* JMCBluetoothManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBluetoothManager.swift; path = JMCiBeaconManager/Classes/JMCBluetoothManager.swift; sourceTree = "<group>"; };
 		67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
-		67F46E3319F66177A3427481A6E6D19C /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
-		6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
-		6DDAE63AAECE2ACAD944BD4E2F5FE5E5 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
+		6A7CCE9C858E2FC69FFD8FE97703204E /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C8AD5A6A5AEFB1BFCE3CE5487FE6922 /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		6CDF522782D086F219A8E071F8043D8D /* ALTextInputBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ALTextInputBar.modulemap; sourceTree = "<group>"; };
+		74958749280E229F64524F63E9B5859D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D2A4746B905629B0905D848EB1A199 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
+		76A438C8BD8428EA369F644BCA0F2A42 /* RadarScannerShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadarScannerShape.swift; path = JMCiBeaconManager/Classes/RadarScannerShape.swift; sourceTree = "<group>"; };
+		7C03ACB585358B642D5BCBDFA0ACBE1C /* ALTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ALTextView.swift; path = ALTextInputBar/ALTextView.swift; sourceTree = "<group>"; };
+		81AC4B45C644F799F761B36926E9E95E /* DataStructures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStructures.swift; path = JMCiBeaconManager/Classes/DataStructures.swift; sourceTree = "<group>"; };
+		823F16EA78B49D954FC51F3AE20A20D2 /* JMCiBeaconManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JMCiBeaconManager-dummy.m"; sourceTree = "<group>"; };
 		8551CED925E57C8FAAD6A9C00A7BDB0A /* Pods-Conference App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Conference App-acknowledgements.markdown"; sourceTree = "<group>"; };
-		90F052D93A7690195DCD43DB377F6787 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
-		90F526E7D10FFA064E3F3A66BF63446B /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
+		87094F409BC1CABE76CAED1F12A8F7FC /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
+		889037352EC00B7A81741E139537B620 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		88CEDA094DAD1D3AC97BBAC6FC19B5CC /* ALTextInputBarDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ALTextInputBarDelegate.swift; path = ALTextInputBar/ALTextInputBarDelegate.swift; sourceTree = "<group>"; };
+		8F3C04F4A27ECB6DE5929B15D34D05F4 /* ALTextInputBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALTextInputBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91906E86CDE50D31FC29753CAC99D9AB /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98F2DE14146FC42107E28394EE93D014 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
-		9B5119CDADE46EA1D0275F0CA48BC46D /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		98C0FDA764A0EC435799FD51019393F9 /* JMCiBeaconManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JMCiBeaconManager.modulemap; sourceTree = "<group>"; };
+		997A4771E3F3BBBD084608327CAED7EE /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
+		9CCE3CEDA7B8BF4D2742BEA0EB44F92D /* PWDisplayLinker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinker.swift; path = JMCiBeaconManager/Classes/PWDisplayLinker.swift; sourceTree = "<group>"; };
+		9CCF8B2490C442699DDAC4D7616CC842 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
+		A21CF4944F84ABDBF983C8D61DE17D04 /* JMCRadarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCRadarView.swift; path = JMCiBeaconManager/Classes/JMCRadarView.swift; sourceTree = "<group>"; };
+		A4C678468419E074F2C1845406E158B4 /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
 		AD31636541C246F5BA65ACBADEC6BB28 /* Pods-Conference App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Conference App-frameworks.sh"; sourceTree = "<group>"; };
+		ADD49F9C3564385C15FF83B316709E8A /* JMCiBeaconManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JMCiBeaconManager-umbrella.h"; sourceTree = "<group>"; };
 		B3381B954FF0573C0BBEE073A9E69E8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3417166791A31FD25DADCF5C1014FBF /* DataStructures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStructures.swift; path = JMCiBeaconManager/Classes/DataStructures.swift; sourceTree = "<group>"; };
-		C396C0AD9BB630BACBA878E50821B673 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B52ECD3E7520CE2BE4F860BF81FF4D01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5D21A9AD2A09CB496652FFFD3136DDC /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		BD3092AA44C6ED7D057C46468FCB6167 /* BeaconShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaconShape.swift; path = JMCiBeaconManager/Classes/BeaconShape.swift; sourceTree = "<group>"; };
+		BD863B2214EB676013F6AB60CDA00D64 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
+		BF68C48AD0143D982CADD12A59BCC91C /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
+		C673ED5CF8DBCABC7F71E93E33E339E4 /* ALTextInputBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ALTextInputBar.xcconfig; sourceTree = "<group>"; };
 		C800003B7D1D7104D29612A132CF281E /* Pods-Conference App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Conference App.modulemap"; sourceTree = "<group>"; };
+		CA5C5CCDF15F2C2CD04E95AEC730D8E1 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		CE5356B61B0AFB0BC8F05DE195B2DE79 /* Pods-Conference App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Conference App-acknowledgements.plist"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CEF6E6C983DC1925BD44D08AEBAE8245 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
-		D0BEC02D2999F7C4402E958817893883 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
-		D1086AC26FE53CCF1A0CD0894676CF94 /* JMCiBeaconManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMCiBeaconManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4A102C0060B508C6A9F5C7D69456058 /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
-		DB8AE95A741AA52A3BECA74001F4ECDF /* JMCBluetoothManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCBluetoothManager.swift; path = JMCiBeaconManager/Classes/JMCBluetoothManager.swift; sourceTree = "<group>"; };
-		DC6288E62B6D966CFCAD28C8D179B13C /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
-		DCCF8F7F72F5910D0E156D1C343F9A9C /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
-		DE54B6BB8A857A6FB3E6293BB945C078 /* PWDisplayLinker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinker.swift; path = JMCiBeaconManager/Classes/PWDisplayLinker.swift; sourceTree = "<group>"; };
-		DEA98F5010666E767467EF1884AF1777 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
-		DEB194AF2B5F55B682581D6FDB35E24C /* JMCiBeaconManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JMCiBeaconManager.modulemap; sourceTree = "<group>"; };
-		DFE53D0E8A06D074AF15C1B1077891ED /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		DD15C7DAD75ACC9A590F9356B42EF9C9 /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
+		DF1B6358ED37E0A60F53FEF671CE9835 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = iOS/TwitterCore.framework; sourceTree = "<group>"; };
 		E0C1017F650312874F25212199A2841D /* Pods-Conference App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Conference App-dummy.m"; sourceTree = "<group>"; };
-		ECE2569585458709CD5DD2C427F969EA /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
-		EE665C264EF8C5D7FDACCED59930C12F /* PWDisplayLinkerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PWDisplayLinkerDelegate.swift; path = JMCiBeaconManager/Classes/PWDisplayLinkerDelegate.swift; sourceTree = "<group>"; };
-		FA0C9C3E359A74B3DB209AEB8E8C0E00 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
-		FAEC2AC0797720242498333CEF56CE79 /* JMCRadarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JMCRadarView.swift; path = JMCiBeaconManager/Classes/JMCRadarView.swift; sourceTree = "<group>"; };
+		E93C2FAECEAC2DE090300A2EEAC89DA9 /* ALTextInputBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ALTextInputBar-umbrella.h"; sourceTree = "<group>"; };
+		EC0CFD993BD1954E331CE7FCF201584E /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
+		ECB3D6CFE02B88B9E4D98148735F37F5 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
+		EF9340F801CFFBD4BF6FFEDBE50D880A /* Pods_Conference_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Conference_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D955598CC281292065EBE2B98E5CF8 /* JMCiBeaconManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMCiBeaconManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F629F17A875E882E7AAA299E7D603743 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
+		FBD76669B0F5A0F7EBF1C4C8322EEC06 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		FF10928C923B025612A68B0DE4056BD5 /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		04EA32B8FC4290FBF174742D53933C87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E309CCFE44C6169F4B3D7212606069E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0FC8F2602D193A43A9C40A0DB2932567 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,19 +170,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		234668E85174FCAD3EF8C866C8C6AA48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D2F2792AEDE677A4EBB07D450DE4D74 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F0E55176A5AF13111D389E09381931E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				410D0641B813947CA53F07D75F4624CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A172F868A29F41EB462A03AA2765883 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2044DEEBA577B5B67C234F75D664DFFC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,38 +207,42 @@
 			path = "Target Support Files/Pods-Conference App";
 			sourceTree = "<group>";
 		};
-		07368D1B31244C7544F55868F179644F /* HanekeSwift */ = {
+		107548C58F414E9C4BB9A36292192786 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DCCF8F7F72F5910D0E156D1C343F9A9C /* Cache.swift */,
-				DFE53D0E8A06D074AF15C1B1077891ED /* CGSize+Swift.swift */,
-				0A56E5A32C3A26E8BA8A59F935FC4D30 /* CryptoSwiftMD5.swift */,
-				04E9B561DE18A2D03A2C81B4ED389144 /* Data.swift */,
-				90F526E7D10FFA064E3F3A66BF63446B /* DiskCache.swift */,
-				D0BEC02D2999F7C4402E958817893883 /* DiskFetcher.swift */,
-				62A00E49AE05CCDD0220C6F0E4226664 /* Fetch.swift */,
-				26752CD11FE6DC976859BA877B4175BA /* Fetcher.swift */,
-				6DDAE63AAECE2ACAD944BD4E2F5FE5E5 /* Format.swift */,
-				9B5119CDADE46EA1D0275F0CA48BC46D /* Haneke.swift */,
-				0105CA1141F7F02DEB3056DDA7C5F7B9 /* Log.swift */,
-				DEA98F5010666E767467EF1884AF1777 /* NetworkFetcher.swift */,
-				98F2DE14146FC42107E28394EE93D014 /* NSFileManager+Haneke.swift */,
-				44FF5C2A697EA1FD959BA7741FF1C8C6 /* NSHTTPURLResponse+Haneke.swift */,
-				5252BCB84AE186BF9D292F5C1D9EED2E /* NSURLResponse+Haneke.swift */,
-				D4A102C0060B508C6A9F5C7D69456058 /* String+Haneke.swift */,
-				2CC07E67FDCA8454DF41999858B78C45 /* UIButton+Haneke.swift */,
-				ECE2569585458709CD5DD2C427F969EA /* UIImage+Haneke.swift */,
-				67F46E3319F66177A3427481A6E6D19C /* UIImageView+Haneke.swift */,
-				3A895C3B4A53AE11D04A4198E8773363 /* UIView+Haneke.swift */,
-				C5BFE3944A8316254D5BF37C1E399F28 /* Support Files */,
+				0CEDEB975B7C6BD5F012E75785CEB7F4 /* OneSignal.framework */,
 			);
-			path = HanekeSwift;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0FA7B2194367FAAD567EDE54E0C9A9CD /* Frameworks */ = {
+		166308FA0F772CE2F95FB90117F52D70 /* JMCiBeaconManager */ = {
 			isa = PBXGroup;
 			children = (
-				CEF6E6C983DC1925BD44D08AEBAE8245 /* OneSignal.framework */,
+				BD3092AA44C6ED7D057C46468FCB6167 /* BeaconShape.swift */,
+				81AC4B45C644F799F761B36926E9E95E /* DataStructures.swift */,
+				050DE8B504F27A881E1A6CC5EFFA68C5 /* JMCBeaconManager.swift */,
+				6627CB85965FC9FA52BDBB33D3D40D7A /* JMCBluetoothManager.swift */,
+				A21CF4944F84ABDBF983C8D61DE17D04 /* JMCRadarView.swift */,
+				9CCE3CEDA7B8BF4D2742BEA0EB44F92D /* PWDisplayLinker.swift */,
+				4D591F24188CC9E9EAEAE544C5C1C105 /* PWDisplayLinkerDelegate.swift */,
+				76A438C8BD8428EA369F644BCA0F2A42 /* RadarScannerShape.swift */,
+				A015E0CD4CDBD74C59EFCDE97D1E1ACF /* Support Files */,
+			);
+			path = JMCiBeaconManager;
+			sourceTree = "<group>";
+		};
+		1CAFF3D29E4AAA4CCAB98D31871D8421 /* TwitterCore */ = {
+			isa = PBXGroup;
+			children = (
+				A47BC1DDE317EA7FC6DD42C91DD692A2 /* Frameworks */,
+			);
+			path = TwitterCore;
+			sourceTree = "<group>";
+		};
+		34C425CC6B0DC97E1F06967759DC845A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				314D9EA23097609AFEF82A8026BCB09B /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,26 +255,41 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		41329F541C88DE7E5579206007060EFD /* OneSignal */ = {
+		3E89FB774FC761993014AEF9EB714AFD /* TwitterKit */ = {
 			isa = PBXGroup;
 			children = (
-				0FA7B2194367FAAD567EDE54E0C9A9CD /* Frameworks */,
+				9F3A20F4B6AA4DC0040CC99D0720A9B8 /* Frameworks */,
+				EC40200EF1E19CAE1D6D1CC0FF36255C /* Resources */,
 			);
-			path = OneSignal;
+			path = TwitterKit;
 			sourceTree = "<group>";
 		};
-		528687B4EA7FD1C1CD63FC057D89F1F0 /* Support Files */ = {
+		49AAD8AF584E7D789F4F1E0F41B5E492 /* HanekeSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C396C0AD9BB630BACBA878E50821B673 /* Info.plist */,
-				DEB194AF2B5F55B682581D6FDB35E24C /* JMCiBeaconManager.modulemap */,
-				4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */,
-				297B925023019FAA354F8F760C616871 /* JMCiBeaconManager-dummy.m */,
-				12CAA421B2A02F72A293A61F6CF79D95 /* JMCiBeaconManager-prefix.pch */,
-				2B541443450B2A91F7C36B5965F8EC46 /* JMCiBeaconManager-umbrella.h */,
+				393109C749CD880B4A12C194E595BF43 /* Cache.swift */,
+				FBD76669B0F5A0F7EBF1C4C8322EEC06 /* CGSize+Swift.swift */,
+				F629F17A875E882E7AAA299E7D603743 /* CryptoSwiftMD5.swift */,
+				0000A2260C230C9E103CCE2E27ECEED5 /* Data.swift */,
+				DD15C7DAD75ACC9A590F9356B42EF9C9 /* DiskCache.swift */,
+				0B6D60E93718A6F0F8BFF1940570B6F4 /* DiskFetcher.swift */,
+				FF10928C923B025612A68B0DE4056BD5 /* Fetch.swift */,
+				405683E3B36D302D3CFAA76EC7FF21D4 /* Fetcher.swift */,
+				9CCF8B2490C442699DDAC4D7616CC842 /* Format.swift */,
+				B5D21A9AD2A09CB496652FFFD3136DDC /* Haneke.swift */,
+				12BCA285982E70B9D44ACAEF26857DCB /* Log.swift */,
+				889037352EC00B7A81741E139537B620 /* NetworkFetcher.swift */,
+				ECB3D6CFE02B88B9E4D98148735F37F5 /* NSFileManager+Haneke.swift */,
+				3FEA2CB4667DF86D9BAB84E4E2F7BE2A /* NSHTTPURLResponse+Haneke.swift */,
+				0AEB77B333903C1737E32C6ACEEFA07B /* NSURLResponse+Haneke.swift */,
+				BF68C48AD0143D982CADD12A59BCC91C /* String+Haneke.swift */,
+				87094F409BC1CABE76CAED1F12A8F7FC /* UIButton+Haneke.swift */,
+				91906E86CDE50D31FC29753CAC99D9AB /* UIImage+Haneke.swift */,
+				997A4771E3F3BBBD084608327CAED7EE /* UIImageView+Haneke.swift */,
+				EC0CFD993BD1954E331CE7FCF201584E /* UIView+Haneke.swift */,
+				FCF88A515A225663F16178160A1C6A63 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/JMCiBeaconManager";
+			path = HanekeSwift;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -239,36 +297,56 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F56CABEDEA131B5335E0176E2FBEED39 /* Pods */,
-				B41EB69C97AD7F0EE71745B35452929B /* Products */,
+				DCA31CDE7E5CFD95E2BA1F703414297D /* Pods */,
+				DC4DD41912F4BD64623624B2FB326A26 /* Products */,
 				E38CC51AE345FDC0ED6C1F836AF05209 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8A7C6FF7E0CE1A72DC780C3E334ECA2B /* JMCiBeaconManager */ = {
+		86AFD4AFAF98A59C0CBB585D2D1C3160 /* OneSignal */ = {
 			isa = PBXGroup;
 			children = (
-				508DBBF3F82BED87DB456FD9B9947DB3 /* BeaconShape.swift */,
-				C3417166791A31FD25DADCF5C1014FBF /* DataStructures.swift */,
-				29C4CC096B93C3282CBB59437420837B /* JMCBeaconManager.swift */,
-				DB8AE95A741AA52A3BECA74001F4ECDF /* JMCBluetoothManager.swift */,
-				FAEC2AC0797720242498333CEF56CE79 /* JMCRadarView.swift */,
-				DE54B6BB8A857A6FB3E6293BB945C078 /* PWDisplayLinker.swift */,
-				EE665C264EF8C5D7FDACCED59930C12F /* PWDisplayLinkerDelegate.swift */,
-				2D4BFA5E21F337E3C364EFA1FDFBD163 /* RadarScannerShape.swift */,
-				528687B4EA7FD1C1CD63FC057D89F1F0 /* Support Files */,
+				107548C58F414E9C4BB9A36292192786 /* Frameworks */,
 			);
-			path = JMCiBeaconManager;
+			path = OneSignal;
 			sourceTree = "<group>";
 		};
-		B41EB69C97AD7F0EE71745B35452929B /* Products */ = {
+		9F3A20F4B6AA4DC0040CC99D0720A9B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				674A00267B88B74729DB8A7729EC88A4 /* Haneke.framework */,
-				D1086AC26FE53CCF1A0CD0894676CF94 /* JMCiBeaconManager.framework */,
-				26F0D071F9707E9B6EF4E2A9DEE4A280 /* Pods_Conference_App.framework */,
+				CA5C5CCDF15F2C2CD04E95AEC730D8E1 /* TwitterKit.framework */,
 			);
-			name = Products;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A015E0CD4CDBD74C59EFCDE97D1E1ACF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				74958749280E229F64524F63E9B5859D /* Info.plist */,
+				98C0FDA764A0EC435799FD51019393F9 /* JMCiBeaconManager.modulemap */,
+				2C64A1B2C20A17039A81E18F37074000 /* JMCiBeaconManager.xcconfig */,
+				823F16EA78B49D954FC51F3AE20A20D2 /* JMCiBeaconManager-dummy.m */,
+				40A3A08334079ED794F5513180448C4A /* JMCiBeaconManager-prefix.pch */,
+				ADD49F9C3564385C15FF83B316709E8A /* JMCiBeaconManager-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JMCiBeaconManager";
+			sourceTree = "<group>";
+		};
+		A47BC1DDE317EA7FC6DD42C91DD692A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF1B6358ED37E0A60F53FEF671CE9835 /* TwitterCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A57CAB11BCAD11EEAC57E7A576993157 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				34C425CC6B0DC97E1F06967759DC845A /* Frameworks */,
+			);
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -279,18 +357,56 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C5BFE3944A8316254D5BF37C1E399F28 /* Support Files */ = {
+		BE0D6732F0E9775C6AFC351792FEF36F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA0C9C3E359A74B3DB209AEB8E8C0E00 /* HanekeSwift.modulemap */,
-				6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */,
-				DC6288E62B6D966CFCAD28C8D179B13C /* HanekeSwift-dummy.m */,
-				5CCFFF29BB624C9A368041B130C932A9 /* HanekeSwift-prefix.pch */,
-				90F052D93A7690195DCD43DB377F6787 /* HanekeSwift-umbrella.h */,
-				567A3769C4CAB971B691DA8369139E90 /* Info.plist */,
+				6CDF522782D086F219A8E071F8043D8D /* ALTextInputBar.modulemap */,
+				C673ED5CF8DBCABC7F71E93E33E339E4 /* ALTextInputBar.xcconfig */,
+				2BFE79D57B24278CE505B8D133AD454E /* ALTextInputBar-dummy.m */,
+				5FE64683AD8B0B09048EBEC87ABD1976 /* ALTextInputBar-prefix.pch */,
+				E93C2FAECEAC2DE090300A2EEAC89DA9 /* ALTextInputBar-umbrella.h */,
+				B52ECD3E7520CE2BE4F860BF81FF4D01 /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/HanekeSwift";
+			path = "../Target Support Files/ALTextInputBar";
+			sourceTree = "<group>";
+		};
+		DAEA2B3BDC1F5EBA8A9CFCCAE2B7B232 /* ALTextInputBar */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4B772B109F60702C45476E00E2315 /* ALKeyboardObservingView.swift */,
+				4AE78DDC6F2BF613AC3EABC2770F33B6 /* ALTextInputBar.swift */,
+				88CEDA094DAD1D3AC97BBAC6FC19B5CC /* ALTextInputBarDelegate.swift */,
+				45C374C8ECF9740148ED17AE4D1FEBD3 /* ALTextInputUtilities.swift */,
+				7C03ACB585358B642D5BCBDFA0ACBE1C /* ALTextView.swift */,
+				BE0D6732F0E9775C6AFC351792FEF36F /* Support Files */,
+			);
+			path = ALTextInputBar;
+			sourceTree = "<group>";
+		};
+		DC4DD41912F4BD64623624B2FB326A26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F3C04F4A27ECB6DE5929B15D34D05F4 /* ALTextInputBar.framework */,
+				6A7CCE9C858E2FC69FFD8FE97703204E /* Haneke.framework */,
+				F5D955598CC281292065EBE2B98E5CF8 /* JMCiBeaconManager.framework */,
+				EF9340F801CFFBD4BF6FFEDBE50D880A /* Pods_Conference_App.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA31CDE7E5CFD95E2BA1F703414297D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAEA2B3BDC1F5EBA8A9CFCCAE2B7B232 /* ALTextInputBar */,
+				A57CAB11BCAD11EEAC57E7A576993157 /* Fabric */,
+				49AAD8AF584E7D789F4F1E0F41B5E492 /* HanekeSwift */,
+				166308FA0F772CE2F95FB90117F52D70 /* JMCiBeaconManager */,
+				86AFD4AFAF98A59C0CBB585D2D1C3160 /* OneSignal */,
+				1CAFF3D29E4AAA4CCAB98D31871D8421 /* TwitterCore */,
+				3E89FB774FC761993014AEF9EB714AFD /* TwitterKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		E38CC51AE345FDC0ED6C1F836AF05209 /* Targets Support Files */ = {
@@ -301,14 +417,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F56CABEDEA131B5335E0176E2FBEED39 /* Pods */ = {
+		EC40200EF1E19CAE1D6D1CC0FF36255C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				07368D1B31244C7544F55868F179644F /* HanekeSwift */,
-				8A7C6FF7E0CE1A72DC780C3E334ECA2B /* JMCiBeaconManager */,
-				41329F541C88DE7E5579206007060EFD /* OneSignal */,
+				09CDD5A1CFFF961310B23E09C40E7F4E /* TwitterKitResources.bundle */,
 			);
-			name = Pods;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FCF88A515A225663F16178160A1C6A63 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD863B2214EB676013F6AB60CDA00D64 /* HanekeSwift.modulemap */,
+				195D7B0CE3E0ACE08A76998718D201C3 /* HanekeSwift.xcconfig */,
+				6C8AD5A6A5AEFB1BFCE3CE5487FE6922 /* HanekeSwift-dummy.m */,
+				A4C678468419E074F2C1845406E158B4 /* HanekeSwift-prefix.pch */,
+				75D2A4746B905629B0905D848EB1A199 /* HanekeSwift-umbrella.h */,
+				0B359304C62E71CF185B44383084461E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HanekeSwift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,17 +458,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F280C7FF5E82DC83FF8114BAF062D65 /* Headers */ = {
+		D4E27FD7B6C062A2F8E14631EB07EA83 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51FDBB4974F7723AD98264B83EF3EC18 /* Pods-Conference App-umbrella.h in Headers */,
+				CB684C9E34333E0863D0BB300E56C10A /* ALTextInputBar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1FA8FC5F7E869F2C10E44CE6B250557 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				337CD418C4779806C6460A7A16FB241E /* Pods-Conference App-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2360F1E1F622EF807B1B0D1B45D04B57 /* Pods-Conference App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F408FD98E1CB2B26706EE9EBE8DE4B26 /* Build configuration list for PBXNativeTarget "Pods-Conference App" */;
+			buildPhases = (
+				235F50EB2338EB0902E8C2B59C9A11FF /* Sources */,
+				9A172F868A29F41EB462A03AA2765883 /* Frameworks */,
+				E1FA8FC5F7E869F2C10E44CE6B250557 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32E96EB9C3ACBD724C302C8499561072 /* PBXTargetDependency */,
+				D8B3B6D7FB099C708C98D81B49C4B9E3 /* PBXTargetDependency */,
+				93CCA367498556020A072926A9FAB03D /* PBXTargetDependency */,
+			);
+			name = "Pods-Conference App";
+			productName = "Pods-Conference App";
+			productReference = EF9340F801CFFBD4BF6FFEDBE50D880A /* Pods_Conference_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72681BE87943D4976033F6522AE72050 /* Build configuration list for PBXNativeTarget "HanekeSwift" */;
@@ -355,7 +511,7 @@
 			);
 			name = HanekeSwift;
 			productName = HanekeSwift;
-			productReference = 674A00267B88B74729DB8A7729EC88A4 /* Haneke.framework */;
+			productReference = 6A7CCE9C858E2FC69FFD8FE97703204E /* Haneke.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */ = {
@@ -372,26 +528,24 @@
 			);
 			name = JMCiBeaconManager;
 			productName = JMCiBeaconManager;
-			productReference = D1086AC26FE53CCF1A0CD0894676CF94 /* JMCiBeaconManager.framework */;
+			productReference = F5D955598CC281292065EBE2B98E5CF8 /* JMCiBeaconManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CFECFB0E7990A6253E56EA393775C122 /* Pods-Conference App */ = {
+		D7C2C36F506779D474C9297DA18D7ADB /* ALTextInputBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D79A7A678AEF2D5B0F328F981034396C /* Build configuration list for PBXNativeTarget "Pods-Conference App" */;
+			buildConfigurationList = 889250FF8104DDB84B48F243CA16FF69 /* Build configuration list for PBXNativeTarget "ALTextInputBar" */;
 			buildPhases = (
-				BD09E7797E39A9BAC33DC87924D304D5 /* Sources */,
-				234668E85174FCAD3EF8C866C8C6AA48 /* Frameworks */,
-				1F280C7FF5E82DC83FF8114BAF062D65 /* Headers */,
+				586BBBC45F8CB821BA59D2DAFB9D6B33 /* Sources */,
+				04EA32B8FC4290FBF174742D53933C87 /* Frameworks */,
+				D4E27FD7B6C062A2F8E14631EB07EA83 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E997F9D9147AB7BDB272B8414EB0A949 /* PBXTargetDependency */,
-				3102F6D587960334EF0E0744C249A3C3 /* PBXTargetDependency */,
 			);
-			name = "Pods-Conference App";
-			productName = "Pods-Conference App";
-			productReference = 26F0D071F9707E9B6EF4E2A9DEE4A280 /* Pods_Conference_App.framework */;
+			name = ALTextInputBar;
+			productName = ALTextInputBar;
+			productReference = 8F3C04F4A27ECB6DE5929B15D34D05F4 /* ALTextInputBar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -411,13 +565,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B41EB69C97AD7F0EE71745B35452929B /* Products */;
+			productRefGroup = DC4DD41912F4BD64623624B2FB326A26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D7C2C36F506779D474C9297DA18D7ADB /* ALTextInputBar */,
 				2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */,
 				61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */,
-				CFECFB0E7990A6253E56EA393775C122 /* Pods-Conference App */,
+				2360F1E1F622EF807B1B0D1B45D04B57 /* Pods-Conference App */,
 			);
 		};
 /* End PBXProject section */
@@ -439,11 +594,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD09E7797E39A9BAC33DC87924D304D5 /* Sources */ = {
+		235F50EB2338EB0902E8C2B59C9A11FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AEC422A729B36FE79DCA8D7607413B1 /* Pods-Conference App-dummy.m in Sources */,
+				975B0BC09268FF999B29B3B672C8F996 /* Pods-Conference App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		586BBBC45F8CB821BA59D2DAFB9D6B33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7EE2410DF26AF3B05155D08C9E4087B /* ALKeyboardObservingView.swift in Sources */,
+				BCD516A98C8BBAADF9B9EEE9F6EA38D4 /* ALTextInputBar-dummy.m in Sources */,
+				795CA86A7E5D28B3BF630796E6A624E0 /* ALTextInputBar.swift in Sources */,
+				1BCC3CD8E28BA768E8B388B531581AD6 /* ALTextInputBarDelegate.swift in Sources */,
+				665CE1C2C96F348BFB5C604F5530A336 /* ALTextInputUtilities.swift in Sources */,
+				451F9ABF16737407C7ADECAB9EC194A1 /* ALTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,17 +646,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3102F6D587960334EF0E0744C249A3C3 /* PBXTargetDependency */ = {
+		32E96EB9C3ACBD724C302C8499561072 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ALTextInputBar;
+			target = D7C2C36F506779D474C9297DA18D7ADB /* ALTextInputBar */;
+			targetProxy = 43DC7DAA1273A873A842914F18E8918C /* PBXContainerItemProxy */;
+		};
+		93CCA367498556020A072926A9FAB03D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JMCiBeaconManager;
 			target = 61290FB0253531D2C0D469258A0417DE /* JMCiBeaconManager */;
-			targetProxy = EFB0533C617AC026F1ED657C077D1281 /* PBXContainerItemProxy */;
+			targetProxy = DD15C097085D8DFE8AC7B28759BADEC3 /* PBXContainerItemProxy */;
 		};
-		E997F9D9147AB7BDB272B8414EB0A949 /* PBXTargetDependency */ = {
+		D8B3B6D7FB099C708C98D81B49C4B9E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HanekeSwift;
 			target = 2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */;
-			targetProxy = 55FB75EDC05ACB368FB4DFF823870E66 /* PBXContainerItemProxy */;
+			targetProxy = 6AD6314A874E4C044CC1E96BA3B687F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -535,42 +709,39 @@
 			};
 			name = Debug;
 		};
-		527FE0753770CD700A2F721380E7FFD6 /* Release */ = {
+		3545A856FB8C17FAE26F278DA3B65127 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */;
+			baseConfigurationReference = C673ED5CF8DBCABC7F71E93E33E339E4 /* ALTextInputBar.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ALTextInputBar/ALTextInputBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ALTextInputBar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Conference_App;
+				MODULEMAP_FILE = "Target Support Files/ALTextInputBar/ALTextInputBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ALTextInputBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		55E0A7F10D207D2A449B9F0882A8E5C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */;
+			baseConfigurationReference = 2C64A1B2C20A17039A81E18F37074000 /* JMCiBeaconManager.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -597,7 +768,37 @@
 			};
 			name = Release;
 		};
-		569AADD228C350837BF12426E5584D88 /* Debug */ = {
+		6396977BD54CF323E225E3BA478F0B6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 195D7B0CE3E0ACE08A76998718D201C3 /* HanekeSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6657EA5B95596D91023E41147894B9C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AB53D6DF204F6673B7ACFB1D7905DF1 /* Pods-Conference App.debug.xcconfig */;
 			buildSettings = {
@@ -631,39 +832,38 @@
 			};
 			name = Debug;
 		};
-		6396977BD54CF323E225E3BA478F0B6B /* Debug */ = {
+		6DAF138F2BEC688A01787B04CC9E4E95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */;
+			baseConfigurationReference = C673ED5CF8DBCABC7F71E93E33E339E4 /* ALTextInputBar.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ALTextInputBar/ALTextInputBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ALTextInputBar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Haneke;
+				MODULEMAP_FILE = "Target Support Files/ALTextInputBar/ALTextInputBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ALTextInputBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		A789AD15C7069B9487F6E2A93DE8D319 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CCE763C475098DB55527C8567468246 /* HanekeSwift.xcconfig */;
+			baseConfigurationReference = 195D7B0CE3E0ACE08A76998718D201C3 /* HanekeSwift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -692,7 +892,7 @@
 		};
 		A92051B2473232140037261E3B084C82 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AAB4C07E29D010CB0B5D67482343C82 /* JMCiBeaconManager.xcconfig */;
+			baseConfigurationReference = 2C64A1B2C20A17039A81E18F37074000 /* JMCiBeaconManager.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -758,6 +958,39 @@
 			};
 			name = Release;
 		};
+		F24820ABCDE1A9AF18C69631A935A442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67A9E9FA1241028D88B1DB3D6FB64B28 /* Pods-Conference App.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Conference App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Conference App/Pods-Conference App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Conference_App;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -779,6 +1012,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		889250FF8104DDB84B48F243CA16FF69 /* Build configuration list for PBXNativeTarget "ALTextInputBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3545A856FB8C17FAE26F278DA3B65127 /* Debug */,
+				6DAF138F2BEC688A01787B04CC9E4E95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B4CB58A11D032A539303719F9A68B7D8 /* Build configuration list for PBXNativeTarget "JMCiBeaconManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -788,11 +1030,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D79A7A678AEF2D5B0F328F981034396C /* Build configuration list for PBXNativeTarget "Pods-Conference App" */ = {
+		F408FD98E1CB2B26706EE9EBE8DE4B26 /* Build configuration list for PBXNativeTarget "Pods-Conference App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				569AADD228C350837BF12426E5584D88 /* Debug */,
-				527FE0753770CD700A2F721380E7FFD6 /* Release */,
+				6657EA5B95596D91023E41147894B9C5 /* Debug */,
+				F24820ABCDE1A9AF18C69631A935A442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -247,13 +247,13 @@
                   symbolName = "Conference_App.Sponsor.init (dictionary : __ObjC.NSDictionary) -&gt; Conference_App.Sponsor"
                   moduleName = "Conference App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/felipe/Documents/iTenWired-Swift/Conference%20App/Sponsor.swift"
-                  timestampString = "491427724.576389"
+                  urlString = "file:///Users/felipe/Desktop/iosDemo/iTenWired-Swift/Conference%20App/Sponsor.swift"
+                  timestampString = "491940374.196313"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
                   endingLineNumber = "100"
-                  offsetFromSymbolStart = "2836">
+                  offsetFromSymbolStart = "3610">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -262,13 +262,13 @@
                   symbolName = "Conference_App.Sponsor.init (dictionary : __ObjC.NSDictionary) -&gt; Conference_App.Sponsor"
                   moduleName = "Conference App"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/felipe/Documents/iTenWired-Swift/Conference%20App/Sponsor.swift"
-                  timestampString = "491427724.576538"
+                  urlString = "file:///Users/felipe/Desktop/iosDemo/iTenWired-Swift/Conference%20App/Sponsor.swift"
+                  timestampString = "491940374.196493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
                   endingLineNumber = "100"
-                  offsetFromSymbolStart = "3256">
+                  offsetFromSymbolStart = "4136">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -5,4 +5,7 @@ target "Conference App" do
 	pod 'OneSignal'
     pod 'JMCiBeaconManager'
     pod 'HanekeSwift'
+    pod 'Fabric'
+    pod 'TwitterKit'
+    pod 'ALTextInputBar'
 end

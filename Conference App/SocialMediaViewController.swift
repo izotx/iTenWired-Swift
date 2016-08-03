@@ -61,7 +61,9 @@ class SocialMediaViewController: UIViewController{
     
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var socialItems:[SocialItem] = [SocialItem(name:"Facebook", logo: "Facebook-50.png", storyboardId: "", viewControllerId: ""),
+    var socialItems:[SocialItem] = [
+                                    SocialItem(name: "iTenWired Social Feed", logo: "iTenWiredFeed-50.png", storyboardId:                  "SocialMedia", viewControllerId: "ITENFEEDSTORYBOARD"),
+                                    SocialItem(name:"Facebook", logo: "Facebook-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Twitter", logo: "Twitter-50.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
                                     SocialItem(name:"LinkedIn", logo:"LinkedIn-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Google+", logo :"Google-50.png", storyboardId: "", viewControllerId: ""),

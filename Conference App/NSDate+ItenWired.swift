@@ -60,4 +60,45 @@ extension NSDate {
         
         return dateWithSecondsAdded
     }
+    
+    func stringDateSinceNow() -> String{
+        
+        let time = self.timeIntervalSinceNow * -1
+        
+        var intTime:Int = Int(time)
+        
+        if intTime < 60 {
+            return "\(intTime)s"
+        }
+        
+        intTime = intTime / 60
+        
+        if intTime < 60{
+            return "\(intTime)m"
+        }
+        
+        intTime = intTime / 60
+        
+        if intTime < 24 {
+            return "\(intTime)h"
+        }
+        
+        intTime = intTime / 24
+        
+        if intTime < 7 {
+            return "\(intTime)d"
+        }
+        
+        intTime = intTime / 7
+        
+        if intTime < 5 {
+            return "\(intTime)w"
+        }
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        
+        
+        return dateFormatter.stringFromDate(self)
+    }
 }

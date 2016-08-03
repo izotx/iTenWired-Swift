@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ALTextInputBar/ALTextInputBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/HanekeSwift/Haneke.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JMCiBeaconManager/JMCiBeaconManager.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ALTextInputBar/ALTextInputBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/HanekeSwift/Haneke.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JMCiBeaconManager/JMCiBeaconManager.framework"
 fi

@@ -68,6 +68,25 @@
 		554980201CE37DCC00CC6E36 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5549801F1CE37DCC00CC6E36 /* Notification.storyboard */; };
 		554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980231CE37EDC00CC6E36 /* NotificationViewController.swift */; };
 		554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554980251CE3871500CC6E36 /* NotificationsCell.swift */; };
+		55511D451D5250E400B5569D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55511D411D5250E400B5569D /* FBSDKCoreKit.framework */; };
+		55511D461D5250E400B5569D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55511D421D5250E400B5569D /* FBSDKLoginKit.framework */; };
+		55511D471D5250E400B5569D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55511D431D5250E400B5569D /* FBSDKShareKit.framework */; };
+		55511D791D5264B500B5569D /* FacebookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D621D5264B500B5569D /* FacebookCell.swift */; };
+		55511D7A1D5264B500B5569D /* FNBJSocialFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D631D5264B500B5569D /* FNBJSocialFeed.swift */; };
+		55511D7B1D5264B500B5569D /* FNBJSocialFeedFacebookAccessToken .swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D641D5264B500B5569D /* FNBJSocialFeedFacebookAccessToken .swift */; };
+		55511D7C1D5264B500B5569D /* FNBJSocialFeedFacebookCellTextOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D651D5264B500B5569D /* FNBJSocialFeedFacebookCellTextOnly.swift */; };
+		55511D7D1D5264B500B5569D /* FNBJSocialFeedFacebookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D661D5264B500B5569D /* FNBJSocialFeedFacebookController.swift */; };
+		55511D7E1D5264B500B5569D /* FNBJSocialFeedFacebookPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D671D5264B500B5569D /* FNBJSocialFeedFacebookPost.swift */; };
+		55511D7F1D5264B500B5569D /* FNBJSocialFeedFacebookUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D681D5264B500B5569D /* FNBJSocialFeedFacebookUser.swift */; };
+		55511D801D5264B500B5569D /* FNBJSocialFeedFeedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D691D5264B500B5569D /* FNBJSocialFeedFeedObject.swift */; };
+		55511D811D5264B500B5569D /* FNBJSocialFeedNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D6A1D5264B500B5569D /* FNBJSocialFeedNetwork.swift */; };
+		55511D821D5264B500B5569D /* FNBJSocialFeedTwiterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D6B1D5264B500B5569D /* FNBJSocialFeedTwiterController.swift */; };
+		55511D831D5264B500B5569D /* FNBJSocialFeedTwitterTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D6C1D5264B500B5569D /* FNBJSocialFeedTwitterTweet.swift */; };
+		55511D841D5264B500B5569D /* FNBJSocialFeedTwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D6D1D5264B500B5569D /* FNBJSocialFeedTwitterUser.swift */; };
+		55511D851D5264B500B5569D /* FNBJSocialFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D6E1D5264B500B5569D /* FNBJSocialFeedViewController.swift */; };
+		55511D881D5264B500B5569D /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 55511D711D5264B500B5569D /* placeholder.png */; };
+		55511D891D5264B500B5569D /* TwitterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55511D721D5264B500B5569D /* TwitterCell.swift */; };
+		55511D8E1D526C8B00B5569D /* iTenWiredFeed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 55511D8D1D526C8B00B5569D /* iTenWiredFeed-50.png */; };
 		555A7A661CEFB1460068F58C /* More-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A651CEFB1460068F58C /* More-25.png */; };
 		555A7A681CF33BAF0068F58C /* More-color-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 555A7A671CF33BAF0068F58C /* More-color-25.png */; };
 		555A7A6A1CF348580068F58C /* speakerHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A7A691CF348580068F58C /* speakerHeaderCell.swift */; };
@@ -179,11 +198,6 @@
 		55FEE21B1CF6033C0019F48D /* AgendaFilled-50-color.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FEE21A1CF6033C0019F48D /* AgendaFilled-50-color.png */; };
 		55FEE21D1CF606680019F48D /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE21C1CF606680019F48D /* SCLAlertView.swift */; };
 		55FEE21F1CF606D10019F48D /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE21E1CF606D10019F48D /* SCLExtensions.swift */; };
-		55FEE2231CF763400019F48D /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2221CF763400019F48D /* Twitter.swift */; };
-		55FEE2261CF764280019F48D /* TwitterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2251CF764280019F48D /* TwitterCell.swift */; };
-		55FEE2281CF764BD0019F48D /* TwitterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE2271CF764BD0019F48D /* TwitterController.swift */; };
-		55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22A1CF7654E0019F48D /* TwitterUser.swift */; };
-		55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FEE22C1CF765C00019F48D /* TwitterViewController.swift */; };
 		7A4842F484A1144F17FEDDBE /* Pods_Conference_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 897F2AE7C1400623A40A7102 /* Pods_Conference_App.framework */; };
 		827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827BA99E1CC2E44B003085BA /* Social.framework */; };
 		827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 827BA9A01CC2E464003085BA /* SocialMedia.storyboard */; };
@@ -279,6 +293,25 @@
 		5549801F1CE37DCC00CC6E36 /* Notification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		554980231CE37EDC00CC6E36 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		554980251CE3871500CC6E36 /* NotificationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
+		55511D411D5250E400B5569D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		55511D421D5250E400B5569D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		55511D431D5250E400B5569D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		55511D621D5264B500B5569D /* FacebookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookCell.swift; sourceTree = "<group>"; };
+		55511D631D5264B500B5569D /* FNBJSocialFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeed.swift; sourceTree = "<group>"; };
+		55511D641D5264B500B5569D /* FNBJSocialFeedFacebookAccessToken .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FNBJSocialFeedFacebookAccessToken .swift"; sourceTree = "<group>"; };
+		55511D651D5264B500B5569D /* FNBJSocialFeedFacebookCellTextOnly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedFacebookCellTextOnly.swift; sourceTree = "<group>"; };
+		55511D661D5264B500B5569D /* FNBJSocialFeedFacebookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedFacebookController.swift; sourceTree = "<group>"; };
+		55511D671D5264B500B5569D /* FNBJSocialFeedFacebookPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedFacebookPost.swift; sourceTree = "<group>"; };
+		55511D681D5264B500B5569D /* FNBJSocialFeedFacebookUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedFacebookUser.swift; sourceTree = "<group>"; };
+		55511D691D5264B500B5569D /* FNBJSocialFeedFeedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedFeedObject.swift; sourceTree = "<group>"; };
+		55511D6A1D5264B500B5569D /* FNBJSocialFeedNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedNetwork.swift; sourceTree = "<group>"; };
+		55511D6B1D5264B500B5569D /* FNBJSocialFeedTwiterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedTwiterController.swift; sourceTree = "<group>"; };
+		55511D6C1D5264B500B5569D /* FNBJSocialFeedTwitterTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedTwitterTweet.swift; sourceTree = "<group>"; };
+		55511D6D1D5264B500B5569D /* FNBJSocialFeedTwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedTwitterUser.swift; sourceTree = "<group>"; };
+		55511D6E1D5264B500B5569D /* FNBJSocialFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FNBJSocialFeedViewController.swift; sourceTree = "<group>"; };
+		55511D711D5264B500B5569D /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		55511D721D5264B500B5569D /* TwitterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterCell.swift; sourceTree = "<group>"; };
+		55511D8D1D526C8B00B5569D /* iTenWiredFeed-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTenWiredFeed-50.png"; sourceTree = "<group>"; };
 		555A7A651CEFB1460068F58C /* More-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More-25.png"; sourceTree = "<group>"; };
 		555A7A671CF33BAF0068F58C /* More-color-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More-color-25.png"; sourceTree = "<group>"; };
 		555A7A691CF348580068F58C /* speakerHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = speakerHeaderCell.swift; sourceTree = "<group>"; };
@@ -386,11 +419,6 @@
 		55FEE21A1CF6033C0019F48D /* AgendaFilled-50-color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AgendaFilled-50-color.png"; sourceTree = "<group>"; };
 		55FEE21C1CF606680019F48D /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		55FEE21E1CF606D10019F48D /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
-		55FEE2221CF763400019F48D /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
-		55FEE2251CF764280019F48D /* TwitterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterCell.swift; sourceTree = "<group>"; };
-		55FEE2271CF764BD0019F48D /* TwitterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterController.swift; sourceTree = "<group>"; };
-		55FEE22A1CF7654E0019F48D /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
-		55FEE22C1CF765C00019F48D /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		63AAC6D6F1D6B88DA677F496 /* Pods-Conference App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Conference App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Conference App/Pods-Conference App.release.xcconfig"; sourceTree = "<group>"; };
 		827BA99E1CC2E44B003085BA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		827BA9A01CC2E464003085BA /* SocialMedia.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialMedia.storyboard; sourceTree = "<group>"; };
@@ -429,7 +457,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55511D451D5250E400B5569D /* FBSDKCoreKit.framework in Frameworks */,
 				827BA99F1CC2E44B003085BA /* Social.framework in Frameworks */,
+				55511D461D5250E400B5569D /* FBSDKLoginKit.framework in Frameworks */,
+				55511D471D5250E400B5569D /* FBSDKShareKit.framework in Frameworks */,
 				0EE564CF1CB8331A001678B0 /* MapKit.framework in Frameworks */,
 				7A4842F484A1144F17FEDDBE /* Pods_Conference_App.framework in Frameworks */,
 			);
@@ -571,7 +602,6 @@
 				D4C467C61CB84BA000BD6157 /* AgendaController.swift */,
 				552E692B1CE284DC0010C3C9 /* NotificationController.swift */,
 				557D354B1CE4DC8B00562A7A /* MyItenController.swift */,
-				55FEE2271CF764BD0019F48D /* TwitterController.swift */,
 				5569DA2B1D302C800004F0C1 /* NearMeController.swift */,
 				559F54E91D3D31D200F2754B /* LocationController.swift */,
 			);
@@ -587,6 +617,60 @@
 			name = UIView;
 			sourceTree = "<group>";
 		};
+		55511D5B1D5264B500B5569D /* FNBJSocialFeed */ = {
+			isa = PBXGroup;
+			children = (
+				55511D921D526DDB00B5569D /* Images */,
+				55511D911D526DD000B5569D /* UI */,
+				55511D901D526D6800B5569D /* Model */,
+				55511D8F1D526D4F00B5569D /* View Controllers */,
+				55511D661D5264B500B5569D /* FNBJSocialFeedFacebookController.swift */,
+				55511D631D5264B500B5569D /* FNBJSocialFeed.swift */,
+				55511D6A1D5264B500B5569D /* FNBJSocialFeedNetwork.swift */,
+				55511D6B1D5264B500B5569D /* FNBJSocialFeedTwiterController.swift */,
+			);
+			path = FNBJSocialFeed;
+			sourceTree = "<group>";
+		};
+		55511D8F1D526D4F00B5569D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55511D6E1D5264B500B5569D /* FNBJSocialFeedViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		55511D901D526D6800B5569D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55511D681D5264B500B5569D /* FNBJSocialFeedFacebookUser.swift */,
+				55511D6D1D5264B500B5569D /* FNBJSocialFeedTwitterUser.swift */,
+				55511D6C1D5264B500B5569D /* FNBJSocialFeedTwitterTweet.swift */,
+				55511D691D5264B500B5569D /* FNBJSocialFeedFeedObject.swift */,
+				55511D641D5264B500B5569D /* FNBJSocialFeedFacebookAccessToken .swift */,
+				55511D671D5264B500B5569D /* FNBJSocialFeedFacebookPost.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		55511D911D526DD000B5569D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				55511D621D5264B500B5569D /* FacebookCell.swift */,
+				55511D651D5264B500B5569D /* FNBJSocialFeedFacebookCellTextOnly.swift */,
+				55511D721D5264B500B5569D /* TwitterCell.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		55511D921D526DDB00B5569D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				55511D711D5264B500B5569D /* placeholder.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		5569DA2F1D3046EF0004F0C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,7 +683,6 @@
 			isa = PBXGroup;
 			children = (
 				827BA9A21CC2E48F003085BA /* SocialMediaViewController.swift */,
-				55FEE22C1CF765C00019F48D /* TwitterViewController.swift */,
 			);
 			name = Social;
 			sourceTree = "<group>";
@@ -757,7 +840,6 @@
 		55DAC3121CE5116A00941824 /* Social */ = {
 			isa = PBXGroup;
 			children = (
-				55FEE2291CF7653E0019F48D /* Twitter */,
 				55DAC37E1CEBAEDD00941824 /* SocialMedia.swift */,
 			);
 			name = Social;
@@ -780,6 +862,7 @@
 				559F76531CEE5B20003BE6E6 /* Web */,
 				55DAC3741CEBAA0000941824 /* Instagram-50.png */,
 				55DAC3681CEBA12800941824 /* Facebook-25.png */,
+				55511D8D1D526C8B00B5569D /* iTenWiredFeed-50.png */,
 				55DAC3301CEA493D00941824 /* youtube.png */,
 				55DAC36E1CEBA8AC00941824 /* Twitter-50.png */,
 				55DAC3721CEBA96E00941824 /* YouTube-50.png */,
@@ -894,23 +977,16 @@
 			isa = PBXGroup;
 			children = (
 				55DAC36C1CEBA36700941824 /* SocialMediaCell.swift */,
-				55FEE2251CF764280019F48D /* TwitterCell.swift */,
 			);
 			name = "Social Media";
-			sourceTree = "<group>";
-		};
-		55FEE2291CF7653E0019F48D /* Twitter */ = {
-			isa = PBXGroup;
-			children = (
-				55FEE2221CF763400019F48D /* Twitter.swift */,
-				55FEE22A1CF7654E0019F48D /* TwitterUser.swift */,
-			);
-			name = Twitter;
 			sourceTree = "<group>";
 		};
 		55FEE2301CF785CB0019F48D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55511D411D5250E400B5569D /* FBSDKCoreKit.framework */,
+				55511D421D5250E400B5569D /* FBSDKLoginKit.framework */,
+				55511D431D5250E400B5569D /* FBSDKShareKit.framework */,
 				827BA99E1CC2E44B003085BA /* Social.framework */,
 				0EE564CE1CB8331A001678B0 /* MapKit.framework */,
 				897F2AE7C1400623A40A7102 /* Pods_Conference_App.framework */,
@@ -964,6 +1040,7 @@
 		FE2623A01CAEFA940074C58F /* Conference App */ = {
 			isa = PBXGroup;
 			children = (
+				55511D5B1D5264B500B5569D /* FNBJSocialFeed */,
 				5569DA2F1D3046EF0004F0C1 /* Extensions */,
 				551604F11CE2720F00D46D2B /* Conference App-Bridging-Header.h */,
 				FE2623A11CAEFA940074C58F /* AppDelegate.swift */,
@@ -1018,6 +1095,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE2623CB1CAEFA940074C58F /* Build configuration list for PBXNativeTarget "Conference App" */;
 			buildPhases = (
+				34BC851AC12D71A0FF27CFC1 /* 📦 Check Pods Manifest.lock */,
 				47D1BA44D3DA44F478DE7ABE /* [CP] Check Pods Manifest.lock */,
 				2A16A9D166B7868905406D80 /* [CP] Check Pods Manifest.lock */,
 				FE26239A1CAEFA940074C58F /* Sources */,
@@ -1027,6 +1105,7 @@
 				E705A329564CC0E7FE7FDA29 /* [CP] Copy Pods Resources */,
 				656374FADF07CAB6EB3BC35D /* 📦 Embed Pods Frameworks */,
 				6D6E49021F9B1D8E76B94CDC /* 📦 Copy Pods Resources */,
+				55511D8C1D5267B100B5569D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1183,6 +1262,7 @@
 				559F76661CEE5CBB003BE6E6 /* About-50.png in Resources */,
 				5569DA241D2EF73A0004F0C1 /* NearByFilled-50.png in Resources */,
 				0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */,
+				55511D881D5264B500B5569D /* placeholder.png in Resources */,
 				55DAC3561CEB547000941824 /* MyIten-25.png in Resources */,
 				55DAC3191CE526E600941824 /* placeholder.png in Resources */,
 				559F76681CEE5D52003BE6E6 /* Who-50.png in Resources */,
@@ -1212,6 +1292,7 @@
 				55DAC37B1CEBAB3E00941824 /* Web-50.png in Resources */,
 				5570EECE1CF4AD8C0033FCDC /* MapMFilled-50.png in Resources */,
 				5570EED61CF4E48A0033FCDC /* Star-50.png in Resources */,
+				55511D8E1D526C8B00B5569D /* iTenWiredFeed-50.png in Resources */,
 				5570EEC61CF4AC510033FCDC /* SocialMediaFilled-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1250,6 +1331,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		34BC851AC12D71A0FF27CFC1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		47D1BA44D3DA44F478DE7ABE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1264,6 +1360,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		55511D8C1D5267B100B5569D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 08ddedcbc6f30b3e9d1dcf33f2c0ec98a6970cf9 23272999b3338f6eb0331fc56c3085a50228e7409e8ba5e69d7d46f0bcd51f5e";
 		};
 		656374FADF07CAB6EB3BC35D /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1343,15 +1452,16 @@
 				407BE0A01D216C87005D61CF /* STKDataSource.m in Sources */,
 				407BE0971D216C87005D61CF /* STKAudioPlayer.m in Sources */,
 				4F72CBAE1CC884BA00C30D2B /* DescriptionViewController.swift in Sources */,
+				55511D821D5264B500B5569D /* FNBJSocialFeedTwiterController.swift in Sources */,
 				559F54E81D3D2EA900F2754B /* LocationViewController.swift in Sources */,
 				555A7A6A1CF348580068F58C /* speakerHeaderCell.swift in Sources */,
 				55FEE20B1CF5FF8D0019F48D /* MenuItem.swift in Sources */,
 				A123500E1CB945F300B1233E /* AgendaViewController.swift in Sources */,
 				0EE564D71CB84DC1001678B0 /* AboutViewController.swift in Sources */,
 				FE2623A21CAEFA940074C58F /* AppDelegate.swift in Sources */,
+				55511D801D5264B500B5569D /* FNBJSocialFeedFeedObject.swift in Sources */,
 				559F76701CEF5C36003BE6E6 /* AgendaHeaderTableViewCell.swift in Sources */,
 				5569DA201D2EF3D80004F0C1 /* NearByViewController.swift in Sources */,
-				55FEE2281CF764BD0019F48D /* TwitterController.swift in Sources */,
 				407BE09D1D216C87005D61CF /* STKCoreFoundationDataSource.m in Sources */,
 				55FEE21F1CF606D10019F48D /* SCLExtensions.swift in Sources */,
 				0E647B331CBF2E67006DFB68 /* AnnotationDetailViewController.swift in Sources */,
@@ -1363,7 +1473,6 @@
 				FE2623A51CAEFA940074C58F /* Conference_App.xcdatamodeld in Sources */,
 				5569DA281D2EFE2B0004F0C1 /* ItenWiredBeacon.swift in Sources */,
 				892079D41CC9A05F008C1CAC /* SocialMediaData.swift in Sources */,
-				55FEE2231CF763400019F48D /* Twitter.swift in Sources */,
 				55DAC36D1CEBA36700941824 /* SocialMediaCell.swift in Sources */,
 				407BE09A1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				402D938B1D4A62500029AFEA /* NSDate+ItenWired.swift in Sources */,
@@ -1376,19 +1485,25 @@
 				FEF7E0C71CB852B5002A810B /* EventCell.swift in Sources */,
 				55450B881CE234EE00A2712E /* Speaker.swift in Sources */,
 				4F4590E61CBEC8DE00F51BCE /* AttendeeData.swift in Sources */,
+				55511D831D5264B500B5569D /* FNBJSocialFeedTwitterTweet.swift in Sources */,
 				5569DA2C1D302C800004F0C1 /* NearMeController.swift in Sources */,
 				559F76471CEE4747003BE6E6 /* MenuCellCollectionViewCell.swift in Sources */,
 				554980261CE3871500CC6E36 /* NotificationsCell.swift in Sources */,
+				55511D7A1D5264B500B5569D /* FNBJSocialFeed.swift in Sources */,
+				55511D791D5264B500B5569D /* FacebookCell.swift in Sources */,
+				55511D7E1D5264B500B5569D /* FNBJSocialFeedFacebookPost.swift in Sources */,
 				55FEE2071CF500250019F48D /* MIBadgeButton.swift in Sources */,
+				55511D7D1D5264B500B5569D /* FNBJSocialFeedFacebookController.swift in Sources */,
 				407BE0A61D216C87005D61CF /* STKHTTPDataSource.m in Sources */,
 				55881A9E1CE12AD3009B8399 /* Sponsor.swift in Sources */,
+				55511D891D5264B500B5569D /* TwitterCell.swift in Sources */,
 				55DAC31B1CE527A100941824 /* PendingOperations.swift in Sources */,
 				5543342A1CE27E7500A6001C /* Notification.swift in Sources */,
-				55FEE2261CF764280019F48D /* TwitterCell.swift in Sources */,
 				5569DA261D2EFDAC0004F0C1 /* IBeaconData.swift in Sources */,
 				55DAC31D1CE528AC00941824 /* ImageDownloader.swift in Sources */,
 				55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */,
 				0E647B2D1CBF2DDB006DFB68 /* MapData.swift in Sources */,
+				55511D841D5264B500B5569D /* FNBJSocialFeedTwitterUser.swift in Sources */,
 				559F54E41D3D207300F2754B /* LocationData.swift in Sources */,
 				55DAC38F1CEDFC4D00941824 /* ShareButton.swift in Sources */,
 				55FEE21D1CF606680019F48D /* SCLAlertView.swift in Sources */,
@@ -1399,22 +1514,25 @@
 				555A7A701CF35F390068F58C /* Reach.swift in Sources */,
 				FEF7E0C51CB852A8002A810B /* EventViewController.swift in Sources */,
 				559F76771CEF6085003BE6E6 /* TrackData.swift in Sources */,
+				55511D811D5264B500B5569D /* FNBJSocialFeedNetwork.swift in Sources */,
 				4F4590E81CBEC98F00F51BCE /* AttendeeController.swift in Sources */,
 				4F2FBD141CBC5C7C0017A11F /* AttendeesCell.swift in Sources */,
 				D4C467CC1CB84BA000BD6157 /* AgendaController.swift in Sources */,
 				407BE0A91D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
+				55511D851D5264B500B5569D /* FNBJSocialFeedViewController.swift in Sources */,
+				55511D7C1D5264B500B5569D /* FNBJSocialFeedFacebookCellTextOnly.swift in Sources */,
 				55DAC3811CEBC77A00941824 /* About.swift in Sources */,
+				55511D7F1D5264B500B5569D /* FNBJSocialFeedFacebookUser.swift in Sources */,
 				407BE0A31D216C87005D61CF /* STKDataSourceWrapper.m in Sources */,
 				5569DA2A1D302BEE0004F0C1 /* iBeaconNearMeProtocol.swift in Sources */,
 				D4C467CB1CB84BA000BD6157 /* Agenda.swift in Sources */,
-				55FEE22D1CF765C00019F48D /* TwitterViewController.swift in Sources */,
 				555A7A721CF365FF0068F58C /* NetworkConnection.swift in Sources */,
 				55DAC37F1CEBAEDD00941824 /* SocialMedia.swift in Sources */,
 				55DAC3671CEB711800941824 /* SpeakerViewController.swift in Sources */,
 				55881AA01CE13506009B8399 /* AttendeeProtocol.swift in Sources */,
 				554980241CE37EDC00CC6E36 /* NotificationViewController.swift in Sources */,
+				55511D7B1D5264B500B5569D /* FNBJSocialFeedFacebookAccessToken .swift in Sources */,
 				A12350191CB9500400B1233E /* ItineraryViewController.swift in Sources */,
-				55FEE22B1CF7654E0019F48D /* TwitterUser.swift in Sources */,
 				403F70A71D3FFE0B00A3205C /* AttendeeStruct.swift in Sources */,
 				407BE0AC1D216C87005D61CF /* STKQueueEntry.m in Sources */,
 				407BE0941D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,

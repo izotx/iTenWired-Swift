@@ -32,6 +32,10 @@
 
 import UIKit
 import CoreData
+import FBSDKCoreKit
+import Fabric
+import TwitterKit
+
 
 enum NotificationObserver:String {
     case APPBecameActive
@@ -106,8 +110,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.managedObjectContext
         
+        //FBSDKApplication Delegate
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //Twitter
+        Fabric.with([Twitter.self])
+        
         
         return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        //Facebook
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
@@ -115,6 +131,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     }
     func applicationDidBecomeActive(application: UIApplication) {
         NSNotificationCenter.defaultCenter().postNotificationName(NotificationObserver.APPBecameActive.rawValue, object: self)
+        
+        //Facebook
+        FBSDKAppEvents.activateApp()
     }
     
     func applicationWillResignActive(application: UIApplication) {
