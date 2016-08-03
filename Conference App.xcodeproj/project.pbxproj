@@ -52,6 +52,9 @@
 		407BE0AC1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
 		407BE0AD1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
 		407BE0AE1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
+		40F930701D522D3A002C2D18 /* NearByDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9306F1D522D3A002C2D18 /* NearByDetailsViewController.swift */; };
+		40F930751D522EA2002C2D18 /* ItenWiredStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3911CEDFEE100941824 /* ItenWiredStyle.swift */; };
+		40F930761D522EA3002C2D18 /* ItenWiredStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3911CEDFEE100941824 /* ItenWiredStyle.swift */; };
 		4F2FBD121CBC5AEC0017A11F /* AttendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2FBD111CBC5AEC0017A11F /* AttendTableViewController.swift */; };
 		4F2FBD141CBC5C7C0017A11F /* AttendeesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */; };
 		4F3A78DB1CB5AAF500A87EE6 /* Attendees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A78DA1CB5AAF500A87EE6 /* Attendees.storyboard */; };
@@ -264,6 +267,7 @@
 		407BE0911D216C87005D61CF /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
 		407BE0921D216C87005D61CF /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
 		407BE0931D216C87005D61CF /* StreamingKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-Prefix.pch"; sourceTree = "<group>"; };
+		40F9306F1D522D3A002C2D18 /* NearByDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByDetailsViewController.swift; sourceTree = "<group>"; };
 		4F2FBD111CBC5AEC0017A11F /* AttendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendTableViewController.swift; sourceTree = "<group>"; };
 		4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendeesCell.swift; sourceTree = "<group>"; };
 		4F3A78DA1CB5AAF500A87EE6 /* Attendees.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Attendees.storyboard; sourceTree = "<group>"; };
@@ -518,6 +522,7 @@
 		55229BCF1CE123070023EFD3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				40F9306F1D522D3A002C2D18 /* NearByDetailsViewController.swift */,
 				559F54E71D3D2EA900F2754B /* LocationViewController.swift */,
 				55DAC3941CEE158D00941824 /* SplitView */,
 				55DAC3931CEE150B00941824 /* Map */,
@@ -1388,6 +1393,7 @@
 				5569DA261D2EFDAC0004F0C1 /* IBeaconData.swift in Sources */,
 				55DAC31D1CE528AC00941824 /* ImageDownloader.swift in Sources */,
 				55450B8A1CE23B6E00A2712E /* speakerCell.swift in Sources */,
+				40F930701D522D3A002C2D18 /* NearByDetailsViewController.swift in Sources */,
 				0E647B2D1CBF2DDB006DFB68 /* MapData.swift in Sources */,
 				559F54E41D3D207300F2754B /* LocationData.swift in Sources */,
 				55DAC38F1CEDFC4D00941824 /* ShareButton.swift in Sources */,
@@ -1440,6 +1446,7 @@
 				407BE09B1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				407BE0AD1D216C87005D61CF /* STKQueueEntry.m in Sources */,
 				407BE0A11D216C87005D61CF /* STKDataSource.m in Sources */,
+				40F930751D522EA2002C2D18 /* ItenWiredStyle.swift in Sources */,
 				407BE0951D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				407BE0AA1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 			);
@@ -1461,6 +1468,7 @@
 				407BE09C1D216C87005D61CF /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				407BE0AE1D216C87005D61CF /* STKQueueEntry.m in Sources */,
 				407BE0A21D216C87005D61CF /* STKDataSource.m in Sources */,
+				40F930761D522EA3002C2D18 /* ItenWiredStyle.swift in Sources */,
 				407BE0961D216C87005D61CF /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				407BE0AB1D216C87005D61CF /* STKLocalFileDataSource.m in Sources */,
 			);

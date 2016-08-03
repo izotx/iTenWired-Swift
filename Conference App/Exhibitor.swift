@@ -115,6 +115,13 @@ class Exhibitor : AttendeeProtocol{
 
 //MARK: iBeaconNearMeProtocol
 extension Exhibitor : iBeaconNearMeProtocol {
+    func getNearMeDescription() -> String {
+        return description
+    }
+    
+    func getId() -> Int {
+        return id 
+    }
     
     func getNearMeIconURL() -> String {
         return logo

@@ -126,6 +126,14 @@ class Sponsor: AttendeeProtocol{
 //MARK: iBeaconNearMeProtocol
 extension Sponsor : iBeaconNearMeProtocol {
     
+    func getNearMeDescription() -> String {
+        return description
+    }
+    
+    func getId() -> Int {
+        return id
+    }
+    
     func getNearMeIconURL() -> String {
         return logo
     }

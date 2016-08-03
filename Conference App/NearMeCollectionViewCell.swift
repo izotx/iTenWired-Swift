@@ -40,26 +40,43 @@ class NearMeCollectionViewCell: UICollectionViewCell {
     
     var nearMeItem: iBeaconNearMeProtocol!
     
-    @IBOutlet var icon: MIBadgeButton!
+//    @IBOutlet weak var containerView: UIView!
+
+    @IBOutlet weak var imageView: UIImageView!
+ //   @IBOutlet var icon: MIBadgeButton!
+    
     @IBOutlet var title: UILabel!
- 
+    
+    override var bounds: CGRect {
+        didSet {
+            contentView.frame = bounds
+        }
+    }
+
     
     func build(nearMeItem: iBeaconNearMeProtocol){
         
-        icon.hnk_setImageFromURL(NSURL(string: nearMeItem.getNearMeIconURL())!)
+       // icon.hnk_setImageFromURL(NSURL(string: nearMeItem.getNearMeIconURL())!)
         title.text = nearMeItem.getNearMeTitle()
         
         self.UIConfig()
     }
     
     internal func UIConfig(){
-        self.backgroundColor = ItenWiredStyle.background.color.invertedColor
-        
+        self.backgroundColor = ItenWiredStyle.background.color.mainColor
+       
         title.textColor = ItenWiredStyle.text.color.invertedColor
         
         self.contentView.layer.borderColor = ItenWiredStyle.background.color.mainColor.CGColor
         
-        self.contentView.layer.borderWidth = 2
+        self.contentView.layer.borderWidth = 0
+        
+//        self.containerView.layer.borderWidth = 1
+//        self.containerView.layer.borderColor = UIColor.greenColor().CGColor
+        
+        self.imageView.layer.borderColor = UIColor.whiteColor().CGColor
+        self.imageView.layer.borderWidth = 2
+        
         
     }
     
