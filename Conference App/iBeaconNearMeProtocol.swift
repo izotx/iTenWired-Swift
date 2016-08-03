@@ -46,11 +46,12 @@ class NearMeMenuItem {
 }
 
 protocol iBeaconNearMeProtocol {
-
+    func getId()-> Int
     func getBeaconId() -> String
     func getNearMeIconURL() -> String
     func getNearMeTitle() -> String
     func getNearMeMenuItem() -> NearMeMenuItem
+    func getNearMeDescription()->String
 }
 
 protocol iBeaconNearMeViewControllerProtocol {

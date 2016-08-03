@@ -35,10 +35,20 @@
 import UIKit
 import JMCiBeaconManager
 
+class NearbyHeader:UICollectionReusableView{
+    
+    @IBOutlet weak var label: UILabel!
+}
+
+
 class NearByViewController: UIViewController {
 
-    
+    var imageCache = [String:UIImage]()
     @IBOutlet var collectionView: UICollectionView!
+    let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+    // 2
+    var dataTask: NSURLSessionDataTask?
+    
     
     
     /// Near me Controller
@@ -108,16 +118,100 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? NearMeCollectionViewCell
+        let item = nearMeController.getAllNearMe()[indexPath.row]
+        cell?.build(item)
         
-        cell?.build(nearMeController.getAllNearMe()[indexPath.row])
+        ///assign image
+        // If this image is already cached, don't re-download
+        let url = item.getNearMeIconURL()
         
+        
+        if let img = imageCache[url] {
+            cell?.imageView.image = img
+            cell?.title.alpha = 0
+        }
+        else {
+            cell?.title.text = item.getNearMeTitle()
+            cell?.title.alpha = 1
+            if let nsurl = NSURL(string: url){
+                dataTask = defaultSession.dataTaskWithURL(nsurl) {[weak self]
+                    data, response, error in
+                    // 7
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else if let httpResponse = response as? NSHTTPURLResponse {
+                        if httpResponse.statusCode == 200 {
+                            //self.updateSearchResults(data)
+                            if let data = data, image = UIImage(data: data){
+                               dispatch_async(dispatch_get_main_queue(), { 
+                                self?.imageCache[url] = image
+                                //reload collection view
+                                //normally I would reload only cell but since the cells can switch places we will just reload all.
+                                self?.collectionView.reloadData()
+                                cell?.title.alpha = 0
+                                
+                               })
+                            }
+                        }
+                    }
+                }
+                // 8
+                dataTask?.resume()
+            }
+            
+           }
+
+        cell?.contentView.frame = cell!.bounds
+        cell?.contentView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+
         return cell!
     }
     
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        switch kind {
+        //2
+        case UICollectionElementKindSectionHeader:
+            //3
+            let headerView =
+                collectionView.dequeueReusableSupplementaryViewOfKind(kind,
+                                                                      withReuseIdentifier: "collectionViewHeader",
+                                                                      forIndexPath: indexPath)
+                    as! NearbyHeader
+            
+            
+            let count = nearMeController.getAllNearMe().count
+            if count == 0{
+                headerView.label.text = "Scanning for nearby iBeacons"
+            }
+            else{
+                let t =  count > 1 ? " iBeacons" :  "iBeacon"
+                headerView.label.text = "\(count) \(t) Nearby"
+            }
+           
+            
+            
+            return headerView
+        default:
+            //4
+            assert(false, "Unexpected element kind")
+        }
+    }
+    
+    
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
        
-        let minValue = min(200, ((collectionView.frame.size.width - 20) / 2  - 6))
-        return CGSize(width: minValue, height: 150)
+        let w = collectionView.frame.width
+        let left = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).sectionInset.left
+        let right = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).sectionInset.left
+        let spacing = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout).minimumInteritemSpacing
+        
+        let adjw = w - (left + right + spacing + 2)
+        let cellW = adjw / 2.0
+        let h:CGFloat = 150
+        
+    
+        return CGSize(width: cellW , height: h)
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

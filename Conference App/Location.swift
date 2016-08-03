@@ -94,6 +94,13 @@ class Location {
 
 //MARK: iBeaconNearMeProtocol
 extension Location : iBeaconNearMeProtocol {
+    func getNearMeDescription() -> String {
+        return description
+    }
+    
+    func getId() -> Int {
+        return id
+    }
     
     func getNearMeIconURL() -> String {
         return icon
