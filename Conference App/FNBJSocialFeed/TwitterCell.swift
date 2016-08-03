@@ -64,7 +64,7 @@ class TwitterCell: UITableViewCell {
         
         let count = self.tweet.retweetCount + 1
         
-        self.retweetButton.setTitle("Retweet \(count)", forState: .Normal)
+        self.retweetButton.setTitle(" \(count)", forState: .Normal)
         let twtController = FNBJSocialFeedTwitterController(hashtag: "#itenwired16")
         
         twtController.retweet(self.tweet) { (tweet) in
@@ -76,7 +76,7 @@ class TwitterCell: UITableViewCell {
     
     @IBAction func favoriteAction(sender: AnyObject) {
         let count = self.tweet.favoriteCount + 1
-        self.favoriteButton.setTitle("Favourite \(count)", forState: .Normal)
+        self.favoriteButton.setTitle(" \(count)", forState: .Normal)
         
         let twtController = FNBJSocialFeedTwitterController(hashtag: "#itenwired16")
         
@@ -109,15 +109,15 @@ class TwitterCell: UITableViewCell {
         self.tweet = tweet
         
         if self.tweet.retweetCount > 0{
-            self.retweetButton.setTitle("Retweet \(self.tweet.retweetCount)", forState: .Normal)
+            self.retweetButton.setTitle(" \(self.tweet.retweetCount)", forState: .Normal)
         }else{
-            self.retweetButton.setTitle("Retweet", forState: .Normal)
+            self.retweetButton.setTitle(" ", forState: .Normal)
         }
         
         if self.tweet.favoriteCount > 0 {
-            self.favoriteButton.setTitle("Favorite \(self.tweet.favoriteCount)", forState: .Normal)
+            self.favoriteButton.setTitle(" \(self.tweet.favoriteCount)", forState: .Normal)
         }else{
-            self.favoriteButton.setTitle("Favorite", forState: .Normal)
+            self.favoriteButton.setTitle(" ", forState: .Normal)
         }
        
         

@@ -52,6 +52,11 @@
 		407BE0AC1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
 		407BE0AD1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
 		407BE0AE1D216C87005D61CF /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 407BE0921D216C87005D61CF /* STKQueueEntry.m */; };
+		4088F4331D5283140052B315 /* Facebook-52.png in Resources */ = {isa = PBXBuildFile; fileRef = 4088F4321D5283140052B315 /* Facebook-52.png */; };
+		4088F4351D5283860052B315 /* facebook52Filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 4088F4341D5283860052B315 /* facebook52Filled.png */; };
+		4088F4371D5284CF0052B315 /* Twitter Filled-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4088F4361D5284CF0052B315 /* Twitter Filled-50.png */; };
+		4088F4391D5286020052B315 /* retweet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4088F4381D5286020052B315 /* retweet@2x.png */; };
+		4088F43B1D5286B40052B315 /* like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4088F43A1D5286B40052B315 /* like@2x.png */; };
 		40F930701D522D3A002C2D18 /* NearByDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F9306F1D522D3A002C2D18 /* NearByDetailsViewController.swift */; };
 		40F930751D522EA2002C2D18 /* ItenWiredStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3911CEDFEE100941824 /* ItenWiredStyle.swift */; };
 		40F930761D522EA3002C2D18 /* ItenWiredStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DAC3911CEDFEE100941824 /* ItenWiredStyle.swift */; };
@@ -281,6 +286,11 @@
 		407BE0911D216C87005D61CF /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
 		407BE0921D216C87005D61CF /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
 		407BE0931D216C87005D61CF /* StreamingKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-Prefix.pch"; sourceTree = "<group>"; };
+		4088F4321D5283140052B315 /* Facebook-52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-52.png"; sourceTree = "<group>"; };
+		4088F4341D5283860052B315 /* facebook52Filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook52Filled.png; sourceTree = "<group>"; };
+		4088F4361D5284CF0052B315 /* Twitter Filled-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter Filled-50.png"; sourceTree = "<group>"; };
+		4088F4381D5286020052B315 /* retweet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retweet@2x.png"; sourceTree = "<group>"; };
+		4088F43A1D5286B40052B315 /* like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like@2x.png"; sourceTree = "<group>"; };
 		40F9306F1D522D3A002C2D18 /* NearByDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByDetailsViewController.swift; sourceTree = "<group>"; };
 		4F2FBD111CBC5AEC0017A11F /* AttendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendTableViewController.swift; sourceTree = "<group>"; };
 		4F2FBD131CBC5C7C0017A11F /* AttendeesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendeesCell.swift; sourceTree = "<group>"; };
@@ -863,6 +873,11 @@
 		55DAC32D1CEA487F00941824 /* Social Media */ = {
 			isa = PBXGroup;
 			children = (
+				4088F43A1D5286B40052B315 /* like@2x.png */,
+				4088F4381D5286020052B315 /* retweet@2x.png */,
+				4088F4341D5283860052B315 /* facebook52Filled.png */,
+				4088F4361D5284CF0052B315 /* Twitter Filled-50.png */,
+				4088F4321D5283140052B315 /* Facebook-52.png */,
 				559F76541CEE5B2A003BE6E6 /* linkedIn */,
 				559F76531CEE5B20003BE6E6 /* Web */,
 				55DAC3741CEBAA0000941824 /* Instagram-50.png */,
@@ -1100,7 +1115,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE2623CB1CAEFA940074C58F /* Build configuration list for PBXNativeTarget "Conference App" */;
 			buildPhases = (
-				34BC851AC12D71A0FF27CFC1 /* 📦 Check Pods Manifest.lock */,
+				34BC851AC12D71A0FF27CFC1 /* [CP] Check Pods Manifest.lock */,
 				47D1BA44D3DA44F478DE7ABE /* [CP] Check Pods Manifest.lock */,
 				2A16A9D166B7868905406D80 /* [CP] Check Pods Manifest.lock */,
 				FE26239A1CAEFA940074C58F /* Sources */,
@@ -1235,6 +1250,7 @@
 				555A7A661CEFB1460068F58C /* More-25.png in Resources */,
 				559F76561CEE5B5F003BE6E6 /* MyIten-50.png in Resources */,
 				55DAC3311CEA493D00941824 /* youtube.png in Resources */,
+				4088F4391D5286020052B315 /* retweet@2x.png in Resources */,
 				559F765F1CEE5C46003BE6E6 /* Announcements-50.png in Resources */,
 				55FEE2151CF602B80019F48D /* LiveBroadcastFilled-50-color.png in Resources */,
 				55DAC3961CEE17F700941824 /* Agenda-25.png in Resources */,
@@ -1264,11 +1280,13 @@
 				55E5A0D51CF4A25200144CD6 /* MapM-50-2.png in Resources */,
 				5570EED01CF4AE2B0033FCDC /* WhoFilled-50.png in Resources */,
 				55FEE2111CF6026B0019F48D /* AboutFilled-50-color.png in Resources */,
+				4088F4371D5284CF0052B315 /* Twitter Filled-50.png in Resources */,
 				559F76661CEE5CBB003BE6E6 /* About-50.png in Resources */,
 				5569DA241D2EF73A0004F0C1 /* NearByFilled-50.png in Resources */,
 				0EE564D51CB845E7001678B0 /* AboutView.storyboard in Resources */,
 				55511D881D5264B500B5569D /* placeholder.png in Resources */,
 				55DAC3561CEB547000941824 /* MyIten-25.png in Resources */,
+				4088F4351D5283860052B315 /* facebook52Filled.png in Resources */,
 				55DAC3191CE526E600941824 /* placeholder.png in Resources */,
 				559F76681CEE5D52003BE6E6 /* Who-50.png in Resources */,
 				5570EED81CF4E48F0033FCDC /* StarFilled-50.png in Resources */,
@@ -1278,6 +1296,7 @@
 				0EBCE1E41CC2E128008CEA2C /* LiveBroadcast.storyboard in Resources */,
 				55DAC37D1CEBAB6900941824 /* Email-50.png in Resources */,
 				5569DA221D2EF7260004F0C1 /* NearByFilled-50-color.png in Resources */,
+				4088F43B1D5286B40052B315 /* like@2x.png in Resources */,
 				D4C467D01CB84D9700BD6157 /* AgendaMain.storyboard in Resources */,
 				559F76491CEE4C9C003BE6E6 /* Settings-25.png in Resources */,
 				827BA9A11CC2E464003085BA /* SocialMedia.storyboard in Resources */,
@@ -1292,6 +1311,7 @@
 				55DAC3731CEBA96E00941824 /* YouTube-50.png in Resources */,
 				55FEE20D1CF601FD0019F48D /* Settings-50-color.png in Resources */,
 				4F3A78DB1CB5AAF500A87EE6 /* Attendees.storyboard in Resources */,
+				4088F4331D5283140052B315 /* Facebook-52.png in Resources */,
 				55DAC32A1CEA3B9100941824 /* menu-25.png in Resources */,
 				55DAC3751CEBAA0000941824 /* Instagram-50.png in Resources */,
 				55DAC37B1CEBAB3E00941824 /* Web-50.png in Resources */,
@@ -1336,14 +1356,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		34BC851AC12D71A0FF27CFC1 /* 📦 Check Pods Manifest.lock */ = {
+		34BC851AC12D71A0FF27CFC1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
