@@ -564,16 +564,16 @@
 			isa = PBXGroup;
 			children = (
 				40F9306F1D522D3A002C2D18 /* NearByDetailsViewController.swift */,
-				559F54E71D3D2EA900F2754B /* LocationViewController.swift */,
+				5569DA1F1D2EF3D80004F0C1 /* NearByViewController.swift */,
 				55DAC3941CEE158D00941824 /* SplitView */,
 				55DAC3931CEE150B00941824 /* Map */,
 				55DAC3651CEB70E800941824 /* Agenda */,
 				55DAC3641CEB70CE00941824 /* Attendee */,
 				557D35531CE50B2200562A7A /* Social */,
 				0EBCE1E51CC2E14E008CEA2C /* LiveBroadcastViewController.swift */,
+				559F54E71D3D2EA900F2754B /* LocationViewController.swift */,
 				0EE564D61CB84DC1001678B0 /* AboutViewController.swift */,
 				554980231CE37EDC00CC6E36 /* NotificationViewController.swift */,
-				5569DA1F1D2EF3D80004F0C1 /* NearByViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

@@ -108,21 +108,22 @@ class MasterViewController : UIViewController{
         
         let notifications = MenuItem(storyboardId: "Notification", viewControllerId: "NotificationViewControllerNav", name: "Announcements", imageUrl: "AnnouncementsFilled-50.png")
         self.menuItems.append(notifications)
-
+        
+        let nearBy = MenuItem(storyboardId: "NearBy", viewControllerId: "NearByViewControllerInitial", name: "Near Me", imageUrl: "NearByFilled-50.png")
+        self.menuItems.append(nearBy)
+        
         let map = MenuItem(storyboardId: "MapView", viewControllerId: "MapNavStoryboard", name: "Map", imageUrl: "MapMFilled-50.png")
         self.menuItems.append(map)
         
         let socialMedia = MenuItem(storyboardId: "SocialMedia", viewControllerId: "SocialMediaNav", name: "Social Media", imageUrl: "SocialMediaFilled-50.png")
         self.menuItems.append(socialMedia)
         
-        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutViewNav", name: "About", imageUrl: "AboutFilled-50.png")
-        self.menuItems.append(about)
- 
         let broadcast = MenuItem(storyboardId: "LiveBroadcast", viewControllerId: "LiveBroadcast", name: "Live Broadcast", imageUrl: "LiveBroadcastFilled-50.png")
         self.menuItems.append(broadcast)
         
-        let nearBy = MenuItem(storyboardId: "NearBy", viewControllerId: "NearByViewControllerInitial", name: "Near Me", imageUrl: "NearByFilled-50.png")
-        self.menuItems.append(nearBy)
+        let about = MenuItem(storyboardId: "AboutView", viewControllerId: "AboutViewNav", name: "About", imageUrl: "AboutFilled-50.png")
+        self.menuItems.append(about)
+
     }
     
 }

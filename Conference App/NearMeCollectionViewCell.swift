@@ -41,6 +41,7 @@ class NearMeCollectionViewCell: UICollectionViewCell {
     var nearMeItem: iBeaconNearMeProtocol!
     
 //    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var itemTypeLabel: UILabel!
 
     @IBOutlet weak var imageView: UIImageView!
  //   @IBOutlet var icon: MIBadgeButton!
@@ -58,6 +59,19 @@ class NearMeCollectionViewCell: UICollectionViewCell {
         
        // icon.hnk_setImageFromURL(NSURL(string: nearMeItem.getNearMeIconURL())!)
         title.text = nearMeItem.getNearMeTitle()
+        itemTypeLabel.text = "" 
+        if nearMeItem is Sponsor{
+            itemTypeLabel.text = "Sponsor"
+        }
+        if nearMeItem is Exhibitor{
+            itemTypeLabel.text = "Exhibitor"
+        }
+
+        if nearMeItem is Location{
+            itemTypeLabel.text = "Location"
+        }
+
+        
         
         self.UIConfig()
     }
