@@ -5,7 +5,7 @@
 [![License][license-image]][license-url]
 [![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)](http://cocoapods.org/pods/LFAlertController)
 
-One to two paragraph statement about your product and what it does.
+An app for ITEN Wired attendees to view information about an annual technology summit in Pensacola, FL. The App displays detailed Schedule with information on Speakers, Presentations and Exhibitors. Users can post social media updates, build a custom schedule and get driving directions.
 
 
 ![](itenwired2.png)
