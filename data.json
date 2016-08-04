@@ -689,7 +689,7 @@
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/NavyFedCreditUnionLogo-300.jpg",
 		"website": "http://www.navyfederal.org",
 		"beacon": {
-			"id": "beacon2",
+			"id": "beacon4",
 			"sensitivity": "near"
 		}
 	}, {
@@ -699,6 +699,10 @@
 		"description": "Northrop Grumman is a leading global security company providing innovative systems, products and solutions in unmanned systems, cyber, C4ISR, and logistics and modernization to government and commercial customers worldwide.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/northrop_grumman.jpg",
 		"website": "http://www.northropgrumman.com/Pages/default.aspx",
+		"beacon": {
+			"id": "beacon4",
+			"sensitivity": "near"
+		}
 		
 	}, {
 		"id": "203",
