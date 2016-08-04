@@ -1,4 +1,4 @@
-# iTenWired Confference App - Swift
+# iTenWired Conference App - Swift
 > New Version of the iTenWired Conference App for iOS.
 
 [![Swift Version][swift-image]][swift-url]
