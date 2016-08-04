@@ -63,19 +63,18 @@ class NearMeCollectionViewCell: UICollectionViewCell {
     }
     
     internal func UIConfig(){
-        self.backgroundColor = ItenWiredStyle.background.color.mainColor
+        self.backgroundColor = ItenWiredStyle.background.color.invertedColor
        
-        title.textColor = ItenWiredStyle.text.color.invertedColor
+        title.textColor = ItenWiredStyle.text.color.mainColor
         
         self.contentView.layer.borderColor = ItenWiredStyle.background.color.mainColor.CGColor
         
-        self.contentView.layer.borderWidth = 0
+        self.contentView.layer.borderWidth = 1
         
 //        self.containerView.layer.borderWidth = 1
-//        self.containerView.layer.borderColor = UIColor.greenColor().CGColor
-        
-        self.imageView.layer.borderColor = UIColor.whiteColor().CGColor
-        self.imageView.layer.borderWidth = 2
+//        self.containerView.layer.borderColor = UIColor.greenColor().CGColor        
+//        self.imageView.layer.borderColor = UIColor.whiteColor().CGColor
+//        self.imageView.layer.borderWidth = 2
         
         
     }
