@@ -48,6 +48,13 @@ Janusz Chudzynski –  janusz@izotx.com – [www.izotx.com](http://www.izotx.com
 
 Felipe N. Brito - me@felipenbrito.com - [www.felipenbrito.com](http://www.felipenbrito.com)
 
+### Libraries
+
+* ALTextInputBar - [https://github.com/AlexLittlejohn/ALTextInputBar](https://github.com/AlexLittlejohn/ALTextInputBar)
+* OneSignal-iOS-SDK - [https://github.com/OneSignal/OneSignal-iOS-SDK](https://github.com/OneSignal/OneSignal-iOS-SDK)
+* JMCiBeaconManager - [https://github.com/izotx/JMCBeaconManager](https://github.com/izotx/JMCBeaconManager)
+* HanekeSwift - [https://github.com/Haneke/HanekeSwift](https://github.com/Haneke/HanekeSwift)
+
 ### Icons
 
 The project icons were provided by [icons8.com](https://icons8.com)
@@ -58,7 +65,7 @@ The project icons were provided by [icons8.com](https://icons8.com)
 
 For commercial usage please contact Janusz Chudzynski at janusz@izotx.com
 
-
+Copyright (c) 2016, Izotx
 
 
 [swift-image]:https://img.shields.io/badge/swift-2.0-orange.svg
