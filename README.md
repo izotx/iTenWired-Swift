@@ -40,13 +40,15 @@ An app for ITEN Wired attendees to view information about an annual technology s
 
 We would love for you to contribute to **iTenWired Conference App**, check the ``LICENSE`` file for more info.
 
-## Meta
+## Credits
+
+### Authors
 
 Janusz Chudzynski –  janusz@izotx.com – [www.izotx.com](http://www.izotx.com)
 
 Felipe N. Brito - me@felipenbrito.com - [www.felipenbrito.com](http://www.felipenbrito.com)
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+### Icons
 
 The project icons were provided by [icons8.com](https://icons8.com)
 
