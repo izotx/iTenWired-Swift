@@ -200,46 +200,50 @@ class NearMeController {
         var flag = false
         let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
         
-        if let l = locationsData.getLocationByiBeacon(beacon)
+        var locations = locationsData.getLocationsByiBeacon(beacon)
+        if locations.count > 0
         {
             beacon.lastRanged = NSDate()
             activeBeacons[id] = beacon
-  
-            if activeNearMe.filter({$0 is Location}).filter({($0 as! Location).id == l.getId()}).count == 0
+            for l in locations{
+            if activeNearMe.filter({$0 is Location}).filter({($0 as! Location).getId() == l.getId()}).count == 0
                 {
                     activeNearMe.append(l)
                     flag = true
                     
                 }
-        }
-        
-        if let a = attendeeData.getSponsorByiBeacon(beacon)
-        {
-            beacon.lastRanged = NSDate()
-            activeBeacons[id] = beacon
-            
-            if activeNearMe.filter({$0 is Sponsor}).filter({($0 as! Sponsor).id == a.getId()}).count == 0
-            {
-                activeNearMe.append(a)
-                flag = true
-                
             }
         }
-
-        if let a = attendeeData.getExhibitorByiBeacon(beacon)
+        
+        var sponsors = attendeeData.getSponsorsByiBeacon(beacon)
+        if sponsors.count > 0
         {
             beacon.lastRanged = NSDate()
             activeBeacons[id] = beacon
-            
-            if activeNearMe.filter({$0 is Exhibitor}).filter({($0 as! Exhibitor).id == a.getId()}).count == 0
-            {
-                activeNearMe.append(a)
-                flag = true
-                
+            for a in sponsors{
+                if activeNearMe.filter({$0 is Sponsor}).filter({($0 as! Sponsor).getId() == a.getId()}).count == 0
+                {
+                    activeNearMe.append(a)
+                    flag = true
+                }
             }
         }
         
         
+        var exhibitors =  attendeeData.getExhibitorsByiBeacon(beacon)
+        if exhibitors.count > 0
+        {
+            beacon.lastRanged = NSDate()
+            activeBeacons[id] = beacon
+            for a in exhibitors{
+                if activeNearMe.filter({$0 is Exhibitor}).filter({($0 as! Exhibitor).getId() == a.getId()}).count == 0
+                {
+                    activeNearMe.append(a)
+                    flag = true
+                    
+                }
+            }
+        }
         
         
 //        for sponsor in attendeeData.getSponsers() {

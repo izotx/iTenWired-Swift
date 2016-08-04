@@ -12,43 +12,50 @@ import Haneke
 
 
 extension AttendeeData{
-    func getSponsorByiBeacon(beacon:ItenWiredBeacon)->iBeaconNearMeProtocol?{
+    func getSponsorsByiBeacon(beacon:ItenWiredBeacon)->[iBeaconNearMeProtocol]{
         let beaconData = IBeaconData()
+        var sponsors = [iBeaconNearMeProtocol]()
         for attendee in self.getSponsers() {
             if let object = beaconData.getBeaconById(attendee.iBeaconId) {
                 if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
                     if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: attendee.getBeaconProximity()){
-                        return attendee
+                        
+                            sponsors.append(attendee)
+                        //return attendee
                     }
                 }
             }
         }
 
-        return nil
+        return sponsors
     }
 
     
-    func getExhibitorByiBeacon(beacon:ItenWiredBeacon)->iBeaconNearMeProtocol?{
+    func getExhibitorsByiBeacon(beacon:ItenWiredBeacon)->[iBeaconNearMeProtocol]{
         let beaconData = IBeaconData()
+        var exhibitors = [iBeaconNearMeProtocol]()
+        
         for attendee in self.getExibitors() {
             if let object = beaconData.getBeaconById(attendee.iBeaconId) {
                 if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
                     if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: attendee.getBeaconProximity()){
-                        return attendee
+                        exhibitors.append(attendee)
                     }
                 }
             }
         }
         
-        return nil
+        return exhibitors
     }
 }
 
 
 extension LocationData{
-    func getLocationByiBeacon(beacon:ItenWiredBeacon)->iBeaconNearMeProtocol?{
+    func getLocationsByiBeacon(beacon:ItenWiredBeacon)->[iBeaconNearMeProtocol]{
         let locationsData = LocationData()
         let beaconData = IBeaconData()
+        var locations = [iBeaconNearMeProtocol]()
+        
         for location in locationsData.getLocations() {
             
             if let object = beaconData.getBeaconById(location.iBeaconId) {
@@ -56,14 +63,13 @@ extension LocationData{
                 if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
                     
                     if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: location.getBeaconProximity()){
-                        
-                        return location
+                        locations.append(location)
                     }
                 }
             }
         }
 
-    return nil
+    return locations
     }
 
 }
@@ -154,30 +160,31 @@ class NearByDetailsViewController: UIViewController {
     
     
     private func refreshUI(){
-        if let beacon = currentClosestIbeacon{
-          instructionsLabel.alpha = 0
-           let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
-            if let l = locationsData.getLocationByiBeacon(iTenWiredBeacon)
-            {
-                refreshUI(l)
-                return
-            }
-            if let a = attendeeData.getSponsorByiBeacon(iTenWiredBeacon)
-            {
-                refreshUI(a)
-                return
-            }
-            
-            if let a = attendeeData.getExhibitorByiBeacon(iTenWiredBeacon)
-            {
-                refreshUI(a)
-                return
-            }
-
-        }
-        else{
-            instructionsLabel.alpha = 1
-        }
+//        if let beacon = currentClosestIbeacon{
+//          instructionsLabel.alpha = 0
+//           let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
+//            if let l = locationsData.getLocationByiBeacon(iTenWiredBeacon)
+//            {
+//                refreshUI(l)
+//                return
+//            }
+//            if  attendeeData.getSponsorByiBeacon(iTenWiredBeacon).count > 0
+//            {
+//                let a = attendeeData.getSponsorByiBeacon(iTenWiredBeacon)[0]
+//                refreshUI(a)
+//                return
+//            }
+//            
+//            if let a = attendeeData.getExhibitorByiBeacon(iTenWiredBeacon)
+//            {
+//                refreshUI(a)
+//                return
+//            }
+//
+//        }
+//        else{
+//            instructionsLabel.alpha = 1
+//        }
     }
     
     private func clearData()
