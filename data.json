@@ -41,32 +41,33 @@
 		"long-description": "The Hilton Pensacola Beach Gulf Front is located in the heart of Pensacola Beach with views of the stunning emerald waters of the Gulf of Mexico. Guests can find outdoor activities, local shopping, dining, and live entertainment within walking distance. /n Valet parking is available (for tips only) from the Lobby Entrance of the hotel. The registration desk will be at the Conference Center entrance of the hotel. The hotel is home to Bonsai Sushi and Lounge, the H2O A Cajun-Asian Grill, and the Latitudes Beach Bar with stunning beach views. Guest amenities include an outdoor pool, fitness center, Grab nâ€™ Go deli shop, full room service and more. Upgrade to a suite to enjoy additional space and a private balcony overlooking the Gulf of Mexico."
 	}],
 	"ibeacons": [{
-    "id":"beacon1",
-		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
-		"minor": 6687,
-		"major": 18792,
-		"name": "1hlm"
-	}, 
-	{
-		"id": "beacon2",
-		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
-		"major": 46518,
-		"minor": 41662,
-		"name": "uehk"
-	}, {
-    "id": "beacon3",
-    		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
-		"major": 4071,
-		"minor": 31565,
-		"name": "fc3w"
-	}, 
-	
-	{"id": "beacon4",
-    		"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
-		"major": 21268,
-		"minor": 46554,
-		"name": "iphone"
-	}],
+			"id": "beacon1",
+			"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+			"minor": 6687,
+			"major": 18792,
+			"name": "1hlm"
+		}, {
+			"id": "beacon2",
+			"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+			"major": 46518,
+			"minor": 41662,
+			"name": "uehk"
+		}, {
+			"id": "beacon3",
+			"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+			"major": 4071,
+			"minor": 31565,
+			"name": "fc3w"
+		},
+
+		{
+			"id": "beacon4",
+			"udid": "f7826da6-4fa2-4e98-8024-bc5b71e0893e",
+			"major": 21268,
+			"minor": 46554,
+			"name": "iphone"
+		}
+	],
 	"tracks": [{
 		"id": "1",
 		"description": "Cyber Security"
@@ -703,7 +704,7 @@
 			"id": "beacon4",
 			"sensitivity": "near"
 		}
-		
+
 	}, {
 		"id": "203",
 		"name": "Konica Minolta Business Solutions, USA, Inc.",
@@ -711,7 +712,7 @@
 		"description": "Konica Minolta Business Solutions U.S.A., Inc. is a leader in enterprise content management, technology optimization and cloud services. Our solutions help organizations improve their speed to market, manage technology costs, and facilitate the sharing of information to increase productivity. With over 41,000 worldwide employees and cutting-edge research programs, Konica Minolta Business Solutions, U.S.A., Inc., is a leader in enterprise content management, technology optimization and cloud services. Recognized for seven consecutive years as a #1 Brand for Customer Loyalty by Brand Keys, clients trust Konica Minolta to help them envision how they can achieve their goals and deliver innovative solutions to give shape to their ideas. For more information, visit CountOnKonicaMinolta.com and also follow us @KonicaMinoltaUS on Twitter, Facebook and YouTube.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/konica_minolta_logo.png",
 		"website": "http://www.CountOnKonicaMinolta.com",
-		
+
 		"beacon": {
 			"id": "beacon16",
 			"sensitivity": "near"
@@ -771,8 +772,8 @@
 		"level": "IGNITE Session Sponsor",
 		"description": "Mediacom Business delivers Internet, Phone and TV services via cable-exclusive DOCSIS 3.0 technology. We have invested over $2.5 billion over the past 10 years to expand our product delivery systems. With a coast-to-coast fiber network, Mediacom Business offers anchor institutions bandwidth and connectivity with speeds of 1 Gigabit and beyond.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/mediacom_MEANSbusiness-300.png",
-		"website": "http://www.mediacombusiness.com",
-	
+		"website": "http://www.mediacombusiness.com"
+
 	}, {
 		"id": "44",
 		"name": "Duncan McCall Advertising & Marketing",
@@ -796,7 +797,7 @@
 		"name": "C-Spire",
 		"description": "C-Spire is the sixth largest wireless provider in the United States with over 1,200,000 customers ranging from the Florida Panhandle to Mississippi.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-cspire.jpg",
-		"website": "http://www.cspire.com",	
+		"website": "http://www.cspire.com",
 		"beacon": {
 			"id": "beacon4",
 			"sensitivity": "near"
@@ -806,7 +807,7 @@
 		"name": "Metro Systems Inc.",
 		"description": "Metro Systems Incorporated (MSI) is a certified small business, with a successful history of providing IT professionals on a project or full-time basis. We specialize in placement of technology professionals for government, commercial, and non-profit organizations, large and small. Our mission is to provide these organizations with the highest quality IT talent and to match candidates to the best possible IT careers. Headquartered in the Washington DC metropolitan area with locations in Alexandria, VA, Richmond, VA and Pensacola, FL, MSI has nationwide reach capabilities.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/metro.png",
-		"website": "http://www.metrosystemsinc.com",
+		"website": "http://www.metrosystemsinc.com"
 	}, {
 		"id": "237",
 		"name": "National Flight Academy",
