@@ -142,9 +142,9 @@ class NearByDetailsViewController: UIViewController {
     
     private func UIConfig() {
         
-        view.backgroundColor = ItenWiredStyle.background.color.mainColor
-        objectTitle.textColor = ItenWiredStyle.background.color.invertedColor
-        objectDescription.textColor = ItenWiredStyle.background.color.invertedColor
+        view.backgroundColor = ItenWiredStyle.background.color.invertedColor
+        objectTitle.textColor = ItenWiredStyle.background.color.mainColor
+        objectDescription.textColor = ItenWiredStyle.background.color.mainColor
     }
 
     let locationsData = LocationData()
@@ -237,6 +237,8 @@ class NearByDetailsViewController: UIViewController {
             }
 
         //check if previous count = 0 
+        let id = "\(immediateIbeacon.major)\(immediateIbeacon.minor)\(immediateIbeacon.UUID)"
+        beaconsData[id] = NSDate()
         
         
         //refresh UI if we found a new iBeacon
