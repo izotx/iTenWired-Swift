@@ -40,6 +40,7 @@ class NearMeCollectionViewCell: UICollectionViewCell {
     
     var nearMeItem: iBeaconNearMeProtocol!
     
+    @IBOutlet weak var headerView: UIView!
 //    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var itemTypeLabel: UILabel!
 
@@ -78,7 +79,7 @@ class NearMeCollectionViewCell: UICollectionViewCell {
     
     internal func UIConfig(){
         self.backgroundColor = ItenWiredStyle.background.color.invertedColor
-       
+       headerView.backgroundColor = ItenWiredStyle.background.color.mainColor.colorWithAlphaComponent(0.7)
         title.textColor = ItenWiredStyle.text.color.mainColor
         
         self.contentView.layer.borderColor = ItenWiredStyle.background.color.mainColor.CGColor

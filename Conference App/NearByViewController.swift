@@ -181,10 +181,10 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
             
             let count = nearMeController.getAllNearMe().count
             if count == 0{
-                headerView.label.text = "Scanning for nearby iBeacons"
+                headerView.label.text = "Scanning for nearby POIs"
             }
             else{
-                let t =  count > 1 ? " iBeacons" :  "iBeacon"
+                let t =  count > 1 ? " POIs" :  "POI"
                 headerView.label.text = "\(count) \(t) Nearby"
             }
            

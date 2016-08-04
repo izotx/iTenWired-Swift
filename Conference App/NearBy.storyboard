@@ -102,7 +102,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRL-wM-nkX">
+                                                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRL-wM-nkX">
                                                     <rect key="frame" x="0.0" y="153" width="251.5" height="32"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0W-vA-6cK">
@@ -112,7 +112,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.066666666666666666" green="0.5490196078431373" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="19Q-dC-DrX"/>
                                                         <constraint firstItem="i0W-vA-6cK" firstAttribute="leading" secondItem="ZRL-wM-nkX" secondAttribute="leading" constant="8" id="Bei-u7-qOg"/>
@@ -137,6 +137,7 @@
                                         </constraints>
                                         <size key="customSize" width="251.5" height="185"/>
                                         <connections>
+                                            <outlet property="headerView" destination="ZRL-wM-nkX" id="r3Q-fT-u5B"/>
                                             <outlet property="imageView" destination="SBM-yL-ZYk" id="Zg1-z9-dWg"/>
                                             <outlet property="itemTypeLabel" destination="i0W-vA-6cK" id="9LX-WL-uC2"/>
                                             <outlet property="title" destination="xLS-qf-Xue" id="d3A-JN-tKA"/>
