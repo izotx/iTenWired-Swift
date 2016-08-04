@@ -90,8 +90,8 @@
 		"description": "Some room description.",
 		"icon": "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-location-128.png",
 		"beacon": {
-			"id": "beacon1",
-			"proximity": "near"
+			"id": "beacon3",
+			"sensitivity": "immediate"
 		}
 	}],
 	"events": [{
@@ -699,10 +699,7 @@
 		"description": "Northrop Grumman is a leading global security company providing innovative systems, products and solutions in unmanned systems, cyber, C4ISR, and logistics and modernization to government and commercial customers worldwide.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/northrop_grumman.jpg",
 		"website": "http://www.northropgrumman.com/Pages/default.aspx",
-		"beacon": {
-			"id": "beacon3",
-			"sensitivity": "immediate"
-		}
+		
 	}, {
 		"id": "203",
 		"name": "Konica Minolta Business Solutions, USA, Inc.",
@@ -771,10 +768,7 @@
 		"description": "Mediacom Business delivers Internet, Phone and TV services via cable-exclusive DOCSIS 3.0 technology. We have invested over $2.5 billion over the past 10 years to expand our product delivery systems. With a coast-to-coast fiber network, Mediacom Business offers anchor institutions bandwidth and connectivity with speeds of 1 Gigabit and beyond.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/mediacom_MEANSbusiness-300.png",
 		"website": "http://www.mediacombusiness.com",
-		"beacon": {
-			"id": "beacon4",
-			"sensitivity": "near"
-		}
+	
 	}, {
 		"id": "44",
 		"name": "Duncan McCall Advertising & Marketing",
@@ -788,7 +782,11 @@
 		"name": "Affiniti",
 		"description": "Affiniti provides advanced technology to rural communities so they can compete in the digital world.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-affiniti.jpg",
-		"website": "http://www.affiniti.com"
+		"website": "http://www.affiniti.com",
+		"beacon": {
+			"id": "beacon4",
+			"sensitivity": "near"
+		}
 	}, {
 		"id": "247",
 		"name": "C-Spire",
