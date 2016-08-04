@@ -7,15 +7,21 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](image.png)
+
+![](itenwired2.png)
+![](itenwired.png)
 
 ## Features
 
-- [x] Feature 1
-- [x] Feature 2
-- [x] Feature 3
-- [x] Feature 4
-- [x] Feature 5
+- [x] Agenda
+- [x] Who is here
+- [x] My Iten
+- [x] Announcements
+- [x] Map
+- [x] Social Media
+- [x] Live Broadcast
+- [x] Near me - (iBeacons)
+- [x] About
 
 ## Requirements
 
@@ -24,74 +30,37 @@ One to two paragraph statement about your product and what it does.
 
 ## Installation
 
-#### CocoaPods
-You can use [CocoaPods](http://cocoapods.org/) to install `YourLibrary` by adding it to your `Podfile`:
-
-```ruby
-platform :ios, '8.0'
-use_frameworks!
-pod 'YourLibrary'
-```
-
-To get the full benefits import `YourLibrary` wherever you import UIKit
-
-``` swift
-import UIKit
-import YourLibrary
-```
-#### Carthage
-Create a `Cartfile` that lists the framework and run `carthage bootstrap`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/YourLibrary.framework` to an iOS project.
-
-```
-github "yourUsername/yourlibrary"
-```
 #### Manually
-1. Download and drop ```YourLibrary.swift``` in your project.  
+1. Download and open the ```Conference App.xcworkspace```  
 2. Congratulations!  
 
-## Usage example
 
-```swift
-import EZSwiftExtensions
-ez.detectScreenShot { () -> () in
-    print("User took a screen shot")
-}
-```
-
-## Release History
-
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
 
 ## Contribute
 
-We would love for you to contribute to **YourLibraryName**, check the ``LICENSE`` file for more info.
+We would love for you to contribute to **iTenWired Conference App**, check the ``LICENSE`` file for more info.
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Janusz Chudzynski –  janusz@izotx.com – [www.izotx.com](http://www.izotx.com)
+
+Felipe N. Brito - me@felipenbrito.com - [www.felipenbrito.com](http://www.felipenbrito.com)
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 The project icons were provided by [icons8.com](https://icons8.com)
 
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+## License
 
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+
+For commercial usage please contact Janusz Chudzynski at janusz@izotx.com
+
+
+
+
+[swift-image]:https://img.shields.io/badge/swift-2.0-orange.svg
 [swift-url]: https://swift.org/
-[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
-[license-url]: LICENSE
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
-[codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
+[license-image]: https://img.shields.io/badge/LICENSE-CC%20BY--NC%204.0-blue.svg
+[license-url]: http://creativecommons.org/licenses/by-nc/4.0/"
+
