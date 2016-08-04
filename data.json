@@ -86,7 +86,7 @@
 	}],
 
 	"locations": [{
-		"id": 1,
+		"id": "1",
 		"name": "Room 4",
 		"description": "Some room description.",
 		"icon": "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-location-128.png",
