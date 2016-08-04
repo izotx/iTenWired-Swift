@@ -792,7 +792,11 @@
 		"name": "C-Spire",
 		"description": "C-Spire is the sixth largest wireless provider in the United States with over 1,200,000 customers ranging from the Florida Panhandle to Mississippi.",
 		"logo": "http://www.itenwired.com/images/uploads/sponsors/_sponsor_bar/sponsor-cspire.jpg",
-		"website": "http://www.cspire.com"
+		"website": "http://www.cspire.com",	
+		"beacon": {
+			"id": "beacon4",
+			"sensitivity": "near"
+		}
 	}, {
 		"id": "187",
 		"name": "Metro Systems Inc.",
