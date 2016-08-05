@@ -49,8 +49,6 @@ class NearByViewController: UIViewController {
     // 2
     var dataTask: NSURLSessionDataTask?
     
-    
-    
     /// Near me Controller
     let nearMeController = NearMeController()
     
@@ -59,6 +57,24 @@ class NearByViewController: UIViewController {
     
     /// iBeacons Ranged List
     var beacons = [iBeacon]()
+    
+
+    deinit{
+    
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+      //  nearMeController.stopUpdates()
+        nearMeController.stop()
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        nearMeController.start()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

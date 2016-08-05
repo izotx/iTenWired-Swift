@@ -64,6 +64,9 @@ class NearMeController {
     /// Locations Data from JSON
     private var locationsData = LocationData()
     
+    deinit{
+    
+    }
     
     init(){
         
@@ -72,46 +75,58 @@ class NearMeController {
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsStateChanged(_:)), name: iBeaconNotifications.BeaconState.rawValue, object: nil)
         
-
-        
         // Get conference beacons from JSON
         let registeredBeacons = beaconData.getBeacons()
         
         /// Register beacons on JMCiBeaconManager
         beaconManager.registerBeacons(registeredBeacons)
         
+        
+        beaconManager.logging = false
+        
+        _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(NearMeController.removeOldBeacons), userInfo: nil, repeats: true)
+    
+    }
+
+    
+    func start(){
         /// Start monitoring for the beacons
         beaconManager.startMonitoring({
             
         }) { (messages) in
             print("Error Messages \(messages)")
         }
-        
-        _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(NearMeController.removeOldBeacons), userInfo: nil, repeats: true)
+
     }
+    
+    func stop(){
+        beaconManager.stopMonitoring()
+    }
+    
     
     @objc func beaconsStateChanged(notification:NSNotification){
         if let beacon = notification.object as? iBeacon{
            //check state of the object
             if beacon.state == CLRegionState.Unknown || beacon.state == CLRegionState.Outside{
                 //delete it
-                var index = 0
-                for object in activeNearMe {
-                    if let otherBeacon = beaconData.getBeaconById(object.getBeaconId()) {
+                for (i,object) in activeNearMe.enumerate().reverse() {
+                    for otherBeacon in beaconData.getBeaconById(object.getBeaconId()) {
                         if otherBeacon.UUID.equalsIgnoreCase(beacon.UUID) &&
                             otherBeacon.major == beacon.major &&
                             otherBeacon.minor == beacon.minor {
                                 //beacon found now we can remove it.
                             let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
                             activeBeacons[id] = nil
-                            activeNearMe.removeAtIndex(index)
+                            activeNearMe.removeAtIndex(i)
+
+                            
                             //print("Remove Beacon")
                             NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
                             
                         }
                     }
-                    index = index + 1
                 }
+                
             }
         }
     }
@@ -130,25 +145,19 @@ class NearMeController {
             if beacon.lastRanged.addSeconds(1).isLessThanDate(now) {
                 let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
                 
-                
-                var index = 0
-                
-                for object in activeNearMe {
+                for (i,object) in activeNearMe.enumerate().reverse() {
                     //Check if it is monitored
-                    if let otherBeacon = beaconData.getBeaconById(object.getBeaconId()) {
+                    for otherBeacon in beaconData.getBeaconById(object.getBeaconId()) {
                         if otherBeacon.UUID.equalsIgnoreCase(beacon.UUID) &&
                             otherBeacon.major == beacon.major &&
                             otherBeacon.minor == beacon.minor {
                         
                             flag = true
                             activeBeacons[id] = nil
-                            activeNearMe.removeAtIndex(index)
-                            print("Remove Beacon")
+                            activeNearMe.removeAtIndex(i)
                         }
                     
                     }
-                    
-                    index = index + 1
                 }
             }
         
@@ -200,7 +209,7 @@ class NearMeController {
         var flag = false
         let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
         
-        var locations = locationsData.getLocationsByiBeacon(beacon)
+        let locations = locationsData.getLocationsByiBeacon(beacon)
         if locations.count > 0
         {
             beacon.lastRanged = NSDate()
@@ -215,7 +224,7 @@ class NearMeController {
             }
         }
         
-        var sponsors = attendeeData.getSponsorsByiBeacon(beacon)
+        let sponsors = attendeeData.getSponsorsByiBeacon(beacon)
         if sponsors.count > 0
         {
             beacon.lastRanged = NSDate()
@@ -230,7 +239,7 @@ class NearMeController {
         }
         
         
-        var exhibitors =  attendeeData.getExhibitorsByiBeacon(beacon)
+        let exhibitors =  attendeeData.getExhibitorsByiBeacon(beacon)
         if exhibitors.count > 0
         {
             beacon.lastRanged = NSDate()
@@ -243,74 +252,10 @@ class NearMeController {
                     
                 }
             }
+            
         }
         
-        
-//        for sponsor in attendeeData.getSponsers() {
-//            
-//            if let object = beaconData.getBeaconById(sponsor.iBeaconId) {
-//                
-//                if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
-//                        if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: sponsor.getBeaconProximity()){
-//                            if let _ = activeNearMe.filter({$0 is Sponsor}).filter({($0 as! Sponsor).id == sponsor.id}).first
-//                            {
-//                                
-//                            }
-//                            else{
-//                                activeNearMe.append(sponsor)
-//                                flag = true
-//                            }
-//    
-//                            break
-//                        }
-//                }
-//            }
-//        }
-//        
-//        
-//        for exhibitor in attendeeData.getExibitors() {
-//            
-//            if let object = beaconData.getBeaconById(exhibitor.iBeaconId) {
-//                
-//                if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
-//                        if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: exhibitor.getBeaconProximity()){
-//                            if let _ = activeNearMe.filter({$0 is Exhibitor}).filter({($0 as! Exhibitor).id == exhibitor.id}).first
-//                            {
-//                                
-//                            }
-//                            else{
-//                                activeNearMe.append(exhibitor)
-//                                flag = true
-//                            }
-//                            
-//                            break
-//                        }
-//                    }
-//                }
-//        }
-//
-//        for location in locationsData.getLocations() {
-//            
-//            if let object = beaconData.getBeaconById(location.iBeaconId) {
-//                
-//                if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
-//                        
-//                        if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: location.getBeaconProximity()){
-//                            if let _ = activeNearMe.filter({$0 is Location}).filter({($0 as! Location).id == location.id}).first
-//                            {
-//                                
-//                            }
-//                            else{
-//                                activeNearMe.append(location)
-//                                flag = true
-//                            }
-//                            
-//                            break
-//                        }
-//                    }
-//            }
-//        }
-        
+ 
         if flag{
             // Notify that a new beacon was ranged
             NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)

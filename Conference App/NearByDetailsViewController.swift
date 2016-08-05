@@ -16,7 +16,7 @@ extension AttendeeData{
         let beaconData = IBeaconData()
         var sponsors = [iBeaconNearMeProtocol]()
         for attendee in self.getSponsers() {
-            if let object = beaconData.getBeaconById(attendee.iBeaconId) {
+             for object in  beaconData.getBeaconById(attendee.iBeaconId) {
                 if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
                     if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: attendee.getBeaconProximity()){
                         
@@ -36,7 +36,7 @@ extension AttendeeData{
         var exhibitors = [iBeaconNearMeProtocol]()
         
         for attendee in self.getExibitors() {
-            if let object = beaconData.getBeaconById(attendee.iBeaconId) {
+            for object in beaconData.getBeaconById(attendee.iBeaconId) {
                 if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
                     if  JMCBeaconManager.isInRange(beacon.proximity, requiredProximity: attendee.getBeaconProximity()){
                         exhibitors.append(attendee)
@@ -58,7 +58,7 @@ extension LocationData{
         
         for location in locationsData.getLocations() {
             
-            if let object = beaconData.getBeaconById(location.iBeaconId) {
+            for object in beaconData.getBeaconById(location.iBeaconId) {
                 
                 if object.UUID.equalsIgnoreCase(beacon.UUID) && object.major == beacon.major && object.minor == beacon.minor {
                     

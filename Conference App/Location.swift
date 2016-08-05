@@ -58,8 +58,8 @@ class Location {
     
     init(dictionary: NSDictionary) {
     
-        if let id = dictionary.objectForKey(LocationEmum.id.rawValue) as? Int {
-            self.id = id
+        if let id = dictionary.objectForKey(LocationEmum.id.rawValue) as? NSString {
+            self.id = id.integerValue
         }
         
         if let name = dictionary.objectForKey(LocationEmum.name.rawValue) as? String {

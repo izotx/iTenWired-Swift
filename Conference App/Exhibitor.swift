@@ -70,7 +70,7 @@ class Exhibitor : AttendeeProtocol{
     
     init(dictionary: NSDictionary){
         
-        if let id = dictionary.objectForKey(ExibitorEnum.id.rawValue) as? Int {
+        if let id = (dictionary.objectForKey(ExibitorEnum.id.rawValue) as? NSString)?.integerValue {
             self.id = id
         }
         

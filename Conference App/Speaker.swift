@@ -61,8 +61,8 @@ class Speaker : AttendeeProtocol {
     
     init(dictionary: NSDictionary){
     
-        if let id = dictionary.objectForKey(SpeakerEnum.id.rawValue) as? String {
-            self.id = Int(id)!
+        if let id = dictionary.objectForKey(SpeakerEnum.id.rawValue) as? NSString {
+            self.id = id.integerValue
         }
         
         if let name = dictionary.objectForKey(SpeakerEnum.name.rawValue) as? String {

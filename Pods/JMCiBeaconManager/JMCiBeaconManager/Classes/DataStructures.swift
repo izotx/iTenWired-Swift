@@ -74,7 +74,7 @@ public class iBeacon : NSObject {
     
     
     /// Default state
-    internal(set) public var state:CLRegionState = CLRegionState.Unknown
+    public var state:CLRegionState = CLRegionState.Unknown
     
     
     
