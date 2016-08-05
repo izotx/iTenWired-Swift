@@ -209,8 +209,11 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return headerView
         default:
             //4
+
+            
             assert(false, "Unexpected element kind")
         }
+         return UICollectionReusableView()
     }
     
     

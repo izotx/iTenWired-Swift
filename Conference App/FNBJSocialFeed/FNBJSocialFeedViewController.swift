@@ -92,6 +92,18 @@ class FNBJSocialFeedViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     
+    override func viewWillDisappear(animated: Bool) {
+        if let timer = timer where timer.valid
+        {
+            timer.invalidate()
+        }
+    }
+    
+    
+    
+    
+    var timer:NSTimer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -110,7 +122,7 @@ class FNBJSocialFeedViewController: UIViewController, UITableViewDataSource, UIT
         
         self.textInputBar.delegate = self
         
-        _ = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: #selector(checkForNewFeed), userInfo: nil, repeats: true)
+
         
         configureInputBar()
         
@@ -156,8 +168,17 @@ class FNBJSocialFeedViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewWillAppear(animated: Bool) {
         self.textInputBar.hidden = true
+        if let timer = timer where timer.valid
+        {
         
+        }
+        else{
+            //create a new timer 
+          timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: #selector(checkForNewFeed), userInfo: nil, repeats: true)
+        }
     }
+    
+
     
     override func viewDidAppear(animated: Bool) {
         //self.tableView.reloadData()
