@@ -40,8 +40,10 @@ enum NetworkNotifications:String{
 class AppData{
    
     let defaults = NSUserDefaults.standardUserDefaults()
-    var URL: NSURL =  NSURL(string: "https://raw.githubusercontent.com/izotx/iTenWired-Swift/master/data.json")!
-
+    //var URL: NSURL =  NSURL(string: "https://raw.githubusercontent.com/izotx/iTenWired-Swift/master/data.json")!
+    var URL: NSURL =  NSURL(string: "http://izotx.com/itenwired/")!
+        
+    
     func getAllNotifications() -> [Notification] {
         let arr = [Notification]()
         var notificationsArray = NotificationList(notifications: arr)
