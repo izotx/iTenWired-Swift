@@ -38,9 +38,12 @@ class EventCell: UITableViewCell {
     }
     
     func setDate(date:String){
-        let day = date.componentsSeparatedByString("/")[1]
-        dateLable.text = day
-    }
+        if (date as NSString).length > 0 {
+            let day = date.componentsSeparatedByString("/")[1]
+            dateLable.text = day
+        }
+        
+     }
     
     func build(event:Event){
         self.event = event

@@ -7,5 +7,6 @@ target "Conference App" do
     pod 'HanekeSwift'
     pod 'Fabric'
     pod 'TwitterKit'
+    pod  'TwitterCore'
     pod 'ALTextInputBar'
 end
