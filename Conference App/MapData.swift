@@ -62,13 +62,32 @@ class MapData {
         
         if let locations = dictionary.objectForKey("conference_location") as? NSArray {
             for locs in locations {
-                let locationName = locs["name"] as? String
-                let locationLat = locs["latitude"] as? String
-                let locationLong = locs["longitude"] as? String
-                let locationDate = locs["date"] as? String
-                let locationDesc = locs["description"] as? String
                 
-                tempLoc.append(ConferenceLocation(name:locationName!, latitude: locationLat!, longitude: locationLong!, date: locationDate!, description: locationDesc!))
+                
+                var locationName = ""
+                var locationLat = ""
+                var locationLong = ""
+                var locationDate = ""
+                var locationDesc = ""
+                
+                if let n = locs["name"] as? String{
+                    locationName = n
+                }
+                if let n = locs["latitude"] as? String{
+                    locationLat = n
+                }
+                if let n = locs["longitude"] as? String{
+                    locationLong = n
+                }
+                if let n = locs["date"] as? String{
+                    locationDate = n
+                }
+
+                if let n = locs["description"] as? String{
+                    locationDesc = n
+                }
+                
+                tempLoc.append(ConferenceLocation(name:locationName, latitude: locationLat, longitude: locationLong, date: locationDate, description: locationDesc))
             }
         }
         return tempLoc
