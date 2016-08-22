@@ -175,9 +175,13 @@ class FNBJSocialFeedTwitterController{
             if connectionError != nil {
                 print("Error: \(connectionError)")
             }
-            
+            guard let data = data else{
+                return
+            }
+                        
             do {
-                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: [])
+                
+                let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
                 let statuses = json.objectForKey("statuses") as? NSArray
                 
                 var tweets:[FNBJSocialFeedTwitterTweet] = []
