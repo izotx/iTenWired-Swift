@@ -193,6 +193,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         // Centers Map on Main Location (Called on Launch)
         var count = 0.00
         
+        
+        
         // All locations "loc" are stored in this array and converted into annotations
         for locs in locArray {
             if let tempLat = CLLocationDegrees(locs.latitude), let tempLong = CLLocationDegrees(locs.longitude), let tempName:String = locs.name, let tempDesc:String = locs.description {
@@ -226,14 +228,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         else {
             
-            // Presents an error message saying "No Internet Connection"
-            let noInternet = UIAlertController(title: "Internet Connection", message: "Map cannot be loaded because there is no internet connection.", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            noInternet.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: { (action: UIAlertAction!) in
-                print("Handle Ok logic here")
-            }))
-            
-            presentViewController(noInternet, animated: true, completion: nil)
+//            // Presents an error message saying "No Internet Connection"
+//            let noInternet = UIAlertController(title: "Internet Connection", message: "Map cannot be loaded because there is no internet connection.", preferredStyle: UIAlertControllerStyle.Alert)
+//            
+//            noInternet.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: { (action: UIAlertAction!) in
+//                print("Handle Ok logic here")
+//            }))
+//            
+//            presentViewController(noInternet, animated: true, completion: nil)
             latSum = mainLatitude
             longSum = mainLongitude
             

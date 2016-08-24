@@ -73,6 +73,7 @@ class MapData {
                 if let n = locs["name"] as? String{
                     locationName = n
                 }
+                
                 if let n = locs["latitude"] as? String{
                     locationLat = n
                 }
@@ -86,6 +87,11 @@ class MapData {
                 if let n = locs["description"] as? String{
                     locationDesc = n
                 }
+                
+                /**
+                     if let tempLat = CLLocationDegrees(locs.latitude), let tempLong = CLLocationDegrees(locs.longitude), let tempName:String = locs.name, let tempDesc:String = locs.description {
+                 */
+                
                 
                 tempLoc.append(ConferenceLocation(name:locationName, latitude: locationLat, longitude: locationLong, date: locationDate, description: locationDesc))
             }
