@@ -42,6 +42,7 @@ enum SpeakerEnum : String {
     case linkedin
     case email
     case sessions
+    case image
 }
 
 class Speaker : AttendeeProtocol {
@@ -56,6 +57,7 @@ class Speaker : AttendeeProtocol {
     var website = ""
     var linkedin = ""
     var email = ""
+    var image = ""
     var sessions:[String] = []
     
     
@@ -92,6 +94,10 @@ class Speaker : AttendeeProtocol {
         if let email = dictionary.objectForKey(SpeakerEnum.email.rawValue) as? String {
             self.email = email
         }
+        if let image = dictionary.objectForKey(SpeakerEnum.image.rawValue) as? String {
+            self.image = image
+        }
+
         
         if let sessions = dictionary.objectForKey(SpeakerEnum.sessions.rawValue) as? [String] {
             self.sessions = sessions

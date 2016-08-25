@@ -34,12 +34,14 @@
 
 
 import UIKit
+import Kingfisher
 
 class SpeakerCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobTitleLabel: UILabel!
 
+    @IBOutlet weak var photoImageView: UIImageView!
     
     func setName(name:String){
         self.nameLabel.text = name
@@ -55,6 +57,14 @@ class SpeakerCell: UITableViewCell {
         self.UIConfig()
         
         setName(speaker.name)
+        
+        
+        if speaker.image != ""{
+            //load it here 
+            if let url = NSURL(string: speaker.image){
+                photoImageView.kf_setImageWithURL(url)
+            }
+        }
         
         if speaker.jobTitle != "" && speaker.company != ""{
             setJobTitle("\(speaker.jobTitle) at \(speaker.company)")

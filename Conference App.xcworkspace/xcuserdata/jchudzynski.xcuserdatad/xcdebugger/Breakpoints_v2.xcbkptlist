@@ -184,54 +184,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Conference App/MapViewController.swift"
-            timestampString = "493756042.175133"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "addNotations()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Conference_App.MapViewController.addNotations () -&gt; ()"
-                  moduleName = "Conference App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jchudzynski/Desktop/Repositories/iTenWired-Swift/Conference%20App/MapViewController.swift"
-                  timestampString = "493756866.196586"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
-                  offsetFromSymbolStart = "549">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Conference_App.MapViewController.addNotations () -&gt; ()"
-                  moduleName = "Conference App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jchudzynski/Desktop/Repositories/iTenWired-Swift/Conference%20App/MapViewController.swift"
-                  timestampString = "493756866.196717"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
-                  offsetFromSymbolStart = "606">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"

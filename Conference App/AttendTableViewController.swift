@@ -49,6 +49,10 @@ class AttendeesViewController: UITableViewController{
     var sponserPhotos = [Photorecord]()
     let sponserPendingoperations = PendingOperarions()
     
+    var speakerPhotos = [Photorecord]()
+    let speakerPendingoperations = PendingOperarions()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +64,7 @@ class AttendeesViewController: UITableViewController{
             //Gets attendees Data
             self.loadSponsers()
             self.loadExhibitors()
-            self.speakers = self.atendeeControler.getSpeakers()
+            self.loadSpeakers()
             
             // Deactivates Activity indicator
             self.activityIndicator.stopAnimating()
@@ -97,6 +101,18 @@ class AttendeesViewController: UITableViewController{
             let url = NSURL(string: exhibitor.logo)
             let photoRecord = Photorecord(name: exhibitor.logo, url: url!)
             self.exhibitorPhotos.append(photoRecord)
+        }
+    }
+    
+    // Loads exhibitor data and populates the photorecord array
+    internal func loadSpeakers(){
+        let exhibitors = self.atendeeControler.getSpeakers()
+        
+        for e in exhibitors {
+            self.speakers.append(e)
+            let url = NSURL(string: e.image)
+            let photoRecord = Photorecord(name: e.image, url: url!)
+            self.speakerPhotos.append(photoRecord)
         }
     }
 

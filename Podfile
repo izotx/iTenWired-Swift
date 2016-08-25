@@ -9,4 +9,5 @@ target "Conference App" do
     pod 'TwitterKit'
     pod  'TwitterCore'
     pod 'ALTextInputBar'
+    pod 'Kingfisher'
 end
