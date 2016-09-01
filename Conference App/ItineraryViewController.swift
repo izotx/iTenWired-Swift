@@ -29,7 +29,7 @@
 //  Conference App
 //
 //  Created by Greg Gruse on 4/9/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
+//  Copyright © 2016 Izotx LLC. All rights reserved.
 //
 
 import UIKit

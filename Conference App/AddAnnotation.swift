@@ -3,7 +3,7 @@
 //  Conference App
 //
 //  Created by Julian L on 4/12/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
+//  Copyright © 2016 Izotx LLC. All rights reserved.
 //
 
 import Foundation

@@ -3,7 +3,7 @@
 //  Conference AppUITests
 //
 //  Created by B4TH Administrator on 4/1/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
+//  Copyright © 2016 Izotx LLC. All rights reserved.
 //
 
 import XCTest

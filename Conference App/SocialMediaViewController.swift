@@ -62,6 +62,8 @@ class SocialMediaViewController: UIViewController{
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var socialItems:[SocialItem] = [
+                                     SocialItem(name:"Capture the Flag", logo: "Flag-50.png", storyboardId: "", viewControllerId: ""),
+                                     
                                     SocialItem(name: "iTenWired Social Feed", logo: "iTenWiredFeed-50.png", storyboardId:                  "SocialMedia", viewControllerId: "ITENFEEDSTORYBOARD"),
                                     SocialItem(name:"Facebook", logo: "Facebook-50.png", storyboardId: "", viewControllerId: ""),
                                     SocialItem(name:"Twitter", logo: "Twitter-50.png", storyboardId: "SocialMedia", viewControllerId: "TwitterViewController"),
@@ -165,6 +167,22 @@ extension SocialMediaViewController: UITableViewDelegate, UITableViewDataSource 
             }
             return
         }
+        if socialItem.name == "Capture the Flag" {
+            
+            if let socialMedia = socialData.getSocialMedia("capturetheflag") {
+                
+                let urlString = socialMedia.URL
+                
+                if let url = NSURL(string: urlString) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+                return
+            }
+            return
+        }
+        
+        
+        
         
         if socialItem.name == "YouTube" {
             

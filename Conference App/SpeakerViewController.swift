@@ -29,7 +29,7 @@
 //  Conference App
 //
 //  Created by tuong on 5/17/16.
-//  Copyright © 2016 Chrystech Systems. All rights reserved.
+//  Copyright © 2016 Izotx LLC. All rights reserved.
 //
 
 import UIKit
