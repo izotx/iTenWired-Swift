@@ -41,9 +41,9 @@ class AppData{
    
     let defaults = NSUserDefaults.standardUserDefaults()
     //var URL: NSURL =  NSURL(string: "https://raw.githubusercontent.com/izotx/iTenWired-Swift/master/data.json")!
-    //var URL: NSURL =  NSURL(string: "http://izotx.com/itenwired/")!
+    var URL: NSURL =  NSURL(string: "http://izotx.com/itenwired/")!
    
-    var URL =  NSURL(string: "http://localhost:81/itenwired/")!
+    //var URL =  NSURL(string: "http://localhost:81/itenwired/")!
     
     
     func getAllNotifications() -> [Notification] {
