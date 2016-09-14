@@ -40,8 +40,7 @@ class SpeakerCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var jobTitleLabel: UILabel!
-
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageView: UIImageView?
     
     func setName(name:String){
         self.nameLabel.text = name
@@ -58,11 +57,10 @@ class SpeakerCell: UITableViewCell {
         
         setName(speaker.name)
         
-        
         if speaker.image != ""{
             //load it here 
-            if let url = NSURL(string: speaker.image){
-                photoImageView.kf_setImageWithURL(url)
+            if let url = NSURL(string: speaker.image), image = photoImageView{
+                image.kf_setImageWithURL(url)
             }
         }
         
