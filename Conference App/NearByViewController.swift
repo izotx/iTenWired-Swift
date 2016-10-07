@@ -52,11 +52,14 @@ class NearByViewController: UIViewController {
     /// Near me Controller
     let nearMeController = NearMeController()
     
-    /// iBeacons Data drom the JSON file
-    let beaconData = IBeaconData()
+//    /// iBeacons Data drom the JSON file
+//    let beaconData = IBeaconData()
+//    
+//    /// iBeacons Ranged List
+//    var beacons = [iBeacon]()
+
     
-    /// iBeacons Ranged List
-    var beacons = [iBeacon]()
+    var datasource = [iBeaconNearMeProtocol]()
     
 
     deinit{
@@ -82,14 +85,50 @@ class NearByViewController: UIViewController {
         // Apply ItenWired Style
         UIConfig()
         
+        self.datasource = nearMeController.getAllNearMe()
         //CollectionView Delegate
         collectionView.delegate = self
         collectionView.dataSource = self
         
-
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearByViewController.newBeaconRanged), name: NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearByViewController.newBeaconRanged), name: NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
         // Do any additional setup after loading the view.
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsAdded(_:)), name: NearMeControllerEnum.ObjectAdded.rawValue, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsRemoved(_:)), name: NearMeControllerEnum.ObjectRemoved.rawValue, object: nil)
+
+    
     }
+    
+    
+    @objc func beaconsAdded(n:NSNotification){
+        if let bp = n.object as? [Int]{
+            nearMeController
+            let ip = NSIndexPath(forItem: 0, inSection: 0)
+            //check for duplicates
+            
+            if self.datasource.filter({$0.getId() == bp.getId()}).count == 0{
+                self.datasource.append(bp)
+                collectionView.insertItemsAtIndexPaths([ip])
+            }
+        }
+    }
+    
+    
+    @objc func beaconsRemoved(n:NSNotification){
+        
+        if let bp = n.object as? [Int] where bp.count > 0 {
+            
+            for (i,object) in datasource.enumerate().reverse() {
+                if bp.filter({$0.getId() == object.getId()}).count > 0{
+                    datasource.removeAtIndex(i)
+                    let ip = NSIndexPath(forItem: i, inSection: 0)
+                    collectionView.deleteItemsAtIndexPaths([ip])
+                }
+            }
+        }
+    }
+    
     
     private func UIConfig() {
         
@@ -104,7 +143,9 @@ class NearByViewController: UIViewController {
     }
     
     func newBeaconRanged() {
-        collectionView.reloadData()
+        
+        
+        //collectionView.reloadData()
     }
     
     
@@ -129,12 +170,13 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return nearMeController.getAllNearMe().count
+//        return nearMeController.getAllNearMe().count
+        return  self.datasource.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as? NearMeCollectionViewCell
-        let item = nearMeController.getAllNearMe()[indexPath.row]
+        let item =  self.datasource[indexPath.row]
         cell?.build(item)
         
         ///assign image
@@ -163,6 +205,8 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
                                 self?.imageCache[url] = image
                                 //reload collection view
                                 //normally I would reload only cell but since the cells can switch places we will just reload all.
+                                
+                                
                                 self?.collectionView.reloadData()
                                 cell?.title.alpha = 0
                                 
@@ -195,7 +239,9 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
                     as! NearbyHeader
             
             
-            let count = nearMeController.getAllNearMe().count
+//            let count = nearMeController.getAllNearMe().count
+            let count = self.datasource.count
+            
             if count == 0{
                 headerView.label.text = "Scanning for nearby POIs"
             }
@@ -203,9 +249,6 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 let t =  count > 1 ? " POIs" :  "POI"
                 headerView.label.text = "\(count) \(t) Nearby"
             }
-           
-            
-            
             return headerView
         default:
             //4
@@ -235,7 +278,7 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        let item = nearMeController.getAllNearMe()[indexPath.row]
+        let item =  self.datasource[indexPath.row]
         let storyboard = UIStoryboard.init(name:  item.getNearMeMenuItem().storyBoardId, bundle: nil)
         
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier(item.getNearMeMenuItem().viewControllerId) as? iBeaconNearMeViewControllerProtocol

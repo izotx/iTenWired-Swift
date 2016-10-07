@@ -40,6 +40,8 @@ import CoreLocation
 
 public enum NearMeControllerEnum : String {
     case NewBeaconRanged
+    case ObjectAdded
+    case ObjectRemoved
 }
 
 class NearMeController {
@@ -52,7 +54,7 @@ class NearMeController {
     
     
     /// Active Beacons Near Me
-    private var activeBeacons = [String : ItenWiredBeacon]()
+    var activeBeacons = [String : ItenWiredBeacon]()
     
     
     /// Active Near Me Objects
@@ -74,6 +76,8 @@ class NearMeController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsRanged(_:)), name: iBeaconNotifications.BeaconProximity.rawValue, object: nil)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsStateChanged(_:)), name: iBeaconNotifications.BeaconState.rawValue, object: nil)
+ 
+        
         
         // Get conference beacons from JSON
         let registeredBeacons = beaconData.getBeacons()
@@ -86,6 +90,8 @@ class NearMeController {
         
         _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(NearMeController.removeOldBeacons), userInfo: nil, repeats: true)
     
+    
+        
     }
 
     
@@ -105,6 +111,8 @@ class NearMeController {
     
     
     @objc func beaconsStateChanged(notification:NSNotification){
+       var elements = [Int]()
+        
         if let beacon = notification.object as? iBeacon{
            //check state of the object
             if beacon.state == CLRegionState.Unknown || beacon.state == CLRegionState.Outside{
@@ -117,11 +125,10 @@ class NearMeController {
                                 //beacon found now we can remove it.
                             let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
                             activeBeacons[id] = nil
-                            activeNearMe.removeAtIndex(i)
-
+                            let el = activeNearMe.removeAtIndex(i)
+                            elements.append(el.getId())
                             
                             //print("Remove Beacon")
-                            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
                             
                         }
                     }
@@ -129,20 +136,23 @@ class NearMeController {
                 
             }
         }
+        if elements.count > 0{
+            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectRemoved.rawValue, object: elements)
+
+        }
+        
     }
     
     @objc func removeOldBeacons() {
         
         var flag = false
+        var elements = [iBeaconNearMeProtocol]()
         objc_sync_enter(activeBeacons)
-//        synchronized(activeBeacons){
-//        
-//        }
         for beacon in activeBeacons.values {
         
             let now = NSDate()
             
-            if beacon.lastRanged.addSeconds(1).isLessThanDate(now) {
+            if beacon.lastRanged.addSeconds(2).isLessThanDate(now) {
                 let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
                 
                 for (i,object) in activeNearMe.enumerate().reverse() {
@@ -154,7 +164,8 @@ class NearMeController {
                         
                             flag = true
                             activeBeacons[id] = nil
-                            activeNearMe.removeAtIndex(i)
+                            let e = activeNearMe.removeAtIndex(i)
+                            elements.append(e)
                         }
                     
                     }
@@ -165,7 +176,7 @@ class NearMeController {
         objc_sync_exit(activeBeacons)
         
         if flag {
-            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
+            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectRemoved.rawValue, object: elements.map({$0.getId()}))
         }
     }
     
@@ -174,24 +185,9 @@ class NearMeController {
     /**Called when the beacons are ranged*/
     @objc func beaconsRanged(notification:NSNotification){
         if let visibleIbeacons = notification.object as? [iBeacon]{
-//            if visibleIbeacons.count == 0 {
-//                if abs(lastDate.timeIntervalSince1970 - NSDate().timeIntervalSince1970) >= 5{
-//                    activeBeacons.removeAll()
-//                    activeNearMe.removeAll()
-//                    NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
-//                    lastDate = NSDate()
-//                    return
-//                }
-//                
-//                
-//            }
-//
-            
             for beacon in visibleIbeacons{
                 let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
                 newBeaconRanged(iTenWiredBeacon)
-
-                
             }
         }
     }
@@ -208,7 +204,7 @@ class NearMeController {
         
         var flag = false
         let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
-        
+        var ids = [Int]()
         let locations = locationsData.getLocationsByiBeacon(beacon)
         if locations.count > 0
         {
@@ -218,6 +214,7 @@ class NearMeController {
             if activeNearMe.filter({$0 is Location}).filter({($0 as! Location).getId() == l.getId()}).count == 0
                 {
                     activeNearMe.append(l)
+                    ids.append(l.getId())
                     flag = true
                     
                 }
@@ -233,6 +230,7 @@ class NearMeController {
                 if activeNearMe.filter({$0 is Sponsor}).filter({($0 as! Sponsor).getId() == a.getId()}).count == 0
                 {
                     activeNearMe.append(a)
+                    ids.append(a.getId())
                     flag = true
                 }
             }
@@ -249,6 +247,7 @@ class NearMeController {
                 {
                     activeNearMe.append(a)
                     flag = true
+                    ids.append(a.getId())
                     
                 }
             }
@@ -258,7 +257,7 @@ class NearMeController {
  
         if flag{
             // Notify that a new beacon was ranged
-            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
+            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectAdded.rawValue, object: [ids])
         }
  
     }
