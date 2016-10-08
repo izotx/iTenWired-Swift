@@ -184,10 +184,12 @@ class NearMeController {
     
     /**Called when the beacons are ranged*/
     @objc func beaconsRanged(notification:NSNotification){
-        if let visibleIbeacons = notification.object as? [iBeacon]{
-            for beacon in visibleIbeacons{
-                let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
-                newBeaconRanged(iTenWiredBeacon)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            if let visibleIbeacons = notification.object as? [iBeacon]{
+                for beacon in visibleIbeacons{
+                    let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
+                    self.newBeaconRanged(iTenWiredBeacon)
+                }
             }
         }
     }

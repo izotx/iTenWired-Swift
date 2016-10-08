@@ -70,14 +70,19 @@ class NearByViewController: UIViewController {
         super.viewWillDisappear(animated)
       //  nearMeController.stopUpdates()
         nearMeController.stop()
+        datasource.removeAll()
     }
     
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.datasource = nearMeController.getAllNearMe()
+        self.collectionView.reloadData()
         nearMeController.start()
+
     }
     
+    var serialQueue = dispatch_queue_create("com.blah.queue", DISPATCH_QUEUE_SERIAL);
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,25 +105,56 @@ class NearByViewController: UIViewController {
     
     }
     
-    
+            var array = [NSIndexPath]()
     @objc func beaconsAdded(n:NSNotification){
-        print(n.object)
-        
-        
+      //  print(n.object)
+            array.removeAll()
         if let bp = n.object as? Array<Int>{
 
-            let ip = NSIndexPath(forItem: 0, inSection: 0)
-            for k in bp {
+
+           
+            for (i,k) in bp.enumerate() {
                 if datasource.filter({$0.getId() == k}).count == 0{
                     //get the object 
                     if let b = nearMeController.getAllNearMe().filter({$0.getId() == k}).first{
-                        datasource.insert(b, atIndex: 0)
-                        collectionView.insertItemsAtIndexPaths([ip])
-//                        collectionView.inse
-//                        collectionView.reloadItemsAtIndexPaths([ip])
+                        
+                        dispatch_async(dispatch_get_main_queue(), {
+                                self.datasource.insert(b, atIndex: i)
+                                let ip = NSIndexPath(forItem: 0, inSection: 0)
+                                self.collectionView.insertItemsAtIndexPaths([ip])
+                        })
+
+                        
+                        
+////                        array.append(ip)
+//                        dispatch_async(serialQueue) { // 1
+//                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+//                                self.collectionView.insertItemsAtIndexPaths([ip])
+//                                
+//                            });
+//                            
+//                            
+//                        }
+
+                        
                     }
                 }
             }
+            
+            
+            
+            if array.count > 0 {
+             dispatch_async(serialQueue) { // 1
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
+                    self.collectionView.insertItemsAtIndexPaths(self.array)
+                
+                });
+
+                
+                }
+            }
+
+            
             
 //            //check for duplicates
 //            if let bp = n.object as? [Int] where bp.count > 0 {
@@ -227,8 +263,9 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
                                 //normally I would reload only cell but since the cells can switch places we will just reload all.
                                 
                                 
-                                self?.collectionView.reloadData()
+                               // self?.collectionView.reloadData()
                                 cell?.title.alpha = 0
+                                collectionView.reloadItemsAtIndexPaths([indexPath])
                                 
                                })
                             }
