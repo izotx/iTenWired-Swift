@@ -66,6 +66,8 @@ class NearMeController {
     /// Locations Data from JSON
     private var locationsData = LocationData()
     
+     var serialQueue = dispatch_queue_create("com.blah.queue", DISPATCH_QUEUE_SERIAL);
+    
     deinit{
     
     }
@@ -88,7 +90,7 @@ class NearMeController {
         
         beaconManager.logging = false
         
-        _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(NearMeController.removeOldBeacons), userInfo: nil, repeats: true)
+        _ = NSTimer.scheduledTimerWithTimeInterval(6, target: self, selector: #selector(NearMeController.removeOldBeacons), userInfo: nil, repeats: true)
     
     
         
@@ -128,6 +130,8 @@ class NearMeController {
                             let el = activeNearMe.removeAtIndex(i)
                             elements.append(el.getId())
                             
+                            
+                           print("removed \(beacon)")
                             //print("Remove Beacon")
                             
                         }
@@ -144,58 +148,111 @@ class NearMeController {
     }
     
     @objc func removeOldBeacons() {
-        
-        var flag = false
-        var elements = [iBeaconNearMeProtocol]()
-        objc_sync_enter(activeBeacons)
-        for beacon in activeBeacons.values {
-        
-            let now = NSDate()
-            
-            if beacon.lastRanged.addSeconds(2).isLessThanDate(now) {
-                let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
-                
-                for (i,object) in activeNearMe.enumerate().reverse() {
-                    //Check if it is monitored
-                    for otherBeacon in beaconData.getBeaconById(object.getBeaconId()) {
-                        if otherBeacon.UUID.equalsIgnoreCase(beacon.UUID) &&
-                            otherBeacon.major == beacon.major &&
-                            otherBeacon.minor == beacon.minor {
-                        
-                            flag = true
-                            activeBeacons[id] = nil
-                            let e = activeNearMe.removeAtIndex(i)
-                            elements.append(e)
-                        }
-                    
-                    }
-                }
+        dispatch_async(serialQueue) {
+            [weak self ]in
+            guard let me = self else{
+                return
             }
+            
+            
+            var flag = false
+            var elements = [iBeaconNearMeProtocol]()
+                    objc_sync_enter(me.activeBeacons)
+           
+                for beacon in me.activeBeacons.values {
+                    
+                    let now = NSDate()
+                    
+                    if beacon.lastRanged.addSeconds(5).isLessThanDate(now) {
+                        
+                        let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
+                        
+                        for (i,object) in me.activeNearMe.enumerate().reverse() {
+                            //Check if it is monitored
+                            for otherBeacon in me.beaconData.getBeaconById(object.getBeaconId()) {
+                                if otherBeacon.UUID.equalsIgnoreCase(beacon.UUID) &&
+                                    otherBeacon.major == beacon.major &&
+                                    otherBeacon.minor == beacon.minor {
+                                    
+                                    flag = true
+                                    me.activeBeacons[id] = nil
+                                    let e = me.activeNearMe.removeAtIndex(i)
+                                    elements.append(e)
+                                    print("removed \(beacon)")
+                                    
+                                }                                
+                            }
+                        }
+                    }
+            
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { 
+                if flag {
+                    NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectRemoved.rawValue, object: elements.map({$0.getId()}))
+                }
+            })
+            
+        objc_sync_exit(me.activeBeacons)
         
-        }
-        objc_sync_exit(activeBeacons)
-        
-        if flag {
-            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectRemoved.rawValue, object: elements.map({$0.getId()}))
-        }
+       
+      }
     }
     
     var lastDate = NSDate()
     
+    
     /**Called when the beacons are ranged*/
     @objc func beaconsRanged(notification:NSNotification){
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            if let visibleIbeacons = notification.object as? [iBeacon]{
-                for beacon in visibleIbeacons{
-                    let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
-                    self.newBeaconRanged(iTenWiredBeacon)
+        
+//        if NSDate().timeIntervalSinceDate(lastDate) > 2{
+        if let visibleIbeacons = notification.object as? [iBeacon]{
+            for beacon in visibleIbeacons{
+                let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
+                iTenWiredBeacon.lastRanged = NSDate()
+                let id = "\(iTenWiredBeacon.major)\(iTenWiredBeacon.minor)\(iTenWiredBeacon.UUID)"
+                
+                if let b = activeBeacons[id]{
+                    b.lastRanged = NSDate()
+                    continue
+                }else{
+                    newBeaconRanged(iTenWiredBeacon)
+                    lastDate = NSDate()
+                    print("added \(beacon)")
+                
                 }
             }
         }
+        
+        
+//            dispatch_async(serialQueue) {
+//                [weak self] in
+//                guard let me = self else {
+//                    return
+//                }
+//                if let visibleIbeacons = notification.object as? [iBeacon]{
+//                    for beacon in visibleIbeacons{
+//                        let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
+//                        let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
+//                        if let b = me.activeBeacons[id]{
+//                            b.lastRanged = NSDate()
+//                            continue
+//                        }
+//                        
+//                        me.newBeaconRanged(iTenWiredBeacon)
+//                        me.lastDate = NSDate()
+//                    }
+//                }
+//            }
+        
+//        }
     }
     
     internal func getAllNearMe() -> [iBeaconNearMeProtocol] {
        // return self.activeBeacons.values
+        
+        
+        
         return self.activeNearMe
     }
     
@@ -208,6 +265,9 @@ class NearMeController {
         let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
         var ids = Array<Int>()
         let locations = locationsData.getLocationsByiBeacon(beacon)
+     
+        
+        objc_sync_enter(activeBeacons)
         if locations.count > 0
         {
             beacon.lastRanged = NSDate()
@@ -256,10 +316,17 @@ class NearMeController {
             
         }
         
+        objc_sync_exit(activeBeacons)
+        
  
         if flag{
             // Notify that a new beacon was ranged
-            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectAdded.rawValue, object: ids)
+            dispatch_async(dispatch_get_main_queue(), {
+                NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectAdded.rawValue, object: ids)
+            })
+        }
+        else{
+            activeBeacons[id] = beacon
         }
  
     }

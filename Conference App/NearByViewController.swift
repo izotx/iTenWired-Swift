@@ -70,7 +70,7 @@ class NearByViewController: UIViewController {
         super.viewWillDisappear(animated)
       //  nearMeController.stopUpdates()
         nearMeController.stop()
-        datasource.removeAll()
+        //datasource.removeAll()
     }
     
     
@@ -90,13 +90,18 @@ class NearByViewController: UIViewController {
         // Apply ItenWired Style
         UIConfig()
         
-        self.datasource = nearMeController.getAllNearMe()
+//        dispatch_async(serialQueue) {
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.datasource = self.nearMeController.getAllNearMe()
+//            })
+//        }
+        
+ 
+        
         //CollectionView Delegate
         collectionView.delegate = self
         collectionView.dataSource = self
         
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NearByViewController.newBeaconRanged), name: NearMeControllerEnum.NewBeaconRanged.rawValue, object: nil)
-        // Do any additional setup after loading the view.
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(beaconsAdded(_:)), name: NearMeControllerEnum.ObjectAdded.rawValue, object: nil)
         
@@ -105,74 +110,53 @@ class NearByViewController: UIViewController {
     
     }
     
-            var array = [NSIndexPath]()
+    var lastUpdate:NSDate = NSDate()
+    
+    
     @objc func beaconsAdded(n:NSNotification){
-      //  print(n.object)
-            array.removeAll()
+         var array = [NSIndexPath]()
+        print("adding to the array")
+   
         if let bp = n.object as? Array<Int>{
-
+        var flag = false
 
            
             for (i,k) in bp.enumerate() {
                 if datasource.filter({$0.getId() == k}).count == 0{
                     //get the object 
                     if let b = nearMeController.getAllNearMe().filter({$0.getId() == k}).first{
-                        
-                        dispatch_async(dispatch_get_main_queue(), {
                                 self.datasource.insert(b, atIndex: i)
-                                let ip = NSIndexPath(forItem: 0, inSection: 0)
-                                self.collectionView.insertItemsAtIndexPaths([ip])
-                        })
+                                //let ip = NSIndexPath(forItem: i, inSection: 0)
+                        
+                              //  array.append(ip)
+                               flag = true
 
-                        
-                        
-////                        array.append(ip)
-//                        dispatch_async(serialQueue) { // 1
-//                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
-//                                self.collectionView.insertItemsAtIndexPaths([ip])
-//                                
-//                            });
-//                            
-//                            
-//                        }
-
-                        
                     }
                 }
             }
             
-            
-            
-            if array.count > 0 {
-             dispatch_async(serialQueue) { // 1
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), {
-                    self.collectionView.insertItemsAtIndexPaths(self.array)
+            if flag{
+                dispatch_async(dispatch_get_main_queue(), { 
+                    //self.collectionView.insertItemsAtIndexPaths(array)
+                    self.collectionView.reloadData()
+                })
                 
-                });
 
                 
-                }
+                
+////                let timeInterval = lastUpdate.timeIntervalSinceNow
+////                if timeInterval < -5{
+//                    collectionView.reloadData()
+//                    lastUpdate = NSDate()
+////                }
             }
-
-            
-            
-//            //check for duplicates
-//            if let bp = n.object as? [Int] where bp.count > 0 {
-//                
-//                for (i,object) in datasource.enumerate().reverse() {
-//                    if bp.filter({$0 == object.getId()}).count > 0{
-//                        datasource.removeAtIndex(i)
-//                        let ip = NSIndexPath(forItem: i, inSection: 0)
-//                        collectionView.deleteItemsAtIndexPaths([ip])
-//                    }
-//                }
-//            }
         }
     }
     
     
     @objc func beaconsRemoved(n:NSNotification){
         
+        var flag = false
         if let bp = n.object as? [Int] where bp.count > 0 {
             
             for (i,object) in datasource.enumerate().reverse() {
@@ -180,9 +164,18 @@ class NearByViewController: UIViewController {
                     datasource.removeAtIndex(i)
                     let ip = NSIndexPath(forItem: i, inSection: 0)
                     collectionView.deleteItemsAtIndexPaths([ip])
+                    flag = true
                 }
             }
         }
+        
+//        if flag {
+////            let timeInterval = lastUpdate.timeIntervalSinceNow
+////            if timeInterval < -5{
+//                collectionView.reloadData()
+//                lastUpdate = NSDate()
+////            }
+//        }
     }
     
     
@@ -263,9 +256,9 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
                                 //normally I would reload only cell but since the cells can switch places we will just reload all.
                                 
                                 
-                               // self?.collectionView.reloadData()
+                                self?.collectionView.reloadData()
                                 cell?.title.alpha = 0
-                                collectionView.reloadItemsAtIndexPaths([indexPath])
+                                //collectionView.reloadItemsAtIndexPaths([indexPath])
                                 
                                })
                             }
@@ -342,5 +335,20 @@ extension NearByViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         destinationViewController?.build(with: item)
         self.navigationController?.pushViewController((destinationViewController as? UIViewController)!, animated: true)
+    
+//        if item.dynamicType == Location.self{
+//            let storyboard = UIStoryboard.init(name:"Location", bundle:nil)
+//            
+//        }
+//        else{
+//        
+//        
+//        }
+        
+//        if item.isClass(){
+//            
+//        }
+    
+    
     }
 }
