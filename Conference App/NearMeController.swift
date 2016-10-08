@@ -204,7 +204,7 @@ class NearMeController {
         
         var flag = false
         let id = "\(beacon.major)\(beacon.minor)\(beacon.UUID)"
-        var ids = [Int]()
+        var ids = Array<Int>()
         let locations = locationsData.getLocationsByiBeacon(beacon)
         if locations.count > 0
         {
@@ -257,7 +257,7 @@ class NearMeController {
  
         if flag{
             // Notify that a new beacon was ranged
-            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectAdded.rawValue, object: [ids])
+            NSNotificationCenter.defaultCenter().postNotificationName(NearMeControllerEnum.ObjectAdded.rawValue, object: ids)
         }
  
     }

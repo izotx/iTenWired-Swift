@@ -102,15 +102,35 @@ class NearByViewController: UIViewController {
     
     
     @objc func beaconsAdded(n:NSNotification){
-        if let bp = n.object as? [Int]{
-            nearMeController
+        print(n.object)
+        
+        
+        if let bp = n.object as? Array<Int>{
+
             let ip = NSIndexPath(forItem: 0, inSection: 0)
-            //check for duplicates
-            
-            if self.datasource.filter({$0.getId() == bp.getId()}).count == 0{
-                self.datasource.append(bp)
-                collectionView.insertItemsAtIndexPaths([ip])
+            for k in bp {
+                if datasource.filter({$0.getId() == k}).count == 0{
+                    //get the object 
+                    if let b = nearMeController.getAllNearMe().filter({$0.getId() == k}).first{
+                        datasource.insert(b, atIndex: 0)
+                        collectionView.insertItemsAtIndexPaths([ip])
+//                        collectionView.inse
+//                        collectionView.reloadItemsAtIndexPaths([ip])
+                    }
+                }
             }
+            
+//            //check for duplicates
+//            if let bp = n.object as? [Int] where bp.count > 0 {
+//                
+//                for (i,object) in datasource.enumerate().reverse() {
+//                    if bp.filter({$0 == object.getId()}).count > 0{
+//                        datasource.removeAtIndex(i)
+//                        let ip = NSIndexPath(forItem: i, inSection: 0)
+//                        collectionView.deleteItemsAtIndexPaths([ip])
+//                    }
+//                }
+//            }
         }
     }
     
@@ -120,7 +140,7 @@ class NearByViewController: UIViewController {
         if let bp = n.object as? [Int] where bp.count > 0 {
             
             for (i,object) in datasource.enumerate().reverse() {
-                if bp.filter({$0.getId() == object.getId()}).count > 0{
+                if bp.filter({$0 == object.getId()}).count > 0{
                     datasource.removeAtIndex(i)
                     let ip = NSIndexPath(forItem: i, inSection: 0)
                     collectionView.deleteItemsAtIndexPaths([ip])
