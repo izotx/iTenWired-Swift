@@ -220,6 +220,9 @@ class NearByDetailsViewController: UIViewController {
             return
         }
         
+        
+        
+        
         guard let immediateIbeacon = visibleIbeacons.filter({$0.proximity == .Immediate}).first else {
 //            //currentClosestIbeacon = nil
 //            //clearData()

@@ -207,9 +207,14 @@ class NearMeController {
         
 //        if NSDate().timeIntervalSinceDate(lastDate) > 2{
         if let visibleIbeacons = notification.object as? [iBeacon]{
+            print("_________")
+            print(visibleIbeacons)
+            print("_________")
             for beacon in visibleIbeacons{
+                
                 let iTenWiredBeacon = ItenWiredBeacon(with: beacon)
                 iTenWiredBeacon.lastRanged = NSDate()
+                print("Proximity \(iTenWiredBeacon.proximity.rawValue)")
                 let id = "\(iTenWiredBeacon.major)\(iTenWiredBeacon.minor)\(iTenWiredBeacon.UUID)"
                 
                 if let b = activeBeacons[id]{
